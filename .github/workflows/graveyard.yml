@@ -58,6 +58,11 @@ jobs:
           GRAVEYARD_SEASON: ${{ vars.GRAVEYARD_SEASON || '2026' }}
         run: |
           set -o pipefail
+          # Identify WHICH key is in use without revealing it: a truncated
+          # SHA-256 cannot be reversed, but it changes when the secret changes.
+          printf 'key fingerprint: %s (length %s)\n' \
+            "$(printf '%s' "$FANTASYPROS_API_KEY" | sha256sum | cut -c1-12)" \
+            "${#FANTASYPROS_API_KEY}"
           mkdir -p out
           python3 graveyard.py rankings \
             --week "$GY_WEEK" \
