@@ -49,3 +49,27 @@ python3 graveyard.py use "Player Name" --week 5
 
 Name matching ignores case, punctuation, accents and Jr./Sr./III, so
 `./gy u "jamarr chase"` will filter out `Ja'Marr Chase`.
+
+## Running it from your phone (no laptop, no terminal)
+
+The key lives as a GitHub repository secret, so it is never in the code, never
+in a commit, and never pasted into a chat.
+
+**One-time setup** (works in a phone browser):
+
+1. Repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+2. Name it `FANTASYPROS_API_KEY`, paste your key, save.
+3. Optionally add a *variable* (same page, Variables tab) `GRAVEYARD_SEASON` = `2026`.
+
+**Every week after that:**
+
+- Repo → **Actions** → **Graveyard** → **Run workflow**
+- Pick `rankings` and a week → run it → open the run and read the summary.
+  The full list is also attached as a CSV artifact.
+- To bury a player: same workflow, action `use`, players `Bijan Robinson, Puka Nacua`.
+  It commits the updated `data/used_players.json` back to the branch, so every
+  device — and next week's pull — sees it immediately.
+
+Because the roster lives in the repo and the runs happen on GitHub's machines,
+any week can be pulled at any time from any device, indefinitely. Nothing
+depends on a chat session staying alive.

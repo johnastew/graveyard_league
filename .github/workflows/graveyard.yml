@@ -1,0 +1,103 @@
+name: Graveyard
+
+# Run from the GitHub mobile site or web UI:
+#   Actions -> Graveyard -> Run workflow -> pick week / action.
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "What to do"
+        type: choice
+        default: rankings
+        options: [rankings, use, unuse, used]
+      week:
+        description: "NFL week (rankings only)"
+        default: "1"
+      players:
+        description: "Player names for use/unuse, comma separated"
+        default: ""
+      position:
+        description: "FLEX, QB, RB, WR, TE, K, DST"
+        default: FLEX
+      scoring:
+        description: "STD, HALF, PPR"
+        default: HALF
+
+permissions:
+  contents: write
+
+# Inputs are passed through env, never interpolated into shell commands.
+env:
+  GY_ACTION: ${{ inputs.action }}
+  GY_WEEK: ${{ inputs.week }}
+  GY_PLAYERS: ${{ inputs.players }}
+  GY_POSITION: ${{ inputs.position }}
+  GY_SCORING: ${{ inputs.scoring }}
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Rankings
+        if: inputs.action == 'rankings'
+        env:
+          FANTASYPROS_API_KEY: ${{ secrets.FANTASYPROS_API_KEY }}
+          GRAVEYARD_SEASON: ${{ vars.GRAVEYARD_SEASON || '2026' }}
+        run: |
+          mkdir -p out
+          python3 graveyard.py rankings \
+            --week "$GY_WEEK" \
+            --position "$GY_POSITION" \
+            --scoring "$GY_SCORING" \
+            --limit 0 --refresh \
+            --csv "out/week${GY_WEEK}-${GY_POSITION}.csv" \
+            | tee rankings.txt
+          {
+            echo "## Week $GY_WEEK — eligible $GY_POSITION"
+            echo '```'
+            cat rankings.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload CSV
+        if: inputs.action == 'rankings'
+        uses: actions/upload-artifact@v4
+        with:
+          name: week-${{ inputs.week }}-${{ inputs.position }}
+          path: out/
+
+      - name: Update used players
+        if: inputs.action == 'use' || inputs.action == 'unuse'
+        run: |
+          python3 - <<'PY'
+          import os, subprocess, sys
+          action = os.environ["GY_ACTION"]
+          names = [n.strip() for n in os.environ.get("GY_PLAYERS", "").split(",") if n.strip()]
+          if not names:
+              sys.exit("No player names given.")
+          cmd = ["python3", "graveyard.py", action, *names]
+          if action == "use":
+              cmd += ["--week", os.environ.get("GY_WEEK", "")]
+          subprocess.run(cmd, check=True)
+          PY
+
+      - name: Show used list
+        if: inputs.action != 'rankings'
+        run: python3 graveyard.py used | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit roster change
+        if: inputs.action == 'use' || inputs.action == 'unuse'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet data/used_players.json; then
+            git add data/used_players.json
+            git commit -m "Graveyard: $GY_ACTION $GY_PLAYERS"
+            git push
+          else
+            echo "No change to the roster."
+          fi
