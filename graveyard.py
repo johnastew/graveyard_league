@@ -75,6 +75,16 @@ def api_key() -> str:
 
 
 # ----------------------------------------------------------------- name matching
+def as_num(v):
+    """The API returns numbers as strings ("1.00"); make them sortable/printable."""
+    if v is None or v == "":
+        return None
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
 def norm(name: str) -> str:
     """Normalize a player name for comparison: 'Ja'Marr Chase Jr.' -> 'jamarr chase'."""
     name = unicodedata.normalize("NFKD", name)
@@ -150,17 +160,18 @@ def extract_players(payload: dict) -> list[dict]:
     out = []
     for p in rows:
         out.append({
-            "rank": p.get("rank_ecr") or p.get("rank") or p.get("rank_ave"),
-            "tier": p.get("tier"),
-            "name": p.get("player_name") or p.get("name") or "",
-            "position": (p.get("player_position_id") or p.get("position_id")
-                         or p.get("position") or ""),
-            "team": p.get("player_team_id") or p.get("team_id") or p.get("team") or "",
-            "opponent": p.get("player_opponent") or p.get("opponent") or "",
-            "bye": p.get("player_bye_week") or p.get("bye_week") or "",
-            "ecr": p.get("rank_ave"),
-            "best": p.get("rank_min"),
-            "worst": p.get("rank_max"),
+            "rank": p.get("rank_ecr"),
+            "pos_rank": p.get("pos_rank", ""),
+            "name": p.get("player_name", ""),
+            "position": p.get("player_position_id", ""),
+            "team": p.get("player_team_id", ""),
+            "opponent": p.get("player_opponent", ""),
+            "bye": p.get("player_bye_week", ""),
+            "ecr": as_num(p.get("rank_ave")),
+            "best": as_num(p.get("rank_min")),
+            "worst": as_num(p.get("rank_max")),
+            "stdev": as_num(p.get("rank_std")),
+            "rostered": as_num(p.get("player_owned_avg")),
         })
     return [p for p in out if p["name"]]
 
@@ -171,15 +182,21 @@ def print_table(players: list[dict], limit: int) -> None:
     if not shown:
         print("No eligible players returned.")
         return
-    hdr = f"{'#':>4}  {'TIER':>4}  {'POS':<4} {'PLAYER':<24} {'TEAM':<4} {'MATCHUP':<8} {'ECR':>6}"
+    hdr = (f"{'#':>4}  {'POSRK':<6} {'PLAYER':<24} {'TEAM':<4} {'MATCHUP':<8} "
+           f"{'ECR':>6}  {'RANGE':>9}  {'ROST%':>6}")
     print(hdr)
     print("-" * len(hdr))
     for p in shown:
         matchup = p["opponent"] or (f"BYE {p['bye']}" if p["bye"] else "")
-        ecr = f"{p['ecr']:.1f}" if isinstance(p["ecr"], (int, float)) else ""
-        print(f"{str(p['rank'] or ''):>4}  {str(p['tier'] or ''):>4}  "
-              f"{str(p['position'])[:4]:<4} {p['name'][:24]:<24} "
-              f"{str(p['team'])[:4]:<4} {str(matchup)[:8]:<8} {ecr:>6}")
+        ecr = f"{p['ecr']:.1f}" if p["ecr"] is not None else ""
+        if p["best"] is not None and p["worst"] is not None:
+            rng = f"{p['best']:.0f}-{p['worst']:.0f}"
+        else:
+            rng = ""
+        rost = f"{p['rostered']:.0f}%" if p["rostered"] is not None else ""
+        print(f"{str(p['rank'] or ''):>4}  {str(p['pos_rank'])[:6]:<6} "
+              f"{p['name'][:24]:<24} {str(p['team'])[:4]:<4} "
+              f"{str(matchup)[:8]:<8} {ecr:>6}  {rng:>9}  {rost:>6}")
 
 
 def write_csv(players: list[dict], path: str) -> None:
@@ -216,7 +233,15 @@ def cmd_rankings(args: argparse.Namespace) -> None:
 
     print(f"Graveyard — {args.season} week {args.week} | {position} "
           f"| {args.scoring.upper()} scoring")
-    print(f"{len(players)} ranked, {burned} already used, {len(eligible)} eligible\n")
+    print(f"{len(players)} ranked, {burned} already used, {len(eligible)} eligible")
+
+    total = payload.get("count")
+    if payload.get("public_api_limited") and isinstance(total, int) and total > len(players):
+        print(f"\n!! Your FantasyPros key is on the '{payload.get('tier', 'free')}' tier: "
+              f"the API ranked {total} players but only returned {len(players)}.")
+        print("!! Everyone past the top few is invisible to this tool until the key "
+              "is upgraded — see README 'API tier limits'.")
+    print()
     print_table(eligible, args.limit)
     if args.csv:
         write_csv(eligible, args.csv)
