@@ -52,9 +52,12 @@ Name matching ignores case, punctuation, accents and Jr./Sr./III, so
 
 ## API tier limits
 
-Verified against a live response: a **free** FantasyPros public API key is
-capped server-side at **10 players per request**, regardless of what you ask
-for. The response says so itself:
+**Current status: a premium key is in place and all 306 players are
+returned.** The notes below describe the free-tier behaviour, kept because
+the failure mode is silent and easy to misread if a key ever changes.
+
+A **free** FantasyPros public API key is capped server-side at **10 players
+per request**, regardless of what you ask for. The response says so itself:
 
 ```json
 {"count": 306, "limit": 10, "public_api_limited": true, "tier": "free"}
@@ -66,14 +69,16 @@ warning whenever it detects the truncation, so a short list is never mistaken
 for a short week.
 
 This matters for Graveyard: the top 10 are the players you burn first, so
-after a few weeks the visible pool is entirely locked out and the list comes
-back empty. Options, in order of practicality:
+after a few weeks the visible pool would be entirely locked out and the list
+would come back empty. Upgrading the key fixes it with no code change.
 
-1. **Upgrade the FantasyPros key** to a tier without `public_api_limited`.
-   Nothing in the code changes — the same request returns all 306.
-2. **Pull per position** (`QB`, `RB`, `WR`, `TE` separately) for 10 each,
-   ~40 players a week instead of 10. Partial workaround, still shallow.
-3. **Use a different data source** for deeper rankings.
+Note that a newly issued key can return `403 Forbidden` for several minutes
+before it is provisioned. If that happens, wait and re-run before assuming
+the key is wrong — this was observed and resolved on its own.
+
+Each run prints a truncated SHA-256 fingerprint of the key in use. It cannot
+be reversed into the key, but it changes when the secret changes, which
+distinguishes "the secret did not update" from "the key is being rejected".
 
 The response also carries no `tier` field per player, so there is no tier
 column; `pos_rank` (RB1, WR7) is shown instead, plus the expert rank range
