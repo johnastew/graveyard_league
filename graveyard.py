@@ -198,6 +198,17 @@ def cmd_rankings(args: argparse.Namespace) -> None:
     position = resolve_position(args.position)
     payload = fetch_rankings(args.season, args.week, position,
                              args.scoring.upper(), refresh=args.refresh)
+    if getattr(args, "debug", False):
+        rows = payload.get("players") or payload.get("data") or []
+        print("-- top-level keys:", sorted(payload.keys()))
+        print("-- row count:", len(rows))
+        for k, v in payload.items():
+            if not isinstance(v, (list, dict)):
+                print(f"-- {k}: {v!r}")
+        if rows:
+            print("-- first row:")
+            print(json.dumps(rows[0], indent=2, sort_keys=True))
+        print("-- end debug\n")
     players = extract_players(payload)
     used = {norm(e["name"]) for e in load_used()}
     eligible = [p for p in players if norm(p["name"]) not in used]
@@ -276,6 +287,8 @@ def main(argv: list[str] | None = None) -> None:
     r.add_argument("--limit", type=int, default=50, help="0 for all")
     r.add_argument("--csv", help="also write results to this CSV path")
     r.add_argument("--refresh", action="store_true", help="bypass the local cache")
+    r.add_argument("--debug", action="store_true",
+                   help="dump the raw API structure before formatting")
     r.set_defaults(func=cmd_rankings)
 
     u = sub.add_parser("use", help="mark players as started (locks them out)")

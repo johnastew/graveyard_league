@@ -21,6 +21,10 @@ on:
         type: choice
         default: FLEX
         options: [FLEX, QB, RB, WR, TE, K, DST, OP]
+      debug:
+        description: "Dump raw API structure"
+        type: boolean
+        default: false
       scoring:
         description: "Scoring"
         type: choice
@@ -37,6 +41,7 @@ env:
   GY_PLAYERS: ${{ inputs.players }}
   GY_POSITION: ${{ inputs.position }}
   GY_SCORING: ${{ inputs.scoring }}
+  GY_DEBUG: ${{ inputs.debug }}
 
 jobs:
   run:
@@ -59,6 +64,7 @@ jobs:
             --position "$GY_POSITION" \
             --scoring "$GY_SCORING" \
             --limit 0 --refresh \
+            $([ "$GY_DEBUG" = "true" ] && echo --debug) \
             --csv "out/week${GY_WEEK}-${GY_POSITION}.csv" \
             | tee rankings.txt
           {
