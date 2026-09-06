@@ -32,6 +32,21 @@ CACHE_DIR = os.path.join(ROOT, "data", "cache")
 
 SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
 
+# FantasyPros' own spellings. "FLEX" and "DEF" are what everyone types, so we
+# accept them and translate.
+VALID_POSITIONS = {"QB", "RB", "WR", "TE", "K", "OP", "FLX", "DST", "IDP",
+                   "DL", "LB", "DB", "TK", "TQB", "TRB", "TWR", "TTE", "TOL",
+                   "HC", "P"}
+POSITION_ALIASES = {"FLEX": "FLX", "DEF": "DST", "D/ST": "DST", "PK": "K"}
+
+
+def resolve_position(pos: str) -> str:
+    pos = pos.strip().upper()
+    pos = POSITION_ALIASES.get(pos, pos)
+    if pos not in VALID_POSITIONS:
+        sys.exit(f"Unknown position {pos!r}. Valid: {', '.join(sorted(VALID_POSITIONS))}")
+    return pos
+
 
 # --------------------------------------------------------------------------- env
 def load_dotenv(path: str | None = None) -> None:
@@ -180,14 +195,15 @@ def write_csv(players: list[dict], path: str) -> None:
 
 # ---------------------------------------------------------------------- commands
 def cmd_rankings(args: argparse.Namespace) -> None:
-    payload = fetch_rankings(args.season, args.week, args.position.upper(),
+    position = resolve_position(args.position)
+    payload = fetch_rankings(args.season, args.week, position,
                              args.scoring.upper(), refresh=args.refresh)
     players = extract_players(payload)
     used = {norm(e["name"]) for e in load_used()}
     eligible = [p for p in players if norm(p["name"]) not in used]
     burned = len(players) - len(eligible)
 
-    print(f"Graveyard — {args.season} week {args.week} | {args.position.upper()} "
+    print(f"Graveyard — {args.season} week {args.week} | {position} "
           f"| {args.scoring.upper()} scoring")
     print(f"{len(players)} ranked, {burned} already used, {len(eligible)} eligible\n")
     print_table(eligible, args.limit)
@@ -254,7 +270,8 @@ def main(argv: list[str] | None = None) -> None:
     r = sub.add_parser("rankings", help="show eligible players for a week")
     r.add_argument("--season", type=int, default=season_default)
     r.add_argument("--week", type=int, default=default_week())
-    r.add_argument("--position", default="FLEX")
+    r.add_argument("--position", default="FLEX",
+                   help="FLEX/FLX, QB, RB, WR, TE, K, DST, OP, ...")
     r.add_argument("--scoring", default="HALF")
     r.add_argument("--limit", type=int, default=50, help="0 for all")
     r.add_argument("--csv", help="also write results to this CSV path")

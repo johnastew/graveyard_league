@@ -17,11 +17,15 @@ on:
         description: "Player names for use/unuse, comma separated"
         default: ""
       position:
-        description: "FLEX, QB, RB, WR, TE, K, DST"
+        description: "Position"
+        type: choice
         default: FLEX
+        options: [FLEX, QB, RB, WR, TE, K, DST, OP]
       scoring:
-        description: "STD, HALF, PPR"
+        description: "Scoring"
+        type: choice
         default: HALF
+        options: [HALF, PPR, STD]
 
 permissions:
   contents: write
@@ -48,6 +52,7 @@ jobs:
           FANTASYPROS_API_KEY: ${{ secrets.FANTASYPROS_API_KEY }}
           GRAVEYARD_SEASON: ${{ vars.GRAVEYARD_SEASON || '2026' }}
         run: |
+          set -o pipefail
           mkdir -p out
           python3 graveyard.py rankings \
             --week "$GY_WEEK" \
