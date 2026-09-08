@@ -153,6 +153,27 @@ what the format lets you do.
 
 Never start a player with an unresolved status flag unless you can verify active before lock.
 
+## Prior-year data has a shelf life too
+
+Every matchup input in this method — projections, strength-of-schedule stars, and the
+defensive splits analysts cite — is built on **last season's** data. Offseason personnel
+turnover can invalidate it outright, and week 1 is when that risk peaks, because there is
+no current-season data yet to correct it.
+
+Week 1 2026 example: Bucky Irving was chosen largely because Cincinnati had been 32nd in
+rushing yards allowed, 31st in yards per carry, and 2nd-most fantasy points allowed to
+backs in 2025. Derek Brown's Primer: *"we need to throw every Cincy defensive statistic in
+the trash from 2025."* The Bengals had added Dexter Lawrence, Jonathan Allen, Boye Mafe,
+Cashius Howell, Kyle Dugger and Bryan Cook. A projected elite matchup was actually neutral.
+
+- Before leaning on any defensive split, check whether that unit turned over. A new
+  coordinator, a rebuilt front seven, or a new secondary invalidates the number.
+- **Weeks 1-4, discount matchup edges and weight volume and role certainty higher.** Who
+  gets the touches is knowable in week 1; how good the opposing defense is, is not. Alvin
+  Kamara being out — handing Travis Etienne the backfield — is a harder fact than any
+  2025 defensive ranking.
+- By roughly week 5 current-season defensive data becomes usable and this caveat relaxes.
+
 ## Shelf-life caveat
 
 Decay only matters for players you would *actually start*. A QB31 with benching risk is not
@@ -167,10 +188,11 @@ reasoning. The shelf-life principle earns its keep in the genuinely useful band.
 3. Filter out anyone whose ROS rank still sits inside the band you will need later,
    weighted by pool tightness (skip this filter entirely for DST).
 4. Drop anyone with an unresolved status flag.
-5. Take the highest remaining deltas that clear the survival bar for the week's cut %.
-6. Check team/game overlap — decorrelate early in the season.
-7. Verify inactives before lock.
-8. Record the burn in `data/used_players.json` via `./gy u "Name"` **after** lineups lock.
+5. Sanity-check any matchup-based edge against offseason turnover (weeks 1-4 especially).
+6. Take the highest remaining deltas that clear the survival bar for the week's cut %.
+7. Check team/game overlap — decorrelate early in the season.
+8. Verify inactives before lock.
+9. Record the burn in `data/used_players.json` via `./gy u "Name"` **after** lineups lock.
 
 ## Season deployment plan
 
@@ -202,6 +224,11 @@ Nacua, St. Brown, Smith-Njigba, Bowers, McBride, Lamar, Allen, Hurts, Burrow, Ma
 Lawrence, Nix, Cook, K. Walker, Jeanty, Chase Brown, Hampton, Flowers, Nabers, A.J. Brown,
 Seattle and Houston DST — every negative-delta asset.
 
+Late revisions from Derek Brown's Primer: Etienne upgraded (Alvin Kamara out, full
+backfield); Adams confirmed (1st among 109 receivers in separation score and route win
+rate — his +8 delta prices hamstring risk, not decline); Irving held but his matchup
+downgraded from elite to neutral per the turnover caveat above.
+
 Deliberate exception: Pitts at TE5 is the most expensive piece, taken on a specific read
 about Tua's target volume. Validated independently — he rose TE6 -> TE5 during the week and
 carries a +3 delta.
@@ -218,6 +245,8 @@ carries a +3 delta.
   arrive as QB29s.
 - **"K and DST are both near-noise."** K yes (1.3 spread). DST no (3.4) — comparable to QB.
 - **"QB-WR stacks are the good kind of correlation."** DFS logic. Wrong for a floor format.
+- **"Cincinnati is the softest RB matchup on the board."** Built on 2025 splits. They
+  rebuilt the defensive line over the offseason. Prior-year data needs a turnover check.
 - **"Protect Jacksonville's DST12 residual."** Applied the RB scarcity rule to a loose,
   matchup-driven pool. Residual value must be weighted by pool tightness.
 
