@@ -196,9 +196,14 @@ Cashius Howell, Kyle Dugger and Bryan Cook. A projected elite matchup was actual
 - Before leaning on any defensive split, check whether that unit turned over. A new
   coordinator, a rebuilt front seven, or a new secondary invalidates the number.
 - **Weeks 1-4, discount matchup edges and weight volume and role certainty higher.** Who
-  gets the touches is knowable in week 1; how good the opposing defense is, is not. Alvin
-  Kamara being out — handing Travis Etienne the backfield — is a harder fact than any
-  2025 defensive ranking.
+  gets the touches is knowable in week 1; how good the opposing defense is, is not.
+  **But check that the "hard fact" is still true.** This principle was illustrated with
+  "Alvin Kamara is out, handing Travis Etienne the backfield" — and by Wednesday of week
+  1 Kamara was practising in a limited capacity and listed questionable, not out. A
+  role premise built on someone else's injury decays exactly as fast as the injury
+  report, and unlike a status flag on your own player it never trips the filter. **Re-
+  verify the absence that creates the role, not just the health of the player you are
+  starting.**
 - By roughly week 5 current-season defensive data becomes usable and this caveat relaxes.
 
 ## Shelf-life caveat
@@ -219,7 +224,9 @@ reasoning. The shelf-life principle earns its keep in the genuinely useful band.
 6. Take the highest remaining deltas that clear the survival bar for the week's cut %.
 7. Check team/game overlap — decorrelate early in the season.
 8. Verify inactives before lock.
-9. Record the burn in `data/used_players.json` via `./gy u "Name"` **after** lineups lock.
+9. For any starter whose role depends on another player's absence, verify that other
+   player is still out — the tooling cannot see this dependency.
+10. Record the burn in `data/used_players.json` via `./gy u "Name"` **after** lineups lock.
 
 ## Season deployment plan
 
@@ -235,13 +242,20 @@ reasoning. The shelf-life principle earns its keep in the genuinely useful band.
 | --- | --- | --- | --- | --- | --- | --- |
 | QB | Kirk Cousins | LV | QB28 | — | — | ~13.4 |
 | SFLX | Tua Tagovailoa | ATL | QB31 | — | — | ~13.5 |
-| RB | Travis Etienne Jr. | NO | RB16 | RB18 | +2 | ~13.2 |
+| RB | Travis Etienne Jr. | NO | RB16 | RB18 | +2 | ~13.2 |*
 | RB | Tony Pollard | TEN | RB27 | RB33 | +6 | 11.6 |
 | WR | Davante Adams | LAR | WR21 | WR29 | +8 | ~10.8 |
 | WR | DK Metcalf | PIT | WR31 | WR33 | +2 | 11.8 |
 | FLEX | Quentin Johnston | LAC | WR34 | WR38 | +4 | 13.1 |
 | TE | Dallas Goedert | PHI | TE8 | TE12 | +4 | 14.3 |
 | DST | Jacksonville | JAC | DST1 | — | +11 | ~8 |
+
+\* Etienne carries the lineup's only open question: Kamara is questionable, not out
+(see "Role-by-absence" below). Re-check Saturday; pivot to Chuba Hubbard (CAR,
+RB30/ROS40, +10) or Kenny Gainwell (TB, +3) if Kamara practises in full.
+
+Every one of the nine is absent from the league-wide injury report — no designation
+on any of them.
 
 Nine players, nine teams, ~110 projected. Only shared game is Tua (ATL) vs Metcalf
 (PIT) — opposite sides, a hedge, though that game carries a 42.0 total, the quietest
@@ -316,6 +330,26 @@ Higgins, Fannin, Seattle and Houston DST.
   kicked off, or were openly conditional on a role nobody had confirmed.
 - Prefer sources that state *why* a player is ranked where he is. A rank alone cannot
   be cross-checked against the turnover caveat or the role-certainty rule.
+
+## Role-by-absence: a second-order status risk
+
+The status filter asks whether *your* player is healthy. It cannot ask whether the
+player whose absence created your player's role is still absent. Those are different
+questions and the second one is not on your player's injury line at all.
+
+Week 1 2026 produced one of each:
+
+- **Tua Tagovailoa** was taken as a punt carrying benching risk, since Michael Penix Jr.
+  sat one ECR spot behind him. The injury report then showed Penix out for the week with
+  a torn ACL — the risk priced into the pick had already evaporated.
+- **Travis Etienne** was taken because Alvin Kamara was out. By Wednesday Kamara was a
+  limited participant and questionable. Etienne's own line stayed clean the whole time,
+  so nothing in the tooling flagged it.
+
+**Rule: for every starter whose case rests on someone else being absent, check that
+other player on the injury report too.** `./gy s` cannot do this — it reads the ranked
+board, which carries no dependency between players. It is a manual step in the
+checklist, alongside verifying actives.
 
 ## Bank watch
 
