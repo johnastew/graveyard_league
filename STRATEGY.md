@@ -351,6 +351,31 @@ other player on the injury report too.** `./gy s` cannot do this — it reads th
 board, which carries no dependency between players. It is a manual step in the
 checklist, alongside verifying actives.
 
+## Residual is measured against the usable pool, not the hoard band
+
+The hoard band says *do not spend this player*. It is not the same line as *this player
+still has value later*, and conflating them under-counts residual for the tight
+positions. A TE12 sits outside the band (8) but well inside a usable pool of ~18-20, so
+burning him does cost something. A WR29 sits outside the band (15) and inside a usable
+pool of ~60-70 — but WR runs only ~65% consumption, so the surplus refills faster than
+you burn it and the residual really is nil.
+
+Before asking "can I go cheaper here?", check the slot against the pool it draws from:
+
+| Pos | Consumption | Going deeper buys you |
+| --- | --- | --- |
+| QB | ~115% | a lot, until you fall past ~QB28 — below that there is nothing left |
+| RB | ~100% | a lot, anywhere inside ~RB30 |
+| TE | ~90% | real value inside ~TE18 |
+| WR | ~65% | **almost nothing below ~WR15** — the pool outruns the burn |
+| DST | 53% | nothing, ever |
+
+The practical test: **going deeper only pays when the player you drop is someone you
+would actually start again.** Week 1 2026 ran into this three times — the lineup had
+already been taken down to two QBs, three WRs and a DST with no residual between them,
+so further "cheaper" moves at WR were selling points for nothing, while the RB and TE
+slots still held assets worth preserving.
+
 ## Bank watch
 
 - **Brock Bowers (knee)** is out for week 1 after a meniscus trim. Reporting split on
