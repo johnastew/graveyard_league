@@ -121,18 +121,23 @@ def save_used(entries: list[dict]) -> None:
 
 # --------------------------------------------------------------------------- api
 def fetch_rankings(season: int, week: int, position: str, scoring: str,
-                   refresh: bool = False) -> dict:
+                   refresh: bool = False, ranking_type: str | None = None) -> dict:
+    # ROS boards are not week-scoped; the API wants week 0 with type=ros.
+    ranking_type = ranking_type or ("weekly" if week else "draft")
+    if ranking_type == "ros":
+        week = 0
     params = {
         "position": position,
         "scoring": scoring,
         "week": str(week),
-        "type": "weekly" if week else "draft",
+        "type": ranking_type,
         "experts": "available",
     }
     url = f"{BASE_URL}/nfl/{season}/consensus-rankings?" + urllib.parse.urlencode(params)
 
     os.makedirs(CACHE_DIR, exist_ok=True)
-    cache = os.path.join(CACHE_DIR, f"{season}-wk{week}-{position}-{scoring}.json")
+    cache = os.path.join(CACHE_DIR,
+                         f"{season}-wk{week}-{position}-{scoring}-{ranking_type}.json")
     if os.path.exists(cache) and not refresh:
         with open(cache, encoding="utf-8") as fh:
             return json.load(fh)
@@ -147,7 +152,8 @@ def fetch_rankings(season: int, week: int, position: str, scoring: str,
             payload = json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", "replace")[:400]
-        sys.exit(f"FantasyPros API error {exc.code} for {position}/{scoring} week {week}:\n{body}")
+        sys.exit(f"FantasyPros API error {exc.code} for {position}/{scoring} "
+                 f"{ranking_type} week {week}:\n{body}")
     except urllib.error.URLError as exc:
         sys.exit(f"Could not reach FantasyPros: {exc.reason}")
 
@@ -173,6 +179,9 @@ def extract_players(payload: dict) -> list[dict]:
             "worst": as_num(p.get("rank_max")),
             "stdev": as_num(p.get("rank_std")),
             "rostered": as_num(p.get("player_owned_avg")),
+            # Spelling varies across FantasyPros payloads; take whichever is set.
+            "status": (p.get("player_injury_status") or p.get("injury_status")
+                       or p.get("player_status") or "").strip(),
         })
     return [p for p in out if p["name"]]
 
@@ -230,13 +239,13 @@ POINT_CURVES = {
 # Slot -> positions that may fill it. Mirrors the League Tycoon Graveyard board.
 LINEUP_SLOTS = [
     ("QB", ("QB",)),
-    ("RB", ("RB",)),
-    ("RB", ("RB",)),
-    ("WR", ("WR",)),
-    ("WR", ("WR",)),
-    ("TE", ("TE",)),
-    ("FLEX", ("RB", "WR", "TE")),
     ("SFLX", ("QB", "RB", "WR", "TE")),
+    ("RB", ("RB",)),
+    ("RB", ("RB",)),
+    ("WR", ("WR",)),
+    ("WR", ("WR",)),
+    ("FLEX", ("RB", "WR", "TE")),
+    ("TE", ("TE",)),
     ("DST", ("DST",)),
 ]
 
@@ -453,6 +462,140 @@ def print_lineup(lineup: list[dict | None], target: float, made_it: bool) -> Non
           "-- the players do not all bust at once.")
 
 
+# ---------------------------------------------------------------- strategy mode
+# The elimination curve from STRATEGY.md. The cut more than doubles from week 1
+# to week 11, which is the whole reason to spend cheap assets early.
+ELIMINATION = {
+    1: (752, 87, 11.6), 2: (665, 82, 12.3), 3: (583, 76, 13.0),
+    4: (507, 70, 13.8), 5: (437, 65, 14.9), 6: (372, 59, 15.9),
+    7: (313, 54, 17.3), 8: (259, 49, 18.9), 9: (210, 43, 20.5),
+    10: (167, 38, 22.8), 11: (129, 33, 25.6),
+}
+
+# Residual-value filter: the rest-of-season positional band to keep in the bank.
+# A player whose ROS rank is inside this band is one you will still want later,
+# so he is not a burn candidate however good his matchup is this week. Weighted
+# by pool tightness -- see the tightness table in STRATEGY.md. DST is absent on
+# purpose: matchups regenerate weekly, so there is no future week where you need
+# a specific defense. Never filter it.
+HOARD_BAND = {"QB": 12, "RB": 12, "TE": 8, "WR": 15}
+
+# Weeks in which prior-year matchup data is least trustworthy, so volume and
+# role certainty outrank matchup quality.
+STALE_DATA_WEEKS = 4
+
+# From this week on the cut is steep enough that you must beat closer to the
+# median: deploy the bank, put a real QB in superflex, and stacking becomes
+# defensible because ceiling starts to matter.
+ENDGAME_WEEK = 9
+
+
+def positional_rank(player: dict) -> float | None:
+    return pos_rank_number(player)
+
+
+def delta_board(season: int, week: int, position: str, scoring: str,
+                refresh: bool = False) -> list[dict]:
+    """Join this week's board against the rest-of-season board.
+
+    delta = ROS rank - weekly rank. Positive means he is ranked better this week
+    than for the season as a whole, so this is the week to spend him.
+    """
+    weekly = extract_players(fetch_rankings(season, week, position, scoring,
+                                            refresh=refresh, ranking_type="weekly"))
+    ros = extract_players(fetch_rankings(season, week, position, scoring,
+                                         refresh=refresh, ranking_type="ros"))
+    ros_rank = {}
+    for p in ros:
+        r = positional_rank(p)
+        if r is not None:
+            ros_rank[norm(p["name"])] = r
+
+    out = []
+    for p in weekly:
+        wk = positional_rank(p)
+        rs = ros_rank.get(norm(p["name"]))
+        if wk is None:
+            continue
+        row = dict(p)
+        row["position"] = p["position"] or position
+        row["wk_rank"] = wk
+        row["ros_rank"] = rs
+        # No ROS ranking at all means the experts do not see him as a season
+        # asset -- nothing to hoard, so treat the whole gap as spendable.
+        row["delta"] = (rs - wk) if rs is not None else None
+        out.append(row)
+    return out
+
+
+def classify(row: dict, week: int) -> tuple[bool, str]:
+    """Is this player a burn candidate this week, and if not, why not?"""
+    pos = (row["position"] or "").upper()
+    if row.get("status"):
+        return False, f"status: {row['status']}"
+    band = HOARD_BAND.get(pos)
+    if band is not None and row["ros_rank"] is not None and row["ros_rank"] <= band:
+        return False, f"bank ({pos}{row['ros_rank']:.0f} ROS)"
+    if row["delta"] is None:
+        return True, "no ROS rank"
+    if row["delta"] < 0:
+        return False, "negative delta"
+    return True, ""
+
+
+def pick_slate(candidates: list[dict], decorrelate: bool,
+               punt_superflex: bool = True) -> list[dict | None]:
+    """Highest delta per slot, scarcest slot first, optionally one team each."""
+    by_slot = []
+    for slot, allowed in LINEUP_SLOTS:
+        # Punting superflex is a weeks-1-5 move. Late, it has to be a real QB.
+        if slot == "SFLX" and not punt_superflex:
+            allowed = ("QB",)
+        pool = [p for p in candidates if (p["position"] or "").upper() in allowed]
+        pool.sort(key=lambda p: (-(p["delta"] if p["delta"] is not None else 0),
+                                 p["wk_rank"]))
+        by_slot.append(pool)
+
+    slate: list[dict | None] = [None] * len(LINEUP_SLOTS)
+    used_names: set[str] = set()
+    used_teams: set[str] = set()
+    for idx in sorted(range(len(LINEUP_SLOTS)), key=lambda i: len(by_slot[i])):
+        for cand in by_slot[idx]:
+            if norm(cand["name"]) in used_names:
+                continue
+            team = str(cand.get("team") or "")
+            if decorrelate and team and team in used_teams:
+                continue
+            slate[idx] = cand
+            used_names.add(norm(cand["name"]))
+            if team:
+                used_teams.add(team)
+            break
+    return slate
+
+
+def print_slate(slate: list[dict | None], week: int) -> None:
+    hdr = (f"{'SLOT':<6} {'PLAYER':<24} {'POS':<4} {'TEAM':<4} {'MATCHUP':<8} "
+           f"{'WK':>5} {'ROS':>5} {'DELTA':>6}")
+    print(hdr)
+    print("-" * len(hdr))
+    for (slot, _), p in zip(LINEUP_SLOTS, slate):
+        if not p:
+            print(f"{slot:<6} {'-- no candidate --':<24}")
+            continue
+        matchup = p["opponent"] or (f"BYE {p['bye']}" if p["bye"] else "")
+        ros = f"{p['ros_rank']:.0f}" if p["ros_rank"] is not None else "-"
+        delta = f"{p['delta']:+.0f}" if p["delta"] is not None else "-"
+        print(f"{slot:<6} {p['name'][:24]:<24} "
+              f"{str(p['position'])[:4]:<4} {str(p['team'])[:4]:<4} "
+              f"{str(matchup)[:8]:<8} {p['wk_rank']:>5.0f} {ros:>5} {delta:>6}")
+    teams = [str(p.get("team")) for p in slate if p and p.get("team")]
+    dupes = {t for t in teams if teams.count(t) > 1}
+    print("-" * len(hdr))
+    print(f"{len(teams)} players, {len(set(teams))} teams"
+          + (f" -- SAME-TEAM PAIR: {', '.join(sorted(dupes))}" if dupes else ""))
+
+
 # ---------------------------------------------------------------------- commands
 def cmd_rankings(args: argparse.Namespace) -> None:
     position = resolve_position(args.position)
@@ -506,6 +649,79 @@ def cmd_cheapest(args: argparse.Namespace) -> None:
     print_lineup(lineup, args.target, made_it)
     if args.csv:
         write_csv([p for p in lineup if p], args.csv)
+
+
+def cmd_strategy(args: argparse.Namespace) -> None:
+    scoring = args.scoring.upper()
+    week = args.week
+    used = {norm(e["name"]) for e in load_used()}
+
+    print(f"Graveyard — {args.season} week {week} | strategy | {scoring} scoring")
+    if week in ELIMINATION:
+        field, reaped, pct = ELIMINATION[week]
+        print(f"{field} alive, {reaped} cut this week ({pct}%). "
+              + ("Cheapest survivable lineup; spend decaying assets."
+                 if pct < 15 else
+                 "Mid-tier; ranks ~8-15." if pct < 20 else
+                 "Deploy the bank. Do not punt."))
+    else:
+        print(f"No elimination row for week {week} — check the league page.")
+
+    rows, burned = [], 0
+    for pos in LINEUP_POSITIONS:
+        for row in delta_board(args.season, week, pos, scoring, refresh=args.refresh):
+            if norm(row["name"]) in used:
+                burned += 1
+                continue
+            rows.append(row)
+
+    candidates, held = [], []
+    for row in rows:
+        ok, why = classify(row, week)
+        (candidates if ok else held).append((row, why))
+    candidates = [r for r, _ in candidates]
+
+    print(f"{len(rows)} eligible, {burned} already burned, "
+          f"{len(candidates)} spendable, {len(held)} held back")
+    if week <= STALE_DATA_WEEKS:
+        print(f"!! Week {week}: matchup inputs are last season's data. Weight volume "
+              f"and role\n!! certainty over matchup quality, and check any defensive "
+              f"split for turnover.")
+    print()
+
+    # Decorrelate while the cut is shallow; from the endgame on, ceiling matters
+    # and same-game exposure is an acceptable price for it.
+    decorrelate = week < ENDGAME_WEEK and not args.no_decorrelate
+    slate = pick_slate(candidates, decorrelate=decorrelate,
+                       punt_superflex=week < ENDGAME_WEEK)
+    if week >= ENDGAME_WEEK:
+        print(f"Week {week} is endgame: superflex must be a real QB, and "
+              f"same-team pairs are allowed.\n")
+    print_slate(slate, week)
+
+    print(f"\nTop burn candidates by delta:")
+    for pos in LINEUP_POSITIONS:
+        best = sorted((c for c in candidates if (c["position"] or "").upper() == pos),
+                      key=lambda p: -(p["delta"] if p["delta"] is not None else 0))[:args.show]
+        line = ", ".join(
+            f"{p['name']} ({pos}{p['wk_rank']:.0f}, "
+            f"{('%+d' % p['delta']) if p['delta'] is not None else 'n/a'})"
+            for p in best)
+        print(f"  {pos:<4} {line}")
+
+    if args.explain:
+        print(f"\nHeld back:")
+        for row, why in sorted(held, key=lambda rw: rw[0]["wk_rank"])[:args.show * 4]:
+            print(f"  {row['name'][:24]:<24} {str(row['position']):<4} "
+                  f"wk{row['wk_rank']:.0f}  {why}")
+
+    print("\nDELTA is ROS rank minus this week's rank: positive means he is ranked "
+          "better\nnow than for the season, so this is the week to spend him. Players "
+          "inside the\nper-position hoard band are held back regardless of delta "
+          "(never for DST).\nVerify inactives before lock, then record burns with "
+          "./gy u \"Name\".")
+    if args.csv:
+        write_csv([p for p in slate if p], args.csv)
 
 
 def cmd_use(args: argparse.Namespace) -> None:
@@ -591,6 +807,21 @@ def main(argv: list[str] | None = None) -> None:
     c.add_argument("--csv", help="also write the lineup to this CSV path")
     c.add_argument("--refresh", action="store_true", help="bypass the local cache")
     c.set_defaults(func=cmd_cheapest)
+
+    g = sub.add_parser("strategy",
+                       help="delta board + recommended slate for the week")
+    g.add_argument("--season", type=int, default=season_default)
+    g.add_argument("--week", type=int, default=default_week())
+    g.add_argument("--scoring", default="HALF")
+    g.add_argument("--show", type=int, default=6,
+                   help="how many burn candidates to list per position")
+    g.add_argument("--explain", action="store_true",
+                   help="also list who was held back and why")
+    g.add_argument("--no-decorrelate", action="store_true",
+                   help=f"allow same-team pairs (automatic from week {ENDGAME_WEEK})")
+    g.add_argument("--csv", help="also write the slate to this CSV path")
+    g.add_argument("--refresh", action="store_true", help="bypass the local cache")
+    g.set_defaults(func=cmd_strategy)
 
     u = sub.add_parser("use", help="mark players as started (locks them out)")
     u.add_argument("names", nargs="+")

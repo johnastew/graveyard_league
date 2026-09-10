@@ -257,8 +257,17 @@ carries a +3 delta.
   in the late weeks when the QB board is thin.
 - Contest end week (assumed 17 for all pool math above).
 
-## Tooling backlog
+## Tooling
 
-`graveyard.py` should grow a `--strategy` mode that joins weekly and ROS ranks into a single
-delta column, applies the residual filter per position, excludes burned players, and prints
-the recommended slate. That turns the weekly checklist above into one command.
+The weekly checklist above is implemented as `./gy s` (`graveyard.py strategy`). It
+joins the weekly and ROS boards into a delta column, drops burned players and status
+flags, applies the per-position residual filter (`HOARD_BAND` in `graveyard.py`, DST
+exempt), and prints the recommended slate plus the top burn candidates per position.
+
+It reads the week off the elimination table: decorrelates and allows a superflex punt
+through week 8, requires a real QB in superflex and permits same-team pairs from week 9
+(`ENDGAME_WEEK`), and warns about stale prior-year data through week 4.
+
+Steps it cannot do for you: verifying inactives before lock (step 8), and the
+offseason-turnover sanity check on any matchup edge (step 5). `--explain` shows who was
+held back and why, so the filter never silently hides a player you wanted.

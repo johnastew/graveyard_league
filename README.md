@@ -23,6 +23,8 @@ beyond the Python 3 standard library.
 ```bash
 ./gy                      # eligible players for the current week
 ./gy 5                    # eligible players for week 5
+./gy s                    # delta board + recommended slate (the weekly driver)
+./gy s 5                  # ...for week 5
 ./gy c                    # cheapest lineup that still clears the floor target
 ./gy c 90                 # ...with the floor target set to 90
 ./gy u "Bijan Robinson"   # mark used after you start them
@@ -46,6 +48,42 @@ python3 graveyard.py cheapest --week 5 --target 95 --reuse 2.0 --csv out/wk5.csv
 - `--scoring` — `STD`, `HALF`, `PPR`
 - `--limit 0` — print everyone instead of the top 50
 - `--refresh` — bypass the on-disk response cache in `data/cache/`
+
+## Strategy mode
+
+`./gy s` is the weekly driver. It implements the checklist in
+[STRATEGY.md](STRATEGY.md) as one command:
+
+1. Pulls the weekly **and** rest-of-season boards for QB/RB/WR/TE/DST.
+2. Joins them into `delta = ROS rank - weekly rank`. Positive means he is ranked
+   better this week than for the season, so this is the week to spend him.
+3. Drops everyone already burned (`data/used_players.json`).
+4. Drops anyone carrying a status flag — a bust here consumes the asset
+   permanently, so an unresolved flag is disqualifying, not a discount.
+5. Applies the per-position residual filter: a player whose ROS rank sits inside
+   `HOARD_BAND` is one you will still want later, so he is held back however good
+   his matchup is. **DST is exempt** — matchups regenerate weekly and no future
+   week needs a specific defense.
+6. Fills the nine slots with the highest remaining deltas, one team each.
+
+It adapts to the week from the elimination table: through week 8 it decorrelates
+and will punt superflex to a WR/RB; from week 9 (`ENDGAME_WEEK`) superflex must be
+a real QB and same-team pairs are allowed, because the cut is steep enough that
+ceiling starts to matter. In weeks 1-4 it warns that every matchup input is last
+season's data.
+
+```bash
+./gy s                       # this week
+python3 graveyard.py strategy --week 5 --explain --show 10
+```
+
+`--explain` lists who was held back and why (`bank (RB9 ROS)`, `status: Q`,
+`negative delta`) — use it to check the filter is not hiding someone you want.
+`--no-decorrelate` allows same-team pairs early.
+
+The slate is a starting point, not a verdict: it cannot see a beat writer's
+snap-count note or a Saturday inactive. Verify before lock, then record the burns
+with `./gy u "Name"`.
 
 ## Cheapest-lineup mode
 

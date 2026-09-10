@@ -2,6 +2,8 @@
 # Short wrapper so mobile commands stay tiny:
 #   ./gy            -> this week's eligible list (top 50)
 #   ./gy 5          -> week 5 eligible list
+#   ./gy s          -> delta board + recommended slate for this week
+#   ./gy s 5        -> ...for week 5
 #   ./gy c          -> cheapest lineup clearing the default floor target
 #   ./gy c 90       -> cheapest lineup clearing a floor of 90
 #   ./gy u "Name"   -> mark a player used
@@ -10,6 +12,11 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 case "${1:-}" in
+  s) shift
+     if [[ "${1:-}" =~ ^[0-9]+$ ]]; then
+       wk="$1"; shift; exec python3 graveyard.py strategy --week "$wk" "$@"
+     fi
+     exec python3 graveyard.py strategy "$@" ;;
   c) shift
      if [[ "${1:-}" =~ ^[0-9]+([.][0-9]+)?$ ]]; then
        t="$1"; shift; exec python3 graveyard.py cheapest --target "$t" "$@"
