@@ -5,6 +5,9 @@ fantasy football: pick from the whole NFL pool each week, but every player you
 start is locked out for the rest of the season. This tool pulls FantasyPros
 consensus rankings and subtracts everyone you've already burned.
 
+Strategy, the weekly decision method, and the running lineup log live in
+[`STRATEGY.md`](STRATEGY.md). Read that before setting a lineup.
+
 ## Setup
 
 ```bash
@@ -90,6 +93,7 @@ proven optimum.
 
 | path | what |
 | --- | --- |
+| `STRATEGY.md` | format doctrine, the weekly method, and the lineup log |
 | `graveyard.py` | the CLI |
 | `gy` | short wrapper for typing on a phone |
 | `data/used_players.json` | your burned players — commit this to keep it |
