@@ -20,6 +20,8 @@ beyond the Python 3 standard library.
 ```bash
 ./gy                      # eligible players for the current week
 ./gy 5                    # eligible players for week 5
+./gy c                    # cheapest lineup that still clears the floor target
+./gy c 90                 # ...with the floor target set to 90
 ./gy u "Bijan Robinson"   # mark used after you start them
 ./gy l                    # list everyone burned so far
 ./gy x "Bijan Robinson"   # undo a mistaken mark
@@ -33,10 +35,56 @@ python3 graveyard.py rankings --week 5 --position FLEX --scoring HALF \
 python3 graveyard.py use "Player Name" --week 5
 ```
 
+```bash
+python3 graveyard.py cheapest --week 5 --target 95 --reuse 2.0 --csv out/wk5.csv
+```
+
 - `--position` — `FLEX`, `QB`, `RB`, `WR`, `TE`, `K`, `DST`, `OP`, …
 - `--scoring` — `STD`, `HALF`, `PPR`
 - `--limit 0` — print everyone instead of the top 50
 - `--refresh` — bypass the on-disk response cache in `data/cache/`
+
+## Cheapest-lineup mode
+
+`cheapest` answers a different question from `rankings`. Graveyard is a survival
+format: you do not need to win the week, you need to not finish in the bottom
+slice, and every player you start is gone for good. So the right lineup is the
+one that clears the cut using the *least valuable* players who still clear it,
+banking the studs for later.
+
+It pulls QB/RB/WR/TE/DST rankings, drops everyone burned and everyone on bye,
+and fills the nine-slot board (QB, RB, RB, WR, WR, TE, FLEX, SFLX, DST) to
+minimize value burned subject to the lineup's floor clearing `--target`.
+
+Three numbers per player:
+
+| column | meaning |
+| --- | --- |
+| `FLOOR` | points if the most pessimistic expert is right (from the consensus rank spread) |
+| `PROJ` | points at consensus rank |
+| `BURN` | season-long value given up by starting him |
+
+`BURN` is `PROJ` plus the player's points above replacement times `--reuse`
+(default 2.0), because spending a stud costs you every future week you could
+have used him, not just this week's points. `--reuse 0` prices a burn at one
+week flat.
+
+**Set `--target` from the actual cut line, not from a good score.** If the
+bottom 122 of 1052 go home, look at what last week's 930th-place team scored
+and add a safety margin — that number is usually far below what a
+maximize-the-week lineup produces, and the gap is exactly the value this mode
+saves you.
+
+### Caveat on the numbers
+
+FantasyPros' consensus endpoint returns *ranks*, not projected points, so the
+floor and projection come from a rank-to-points curve defined in
+`POINT_CURVES` — coarse anchor values, linearly interpolated. They are good
+enough to compare slots and pick the next upgrade, and they are not real
+projections. Override them with `--curves file.json` (same shape) if you have
+better ones. The optimizer itself is a greedy heuristic — cheapest legal
+lineup, then repeated best floor-gained-per-value-spent upgrades — not a
+proven optimum.
 
 ## Files
 

@@ -7,6 +7,7 @@ League Tycoon "Graveyard" rules).
 
 Usage:
     ./graveyard.py rankings [--week N] [--position FLEX] [--scoring HALF]
+    ./graveyard.py cheapest [--week N] [--target 100] [--scoring HALF]
     ./graveyard.py use "Ja'Marr Chase" [more names...]
     ./graveyard.py unuse "Ja'Marr Chase"
     ./graveyard.py used
@@ -210,6 +211,237 @@ def write_csv(players: list[dict], path: str) -> None:
     print(f"\nWrote {len(players)} rows to {path}")
 
 
+# ------------------------------------------------------------------ value model
+# The consensus-rankings endpoint gives ranks, not points, so a lineup total has
+# to come from a rank -> points curve. These are anchor points (positional rank,
+# half-PPR points) for a typical week, linearly interpolated between and held
+# flat outside. They are deliberately coarse: the optimizer only needs the
+# ordering and the rough shape of the drop-off to pick a slot to upgrade.
+# Override any of it with --curves path/to/curves.json using the same shape.
+POINT_CURVES = {
+    "QB":  [(1, 21.0), (6, 19.0), (12, 16.5), (20, 13.5), (32, 10.5), (48, 6.0)],
+    "RB":  [(1, 19.0), (6, 14.5), (12, 11.5), (24, 8.5), (48, 5.0), (80, 2.0)],
+    "WR":  [(1, 18.0), (6, 14.0), (12, 11.5), (24, 8.5), (48, 5.5), (90, 2.0)],
+    "TE":  [(1, 15.0), (4, 10.5), (12, 7.0), (24, 4.5), (40, 2.0)],
+    "DST": [(1, 10.0), (6, 8.0), (12, 6.5), (20, 5.0), (32, 3.5)],
+    "K":   [(1, 9.5), (6, 8.5), (12, 7.5), (24, 6.0), (32, 5.0)],
+}
+
+# Slot -> positions that may fill it. Mirrors the League Tycoon Graveyard board.
+LINEUP_SLOTS = [
+    ("QB", ("QB",)),
+    ("RB", ("RB",)),
+    ("RB", ("RB",)),
+    ("WR", ("WR",)),
+    ("WR", ("WR",)),
+    ("TE", ("TE",)),
+    ("FLEX", ("RB", "WR", "TE")),
+    ("SFLX", ("QB", "RB", "WR", "TE")),
+    ("DST", ("DST",)),
+]
+
+# Positions to pull rankings for. One API call each, all cached.
+LINEUP_POSITIONS = ("QB", "RB", "WR", "TE", "DST")
+
+# Roughly the last rank at each position you could stream off waivers in any
+# given week. Points above this line are what actually make a player scarce,
+# and so are what you are really spending when Graveyard burns him.
+REPLACEMENT_RANK = {"QB": 24, "RB": 48, "WR": 60, "TE": 24, "DST": 24, "K": 24}
+
+# How many future weeks' worth of that scarcity you give up by starting a player
+# now. 0 would price a burn at one week of points, which badly underrates the
+# cost of spending a stud in a week you did not need him.
+DEFAULT_REUSE = 2.0
+
+# How many candidates per slot the upgrade search looks at each pass. The pool
+# is sorted by floor, so this only ever trims players too weak to be an upgrade.
+UPGRADE_WIDTH = 60
+
+
+def load_curves(path: str | None) -> dict:
+    if not path:
+        return POINT_CURVES
+    with open(path, encoding="utf-8") as fh:
+        raw = json.load(fh)
+    curves = dict(POINT_CURVES)
+    for pos, pts in raw.items():
+        curves[pos.upper()] = sorted((float(r), float(p)) for r, p in pts)
+    return curves
+
+
+def curve_points(curves: dict, position: str, rank: float | None) -> float:
+    """Interpolate a positional rank into weekly points."""
+    pts = curves.get((position or "").upper())
+    if not pts or rank is None:
+        return 0.0
+    if rank <= pts[0][0]:
+        return pts[0][1]
+    if rank >= pts[-1][0]:
+        return pts[-1][1]
+    for (r0, p0), (r1, p1) in zip(pts, pts[1:]):
+        if r0 <= rank <= r1:
+            span = r1 - r0
+            if span <= 0:
+                return p1
+            return p0 + (p1 - p0) * (rank - r0) / span
+    return pts[-1][1]
+
+
+def pos_rank_number(player: dict) -> float | None:
+    """'RB14' -> 14. Falls back to the rank within this position's fetch."""
+    m = re.search(r"(\d+)", str(player.get("pos_rank") or ""))
+    if m:
+        return float(m.group(1))
+    return as_num(player.get("rank"))
+
+
+def score_player(player: dict, curves: dict, reuse: float = DEFAULT_REUSE) -> dict:
+    """Attach floor / projection / value to a ranked player.
+
+    floor      what he is worth if the most pessimistic expert is right
+               (rank_max, the worst rank any expert gave him)
+    projection what he is worth at consensus rank
+    value      what starting him costs you, since Graveyard burns him for the
+               season: this week's points plus the scarcity you can no longer
+               spend later. A player at replacement level costs about what he
+               scores, because you could always find another like him; a stud
+               costs several times that, because you only get him once.
+    """
+    pos = player["position"]
+    consensus = pos_rank_number(player)
+    # rank_min/rank_max are ranks over the same positional list, so a *higher*
+    # number is the pessimistic end.
+    worst = player.get("worst")
+    spread = None
+    if worst is not None and consensus is not None:
+        # rank_min/max come back over the full-list ranking; keep the downside
+        # relative to consensus so it stays in positional-rank space.
+        best = player.get("best")
+        if best is not None and worst >= best:
+            spread = worst - best
+    downside = consensus if consensus is not None else None
+    if downside is not None and spread:
+        downside = downside + spread / 2.0
+    scored = dict(player)
+    scored["projection"] = curve_points(curves, pos, consensus)
+    scored["floor"] = curve_points(curves, pos, downside)
+    replacement = curve_points(curves, pos, REPLACEMENT_RANK.get(pos.upper()))
+    surplus = max(0.0, scored["projection"] - replacement)
+    scored["value"] = scored["projection"] + surplus * reuse
+    return scored
+
+
+def build_pool(season: int, week: int, scoring: str, curves: dict,
+               reuse: float = DEFAULT_REUSE, refresh: bool = False) -> list[dict]:
+    used = {norm(e["name"]) for e in load_used()}
+    pool, seen = [], set()
+    for pos in LINEUP_POSITIONS:
+        payload = fetch_rankings(season, week, pos, scoring, refresh=refresh)
+        for p in extract_players(payload):
+            key = norm(p["name"])
+            if key in used or key in seen:
+                continue
+            # A player on bye cannot score; leave him out entirely.
+            if p["opponent"] in ("", None) and p["bye"] and str(p["bye"]) == str(week):
+                continue
+            p["position"] = p["position"] or pos
+            seen.add(key)
+            pool.append(score_player(p, curves, reuse))
+    return pool
+
+
+# ------------------------------------------------------------------- optimizer
+def cheapest_lineup(pool: list[dict], target: float) -> tuple[list[dict | None], bool]:
+    """Cheapest lineup (least value burned) whose floors sum to >= target.
+
+    Greedy: start from the cheapest legal lineup, then repeatedly make the
+    upgrade with the best floor gained per point of value spent. That is a
+    heuristic, not a proven optimum, but the value curve is smooth enough that
+    the picks it makes are the ones you would make by hand.
+    """
+    by_slot = []
+    for _, allowed in LINEUP_SLOTS:
+        cands = [p for p in pool if p["position"] in allowed]
+        cands.sort(key=lambda p: (p["value"], p["name"]))
+        by_slot.append(cands)
+
+    lineup: list[dict | None] = [None] * len(LINEUP_SLOTS)
+    taken: set[str] = set()
+
+    # Scarcest slot first, so a thin position is not left with nothing.
+    for idx in sorted(range(len(LINEUP_SLOTS)), key=lambda i: len(by_slot[i])):
+        for cand in by_slot[idx]:
+            if norm(cand["name"]) not in taken:
+                lineup[idx] = cand
+                taken.add(norm(cand["name"]))
+                break
+
+    def total(key: str) -> float:
+        return sum(p[key] for p in lineup if p)
+
+    while total("floor") < target:
+        best = None  # (efficiency, slot index, candidate)
+        for idx, cands in enumerate(by_slot):
+            current = lineup[idx]
+            base_floor = current["floor"] if current else 0.0
+            base_value = current["value"] if current else 0.0
+            ranked = sorted(cands, key=lambda p: -p["floor"])[:UPGRADE_WIDTH]
+            for cand in ranked:
+                if norm(cand["name"]) in taken and cand is not current:
+                    continue
+                d_floor = cand["floor"] - base_floor
+                d_value = cand["value"] - base_value
+                if d_floor <= 1e-9:
+                    continue
+                # A free or cheaper upgrade is always worth taking.
+                eff = d_floor / d_value if d_value > 1e-9 else float("inf")
+                if best is None or eff > best[0]:
+                    best = (eff, idx, cand)
+        if best is None:
+            return lineup, False  # target is out of reach with what is left
+        _, idx, cand = best
+        if lineup[idx]:
+            taken.discard(norm(lineup[idx]["name"]))
+        lineup[idx] = cand
+        taken.add(norm(cand["name"]))
+
+    return lineup, True
+
+
+def print_lineup(lineup: list[dict | None], target: float, made_it: bool) -> None:
+    hdr = (f"{'SLOT':<6} {'PLAYER':<24} {'POS':<4} {'TEAM':<4} {'MATCHUP':<8} "
+           f"{'FLOOR':>6} {'PROJ':>6} {'BURN':>6}")
+    print(hdr)
+    print("-" * len(hdr))
+    for (slot, _), p in zip(LINEUP_SLOTS, lineup):
+        if not p:
+            print(f"{slot:<6} {'-- nobody eligible --':<24}")
+            continue
+        matchup = p["opponent"] or (f"BYE {p['bye']}" if p["bye"] else "")
+        print(f"{slot:<6} {p['name'][:24]:<24} {str(p['position'])[:4]:<4} "
+              f"{str(p['team'])[:4]:<4} {str(matchup)[:8]:<8} "
+              f"{p['floor']:>6.1f} {p['projection']:>6.1f} {p['value']:>6.1f}")
+    floor = sum(p["floor"] for p in lineup if p)
+    proj = sum(p["projection"] for p in lineup if p)
+    burn = sum(p["value"] for p in lineup if p)
+    print("-" * len(hdr))
+    print(f"{'TOTAL':<6} {'':<24} {'':<4} {'':<4} {'':<8} "
+          f"{floor:>6.1f} {proj:>6.1f} {burn:>6.1f}")
+    print()
+    if made_it:
+        print(f"Floor {floor:.1f} clears the {target:.1f} target by {floor - target:.1f}, "
+              f"burning {burn:.1f} points of season-long value.")
+    else:
+        print(f"!! Best reachable floor is {floor:.1f}, short of the {target:.1f} target.")
+        print("!! Too much of the pool is already burned — lower --target or accept "
+              "the risk.")
+    print("\nFLOOR is the pessimistic-expert case, PROJ the consensus case, and "
+          "BURN what\nyou give up for the rest of the season by starting him. "
+          "The target is a floor,\nnot a projection: the point is to clear the "
+          "cut with the cheapest players who\nstill clear it, not to maximize "
+          "the week.")
+
+
 # ---------------------------------------------------------------------- commands
 def cmd_rankings(args: argparse.Namespace) -> None:
     position = resolve_position(args.position)
@@ -245,6 +477,24 @@ def cmd_rankings(args: argparse.Namespace) -> None:
     print_table(eligible, args.limit)
     if args.csv:
         write_csv(eligible, args.csv)
+
+
+def cmd_cheapest(args: argparse.Namespace) -> None:
+    curves = load_curves(args.curves)
+    scoring = args.scoring.upper()
+    pool = build_pool(args.season, args.week, scoring, curves, reuse=args.reuse,
+                      refresh=args.refresh)
+    used = len(load_used())
+
+    print(f"Graveyard — {args.season} week {args.week} | cheapest lineup "
+          f"| {scoring} scoring")
+    print(f"{len(pool)} eligible across {'/'.join(LINEUP_POSITIONS)}, "
+          f"{used} already used, floor target {args.target:.1f}")
+    print()
+    lineup, made_it = cheapest_lineup(pool, args.target)
+    print_lineup(lineup, args.target, made_it)
+    if args.csv:
+        write_csv([p for p in lineup if p], args.csv)
 
 
 def cmd_use(args: argparse.Namespace) -> None:
@@ -315,6 +565,21 @@ def main(argv: list[str] | None = None) -> None:
     r.add_argument("--debug", action="store_true",
                    help="dump the raw API structure before formatting")
     r.set_defaults(func=cmd_rankings)
+
+    c = sub.add_parser("cheapest",
+                       help="cheapest lineup whose floor still clears a target")
+    c.add_argument("--season", type=int, default=season_default)
+    c.add_argument("--week", type=int, default=default_week())
+    c.add_argument("--target", type=float, default=100.0,
+                   help="floor total the lineup must clear (default 100)")
+    c.add_argument("--scoring", default="HALF")
+    c.add_argument("--curves", help="JSON file overriding the rank->points curves")
+    c.add_argument("--reuse", type=float, default=DEFAULT_REUSE,
+                   help="how heavily to price the future weeks a burn costs "
+                        f"(default {DEFAULT_REUSE}; 0 prices a burn at one week)")
+    c.add_argument("--csv", help="also write the lineup to this CSV path")
+    c.add_argument("--refresh", action="store_true", help="bypass the local cache")
+    c.set_defaults(func=cmd_cheapest)
 
     u = sub.add_parser("use", help="mark players as started (locks them out)")
     u.add_argument("names", nargs="+")
