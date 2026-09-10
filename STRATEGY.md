@@ -151,7 +151,34 @@ uncertainty", "wait a week to see" flag far more heavily than the analyst intend
 "I'd like to wait a week and see" is nearly free advice in this format — waiting is exactly
 what the format lets you do.
 
-Never start a player with an unresolved status flag unless you can verify active before lock.
+### An inactive starter is burned (confirmed)
+
+**Starting a player who turns out inactive burns him for the season anyway.** Confirmed
+with the league, week 1 2026. This was the most load-bearing open question and the answer
+is the punishing one.
+
+There is therefore **no free roll**. You cannot start a questionable player hoping to
+"find out" — if he sits you pay the full asset price and score zero in that slot. The
+expected cost of a game-time decision is not `p(out) x (points forgone)`, it is
+`p(out) x (points forgone + the asset, permanently)`, and the asset half is charged
+whether or not he plays.
+
+Three consequences:
+
+- **A status flag is disqualifying, not a discount.** There is no delta large enough to
+  price it, because the downside is not a bad week — it is a bad week *plus* losing the
+  player from every future week.
+- **A zero is fatal in a way that being light is not.** Week 1 you might survive a zero at
+  one slot; by week 11 at a 25.6% cut you will not. The cost of status risk rises on the
+  same curve as everything else.
+- **It sharpens the QB banking rule.** The late-week worry was "the QB board is thin, so
+  how much status risk do I tolerate?" The answer is none — which means the thin-board
+  problem has to be solved *in advance*, by banking enough arms, not absorbed later by
+  starting someone doubtful. Bank the top ~12 harder, not less hard.
+
+Never start a player with an unresolved status flag unless you can verify active before
+lock. `./gy s` drops them automatically; `--cleared "Name"` re-admits one you have
+personally confirmed active.
 
 ## Prior-year data has a shelf life too
 
@@ -253,9 +280,12 @@ carries a +3 delta.
 ## Open questions
 
 - Confirm exact starting slots against the league page.
-- Does an inactive starter count as burned? Determines how much status risk is tolerable
-  in the late weeks when the QB board is thin.
 - Contest end week (assumed 17 for all pool math above).
+- Entrant count: the elimination table above is built on 752, but 1052 has also been
+  cited. Every cut percentage and posture threshold moves if it is the latter.
+
+**Answered:** does an inactive starter count as burned? **Yes** — see "An inactive starter
+is burned" above.
 
 ## Tooling
 
@@ -267,6 +297,9 @@ exempt), and prints the recommended slate plus the top burn candidates per posit
 It reads the week off the elimination table: decorrelates and allows a superflex punt
 through week 8, requires a real QB in superflex and permits same-team pairs from week 9
 (`ENDGAME_WEEK`), and warns about stale prior-year data through week 4.
+
+Since an inactive start burns the player anyway, the status filter is a hard drop rather
+than a ranking penalty. `--cleared "Name"` re-admits a player you have verified active.
 
 Steps it cannot do for you: verifying inactives before lock (step 8), and the
 offseason-turnover sanity check on any matchup edge (step 5). `--explain` shows who was

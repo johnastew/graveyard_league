@@ -528,10 +528,17 @@ def delta_board(season: int, week: int, position: str, scoring: str,
     return out
 
 
-def classify(row: dict, week: int) -> tuple[bool, str]:
-    """Is this player a burn candidate this week, and if not, why not?"""
+def classify(row: dict, week: int,
+             cleared: set[str] | None = None) -> tuple[bool, str]:
+    """Is this player a burn candidate this week, and if not, why not?
+
+    A status flag is a hard drop, not a ranking penalty: starting a player who
+    turns out inactive burns him for the season anyway, so the downside is a
+    zero *plus* the permanent loss of the asset. No delta prices that. Only a
+    name passed to --cleared (verified active before lock) gets back in.
+    """
     pos = (row["position"] or "").upper()
-    if row.get("status"):
+    if row.get("status") and norm(row["name"]) not in (cleared or set()):
         return False, f"status: {row['status']}"
     band = HOARD_BAND.get(pos)
     if band is not None and row["ros_rank"] is not None and row["ros_rank"] <= band:
@@ -675,14 +682,28 @@ def cmd_strategy(args: argparse.Namespace) -> None:
                 continue
             rows.append(row)
 
+    cleared = {norm(n) for n in (args.cleared or [])}
     candidates, held = [], []
     for row in rows:
-        ok, why = classify(row, week)
+        ok, why = classify(row, week, cleared)
         (candidates if ok else held).append((row, why))
     candidates = [r for r, _ in candidates]
 
     print(f"{len(rows)} eligible, {burned} already burned, "
           f"{len(candidates)} spendable, {len(held)} held back")
+    if cleared:
+        # Clearing a status flag only lifts that one gate -- the hoard band and
+        # delta still apply -- so report where each cleared player actually ended
+        # up rather than implying he made the slate.
+        for row in rows:
+            if norm(row["name"]) not in cleared or not row.get("status"):
+                continue
+            ok, why = classify(row, week, cleared)
+            print(f"Cleared {row['name']} ({row['status']}): "
+                  + ("now spendable" if ok else f"still held -- {why}"))
+        for name in args.cleared:
+            if norm(name) not in {norm(r["name"]) for r in rows}:
+                print(f"!! --cleared {name!r} matched nobody on this week's board.")
     if week <= STALE_DATA_WEEKS:
         print(f"!! Week {week}: matchup inputs are last season's data. Weight volume "
               f"and role\n!! certainty over matchup quality, and check any defensive "
@@ -718,8 +739,10 @@ def cmd_strategy(args: argparse.Namespace) -> None:
     print("\nDELTA is ROS rank minus this week's rank: positive means he is ranked "
           "better\nnow than for the season, so this is the week to spend him. Players "
           "inside the\nper-position hoard band are held back regardless of delta "
-          "(never for DST).\nVerify inactives before lock, then record burns with "
-          "./gy u \"Name\".")
+          "(never for DST).")
+    print("An inactive start burns the player anyway, so anyone carrying a status "
+          "flag is\ndropped outright. Verify actives before lock -- re-admit one with "
+          "--cleared\n\"Name\" -- then record the burns with ./gy u \"Name\".")
     if args.csv:
         write_csv([p for p in slate if p], args.csv)
 
@@ -815,6 +838,9 @@ def main(argv: list[str] | None = None) -> None:
     g.add_argument("--scoring", default="HALF")
     g.add_argument("--show", type=int, default=6,
                    help="how many burn candidates to list per position")
+    g.add_argument("--cleared", action="append", metavar="NAME",
+                   help="re-admit a status-flagged player you have verified "
+                        "active before lock; repeatable")
     g.add_argument("--explain", action="store_true",
                    help="also list who was held back and why")
     g.add_argument("--no-decorrelate", action="store_true",
