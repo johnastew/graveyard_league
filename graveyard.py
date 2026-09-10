@@ -243,6 +243,16 @@ LINEUP_SLOTS = [
 # Positions to pull rankings for. One API call each, all cached.
 LINEUP_POSITIONS = ("QB", "RB", "WR", "TE", "DST")
 
+# Week-to-week coefficient of variation by position: how far a typical week
+# swings from the projection. QBs are the steadiest scorers; TEs and defenses
+# are close to coin flips.
+POSITION_CV = {"QB": 0.35, "RB": 0.50, "WR": 0.55, "TE": 0.60, "DST": 0.65,
+               "K": 0.45}
+
+# How pessimistic "floor" is, in standard deviations below the projection.
+# 0.85 is roughly a 20th-percentile week.
+FLOOR_Z = 0.85
+
 # Roughly the last rank at each position you could stream off waivers in any
 # given week. Points above this line are what actually make a player scarce,
 # and so are what you are really spending when Graveyard burns him.
@@ -298,9 +308,8 @@ def pos_rank_number(player: dict) -> float | None:
 def score_player(player: dict, curves: dict, reuse: float = DEFAULT_REUSE) -> dict:
     """Attach floor / projection / value to a ranked player.
 
-    floor      what he is worth if the most pessimistic expert is right
-               (rank_max, the worst rank any expert gave him)
     projection what he is worth at consensus rank
+    sigma      how far a typical week swings from that projection
     value      what starting him costs you, since Graveyard burns him for the
                season: this week's points plus the scarcity you can no longer
                spend later. A player at replacement level costs about what he
@@ -309,22 +318,9 @@ def score_player(player: dict, curves: dict, reuse: float = DEFAULT_REUSE) -> di
     """
     pos = player["position"]
     consensus = pos_rank_number(player)
-    # rank_min/rank_max are ranks over the same positional list, so a *higher*
-    # number is the pessimistic end.
-    worst = player.get("worst")
-    spread = None
-    if worst is not None and consensus is not None:
-        # rank_min/max come back over the full-list ranking; keep the downside
-        # relative to consensus so it stays in positional-rank space.
-        best = player.get("best")
-        if best is not None and worst >= best:
-            spread = worst - best
-    downside = consensus if consensus is not None else None
-    if downside is not None and spread:
-        downside = downside + spread / 2.0
     scored = dict(player)
     scored["projection"] = curve_points(curves, pos, consensus)
-    scored["floor"] = curve_points(curves, pos, downside)
+    scored["sigma"] = scored["projection"] * POSITION_CV.get(pos.upper(), 0.55)
     replacement = curve_points(curves, pos, REPLACEMENT_RANK.get(pos.upper()))
     surplus = max(0.0, scored["projection"] - replacement)
     scored["value"] = scored["projection"] + surplus * reuse
@@ -351,6 +347,20 @@ def build_pool(season: int, week: int, scoring: str, curves: dict,
 
 
 # ------------------------------------------------------------------- optimizer
+def lineup_floor(lineup) -> float:
+    """Pessimistic total for the lineup as a whole.
+
+    Not the sum of each player's own floor -- that would assume all nine bust
+    in the same week, which is far more pessimistic than reality. Nine players
+    are close enough to independent that their variances add in quadrature, so
+    the lineup's downside is much tighter than any one player's.
+    """
+    import math
+    proj = sum(p["projection"] for p in lineup if p)
+    var = sum(p["sigma"] ** 2 for p in lineup if p)
+    return proj - FLOOR_Z * math.sqrt(var)
+
+
 def cheapest_lineup(pool: list[dict], target: float) -> tuple[list[dict | None], bool]:
     """Cheapest lineup (least value burned) whose floors sum to >= target.
 
@@ -376,20 +386,19 @@ def cheapest_lineup(pool: list[dict], target: float) -> tuple[list[dict | None],
                 taken.add(norm(cand["name"]))
                 break
 
-    def total(key: str) -> float:
-        return sum(p[key] for p in lineup if p)
-
-    while total("floor") < target:
+    while lineup_floor(lineup) < target:
+        base_floor = lineup_floor(lineup)
         best = None  # (efficiency, slot index, candidate)
         for idx, cands in enumerate(by_slot):
             current = lineup[idx]
-            base_floor = current["floor"] if current else 0.0
             base_value = current["value"] if current else 0.0
-            ranked = sorted(cands, key=lambda p: -p["floor"])[:UPGRADE_WIDTH]
+            ranked = sorted(cands, key=lambda p: -p["projection"])[:UPGRADE_WIDTH]
             for cand in ranked:
                 if norm(cand["name"]) in taken and cand is not current:
                     continue
-                d_floor = cand["floor"] - base_floor
+                trial = list(lineup)
+                trial[idx] = cand
+                d_floor = lineup_floor(trial) - base_floor
                 d_value = cand["value"] - base_value
                 if d_floor <= 1e-9:
                     continue
@@ -410,7 +419,7 @@ def cheapest_lineup(pool: list[dict], target: float) -> tuple[list[dict | None],
 
 def print_lineup(lineup: list[dict | None], target: float, made_it: bool) -> None:
     hdr = (f"{'SLOT':<6} {'PLAYER':<24} {'POS':<4} {'TEAM':<4} {'MATCHUP':<8} "
-           f"{'FLOOR':>6} {'PROJ':>6} {'BURN':>6}")
+           f"{'PROJ':>6} {'SIGMA':>6} {'BURN':>6}")
     print(hdr)
     print("-" * len(hdr))
     for (slot, _), p in zip(LINEUP_SLOTS, lineup):
@@ -420,13 +429,15 @@ def print_lineup(lineup: list[dict | None], target: float, made_it: bool) -> Non
         matchup = p["opponent"] or (f"BYE {p['bye']}" if p["bye"] else "")
         print(f"{slot:<6} {p['name'][:24]:<24} {str(p['position'])[:4]:<4} "
               f"{str(p['team'])[:4]:<4} {str(matchup)[:8]:<8} "
-              f"{p['floor']:>6.1f} {p['projection']:>6.1f} {p['value']:>6.1f}")
-    floor = sum(p["floor"] for p in lineup if p)
+              f"{p['projection']:>6.1f} {p['sigma']:>6.1f} {p['value']:>6.1f}")
+    floor = lineup_floor(lineup)
     proj = sum(p["projection"] for p in lineup if p)
     burn = sum(p["value"] for p in lineup if p)
     print("-" * len(hdr))
     print(f"{'TOTAL':<6} {'':<24} {'':<4} {'':<4} {'':<8} "
-          f"{floor:>6.1f} {proj:>6.1f} {burn:>6.1f}")
+          f"{proj:>6.1f} {'':>6} {burn:>6.1f}")
+    print(f"{'':<6} {'lineup floor (20th pctile)':<24} {'':<4} {'':<4} {'':<8} "
+          f"{floor:>6.1f}")
     print()
     if made_it:
         print(f"Floor {floor:.1f} clears the {target:.1f} target by {floor - target:.1f}, "
@@ -435,11 +446,11 @@ def print_lineup(lineup: list[dict | None], target: float, made_it: bool) -> Non
         print(f"!! Best reachable floor is {floor:.1f}, short of the {target:.1f} target.")
         print("!! Too much of the pool is already burned — lower --target or accept "
               "the risk.")
-    print("\nFLOOR is the pessimistic-expert case, PROJ the consensus case, and "
-          "BURN what\nyou give up for the rest of the season by starting him. "
-          "The target is a floor,\nnot a projection: the point is to clear the "
-          "cut with the cheapest players who\nstill clear it, not to maximize "
-          "the week.")
+    print("\nPROJ is the consensus week, SIGMA how far a typical week swings from "
+          "it, and\nBURN what you give up for the rest of the season by starting "
+          "him. The lineup\nfloor is a 20th-percentile total with the nine "
+          "variances added in quadrature,\nnot a sum of nine individual floors "
+          "-- the players do not all bust at once.")
 
 
 # ---------------------------------------------------------------------- commands
