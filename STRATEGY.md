@@ -319,9 +319,12 @@ Higgins, Fannin, Seattle and Houston DST.
 
 ## Bank watch
 
-- **Brock Bowers (knee)** is out for week 1 and "could miss multiple weeks." He is the
-  ROS TE1 in the bank; that asset is frozen, so TE planning for the endgame cannot
-  assume him.
+- **Brock Bowers (knee)** is out for week 1 after a meniscus trim. Reporting split on
+  severity: Eisenberg said "could miss multiple weeks," Schefter said "a game or two."
+  Take the specific report over the vague one — the ROS TE1 is frozen for a week or
+  two, not the month. He is still bankable for the endgame; do not panic-spend the
+  TE board around his absence. Tre Tucker becomes Las Vegas's lead pass-catcher while
+  he is out, which is a burn candidate in any week Kirk Cousins is not started.
 - **Isaiah Likely** (NYG) is weekly TE11 against ROS TE10 — a *negative* delta, so he
   is a hoard, not a burn, and one of the few tight ends worth carrying toward weeks
   9-11. SportsLine's model has him TE9 ahead of LaPorta and Kelce, as the clear No. 1
