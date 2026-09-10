@@ -229,36 +229,52 @@ reasoning. The shelf-life principle earns its keep in the genuinely useful band.
 | 5-8 | 14.9-18.9% | Mid-tier. Ranks ~8-15. |
 | 9+ | 20.5-25.6% | Deploy the bank. Never punt. Stacks become acceptable. |
 
-## Week 1 lineup (2026)
+## Week 1 lineup (2026) — final
 
-| Slot | Player | Team | Rank | Delta |
-| --- | --- | --- | --- | --- |
-| QB | Kirk Cousins | LV | QB28 | +3 |
-| SFLX | Bryce Young | CAR | QB24 | +2 |
-| RB | Travis Etienne Jr. | NO | RB17 | +1 |
-| RB | Bucky Irving | TB | RB18 | +2 |
-| WR | Davante Adams | LAR | ~WR21 | +8 |
-| WR | DK Metcalf | PIT | ~WR23 | +8 |
-| FLEX | Ladd McConkey | LAC | WR16 | +6 |
-| TE | Kyle Pitts Sr. | ATL | TE5 | +3 |
-| DST | Jacksonville | JAC | DST1 | +11 |
+| Slot | Player | Team | Wk | ROS | Delta | Proj |
+| --- | --- | --- | --- | --- | --- | --- |
+| QB | Kirk Cousins | LV | QB28 | — | — | ~13.4 |
+| SFLX | Tua Tagovailoa | ATL | QB31 | — | — | ~13.5 |
+| RB | Travis Etienne Jr. | NO | RB16 | RB18 | +2 | ~13.2 |
+| RB | Tony Pollard | TEN | RB27 | RB33 | +6 | 11.6 |
+| WR | Davante Adams | LAR | WR21 | WR29 | +8 | ~10.8 |
+| WR | DK Metcalf | PIT | WR31 | WR33 | +2 | 11.8 |
+| FLEX | Quentin Johnston | LAC | WR34 | WR38 | +4 | 13.1 |
+| TE | Dallas Goedert | PHI | TE8 | TE12 | +4 | 14.3 |
+| DST | Jacksonville | JAC | DST1 | — | +11 | ~8 |
 
-Nine players, nine teams, no same-team pairs. Only shared game is Metcalf (PIT) vs
-Pitts (ATL) — opposite sides, a hedge.
+Nine players, nine teams, ~110 projected. Only shared game is Tua (ATL) vs Metcalf
+(PIT) — opposite sides, a hedge, though that game carries a 42.0 total, the quietest
+on the slate.
 
-Nothing burned above QB24 / RB17 / WR16 / TE5. Banked: Gibbs, Bijan, McCaffrey, Chase,
-Nacua, St. Brown, Smith-Njigba, Bowers, McBride, Lamar, Allen, Hurts, Burrow, Maye,
-Lawrence, Nix, Cook, K. Walker, Jeanty, Chase Brown, Hampton, Flowers, Nabers, A.J. Brown,
-Seattle and Houston DST — every negative-delta asset.
+Banked: Bryce Young (QB24), Bucky Irving (RB20), Ladd McConkey (WR22), Kyle Pitts
+(TE8), plus every elite — Gibbs, Bijan, McCaffrey, Chase, Nacua, St. Brown,
+Smith-Njigba, Bowers, McBride, Lamar, Allen, Hurts, Burrow, Maye, Lawrence, Nix,
+Shough, Cook, K. Walker, Jeanty, Chase Brown, Hampton, Flowers, Nabers, A.J. Brown,
+Higgins, Fannin, Seattle and Houston DST.
 
-Late revisions from Derek Brown's Primer: Etienne upgraded (Alvin Kamara out, full
-backfield); Adams confirmed (1st among 109 receivers in separation score and route win
-rate — his +8 delta prices hamstring risk, not decline); Irving held but his matchup
-downgraded from elite to neutral per the turnover caveat above.
+### How it moved off the first draft
 
-Deliberate exception: Pitts at TE5 is the most expensive piece, taken on a specific read
-about Tua's target volume. Validated independently — he rose TE6 -> TE5 during the week and
-carries a +3 delta.
+- **Pitts (TE5) -> Goedert.** Pitts was ROS TE8 — inside the TE hoard band, the only
+  band violation in the lineup — and his thesis was Tua's target volume while Tua
+  ranks QB31. Goedert is ROS TE12 (spendable) *and* projects higher, 14.3 vs 11.2.
+  Cheaper asset and more points; the "deliberate exception" did not survive contact
+  with the residual filter.
+- **Bryce Young (QB24) -> Tua (QB31).** Young sits inside the startable band and is a
+  real superflex body at ~115% QB consumption; Tua is below the band, so per the
+  shelf-life caveat he is worth nothing later. Costs ~3.3 points to bank a usable arm.
+  Confirmed startable: depth chart position 1, no injury designation, and Eisenberg
+  writes Atlanta's week as "with Tua Tagovailoa under center." **A weeks-1-5 move
+  only.**
+- **Irving (RB19) -> Pollard (RB27).** Irving's entire case was the Cincinnati
+  matchup, which the turnover check had already voided. Pollard draws the Jets, who
+  allowed the most fantasy points to backs in 2025, with Tennessee favoured at home.
+  Note Irving was later confirmed 100% and endorsed as "a great RB2 play" — holding
+  him would not have been a mistake, just a more expensive one.
+- **McConkey (WR17) -> a deep FLEX.** McConkey at ROS WR22 was the only WR in the
+  lineup with real residual. Adams (ROS WR29) and Metcalf (ROS WR33) have almost
+  nothing left to bank, so burning them is close to free — their high *weekly* rank
+  is not a reason to avoid them.
 
 ## Things we got wrong (so we don't re-derive them)
 
@@ -276,6 +292,40 @@ carries a +3 delta.
   rebuilt the defensive line over the offseason. Prior-year data needs a turnover check.
 - **"Protect Jacksonville's DST12 residual."** Applied the RB scarcity rule to a loose,
   matchup-driven pool. Residual value must be weighted by pool tightness.
+- **"Michael Wilson is the biggest delta on the WR board, so start him."** He was
+  WR36 weekly against WR55 ROS, a +19 gap and the largest anywhere. He was also
+  Arizona's *third* option behind Marvin Harrison Jr. and Trey McBride, "terrible
+  last year when Harrison was healthy," as a 9.5-point underdog against the defence
+  that finished 5th in fewest points allowed to receivers. **A large positive delta
+  on a deep player usually means an analyst likes him, not that he will see the
+  ball.** Delta encodes matchup and shelf-life; it cannot see target share. Cross-
+  check role before burning anyone whose delta comes from a low ROS rank rather than
+  a high weekly one — the same role-certainty rule that applies to deep RBs.
+- **"Read the weekly rank to judge how expensive a player is."** The residual filter
+  runs on ROS rank. A player can look costly this week and be nearly free as an
+  asset: Adams was WR21 weekly but WR29 ROS with a +8 delta — the textbook burn.
+
+## Source notes
+
+- **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
+  carry projections, opponent context and role notes — the inputs the residual filter
+  and the role-certainty rule actually need. Sleeper columns explicitly hunt ceiling
+  ("some of these guys are going to absolutely faceplant"), which is the wrong tail
+  for a survival format. Week 1's sleeper column produced zero usable names: most of
+  its picks collided with a slot already filled, sat on a team whose game had already
+  kicked off, or were openly conditional on a role nobody had confirmed.
+- Prefer sources that state *why* a player is ranked where he is. A rank alone cannot
+  be cross-checked against the turnover caveat or the role-certainty rule.
+
+## Bank watch
+
+- **Brock Bowers (knee)** is out for week 1 and "could miss multiple weeks." He is the
+  ROS TE1 in the bank; that asset is frozen, so TE planning for the endgame cannot
+  assume him.
+- **Isaiah Likely** (NYG) is weekly TE11 against ROS TE10 — a *negative* delta, so he
+  is a hoard, not a burn, and one of the few tight ends worth carrying toward weeks
+  9-11. SportsLine's model has him TE9 ahead of LaPorta and Kelce, as the clear No. 1
+  tight end for Jaxson Dart.
 
 ## Open questions
 
