@@ -131,6 +131,28 @@ un-punt one.** Holding risks needing points with only weak options left. Committ
 burning an asset you did not need. Week 1 says the second risk is much larger — four
 assets spent for 35 points of surplus.
 
+### Punt selection — punts are cheap, not free
+
+**Any player placed in a slot is burned, whether he plays or not.** Confirmed week 1.
+
+Punts therefore consume inventory. The pool of irrelevant players is large enough that
+~75 punts a season is never a binding constraint, but selection is not arbitrary:
+
+- **Choose players with no plausible path back.** Retired veterans, long-term unsigned
+  players, season-ending IR. Kenny Golladay costs nothing in any scenario.
+- **Avoid young unsigned players.** Undrafted rookies get signed. Jamal Haynes was used
+  as a week 1 punt; if he lands somewhere in October and becomes usable, that was a real
+  asset burned to score zero.
+- Keep a vetted punt list rather than improvising at 4:15 on a Sunday.
+
+Two consequences elsewhere:
+
+1. **A real player who is a surprise scratch costs the asset *and* the zero.** This is the
+   confirmed basis for never starting an unresolved status flag — it is a double loss, not
+   a single one.
+2. **The same applies to lottery tickets.** Confirm a ticket is active before locking, or
+   it is a guaranteed loss rather than a free roll.
+
 ### Lottery tickets early, real players only if needed
 
 The strongest version of the ladder: fill the 1:00 window mostly with **cheap high-variance
@@ -337,7 +359,8 @@ problem. Positive correlation raises variance in both directions; the upside is 
 ## Uncertainty is a cost, not just a risk
 
 In redraft, starting a boom/bust player who busts costs you one week; you bench him next
-week. Here it **permanently consumes the asset**. Weight every "questionable", "workload
+week. Here it **permanently consumes the asset** — confirmed: any player placed in a slot
+is burned whether he plays or not, so a surprise scratch is a double loss. Weight every "questionable", "workload
 uncertainty", "wait a week to see" flag far more heavily than the analyst intends.
 
 "I'd like to wait a week and see" is nearly free advice in this format — waiting is exactly
@@ -455,6 +478,9 @@ Three players cleared the bar on their own — Wentz + Vele + Jacksonville = 53.
 other four real starters were 22.6 points of surplus spent on assets that did not need
 spending. Rodriguez (2.3) and Shipley (2.2) were worse than punts.
 
+**Nine players burned** (punts count): Wentz, Rodriguez, Shipley, Vele, Golladay,
+Otton, Haynes, Rodgers, Jaguars. Recorded in `data/used_players.json`.
+
 **Monday night decision:** held at 75.76 against a live line of 40.02 with only DEN/KC
 left. Left both punts (Golladay, Haynes) in place rather than starting real MNF players.
 For the line to reach 75.76 all 122 bottom teams would have needed +35.74 from a single
@@ -498,8 +524,8 @@ rather than assuming it was low and testing it cheaply.
 ## Open questions
 
 - ~~Confirm exact starting slots~~ — **answered: QB/RB/RB/WR/WR/TE/FLEX/SFLX/DST.**
-- Does an inactive starter count as burned? Determines how much status risk is tolerable
-  in the late weeks when the QB board is thin.
+- ~~Does an inactive starter count as burned?~~ — **answered: yes. Any player placed in
+  a slot is burned, played or not.** See "Punt selection" below.
 - ~~Contest end week~~ — **answered: 17 weeks, finals with 7 teams.**
 
 ## Tooling backlog
