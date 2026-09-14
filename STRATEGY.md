@@ -127,6 +127,63 @@ un-punt one.** Holding risks needing points with only weak options left. Committ
 burning an asset you did not need. Week 1 says the second risk is much larger — four
 assets spent for 35 points of surplus.
 
+### Lottery tickets early, real players only if needed
+
+The strongest version of the ladder: fill the 1:00 window mostly with **cheap high-variance
+players** rather than reliable ones. If two hit, you are clear and can punt every later
+slot. If they miss, reinforce from the late windows with real players — which you would
+have spent anyway.
+
+**Why this is cheaper than it looks.** The cost of burning a player is proportional to his
+*future* value, and for a true scrub that is ~zero — you were never going to start the RB45
+in week 12. A lottery ticket is not a gamble with inventory; it is close to a free roll.
+So the binding constraint is not "how many scrubs can I afford to burn" (unlimited) but
+**"how much reliable reinforcement capacity remains in the late windows"** (thin).
+
+Week 1 validated it accidentally: Carson Wentz (19.22) and Devaughn Vele (19.9) were both
+cheap tickets and produced 39 of the 75.76.
+
+**Calibrate the hit rate to ~40%, not 55%.** Of week 1's five genuine tickets (Wentz,
+Rodriguez, Shipley, Vele, Otton) two cleared 12 points. The difference compounds:
+
+| Hit rate | P(0-1 hits from 5 tickets) |
+| --- | --- |
+| 55% | 13% |
+| **40%** | **34%** |
+
+At 40%, roughly a third of weeks produce almost nothing early. The fallback must be
+genuinely robust.
+
+**So keep 1-2 real floor players in the 1:00 window.** They are the difference between
+"tickets missed, sitting on 28, need 15 more" and "tickets missed, sitting on 12, need 35
+from a thin board."
+
+| Window | Slots | Contents |
+| --- | --- | --- |
+| Sun 1:00 | 5-6 | 1-2 floor players + 3-4 lottery tickets |
+| Sun 4:25 | 1-2 | held |
+| SNF | 1 | held |
+| MNF | 1 | held |
+
+**Decorrelate the tickets by bet shape, not just by team.** Five touchdown-dependent
+goal-line backs all miss together on a low-scoring slate. Mix a TD-dependent back, a
+volume slot receiver, a deep threat, a TE streamer in a plus matchup, a DST.
+
+Ticket profile: cheap inventory, real snap share (a 15-snap player cannot hit), and
+touchdown or big-play equity — preferably in a high-total game.
+
+### The 4:25 information gap
+
+1:00 games end ~4:05-4:20; the 4:25 games lock at 4:25. **Final scores from every early
+game will not be in before that decision.** Expect 6-8 of 9 final and the rest nearly
+done — actionable, but the weakest of the three decision points, not the strongest.
+
+The windows with complete information are **SNF (~8:20pm)** and **MNF (~8:15pm Mon)** —
+1-2 games each, so 4-6 teams. That is the reliable reinforcement pool and it is thin.
+
+**Check the SNF and MNF rosters at the start of the week.** If there are not 2-3 players
+there you would actually be willing to burn, run fewer tickets that week.
+
 ### Monday night is the free-information window
 
 By MNF kickoff roughly 95% of league-wide scoring is complete, so the cut line visible at
