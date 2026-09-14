@@ -60,13 +60,65 @@ Combined with the exponential curve above, the two facts resolve the central ten
 the format: early survival is nearly free, late survival demands everything, so **punt
 maximally early, bank relentlessly, and arrive at weeks 13-17 fully loaded.**
 
+## Game-time sequencing — late games are live options
+
+NFL games stagger across four windows: Thursday, Sunday 1:00, Sunday 4:05/4:25, SNF,
+MNF. Players lock individually at kickoff, so **a player in a late game is not a decision
+already made — it is a decision still available**, after you know your score and roughly
+where the line sits.
+
+Every late-window slot is therefore worth its projection *plus* the option to convert it
+into a punt and keep the asset.
+
+**Structure: early core as insurance, late slots as savings.**
+
+- **Early (Thu / Sun 1:00)** — your floor. High-confidence, high-floor players. Their job
+  is to establish position, and deferring a decision you are confident about gains nothing.
+- **Late (Sun 4:25 / SNF / MNF)** — your lever. Hold and decide live.
+
+**The early core alone should project to roughly 1.4x the expected cut line.** That is the
+insurance premium, and the answer to "how far can I take this." Everything above that
+multiple can be held late.
+
+Hold the **interchangeable** slots late — DST first (32 options, matchup-driven, you are
+indifferent among many), then FLEX and the third receiver.
+
+**Avoid Thursday players.** TNF is negative optionality: you commit before anyone else
+does, with no information. Week 1's recommended lineup had Davante Adams in the Thursday
+game — the worst possible slot for this.
+
+Do not reserve more than ~4 late slots. Only 10-16 teams play in the late windows, so the
+board thins fast, and an early core that busts leaves you betting the week on a short list.
+
+### Two failure modes
+
+1. **The live cut line is not the final cut line.** At 4pm Sunday most teams still have
+   players to play, so the displayed line badly understates where it ends up. Read it
+   literally and you punt into elimination. Log the line at checkpoints — post-1pm,
+   post-4pm, post-SNF, final — until the shape of the climb is known empirically.
+2. **The option expires worthless if you are not there.** The swap windows are roughly
+   4:20pm and 8:15pm Sunday. A worse player taken for optionality you never exercise is
+   strictly a loss.
+
+### Cost of missing this in week 1
+
+Scored 75.76 against a 40.02 line — 35.7 points of surplus across four assets that did not
+need spending. Had Rodriguez, Shipley, Otton and Rodgers been late-window players, all four
+could have been punted after the 1pm games and banked instead.
+
+### Unverified
+
+Week 1 filled *empty* slots late. That is not the same as *swapping an already-set player*
+before his game. If the platform only allows filling empties, deliberately leave slots
+blank rather than pre-filling them with intended punts. **Test this on a low-stakes slot.**
+
 ## Cut-line log
 
 Track this every week. It is the only way to calibrate how many slots can be punted.
 
-| Week | Cut line | Our score | Margin |
-| --- | --- | --- | --- |
-| 1 | 40.02 | 75.76 | +35.74 |
+| Week | post-1pm | post-4pm | post-SNF | Final | Our score | Margin |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | - | - | 40.02 | - | 75.76 | +35.74 |
 
 Working targets until more data arrives (the line should climb as weak teams wash out):
 
@@ -238,6 +290,11 @@ reasoning. The shelf-life principle earns its keep in the genuinely useful band.
 5. Sanity-check any matchup edge against offseason turnover (weeks 1-4 especially).
 6. Take the highest remaining deltas that reach the target, cheapest inventory first.
 7. Check team/game overlap — decorrelate early in the season.
+7b. **Sort the slate by kickoff window.** Put high-floor players in early games;
+    hold interchangeable slots (DST, FLEX, WR3) for the late windows. Avoid TNF.
+    Early core should project ~1.4x the expected cut line on its own.
+7c. **Be at your phone at ~4:20pm and ~8:15pm Sunday.** If clear of the projected
+    line, punt the remaining late slots and bank those assets.
 8. Verify inactives before lock. **Confirm your punt players are genuinely rostered
    nowhere** — a punt who unexpectedly plays is a wasted burn, not a disaster, but a
    punt who is quietly on a roster and scores is a burned asset you did not intend.
@@ -322,6 +379,8 @@ rather than assuming it was low and testing it cheaply.
   arrive as QB29s.
 - **"K and DST are both near-noise."** K yes (1.3 spread). DST no (3.4) — comparable to QB.
 - **"QB-WR stacks are the good kind of correlation."** DFS logic. Wrong for a floor format.
+- **Ignored kickoff times entirely.** Late-window players are live options; we put
+  Davante Adams in the Thursday game, the worst slot for information.
 - **Missed the punt mechanic entirely.** Assumed every slot had to be filled with a
   real player, which inflated every scarcity calculation in this document.
 - **Treated the week 1 cut line as unknowable** and defaulted to caution. It was 40.02;
