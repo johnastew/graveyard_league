@@ -41,8 +41,12 @@ A point in week 16 is worth roughly **five times** a point in week 1. Bank accor
 **You can fill a starting slot with a player who is not on any NFL roster.** He scores
 zero and costs zero inventory. Discovered in week 1 (Kenny Golladay, Jamal Haynes).
 
+**The principle underneath it: surplus points are worthless.** Weeks are independent and
+nothing carries over. Finishing 200th and finishing 600th are identical outcomes — both
+are "alive." Every point above the cut line is an asset spent for zero benefit.
+
 This changes the shape of the game. The question is not "which nine players do I start"
-— it is **"how few real players can I spend and still clear the cut?"**
+— it is **"how few real players can I spend and still clear the cut?"
 
 What it invalidates:
 
@@ -201,7 +205,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 
 | Week | post-1pm | post-4pm | post-SNF | Final | Our score | Margin |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | - | - | 40.02 | - | 75.76 | +35.74 |
+| 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -450,6 +454,13 @@ Rodgers 12.54, Jaguars DST 14.
 Three players cleared the bar on their own — Wentz + Vele + Jacksonville = 53.12. The
 other four real starters were 22.6 points of surplus spent on assets that did not need
 spending. Rodriguez (2.3) and Shipley (2.2) were worse than punts.
+
+**Monday night decision:** held at 75.76 against a live line of 40.02 with only DEN/KC
+left. Left both punts (Golladay, Haynes) in place rather than starting real MNF players.
+For the line to reach 75.76 all 122 bottom teams would have needed +35.74 from a single
+game — and bottom teams are bottom because their lineups already failed, so they have
+*less* left to play, not more. Surplus points buy nothing, so any real player started
+there would have been a pure waste.
 
 Two picks from the recommended lineup survived into the played one: Jacksonville DST
 (14, the most-confirmed call we made) and Aaron Rodgers (12.54). Devaughn Vele, the
