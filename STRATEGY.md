@@ -14,26 +14,71 @@ the league's own elimination table.
 
 ## The elimination curve — the single most important table
 
-| Week | Teams | Reaped | % cut |
+Final entrant numbers, 2026 season:
+
+| Wk | Teams | Reaped | % cut | Wk | Teams | Reaped | % cut |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 1053 | 122 | **11.6%** | 10 | 232 | 53 | 22.8% |
+| 2 | 931 | 114 | 12.2% | 11 | 179 | 46 | 25.7% |
+| 3 | 817 | 107 | 13.1% | 12 | 133 | 39 | **29.3%** |
+| 4 | 710 | 99 | 13.9% | 13 | 94 | 32 | **34.0%** |
+| 5 | 611 | 91 | 14.9% | 14 | 62 | 25 | **40.3%** |
+| 6 | 520 | 83 | 16.0% | 15 | 37 | 18 | **48.6%** |
+| 7 | 437 | 76 | 17.4% | 16 | 19 | 12 | **63.2%** |
+| 8 | 361 | 68 | 18.8% | 17 | 7 | — | FINALS |
+| 9 | 293 | 61 | 20.8% | | | | |
+
+**17 weeks, 7 teams in the finals. Cumulative odds: 7/1053 = 0.66%.**
+
+The difficulty curve is not linear — it is exponential at the end. Weeks 1-8 cut
+11-19%. Weeks 12-16 cut 29%, 34%, 40%, 49%, **63%**. Week 16 requires beating nearly
+two-thirds of an already-elite survivor pool in a single week.
+
+A point in week 16 is worth roughly **five times** a point in week 1. Bank accordingly.
+
+## The punt mechanic — the most important tactic in the format
+
+**You can fill a starting slot with a player who is not on any NFL roster.** He scores
+zero and costs zero inventory. Discovered in week 1 (Kenny Golladay, Jamal Haynes).
+
+This changes the shape of the game. The question is not "which nine players do I start"
+— it is **"how few real players can I spend and still clear the cut?"**
+
+What it invalidates:
+
+- There is no season-long budget of ~153 forced burns. You spend only what each week
+  requires.
+- QB scarcity math (34 starts vs ~28-30 usable) collapses. Punt superflex whenever the
+  bar allows.
+- The pool-tightness and residual-value tables below still describe real scarcity, but
+  that scarcity almost never binds, because punting relieves it.
+
+**A real player who scores 2 points is strictly worse than a punt.** He cost inventory
+and delivered nothing. Only start a real player when you need his points to clear the bar.
+
+Combined with the exponential curve above, the two facts resolve the central tension of
+the format: early survival is nearly free, late survival demands everything, so **punt
+maximally early, bank relentlessly, and arrive at weeks 13-17 fully loaded.**
+
+## Cut-line log
+
+Track this every week. It is the only way to calibrate how many slots can be punted.
+
+| Week | Cut line | Our score | Margin |
 | --- | --- | --- | --- |
-| 1 | 752 | 87 | **11.6%** |
-| 2 | 665 | 82 | 12.3% |
-| 3 | 583 | 76 | 13.0% |
-| 4 | 507 | 70 | 13.8% |
-| 5 | 437 | 65 | 14.9% |
-| 6 | 372 | 59 | 15.9% |
-| 7 | 313 | 54 | 17.3% |
-| 8 | 259 | 49 | 18.9% |
-| 9 | 210 | 43 | 20.5% |
-| 10 | 167 | 38 | 22.8% |
-| 11 | 129 | 33 | **25.6%** |
+| 1 | 40.02 | 75.76 | +35.74 |
 
-The cut line **more than doubles in difficulty** from week 1 to week 11. A point is
-worth roughly half as much in week 1 as it is in week 11. Spending a 13-point player
-now to bank a 13-point player for later is not break-even — it is profit.
+Working targets until more data arrives (the line should climb as weak teams wash out):
 
-Corollary: teams cut in week 1 are teams that started someone **inactive**, not teams
-that were eight points light. Optimize for *zero status risk* first, points second.
+| Weeks | Target score | Real starters | Punts |
+| --- | --- | --- | --- |
+| 2-4 | 55-65 | 4-5 | 4-5 |
+| 5-9 | 75-90 | 5-7 | 2-4 |
+| 10-13 | 95-110 | 7-8 | 1-2 |
+| 14-17 | max | 9 | 0 |
+
+Corollary that still holds: teams cut early are teams that started someone **inactive**,
+not teams that were eight points light. Optimize for *zero status risk* first.
 
 ## The core metric: weekly rank minus rest-of-season rank
 
@@ -183,24 +228,34 @@ reasoning. The shelf-life principle earns its keep in the genuinely useful band.
 
 ## Weekly checklist
 
-1. Pull weekly + ROS ranks for every position.
-2. Compute delta for the eligible (unburned) pool.
-3. Filter out anyone whose ROS rank still sits inside the band you will need later,
-   weighted by pool tightness (skip this filter entirely for DST).
+1. **Estimate this week's cut line** from the log above, then set a target of roughly
+   1.5x it for margin.
+2. **Decide how many slots to punt.** Fill the rest with the cheapest real players that
+   reach the target. Punting is the default; starting a real player is the exception
+   that has to earn itself.
+3. Pull weekly + ROS ranks for the eligible (unburned) pool and compute delta.
 4. Drop anyone with an unresolved status flag.
-5. Sanity-check any matchup-based edge against offseason turnover (weeks 1-4 especially).
-6. Take the highest remaining deltas that clear the survival bar for the week's cut %.
+5. Sanity-check any matchup edge against offseason turnover (weeks 1-4 especially).
+6. Take the highest remaining deltas that reach the target, cheapest inventory first.
 7. Check team/game overlap — decorrelate early in the season.
-8. Verify inactives before lock.
+8. Verify inactives before lock. **Confirm your punt players are genuinely rostered
+   nowhere** — a punt who unexpectedly plays is a wasted burn, not a disaster, but a
+   punt who is quietly on a roster and scores is a burned asset you did not intend.
 9. Record the burn in `data/used_players.json` via `./gy u "Name"` **after** lineups lock.
+10. **Log the actual cut line** in the table above once results are final.
 
 ## Season deployment plan
 
 | Weeks | Cut % | Posture |
 | --- | --- | --- |
-| 1-4 | 11.6-13.8% | Cheapest survivable lineup. Spend every decaying asset. Punt superflex here if needed. |
-| 5-8 | 14.9-18.9% | Mid-tier. Ranks ~8-15. |
-| 9+ | 20.5-25.6% | Deploy the bank. Never punt. Stacks become acceptable. |
+| 1-4 | 11.6-13.9% | Punt 4-5 slots. Cheapest real players only. Spend decaying assets. |
+| 5-9 | 14.9-20.8% | Punt 2-4. Mid-tier real starters. |
+| 10-13 | 22.8-34.0% | Punt 0-2. Start deploying the bank. |
+| 14-16 | 40.3-63.2% | **No punts. Max lineup every week.** Stacks become correct — you need ceiling, not floor. |
+| 17 | FINALS | Whatever is left. |
+
+The whole point of punting weeks 1-9 is to still own Gibbs, Chase, Lamar and Bowers when
+week 16 asks you to beat 63% of the field.
 
 ## Week 1 lineup (2026)
 
@@ -233,6 +288,28 @@ Deliberate exception: Pitts at TE5 is the most expensive piece, taken on a speci
 about Tua's target volume. Validated independently — he rose TE6 -> TE5 during the week and
 carries a +3 delta.
 
+## Week 1 result (2026)
+
+**Survived.** Scored 75.76 against a 40.02 cut line.
+
+The lineup actually played diverged sharply from the one recommended below, and was
+better: Carson Wentz 19.22, Chris Rodriguez Jr. 2.3, Will Shipley 2.2, Devaughn Vele
+19.9, **Kenny Golladay (punt) 0**, Cade Otton 5.6, **Jamal Haynes (punt) 0**, Aaron
+Rodgers 12.54, Jaguars DST 14.
+
+Three players cleared the bar on their own — Wentz + Vele + Jacksonville = 53.12. The
+other four real starters were 22.6 points of surplus spent on assets that did not need
+spending. Rodriguez (2.3) and Shipley (2.2) were worse than punts.
+
+Two picks from the recommended lineup survived into the played one: Jacksonville DST
+(14, the most-confirmed call we made) and Aaron Rodgers (12.54). Devaughn Vele, the
+19.9-point hit, was a deep flier flagged by the Athletic and Derek Brown's Primer that
+the recommendation passed over as too thin.
+
+**The recommendation over-spent by roughly 2.5x.** It projected 104-115 against a bar
+of 40. The error was treating the cut line as unknowable and defaulting to caution,
+rather than assuming it was low and testing it cheaply.
+
 ## Things we got wrong (so we don't re-derive them)
 
 - **"WR and RB are both ~60 deep."** No. RB is ~30-35 usable against ~34 starts. RB is
@@ -245,6 +322,11 @@ carries a +3 delta.
   arrive as QB29s.
 - **"K and DST are both near-noise."** K yes (1.3 spread). DST no (3.4) — comparable to QB.
 - **"QB-WR stacks are the good kind of correlation."** DFS logic. Wrong for a floor format.
+- **Missed the punt mechanic entirely.** Assumed every slot had to be filled with a
+  real player, which inflated every scarcity calculation in this document.
+- **Treated the week 1 cut line as unknowable** and defaulted to caution. It was 40.02;
+  we projected 104-115. Assume the bar is low and test it.
+- **Stopped the elimination curve at week 11.** The real peak is 63.2% in week 16.
 - **"Cincinnati is the softest RB matchup on the board."** Built on 2025 splits. They
   rebuilt the defensive line over the offseason. Prior-year data needs a turnover check.
 - **"Protect Jacksonville's DST12 residual."** Applied the RB scarcity rule to a loose,
@@ -252,10 +334,10 @@ carries a +3 delta.
 
 ## Open questions
 
-- Confirm exact starting slots against the league page.
+- ~~Confirm exact starting slots~~ — **answered: QB/RB/RB/WR/WR/TE/FLEX/SFLX/DST.**
 - Does an inactive starter count as burned? Determines how much status risk is tolerable
   in the late weeks when the QB board is thin.
-- Contest end week (assumed 17 for all pool math above).
+- ~~Contest end week~~ — **answered: 17 weeks, finals with 7 teams.**
 
 ## Tooling backlog
 
