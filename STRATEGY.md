@@ -92,10 +92,10 @@ board thins fast, and an early core that busts leaves you betting the week on a 
 
 ### Two failure modes
 
-1. **The live cut line is not the final cut line.** At 4pm Sunday most teams still have
-   players to play, so the displayed line badly understates where it ends up. Read it
-   literally and you punt into elimination. Log the line at checkpoints — post-1pm,
-   post-4pm, post-SNF, final — until the shape of the climb is known empirically.
+1. **The live cut line is not the final cut line**, and with one week of data any
+   projection of it is fiction. Do **not** forecast the line. Two substitutes: anchor on
+   the *count of real starters* needed (below), and let Monday night — when ~95% of
+   scoring is done — carry the decisions that need real information.
 2. **The option expires worthless if you are not there.** The swap windows are roughly
    4:20pm and 8:15pm Sunday. A worse player taken for optionality you never exercise is
    strictly a loss.
@@ -106,11 +106,37 @@ Scored 75.76 against a 40.02 line — 35.7 points of surplus across four assets 
 need spending. Had Rodriguez, Shipley, Otton and Rodgers been late-window players, all four
 could have been punted after the 1pm games and banked instead.
 
-### Unverified
+### Confirmed: you can swap late
 
-Week 1 filled *empty* slots late. That is not the same as *swapping an already-set player*
-before his game. If the platform only allows filling empties, deliberately leave slots
-blank rather than pre-filling them with intended punts. **Test this on a low-stakes slot.**
+Slots do **not** have to be committed at the start of the week. A player can be swapped
+out any time before his game kicks off. This is the strong version of the mechanic, and
+it means **you should not build a lineup — you should build a ladder.**
+
+Setting nine players on Saturday throws away the entire advantage.
+
+| When | Do |
+| --- | --- |
+| Early week | Identify the MNF-eligible pool. Reserve 1-2 slots for it. |
+| Sun ~12:55 | Commit the core — 4-5 real players in the 1:00 games. This is the floor. |
+| Sun ~4:15 | Score vs. live line. Clear -> punt the 4:25 slots. Short -> add real players. |
+| Sun ~8:10 | Same call for the SNF slot. |
+| Mon ~8:00 | Near-complete information. Decide the last 1-2 slots. |
+
+The asymmetry that makes holding safe: **you can always punt a slot, but you can never
+un-punt one.** Holding risks needing points with only weak options left. Committing risks
+burning an asset you did not need. Week 1 says the second risk is much larger — four
+assets spent for 35 points of surplus.
+
+### Monday night is the free-information window
+
+By MNF kickoff roughly 95% of league-wide scoring is complete, so the cut line visible at
+that moment is close to final. **No projection is required — you are reading it, not
+forecasting it.** Option value concentrates almost entirely in MNF slots; the 4:25 and SNF
+windows still involve guesswork.
+
+The constraint is pool size: MNF is 1-2 games, 2-4 teams. Identify who is eligible at the
+*start* of the week, not on Monday afternoon. (Week 1's DEN/KC gave Nix, Mahomes, K.
+Walker, Kelce, Rice, Sutton, Harvey, Dobbins and two defenses — usually enough.)
 
 ## Cut-line log
 
@@ -120,14 +146,22 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 |
 
-Working targets until more data arrives (the line should climb as weak teams wash out):
+**Anchor on the count of real starters, not a point target.** With n=1 a score target is
+guesswork; "how many real players do I need" is stabler and is the thing you control.
+Week 1: five real starters produced 71.26 against a 40.02 line, and three of them
+(Wentz + Vele + Jacksonville = 53.12) cleared it alone.
 
-| Weeks | Target score | Real starters | Punts |
+| Weeks | Cut % | Real starters | Punts |
 | --- | --- | --- | --- |
-| 2-4 | 55-65 | 4-5 | 4-5 |
-| 5-9 | 75-90 | 5-7 | 2-4 |
-| 10-13 | 95-110 | 7-8 | 1-2 |
-| 14-17 | max | 9 | 0 |
+| 1-5 | 11.6-14.9% | 4-5 | 4-5 |
+| 6-9 | 16-20.8% | 5-6 | 3-4 |
+| 10-13 | 22.8-34.0% | 7-8 | 1-2 |
+| 14-16 | 40.3-63.2% | 9 | 0 |
+
+Log **cut line, your score, your rank, and teams remaining** at every checkpoint. The
+number actually needed is the ratio *final line / 4pm line*. Two or three weeks of it and
+the Sunday-afternoon windows become as safe to act on as Monday already is. Until then,
+treat pre-Monday readings as directional only.
 
 Corollary that still holds: teams cut early are teams that started someone **inactive**,
 not teams that were eight points light. Optimize for *zero status risk* first.
@@ -293,8 +327,10 @@ reasoning. The shelf-life principle earns its keep in the genuinely useful band.
 7b. **Sort the slate by kickoff window.** Put high-floor players in early games;
     hold interchangeable slots (DST, FLEX, WR3) for the late windows. Avoid TNF.
     Early core should project ~1.4x the expected cut line on its own.
-7c. **Be at your phone at ~4:20pm and ~8:15pm Sunday.** If clear of the projected
-    line, punt the remaining late slots and bank those assets.
+7c. **Do not set a full lineup up front — run the ladder.** Commit the 1:00 core,
+    then decide each later window live. Be present ~4:15pm, ~8:10pm, ~8:00pm Mon.
+7d. **Log the cut line, your score, your rank and teams remaining at every
+    checkpoint.** This is how the guesswork gets retired.
 8. Verify inactives before lock. **Confirm your punt players are genuinely rostered
    nowhere** — a punt who unexpectedly plays is a wasted burn, not a disaster, but a
    punt who is quietly on a roster and scores is a burned asset you did not intend.
