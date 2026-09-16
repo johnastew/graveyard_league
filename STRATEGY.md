@@ -228,6 +228,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | Week | post-1pm | post-4pm | post-SNF | Final | Our score | Margin |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
+| 2 | - | - | - | - | - | pending |
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -498,6 +499,82 @@ the recommendation passed over as too thin.
 **The recommendation over-spent by roughly 2.5x.** It projected 104-115 against a bar
 of 40. The error was treating the cut line as unknowable and defaulting to caution,
 rather than assuming it was low and testing it cheaply.
+
+## Week 2 board (2026)
+
+Pulled 2026-09-16 from FantasyPros weekly + ROS, HALF scoring. Delta = ROS rank
+minus weekly rank; positive = spend now, negative = bank.
+
+**Cut context.** Week 2 reaps 12.2% of 931 teams — barely harder than week 1's
+11.6%. Posture is unchanged: punt 4-5 slots, 4-5 real starters, cheapest
+inventory that clears the bar. Week 1's line was 40.02; with n=1 that is the
+only anchor there is, so treat ~40 as directional and anchor on the
+*count* of real starters instead.
+
+### Highest delta with no residual — the week 2 spend list
+
+| Pos | Player | Weekly | ROS | Delta | Residual |
+| --- | --- | --- | --- | --- | --- |
+| DST | **Tampa Bay** | DST2 | DST18 | **+16** | none — DST never hoarded |
+| RB | **Chuba Hubbard** (CAR) | RB23 | RB36 | **+13** | outside ~RB30 usable pool |
+| WR | **DJ Moore** (BUF) | WR14 | WR24 | **+10** | nil below WR15 |
+| WR | Mike Evans (SF) | WR16 | WR23 | +7 | nil below WR15 |
+| WR | Garrett Wilson (NYJ) | WR12 | WR19 | +7 | marginal |
+| RB | Jordan Mason (MIN) | RB27 | RB34 | +7 | outside usable pool |
+| QB | C.J. Stroud (HOU) | QB20 | QB23 | +3 | inside the flat spend band |
+| TE | Michael Mayer (LV) | TE15 | >TE22 | +7 | nil — **role-by-absence, see below** |
+
+Tampa Bay is this week's Jacksonville: a top-2 weekly defense that ranks
+DST18 rest-of-season. Pure one-week rental, nothing to protect. The residual
+filter must not be applied here — that was the week 1 error.
+
+### The strongest banks (do not spend)
+
+Negative delta and high residual, in the order they would hurt most:
+
+Breece Hall (RB25 wk / RB15 ROS, **-10**), Omarion Hampton (-9), D'Andre Swift
+(-8), Jaylen Waddle (-7), Kyren Williams (-7), Chase Brown (-6), De'Von Achane
+(-6), Drake Maye (-6), Drake London (-5), Malik Nabers (-4), Bhayshul Tuten (-4),
+Jeremiyah Love (-4), Trevor Lawrence (-3), Tee Higgins (-3).
+
+Gibbs, Bijan, Chase, Nacua, Smith-Njigba, St. Brown, Josh Allen, Lamar, Hurts and
+McBride all sit at delta 0 with maximum residual. Zero reason to touch any of
+them in a 12.2% week — they are precisely the assets the punt strategy exists to
+preserve for weeks 14-16.
+
+### Week 2 ladder
+
+Five real starters, four punts. Windows must be assigned against the actual
+slate before committing.
+
+| Slot | Plan |
+| --- | --- |
+| DST | Tampa Bay — hold as late as its kickoff allows |
+| QB | C.J. Stroud — flat-band arm, highest floor per unit of inventory |
+| RB | Chuba Hubbard |
+| WR | DJ Moore |
+| WR | Mike Evans |
+| RB / TE / FLEX / SFLX | **punt** |
+
+SFLX is punted, per the rule that superflex punts get scheduled in weeks 1-5
+rather than left to drift into weeks 9-11.
+
+Rough floor from week 1 positional calibration: a QB20 produced 16.14, and the
+RB/WR band here sits around 10-12 each, with TB at roughly 7. That lands near
+55-60 against a ~40 bar — about the 1.4x early-core premium, with the four
+punted slots still convertible to real players from the late windows if the
+1:00 games come in short.
+
+### Two manual checks before locking
+
+1. **Michael Mayer depends on Brock Bowers still being out.** Bowers was a
+   one-to-two-week meniscus absence as of week 1, which means week 2 is exactly
+   when he could return. Mayer's own injury line will stay clean either way —
+   this is the role-by-absence trap. Check Bowers directly, and drop Mayer to a
+   punt if he practices.
+2. **Chuba Hubbard's +13 is a matchup read on prior-year data.** Weeks 1-4 is
+   when that is least trustworthy. Verify the opposing front seven did not turn
+   over before leaning on it.
 
 ## Source notes
 
