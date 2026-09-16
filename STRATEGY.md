@@ -415,7 +415,9 @@ reasoning. The shelf-life principle earns its keep in the genuinely useful band.
     then decide each later window live. Be present ~4:15pm, ~8:10pm, ~8:00pm Mon.
 7d. **Log the cut line, your score, your rank and teams remaining at every
     checkpoint.** This is how the guesswork gets retired.
-8. Verify inactives before lock. **Confirm your punt players are genuinely rostered
+8. Verify inactives before lock. **For any starter whose case rests on another player
+   being absent, check that other player's injury line too** — your man's own status
+   stays clean even as the role evaporates. **Confirm your punt players are genuinely rostered
    nowhere** — a punt who unexpectedly plays is a wasted burn, not a disaster, but a
    punt who is quietly on a roster and scores is a burned asset you did not intend.
 9. Record the burn in `data/used_players.json` via `./gy u "Name"` **after** lineups lock.
@@ -496,6 +498,76 @@ the recommendation passed over as too thin.
 **The recommendation over-spent by roughly 2.5x.** It projected 104-115 against a bar
 of 40. The error was treating the cut line as unknowable and defaulting to caution,
 rather than assuming it was low and testing it cheaply.
+
+## Source notes
+
+- **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
+  carry projections, opponent context and role notes — the inputs the residual filter
+  and the role-certainty rule actually need. Sleeper columns explicitly hunt ceiling
+  ("some of these guys are going to absolutely faceplant"), which is the wrong tail
+  for a survival format. Week 1's sleeper column produced zero usable names: most of
+  its picks collided with a slot already filled, sat on a team whose game had already
+  kicked off, or were openly conditional on a role nobody had confirmed.
+- Prefer sources that state *why* a player is ranked where he is. A rank alone cannot
+  be cross-checked against the turnover caveat or the role-certainty rule.
+
+## Role-by-absence: a second-order status risk
+
+The status filter asks whether *your* player is healthy. It cannot ask whether the
+player whose absence created your player's role is still absent. Those are different
+questions and the second one is not on your player's injury line at all.
+
+Week 1 2026 produced one of each:
+
+- **Tua Tagovailoa** was taken as a punt carrying benching risk, since Michael Penix Jr.
+  sat one ECR spot behind him. The injury report then showed Penix out for the week with
+  a torn ACL — the risk priced into the pick had already evaporated.
+- **Travis Etienne** was taken because Alvin Kamara was out. By Wednesday Kamara was a
+  limited participant and questionable. Etienne's own line stayed clean the whole time,
+  so nothing in the tooling flagged it.
+
+**Rule: for every starter whose case rests on someone else being absent, check that
+other player on the injury report too.** `./gy s` cannot do this — it reads the ranked
+board, which carries no dependency between players. It is a manual step in the
+checklist, alongside verifying actives.
+
+## Residual is measured against the usable pool, not the hoard band
+
+The hoard band says *do not spend this player*. It is not the same line as *this player
+still has value later*, and conflating them under-counts residual for the tight
+positions. A TE12 sits outside the band (8) but well inside a usable pool of ~18-20, so
+burning him does cost something. A WR29 sits outside the band (15) and inside a usable
+pool of ~60-70 — but WR runs only ~65% consumption, so the surplus refills faster than
+you burn it and the residual really is nil.
+
+Before asking "can I go cheaper here?", check the slot against the pool it draws from:
+
+| Pos | Consumption | Going deeper buys you |
+| --- | --- | --- |
+| QB | ~115% | a lot, until you fall past ~QB28 — below that there is nothing left |
+| RB | ~100% | a lot, anywhere inside ~RB30 |
+| TE | ~90% | real value inside ~TE18 |
+| WR | ~65% | **almost nothing below ~WR15** — the pool outruns the burn |
+| DST | 53% | nothing, ever |
+
+The practical test: **going deeper only pays when the player you drop is someone you
+would actually start again.** Week 1 2026 ran into this three times — the lineup had
+already been taken down to two QBs, three WRs and a DST with no residual between them,
+so further "cheaper" moves at WR were selling points for nothing, while the RB and TE
+slots still held assets worth preserving.
+
+## Bank watch
+
+- **Brock Bowers (knee)** is out for week 1 after a meniscus trim. Reporting split on
+  severity: Eisenberg said "could miss multiple weeks," Schefter said "a game or two."
+  Take the specific report over the vague one — the ROS TE1 is frozen for a week or
+  two, not the month. He is still bankable for the endgame; do not panic-spend the
+  TE board around his absence. Tre Tucker becomes Las Vegas's lead pass-catcher while
+  he is out, which is a burn candidate in any week Kirk Cousins is not started.
+- **Isaiah Likely** (NYG) is weekly TE11 against ROS TE10 — a *negative* delta, so he
+  is a hoard, not a burn, and one of the few tight ends worth carrying toward weeks
+  9-11. SportsLine's model has him TE9 ahead of LaPorta and Kelce, as the clear No. 1
+  tight end for Jaxson Dart.
 
 ## Things we got wrong (so we don't re-derive them)
 
