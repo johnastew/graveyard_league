@@ -565,6 +565,32 @@ RB/WR band here sits around 10-12 each, with TB at roughly 7. That lands near
 punted slots still convertible to real players from the late windows if the
 1:00 games come in short.
 
+### Correction: the QB pick was too expensive, by our own test
+
+The week 2 recommendation opened with C.J. Stroud at QB. Drew Lock is the better
+pick and the reasoning is already in this file: **going deeper only pays when the
+player you drop is someone you would actually start again.** Stroud is ROS QB23 —
+inside the ~28-deep usable band, so burning him costs a real future start. Lock is
+outside the band entirely. The projected gap is about 1.2 points. That is the
+residual test applied correctly, and the recommendation failed it.
+
+The wider version of the same error: DJ Moore and Mike Evans both have nil residual
+by the WR table, so they are cheap in *inventory* — but they are ~12 projected points
+each, bought to clear a bar the board already reaches. **Nil residual is not a reason
+to spend.** Surplus points are worthless no matter how cheap the asset was. This is
+week 1's 35.74-point overspend re-derived in a new costume.
+
+### Depth-chart check beats the projection
+
+Chris Brooks projects 7.2 but is **RB4 on Green Bay's depth chart**, behind MarShawn
+Lloyd, Josh Jacobs and Kaleb Johnson (ECR RB73). Burning him costs nothing, so he is
+fine as a slot-filler — but he cannot be *counted* as 7.2 of floor. A projection for
+a fourth-string back prices a role he does not have.
+
+**Rule: before counting a cheap player's projection toward the early core, check the
+depth chart.** The injury feed will not flag him — he is not injured, he is buried.
+`./gy` cannot do this either; the ranked board carries no depth information.
+
 ### Two manual checks before locking
 
 1. **Michael Mayer depends on Brock Bowers still being out.** Bowers was a
