@@ -591,6 +591,41 @@ a fourth-string back prices a role he does not have.
 depth chart.** The injury feed will not flag him — he is not injured, he is buried.
 `./gy` cannot do this either; the ranked board carries no depth information.
 
+### Count is a proxy for cost, and this week they diverge
+
+The posture table says "4-5 real starters" in weeks 1-4. That count is a *proxy*
+for inventory spent, and it assumes a real starter costs real inventory. When the
+board offers players whose ROS rank puts them outside the usable pool entirely, the
+proxy breaks: six free players cost less than three mid-tier ones.
+
+The test is always the cost, never the count. **Filling a slot with genuinely free
+inventory is close to costless, so it buys floor for nothing** — the only thing
+given up is the option to punt that slot later, and a punt is worth zero points.
+Regret on a free burn is approximately zero.
+
+This does not license spending. It licenses spending *cheap*, and it is the
+difference between week 1's five starters at 71.26 points of real inventory and a
+core of the same size drawn from below the usable line.
+
+### Week 2 window map (2026)
+
+Full 16-game slate, no byes.
+
+| Window | Games |
+| --- | --- |
+| TNF Thu | DET @ BUF — **avoid** |
+| Sun 1:00 | GB@NYJ, CIN@HOU, PHI@TEN, NO@BAL, CLE@TB, MIN@CHI, CAR@ATL, PIT@NE |
+| Sun 4:05 | LV@LAC, JAC@DEN |
+| Sun 4:25 | WAS@DAL, MIA@SF, SEA@ARI |
+| SNF | IND @ KC |
+| MNF | NYG @ LAR |
+
+**The MNF pool is unusually rich this week**: Nacua, Davante Adams, Nabers,
+Skattebo, Stafford, Dart, Kyren Williams, Terrance Ferguson and both defenses.
+That is well past the "2-3 players you would actually be willing to burn" bar, so
+holding slots for Monday is better supported than in a typical week. SNF (IND @ KC)
+adds Alec Pierce and Daniel Jones as cheap burns.
+
 ### Two manual checks before locking
 
 1. **Michael Mayer depends on Brock Bowers still being out.** Bowers was a
