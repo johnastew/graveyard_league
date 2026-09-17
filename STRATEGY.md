@@ -626,6 +626,51 @@ That is well past the "2-3 players you would actually be willing to burn" bar, s
 holding slots for Monday is better supported than in a typical week. SNF (IND @ KC)
 adds Alec Pierce and Daniel Jones as cheap burns.
 
+### The inventory budget — does spending WR27 actually run you out?
+
+Challenged directly in week 2: burning players like Luther Burden (a 6th-7th round
+pick) every week must exhaust the roster before the endgame. Worked the numbers
+rather than asserting it.
+
+**Demand.** The endgame is not one week. Weeks 14-17 are four max lineups — 36 slots
+with no punts. Adding the posture table for weeks 2-13 gives **106 real starts
+across the rest of the season**, 36 of them from preserved assets.
+
+**The preserve band.** To field 36 good starts in weeks 14-17 you must arrive with
+roughly QB1-12, RB1-20, WR1-18, TE1-7 intact — about 57 players for 36 starts, a
+37% buffer against injury and tier decline. DST is preserved at zero; matchups
+regenerate.
+
+**Weeks 2-13 demand against what is left outside that band:**
+
+| Pos | Starts needed | Available | Consumption |
+| --- | --- | --- | --- |
+| **RB** | 24 | 20 (RB21-40) | **120%** |
+| TE | 12 | 15 (TE8-22) | 80% |
+| QB | 12 | 16 (QB13-28) | 75% |
+| WR | 24 | 37 (WR19-55) | **65%** |
+| DST | 12 | 32 | 38% |
+
+**The concern is real but mislocated.** WR runs 65% — there are 37 non-preserved
+receivers for 24 starts, so spending WR19-WR35 weekly is affordable and Burden at
+ROS WR27 does not cost an endgame start: twelve better receivers are already banked
+ahead of him. He is a valuable *draft* asset, which is a different currency — draft
+value prices season-long accumulation, and this format only asks whether a player
+would crack a week 14-17 lineup.
+
+**RB is where you run out, at 120%.** Twenty-four running back starts from twenty
+non-preserved backs does not close.
+
+**Therefore: punt the RB slots, not the WR slots.** The deficit is exactly what the
+weeks 2-9 punt budget is for, and it should be spent at running back rather than
+spread evenly. Filling both WR slots with cheap receivers while punting a RB slot is
+not a compromise — it is the shape the budget requires. Every punt aimed at RB
+converts a 120% position into a solvable one; a punt aimed at WR relieves a position
+that was never binding.
+
+Corollary: at RB, the residual filter should be applied *more* strictly than
+elsewhere. An RB inside ~RB30 that you burn is drawn from the one pool with no slack.
+
 ### Two manual checks before locking
 
 1. **Michael Mayer depends on Brock Bowers still being out.** Bowers was a
