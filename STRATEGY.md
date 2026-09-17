@@ -671,6 +671,37 @@ that was never binding.
 Corollary: at RB, the residual filter should be applied *more* strictly than
 elsewhere. An RB inside ~RB30 that you burn is drawn from the one pool with no slack.
 
+### Week 2 lineup (2026)
+
+Shaped by the budget above: punts go to RB (120% consumption), both WR slots get
+filled cheap (65%), TE comes from outside the TE7 preserve band.
+
+| Slot | Player | Team | Window | Weekly / ROS |
+| --- | --- | --- | --- | --- |
+| QB | Drew Lock | SEA @ ARI | Sun 4:25 | unranked ROS — free |
+| RB | Chuba Hubbard | CAR @ ATL | Sun 1:00 | RB23 / RB36, +13 |
+| RB | **punt** | — | — | RB deficit paid here |
+| WR | DK Metcalf | PIT @ NE | Sun 1:00 | WR28 / WR31 |
+| WR | Rome Odunze | MIN @ CHI | Sun 1:00 | WR27 / WR30 |
+| TE | Dalton Schultz | CIN @ HOU | Sun 1:00 | TE17 / TE18 |
+| FLEX | **hold for MNF** | NYG @ LAR | Mon 8:15 | decide live |
+| SFLX | **punt** | — | — | scheduled early per QB rule |
+| DST | Tampa Bay | CLE @ TB | Sun 1:00 | DST2 / DST18, +16 |
+
+Five real players at 1:00 across five different games, no team or game overlap.
+Bet shapes decorrelated: TD-dependent back, defense, deep threat, volume receiver,
+TE streamer. Early core projects roughly 45 against a week 1 line of 40.02.
+
+Drew Lock needs no live decision — he is outside the ROS top 32, so the slot costs
+nothing whether he plays well or not. Darnold (glute) is ruled out and Lock is the
+confirmed starter.
+
+Chris Brooks dropped from the board. He projects 7.2 but is Green Bay's RB4 behind
+Lloyd, Jacobs and Kaleb Johnson, and the RB slot is the one the budget says to punt.
+
+FLEX is the only live decision: at ~8:00pm Monday, punt it if clear, or take Davante
+Adams (ROS WR28) or Cam Skattebo from the Giants-Rams game if short.
+
 ### Two manual checks before locking
 
 1. **Michael Mayer depends on Brock Bowers still being out.** Bowers was a
