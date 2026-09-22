@@ -228,7 +228,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | Week | post-1pm | post-4pm | post-SNF | Final | Our score | Margin |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
-| 2 | 22.16 | 50.24 | 62.60 | ? | 101.32 | +38.72 (survived) |
+| 2 | 22.16 | 50.24 | 62.60 | **72.20** | 101.32 | +29.12 (survived) |
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -508,7 +508,8 @@ rather than assuming it was low and testing it cheaply.
 
 ## Week 2 result (2026)
 
-**Survived.** Scored 101.32 against a 62.60 line (pre-MNF reading; final line TBC).
+**Survived.** Scored 101.32 against a final cut line of **72.20**. 114 reaped, 817
+standing — the elimination table called both numbers exactly.
 
 | Slot | Player | Pts | Proj |
 | --- | --- | --- | --- |
@@ -531,6 +532,19 @@ Nine burned, **zero punts**. Recorded in `data/used_players.json` (18 season tot
 | Mid-afternoon | 22.16 | - |
 | Post-4:25, pre-SNF | 50.24 | **+28.08 (2.27x)** |
 | Post-SNF, pre-MNF | 62.60 | +12.36 |
+| **Final** | **72.20** | **+9.60** |
+
+**The ratios — the numbers this log exists to produce:**
+
+| Checkpoint | Final / checkpoint |
+| --- | --- |
+| post-1pm | **3.26x** |
+| post-4pm | **1.44x** |
+| post-SNF | **1.15x** |
+
+One week of data, so treat these as a first anchor rather than a rule. But the shape is
+clear: **a 1pm reading must be roughly tripled, a 4pm reading multiplied by ~1.45, and
+even a post-SNF reading is still 15% light.**
 
 Two lessons, and they pull in opposite directions:
 
@@ -558,11 +572,21 @@ Both held slots beat their projections and both were cheap:
 Holding those two slots to Monday, rather than filling them Sunday at 1pm, was worth
 roughly 20 points over the placeholders (Theo Johnson + OBJ, ~4.5 combined).
 
-### What nearly went wrong
+### What nearly went wrong — the punt that would have ended the season
 
 At 12:55 the live line read 20 against our 43.14 and the instinct was to punt everything
-remaining. Had we done so we would have finished 70.84 against 62.60 — survived, but by
-8.24 with no lever left. The margin came entirely from slots we had *not* committed.
+remaining.
+
+**Punting the two Monday slots would have finished 70.84 against a 72.20 final line.
+Cut by 1.36 points, in week 2, with the entire bank still on the shelf.**
+
+The whole season turned on two slots held past Sunday afternoon. Every margin in this
+document that looked comfortable at the time — 2x the line at 1pm, +8.24 over the
+pre-MNF reading — was an artefact of reading an unfinished line.
+
+**The rule this buys: never punt a late slot against anything but a post-MNF-kickoff
+line.** Not a 1pm line, not a 4pm line, not a pre-SNF line. There is no cheaper
+version of this lesson available.
 
 Correlation note: Stafford and Parkinson are QB and TE on the same team, the worst kind
 of pairing (same drives, same script). We took it knowingly because the alternative cost
@@ -661,8 +685,12 @@ slots still held assets worth preserving.
 - **Stopped the elimination curve at week 11.** The real peak is 63.2% in week 16.
 - **"Cincinnati is the softest RB matchup on the board."** Built on 2025 splits. They
   rebuilt the defensive line over the offseason. Prior-year data needs a turnover check.
+- **"The final line will land 55-65."** It landed 72.20. Forecasting the line remains
+  fiction even with a checkpoint series in hand — the doctrine's "read it, do not
+  project it" rule survives week 2 intact, and the one time we projected anyway we
+  were 10+ points light in the direction that gets you eliminated.
 - **"Most teams are done by SNF, so the line barely moves after it."** Wrong, week 2:
-  +12.36 across SNF alone. The teams still live late are the ones deliberately holding
+  +12.36 across SNF, then +9.60 more across MNF. The teams still live late are the ones deliberately holding
   late slots, so the tail of the slate is *enriched* in movement, not drained of it.
 - **Asserted TE scarcity without pulling the ROS board.** Argued David Njoku was an
   expensive burn on "TE pool is tight" grounds. He is ROS TE30 — residual near nil.
