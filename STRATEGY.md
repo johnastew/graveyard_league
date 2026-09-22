@@ -228,6 +228,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | Week | post-1pm | post-4pm | post-SNF | Final | Our score | Margin |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
+| 2 | 22.16 | 50.24 | 62.60 | ? | 101.32 | +38.72 (survived) |
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -240,6 +241,12 @@ Week 1: five real starters produced 71.26 against a 40.02 line, and three of the
 | 6-9 | 16-20.8% | 5-6 | 3-4 |
 | 10-13 | 22.8-34.0% | 7-8 | 1-2 |
 | 14-16 | 40.3-63.2% | 9 | 0 |
+
+**Week 2 broke this table.** It ran **nine real starters and zero punts** against a
+12.2% cut and still only finished +38.72. The week-1 read ("punt 4-5 in weeks 1-5")
+was calibrated on a single 40.02 line. Week 2's line was **62.60 before Monday even
+started** — higher than week 1's final. One week does not set the punt budget. Treat
+the table as a floor on real starters, not a target, until the log has 4-5 rows.
 
 Log **cut line, your score, your rank, and teams remaining** at every checkpoint. The
 number actually needed is the ratio *final line / 4pm line*. Two or three weeks of it and
@@ -499,6 +506,69 @@ the recommendation passed over as too thin.
 of 40. The error was treating the cut line as unknowable and defaulting to caution,
 rather than assuming it was low and testing it cheaply.
 
+## Week 2 result (2026)
+
+**Survived.** Scored 101.32 against a 62.60 line (pre-MNF reading; final line TBC).
+
+| Slot | Player | Pts | Proj |
+| --- | --- | --- | --- |
+| QB | Cooper Rush (ATL) | -0.56 | 11.3 |
+| RB | Chuba Hubbard (CAR) | 14.40 | 12.8 |
+| RB | Chris Brooks (GB) | 3.60 | 7.2 |
+| WR | Mack Hollins (NE) | 3.80 | 8.5 |
+| WR | Rashod Bateman (BAL) | 21.80 | 8.9 |
+| TE | Colby Parkinson (LAR) | 3.50 | 7.1 |
+| FLEX | Kenneth Walker III (KC) | 23.80 | 17.3 |
+| SFLX | Matthew Stafford (LAR) | 26.98 | 16.8 |
+| DST | Tampa Bay | 4.00 | 9.6 |
+
+Nine burned, **zero punts**. Recorded in `data/used_players.json` (18 season total).
+
+### The line moved far more than week 1 suggested
+
+| Checkpoint | Line | Move |
+| --- | --- | --- |
+| Mid-afternoon | 22.16 | - |
+| Post-4:25, pre-SNF | 50.24 | **+28.08 (2.27x)** |
+| Post-SNF, pre-MNF | 62.60 | +12.36 |
+
+Two lessons, and they pull in opposite directions:
+
+1. **A pre-SNF reading carries almost no signal.** The afternoon jump is the mass of the
+   field finishing at once. Anchoring on a 1pm or early-4pm number is worthless — at
+   22.16 we looked 2x clear and were in fact *behind* four hours later.
+2. **But SNF and MNF still move it meaningfully.** +12.36 across SNF alone. The reasoning
+   that "most teams are done by SNF so the line barely moves" was wrong, because the
+   teams still live at that hour are disproportionately the ones *holding late slots on
+   purpose* — the same ladder we run. Survivors cluster at the back of the slate.
+
+**Do not punt a late slot on a pre-SNF line.** The honest read only arrives at MNF
+kickoff, exactly as the doctrine already said — week 2 is the proof.
+
+### The ladder paid, twice
+
+Both held slots beat their projections and both were cheap:
+
+- **Stafford 26.98** against a 16.8 projection, taken at 38 years old with no residual.
+  The single best points-per-asset burn of the season so far.
+- **Parkinson 3.5** — weekly TE32 / ROS TE36, delta +4, residual nil. He underperformed
+  and it did not matter. That is what a correct cheap burn looks like: the *asset* was
+  right even though the *outcome* was poor.
+
+Holding those two slots to Monday, rather than filling them Sunday at 1pm, was worth
+roughly 20 points over the placeholders (Theo Johnson + OBJ, ~4.5 combined).
+
+### What nearly went wrong
+
+At 12:55 the live line read 20 against our 43.14 and the instinct was to punt everything
+remaining. Had we done so we would have finished 70.84 against 62.60 — survived, but by
+8.24 with no lever left. The margin came entirely from slots we had *not* committed.
+
+Correlation note: Stafford and Parkinson are QB and TE on the same team, the worst kind
+of pairing (same drives, same script). We took it knowingly because the alternative cost
+Isaiah Likely, a TE12-ROS asset. Stafford's 4 TDs meant it never got tested. **Do not
+read this as a licence to stack — it was a priced risk that happened to win.**
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
@@ -564,10 +634,11 @@ slots still held assets worth preserving.
   two, not the month. He is still bankable for the endgame; do not panic-spend the
   TE board around his absence. Tre Tucker becomes Las Vegas's lead pass-catcher while
   he is out, which is a burn candidate in any week Kirk Cousins is not started.
-- **Isaiah Likely** (NYG) is weekly TE11 against ROS TE10 — a *negative* delta, so he
-  is a hoard, not a burn, and one of the few tight ends worth carrying toward weeks
-  9-11. SportsLine's model has him TE9 ahead of LaPorta and Kelce, as the clear No. 1
-  tight end for Jaxson Dart.
+- **Isaiah Likely** (NYG) — week 2 board has him weekly **TE7 / ROS TE12**, a +5 delta,
+  so the week-1 "negative delta, pure hoard" read is out of date. He is now a *good*
+  burn on delta alone, but ROS TE12 sits well inside a usable pool of ~18-20, so the
+  residual is real. Hold him for weeks 9-13 unless a week genuinely needs the points;
+  spend a TE30+ body first.
 
 ## Things we got wrong (so we don't re-derive them)
 
@@ -590,6 +661,13 @@ slots still held assets worth preserving.
 - **Stopped the elimination curve at week 11.** The real peak is 63.2% in week 16.
 - **"Cincinnati is the softest RB matchup on the board."** Built on 2025 splits. They
   rebuilt the defensive line over the offseason. Prior-year data needs a turnover check.
+- **"Most teams are done by SNF, so the line barely moves after it."** Wrong, week 2:
+  +12.36 across SNF alone. The teams still live late are the ones deliberately holding
+  late slots, so the tail of the slate is *enriched* in movement, not drained of it.
+- **Asserted TE scarcity without pulling the ROS board.** Argued David Njoku was an
+  expensive burn on "TE pool is tight" grounds. He is ROS TE30 — residual near nil.
+  Pool tightness is an argument about a *position*; residual is a fact about a *player*.
+  Check the ROS rank before claiming an individual is worth protecting.
 - **"Protect Jacksonville's DST12 residual."** Applied the RB scarcity rule to a loose,
   matchup-driven pool. Residual value must be weighted by pool tightness.
 
