@@ -349,6 +349,51 @@ starts. **You cannot fill every superflex with a real QB.**
 - **Schedule those punts in weeks 1-5** (11.6-14.9% cut), never in weeks 9-11 (20.5-25.6%).
   Left to drift you would punt late, when you are out of arms and the cut is brutal.
 
+### Backup QBs getting starts are the best superflex fill in the game
+
+The QB pool is the tightest on the board (~115% consumption) and the quality cliff lands
+around QB28. **A backup who has just inherited a starting job sits below that cliff on ROS
+while carrying a real weekly projection.** That combination — startable now, worthless
+later — is the ideal burn, and it is the cheapest way to cover two QB slots without
+touching the bank.
+
+Week 3 2026:
+
+| Player | Weekly | ROS | Delta | Proj |
+| --- | --- | --- | --- | --- |
+| Marcus Mariota (Jayden Daniels, elbow) | QB33 | QB33 | 0 | 14.31 |
+| Tyson Bagent (Caleb Williams, hamstring) | QB36 | QB38 | +2 | 12.91 |
+
+Both project like a low-end starter and both are below the cliff, so the residual is nil.
+Compare the alternatives at the same points: Kirk Cousins (12.68, ROS QB29) and Aaron
+Rodgers (14.57, ROS QB28) sit right at the edge of the usable pool. Same output, worse
+asset.
+
+**This is strictly better than the punt-the-superflex plan.** The doctrine budgets 4-7
+weeks where SFLX takes a WR/RB because a real QB cannot be spared. A backup on a starting
+run fills that slot with ~13 points instead, at the same zero cost. Scan for these first,
+every week, before planning a superflex punt.
+
+**The catch is role risk, and it is the specific thing that kills you.** These players are
+starting only because someone else is hurt, so the status question is not "is my guy
+healthy" but "is the starter still out" — the role-by-absence rule. Grade the reporting:
+
+- *Dislocated elbow, imaging done, consulting specialists, no timetable* (Daniels) — safe.
+- *"Week-to-week," optimism "gave way to reality"* (Williams) — **not** safe. Week-to-week
+  is not ruled out.
+
+### Check the kickoff window before you worry about role risk
+
+A cheap starter **in a late window resolves his own role risk for free.** Bagent's
+week-3 job depended on a week-to-week hamstring — but Chicago played Monday night, so the
+slot did not need committing until 8:15pm Monday, by which point the question was settled.
+
+**So the order of operations is: window first, then status.** A provisional starter in the
+1:00 window is a real risk that needs a Friday practice report and a fallback name. The
+same player on SNF or MNF is simply a free look. Do not discount a name for role risk
+until you have checked when he kicks off.
+
+
 ### DST — never hoard
 
 17 starts from 32 teams, and DST scoring is driven by **matchup, not talent**. Matchups
