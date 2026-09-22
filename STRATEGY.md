@@ -593,6 +593,70 @@ of pairing (same drives, same script). We took it knowingly because the alternat
 Isaiah Likely, a TE12-ROS asset. Stafford's 4 TDs meant it never got tested. **Do not
 read this as a licence to stack — it was a priced risk that happened to win.**
 
+## Field dynamics: the line drifts, and you still cannot predict it
+
+The field you play in week N is not the field from week N-1. Two forces act on it, and
+they point in opposite directions.
+
+**Forces pushing the line up:**
+
+- **Selection.** Managers who punt badly get cut. Every week the survivor pool is
+  enriched in people who understand the ladder. You are always playing a better field
+  than you played last week, and the filtering is relentless — 122, 114, 107, 99...
+- **Learning.** Anyone who nearly died to a bad Monday punt learns the same lesson we
+  learned in week 2. Assume the tactics in this document are being independently
+  rediscovered across the surviving field.
+- **The cut rate itself.** 11.6% -> 63.2%. Independent of scoring, the *percentile* you
+  must beat rises every single week.
+
+**Forces pushing the line down:**
+
+- **Inventory depletion.** Every survivor burns 5-9 real players a week and never gets
+  them back. By week 14 the field has spent 100+ names each against a startable pool of
+  roughly 180. League-wide, late-season lineups are *worse* than early-season ones.
+- **Depletion compounds with the line.** A high line forces fewer punts, which burns
+  inventory faster, which degrades everyone's week-14 roster, which lowers scores. The
+  two effects feed each other.
+
+**Net shape:** early, the quality effect dominates — inventory is deep, so better play
+converts straight into points. Late, depletion dominates. The absolute line likely climbs
+then flattens or falls, and the turning point is not forecastable. Week 2 is the evidence:
+our own best projection was 55-65 and the answer was 72.20.
+
+### The reframe: optimise percentile, not points
+
+The line **in points** is unpredictable. The line **in percentile** is known exactly, for
+all 17 weeks, and was known before the season started. It is the `% cut` column of the
+elimination table.
+
+Week 3 does not ask for 72 points. It asks you to beat **13.1% of 817 teams.**
+
+So the weekly question is not "what score do I need" — it is **"what percentile am I
+buying, and what is the cheapest inventory that buys it?"** The percentile is knowable
+and fixed. The points are a translation that only resolves at MNF kickoff.
+
+This also explains why the checkpoint ratios are worth logging but will never be a
+formula: they translate percentile into points for *one particular week's* field and
+scoring environment. Log them, use them as a sanity check, never as a target.
+
+### The uncomfortable corollary
+
+If survivors are selected for discipline, then the field in week 14 is disproportionately
+made of managers who **also banked well**. The relative edge from banking erodes exactly
+when the cut is most brutal.
+
+The response is not to bank less. It is to bank *harder* early, because:
+
+1. The absolute requirement for late inventory is unchanged — you still need nine real
+   starters in weeks 14-16.
+2. The field you will face has been filtered for the same discipline, so the bar for
+   "good enough inventory" in week 15 is set by people who also hoarded.
+3. Early weeks remain the cheapest place to buy survival. That fact is structural and
+   does not erode.
+
+Banking early is not an edge over the field any more. **It is the entry fee for being in
+the week-14 conversation at all.**
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
