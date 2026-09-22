@@ -12,6 +12,37 @@ the league's own elimination table.
 - Superflex. Starting slots: QB / SFLX / RB / RB / WR / WR / FLEX / TE / DST. **No kicker.**
 - 752 entrants at the start of the 2026 season.
 
+## The rule that applies to every slot: high delta, low residual
+
+**Every position, every week, including DST.** Read this before the elimination curve,
+because it is the filter every other decision passes through.
+
+- **Delta** = ROS rank minus weekly rank. **Positive = ranked better this week than for
+  the season = spend him now.** Negative = a later asset = bank him.
+- **Residual** = what is left over after you burn him, measured against the *usable pool*
+  at his position, not against a hoard band.
+
+**The best burn at every slot is high delta AND low residual.** A big positive delta with
+nothing left behind is a free slot. Chase that number at QB, RB, WR, TE **and DST** — there
+is no position where you should be spending a negative-delta player in a week you can avoid it.
+
+Week 3 2026, what this looks like in practice:
+
+| Slot | Player | Weekly | ROS | Delta | Residual |
+| --- | --- | --- | --- | --- | --- |
+| WR | Deebo Samuel | WR24 | WR44 | **+20** | nil |
+| DST | Carolina | DST9 | DST29 | **+20** | nil |
+| RB | Rico Dowdle | RB26 | RB35 | +9 | nil |
+| WR | Courtland Sutton | WR33 | WR42 | +9 | nil |
+| QB | Tyson Bagent | QB36 | QB38 | +2 | nil |
+
+Nine slots filled that way projected ~101 while burning nothing inside any usable pool.
+
+**Do not spend a negative delta.** Jaylen Waddle at weekly WR21 / ROS WR14 (-7) is a player
+the market says is worth *more* later than this week. Burning him is paying a premium to
+lose an asset.
+
+
 ## The elimination curve — the single most important table
 
 Final entrant numbers, 2026 season:
@@ -332,6 +363,27 @@ going to be scarce.
 The delta metric still helps at DST, but as a **matchup detector**: a big positive gap means
 "ranked well above its talent because of who it plays." Tennessee week 1 was +14 (DST12
 weekly, DST26 ROS) — pure one-week rental.
+
+**Chase the delta at DST exactly as hard as anywhere else.** Week 3 2026: Carolina
+projected 7.70 at DST9 weekly / DST29 ROS (**+20**) while Kansas City projected 7.72 at
+DST3 / DST13 (+10). Identical points, but Carolina is ranked ninth purely for its
+opponent and has nothing behind it. Take the big delta when the projections tie.
+
+### The one DST exception: a delta-0 elite unit
+
+"Never hoard" is right in spirit but slightly too absolute. Week 3 2026 has **Seattle at
+DST1 weekly AND DST1 ROS — delta 0.** That is not a matchup, that is a unit that will be
+the best available option in many future weeks, so it does carry residual even at 53% pool
+consumption.
+
+Refined rule:
+
+> Take the best matchup available and never preserve a defense for its *talent* —
+> **except** at the very top, where a delta-0 DST1 is the best option most weeks and is
+> worth leaving on the shelf.
+
+And never buy a **negative** delta at DST: Denver week 3 was DST12 weekly against DST3 ROS
+(-9), which is paying for a good defense in its bad matchup.
 
 ## Positional point spreads (week 1, for calibration)
 
