@@ -228,6 +228,12 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | Week | post-1pm | post-4pm | post-SNF | Final | Our score | Margin |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
+| 2 | - | - | - | **unlogged** | - | - |
+
+**Week 2 was never logged and its burns were never recorded in
+`data/used_players.json`.** Until that gap is filled, the eligible pool printed by
+`./gy` is wrong — it will offer back players who are already spent. Reconstruct it
+from the league app before trusting any recommendation that names a new player.
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -499,6 +505,100 @@ the recommendation passed over as too thin.
 of 40. The error was treating the cut line as unknowable and defaulting to caution,
 rather than assuming it was low and testing it cheaply.
 
+## The league app's projection is not the consensus rank
+
+The app attaches a point projection to every player it suggests. Those numbers are
+**not** the FantasyPros consensus this doctrine is built on, and in week 3 they
+disagreed on three of nine slots:
+
+| Player | App proj | Consensus weekly rank |
+| --- | --- | --- |
+| Courtland Sutton | 9.3 | WR45 |
+| Kenyon Sadiq | 7.7 | TE24 |
+| Tyson Bagent | 8.3 | QB34 (behind his own backup, Keenum at QB32) |
+
+A projection sorts players by expected points. That is the wrong objective here —
+it cannot see burn cost, residual value, or the delta. **Re-rank anything the app
+suggests against the weekly and ROS boards before accepting it.** The app is a
+lineup optimizer for a format we are not playing.
+
+Corollary: an app projection that sits well above a player's consensus rank is
+usually pricing in a role the consensus does not believe in. Check why.
+
+## Status flags hide behind the app's own icons
+
+The app showed Tyson Bagent with a plain "Q". The actual reporting was **concussion
+protocol, may miss the game, Case Keenum expected to start.** Those are not the same
+fact, and the format punishes the difference twice — the asset *and* the zero.
+
+**Run `injury_status` on every starter, every week.** The app's badge is a summary of
+a summary. It does not distinguish "ankle, good to go" from "in protocol, likely out",
+and both render as one orange letter.
+
+## Week 3 plan (2026)
+
+Cut 13.1%. Week 1's line was 40.02; week 2 unlogged, so the line estimate is still n=1.
+
+The app's suggested nine, with deltas:
+
+| Slot | Player | Wk | ROS | Delta | Proj | Window | Call |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| QB | Drew Lock (SEA) | QB24 | >QB40 | **+16** | 11.3 | Sun 12:00 | Keep, conditional |
+| RB | Brian Robinson (ATL) | >RB45 | >RB48 | ~0 | 4.1 | **Thu** | **Cut** |
+| RB | Emanuel Wilson (SEA) | RB44 | >RB48 | +5 | 6.2 | Sun 12:00 | Keep |
+| WR | Adonai Mitchell (NYJ) | WR30 | >WR50 | **+21** | 9.1 | Sun 12:00 | Keep |
+| WR | Deebo Samuel (SF) | WR26 | WR38 | +12 | 12.1 | Sun 3:05 | Keep |
+| TE | Kenyon Sadiq (NYJ) | TE24 | TE22 | **-2** | 7.7 | Sun 12:00 | Punt |
+| FLEX | Courtland Sutton (DEN) | WR45 | WR40 | **-5** | 9.3 | SNF | Swap -> Adams |
+| SFLX | Tyson Bagent (CHI) | QB34 | QB38 | +4 | 8.3 | MNF | Hold, flagged |
+| DST | Carolina | DST9 | — | — | 8.8 | Sun 12:00 | Upgrade |
+
+Four faults, in order of deadline:
+
+1. **Brian Robinson is a Thursday lock projecting 4.1** — the lowest in the lineup,
+   outside both boards, ATL's RB2 behind Bijan. Barely distinguishable from a punt
+   while paying the full TNF optionality cost. His ankle cleared, which is beside
+   the point.
+2. **Drew Lock's role is Sam Darnold's** — Darnold questionable, limited Wednesday,
+   **53.7% to play**. The Etienne/Kamara trap again: Lock's own line stays clean
+   while the role evaporates. Biggest delta on the board and still a coin flip.
+3. **Bagent is in concussion protocol** (see above).
+4. **Sutton carries a negative delta** — a bank, not a burn. Davante Adams is in the
+   same SNF game and the same FLEX slot at WR16/WR22 (+6), ~30 spots better this week
+   and outside the hoard band.
+
+Plus: Carolina is DST9 when Seattle (1), KC (2), Houston (3) and Philadelphia (4) are
+unburned — ninth-best taken to protect a residual that is never scarce. And five of
+the nine sit in two games (SEA@WAS, NYJ@DET), against the decorrelate rule.
+
+Revised ladder — **5-6 real, 3 punts (RB2, TE, SFLX)**:
+
+| When | Do |
+| --- | --- |
+| Thu, before 7:15 | Drop Brian Robinson. |
+| Sun ~11:55 | Lock (iff Darnold ruled out) · E. Wilson · Mitchell · best-matchup DST. |
+| Sun ~3:00 | Deebo, if the live line says you need him. |
+| Sun ~7:10 | FLEX: Adams over Sutton, only if still short. |
+| Mon ~7:00 | SFLX: punt by default; Bagent only if he clears protocol and you need it. |
+
+Emanuel Wilson improved during the week rather than decaying: he out-touched Jadarian
+Price 21-13 in week 2, and Price is questionable with a chest injury. Positive
+role-by-absence, which is the rare direction that check points.
+
+### The 1.4x core rule and the 4-5 starter rule conflict
+
+Week 3 surfaced a contradiction between two rules in this document. "Early core should
+project ~1.4x the cut line" wants ~63 points against a 45-point line. "Weeks 1-5: 4-5
+real starters" buys cheap players projecting 6-12, which reaches ~50 at most.
+
+Both cannot hold. **The starter count is the rule that survives** — week 1 reached
+75.76 not because the projections were high but because two ~10-point projections
+returned 19.22 and 19.9. The core clears 1.4x on *hits*, not on projections.
+
+So do not treat a core projecting 36 as failing. Treat the projected total as close to
+meaningless and **read the live line at the 4:00 checkpoint instead**. The 1.4x figure
+is a description of a good outcome, not a construction target.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
@@ -592,6 +692,12 @@ slots still held assets worth preserving.
   rebuilt the defensive line over the offseason. Prior-year data needs a turnover check.
 - **"Protect Jacksonville's DST12 residual."** Applied the RB scarcity rule to a loose,
   matchup-driven pool. Residual value must be weighted by pool tightness.
+- **Trusted the league app's point projections.** They are not the FantasyPros
+  consensus and they optimize for total points, which is the wrong objective in a
+  survival format. Week 3 had them disagreeing with the consensus rank on three of
+  nine slots.
+- **Read the app's "Q" badge as the injury report.** It collapsed "ankle, cleared to
+  play" and "in concussion protocol, backup expected to start" into the same icon.
 
 ## Open questions
 
