@@ -853,7 +853,18 @@ Nine real starters, no punts. Projected **85.55** (half-PPR).
 | WR | Deebo Samuel (SF) | WR26 | WR38 | +12 | 10.05 | Sun 3:05 |
 | FLEX | Davante Adams (LAR) | WR16 | WR22 | +6 | 10.84 | SNF |
 | RB | Woody Marks (HOU) | RB34 | RB46 | **+12** | 6.92 | unconfirmed |
-| TE | Oronde Gadsden II (LAC) | TE15 | TE21 | +6 | 6.99 | unconfirmed |
+| TE | Oronde Gadsden II (LAC) | TE15 | TE21 | +6 | 6.99 | Sun 12:00 @ BUF |
+
+**The ladder is thinner than planned.** Gadsden turned out to be an early game, and
+taking Penix on Thursday removed the Monday slot, so five players lock at noon and only
+**two** live levers remain: Deebo (3:05) and Adams (7:20). There is no MNF look this week
+— the free-information window the doctrine leans on hardest is simply absent.
+
+Consequence: **the 3:00 checkpoint carries the weight Monday usually carries**, on a
+reading week 2 showed still needs multiplying by ~1.45. Taking a Thursday player costs
+more than the Thursday slot; it can cost the Monday option too, if the superflex was the
+only late slot left. Check what a Thursday pick does to the *back* of the ladder before
+taking it, not just the front.
 
 Nine teams, no same-team pairs. Only shared game is Watson (CLE) against the Carolina
 DST — opposite sides, a hedge, which the correlation rule permits at any time.
