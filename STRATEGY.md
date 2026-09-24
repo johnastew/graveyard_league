@@ -12,6 +12,37 @@ the league's own elimination table.
 - Superflex. Starting slots: QB / SFLX / RB / RB / WR / WR / FLEX / TE / DST. **No kicker.**
 - 752 entrants at the start of the 2026 season.
 
+## The rule that applies to every slot: high delta, low residual
+
+**Every position, every week, including DST.** Read this before the elimination curve,
+because it is the filter every other decision passes through.
+
+- **Delta** = ROS rank minus weekly rank. **Positive = ranked better this week than for
+  the season = spend him now.** Negative = a later asset = bank him.
+- **Residual** = what is left over after you burn him, measured against the *usable pool*
+  at his position, not against a hoard band.
+
+**The best burn at every slot is high delta AND low residual.** A big positive delta with
+nothing left behind is a free slot. Chase that number at QB, RB, WR, TE **and DST** — there
+is no position where you should be spending a negative-delta player in a week you can avoid it.
+
+Week 3 2026, what this looks like in practice:
+
+| Slot | Player | Weekly | ROS | Delta | Residual |
+| --- | --- | --- | --- | --- | --- |
+| WR | Deebo Samuel | WR24 | WR44 | **+20** | nil |
+| DST | Carolina | DST9 | DST29 | **+20** | nil |
+| RB | Rico Dowdle | RB26 | RB35 | +9 | nil |
+| WR | Courtland Sutton | WR33 | WR42 | +9 | nil |
+| QB | Tyson Bagent | QB36 | QB38 | +2 | nil |
+
+Nine slots filled that way projected ~101 while burning nothing inside any usable pool.
+
+**Do not spend a negative delta.** Jaylen Waddle at weekly WR21 / ROS WR14 (-7) is a player
+the market says is worth *more* later than this week. Burning him is paying a premium to
+lose an asset.
+
+
 ## The elimination curve — the single most important table
 
 Final entrant numbers, 2026 season:
@@ -228,12 +259,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | Week | post-1pm | post-4pm | post-SNF | Final | Our score | Margin |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
-| 2 | - | - | - | **unlogged** | - | - |
-
-**Week 2 was never logged and its burns were never recorded in
-`data/used_players.json`.** Until that gap is filled, the eligible pool printed by
-`./gy` is wrong — it will offer back players who are already spent. Reconstruct it
-from the league app before trusting any recommendation that names a new player.
+| 2 | 22.16 | 50.24 | 62.60 | **72.20** | 101.32 | +29.12 (survived) |
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -246,6 +272,12 @@ Week 1: five real starters produced 71.26 against a 40.02 line, and three of the
 | 6-9 | 16-20.8% | 5-6 | 3-4 |
 | 10-13 | 22.8-34.0% | 7-8 | 1-2 |
 | 14-16 | 40.3-63.2% | 9 | 0 |
+
+**Week 2 broke this table.** It ran **nine real starters and zero punts** against a
+12.2% cut and still only finished +38.72. The week-1 read ("punt 4-5 in weeks 1-5")
+was calibrated on a single 40.02 line. Week 2's line was **62.60 before Monday even
+started** — higher than week 1's final. One week does not set the punt budget. Treat
+the table as a floor on real starters, not a target, until the log has 4-5 rows.
 
 Log **cut line, your score, your rank, and teams remaining** at every checkpoint. The
 number actually needed is the ratio *final line / 4pm line*. Two or three weeks of it and
@@ -317,6 +349,51 @@ starts. **You cannot fill every superflex with a real QB.**
 - **Schedule those punts in weeks 1-5** (11.6-14.9% cut), never in weeks 9-11 (20.5-25.6%).
   Left to drift you would punt late, when you are out of arms and the cut is brutal.
 
+### Backup QBs getting starts are the best superflex fill in the game
+
+The QB pool is the tightest on the board (~115% consumption) and the quality cliff lands
+around QB28. **A backup who has just inherited a starting job sits below that cliff on ROS
+while carrying a real weekly projection.** That combination — startable now, worthless
+later — is the ideal burn, and it is the cheapest way to cover two QB slots without
+touching the bank.
+
+Week 3 2026:
+
+| Player | Weekly | ROS | Delta | Proj |
+| --- | --- | --- | --- | --- |
+| Marcus Mariota (Jayden Daniels, elbow) | QB33 | QB33 | 0 | 14.31 |
+| Tyson Bagent (Caleb Williams, hamstring) | QB36 | QB38 | +2 | 12.91 |
+
+Both project like a low-end starter and both are below the cliff, so the residual is nil.
+Compare the alternatives at the same points: Kirk Cousins (12.68, ROS QB29) and Aaron
+Rodgers (14.57, ROS QB28) sit right at the edge of the usable pool. Same output, worse
+asset.
+
+**This is strictly better than the punt-the-superflex plan.** The doctrine budgets 4-7
+weeks where SFLX takes a WR/RB because a real QB cannot be spared. A backup on a starting
+run fills that slot with ~13 points instead, at the same zero cost. Scan for these first,
+every week, before planning a superflex punt.
+
+**The catch is role risk, and it is the specific thing that kills you.** These players are
+starting only because someone else is hurt, so the status question is not "is my guy
+healthy" but "is the starter still out" — the role-by-absence rule. Grade the reporting:
+
+- *Dislocated elbow, imaging done, consulting specialists, no timetable* (Daniels) — safe.
+- *"Week-to-week," optimism "gave way to reality"* (Williams) — **not** safe. Week-to-week
+  is not ruled out.
+
+### Check the kickoff window before you worry about role risk
+
+A cheap starter **in a late window resolves his own role risk for free.** Bagent's
+week-3 job depended on a week-to-week hamstring — but Chicago played Monday night, so the
+slot did not need committing until 8:15pm Monday, by which point the question was settled.
+
+**So the order of operations is: window first, then status.** A provisional starter in the
+1:00 window is a real risk that needs a Friday practice report and a fallback name. The
+same player on SNF or MNF is simply a free look. Do not discount a name for role risk
+until you have checked when he kicks off.
+
+
 ### DST — never hoard
 
 17 starts from 32 teams, and DST scoring is driven by **matchup, not talent**. Matchups
@@ -331,6 +408,27 @@ going to be scarce.
 The delta metric still helps at DST, but as a **matchup detector**: a big positive gap means
 "ranked well above its talent because of who it plays." Tennessee week 1 was +14 (DST12
 weekly, DST26 ROS) — pure one-week rental.
+
+**Chase the delta at DST exactly as hard as anywhere else.** Week 3 2026: Carolina
+projected 7.70 at DST9 weekly / DST29 ROS (**+20**) while Kansas City projected 7.72 at
+DST3 / DST13 (+10). Identical points, but Carolina is ranked ninth purely for its
+opponent and has nothing behind it. Take the big delta when the projections tie.
+
+### The one DST exception: a delta-0 elite unit
+
+"Never hoard" is right in spirit but slightly too absolute. Week 3 2026 has **Seattle at
+DST1 weekly AND DST1 ROS — delta 0.** That is not a matchup, that is a unit that will be
+the best available option in many future weeks, so it does carry residual even at 53% pool
+consumption.
+
+Refined rule:
+
+> Take the best matchup available and never preserve a defense for its *talent* —
+> **except** at the very top, where a delta-0 DST1 is the best option most weeks and is
+> worth leaving on the shelf.
+
+And never buy a **negative** delta at DST: Denver week 3 was DST12 weekly against DST3 ROS
+(-9), which is paying for a good defense in its bad matchup.
 
 ## Positional point spreads (week 1, for calibration)
 
@@ -505,6 +603,157 @@ the recommendation passed over as too thin.
 of 40. The error was treating the cut line as unknowable and defaulting to caution,
 rather than assuming it was low and testing it cheaply.
 
+## Week 2 result (2026)
+
+**Survived.** Scored 101.32 against a final cut line of **72.20**. 114 reaped, 817
+standing — the elimination table called both numbers exactly.
+
+| Slot | Player | Pts | Proj |
+| --- | --- | --- | --- |
+| QB | Cooper Rush (ATL) | -0.56 | 11.3 |
+| RB | Chuba Hubbard (CAR) | 14.40 | 12.8 |
+| RB | Chris Brooks (GB) | 3.60 | 7.2 |
+| WR | Mack Hollins (NE) | 3.80 | 8.5 |
+| WR | Rashod Bateman (BAL) | 21.80 | 8.9 |
+| TE | Colby Parkinson (LAR) | 3.50 | 7.1 |
+| FLEX | Kenneth Walker III (KC) | 23.80 | 17.3 |
+| SFLX | Matthew Stafford (LAR) | 26.98 | 16.8 |
+| DST | Tampa Bay | 4.00 | 9.6 |
+
+Nine burned, **zero punts**. Recorded in `data/used_players.json` (18 season total).
+
+### The line moved far more than week 1 suggested
+
+| Checkpoint | Line | Move |
+| --- | --- | --- |
+| Mid-afternoon | 22.16 | - |
+| Post-4:25, pre-SNF | 50.24 | **+28.08 (2.27x)** |
+| Post-SNF, pre-MNF | 62.60 | +12.36 |
+| **Final** | **72.20** | **+9.60** |
+
+**The ratios — the numbers this log exists to produce:**
+
+| Checkpoint | Final / checkpoint |
+| --- | --- |
+| post-1pm | **3.26x** |
+| post-4pm | **1.44x** |
+| post-SNF | **1.15x** |
+
+One week of data, so treat these as a first anchor rather than a rule. But the shape is
+clear: **a 1pm reading must be roughly tripled, a 4pm reading multiplied by ~1.45, and
+even a post-SNF reading is still 15% light.**
+
+Two lessons, and they pull in opposite directions:
+
+1. **A pre-SNF reading carries almost no signal.** The afternoon jump is the mass of the
+   field finishing at once. Anchoring on a 1pm or early-4pm number is worthless — at
+   22.16 we looked 2x clear and were in fact *behind* four hours later.
+2. **But SNF and MNF still move it meaningfully.** +12.36 across SNF alone. The reasoning
+   that "most teams are done by SNF so the line barely moves" was wrong, because the
+   teams still live at that hour are disproportionately the ones *holding late slots on
+   purpose* — the same ladder we run. Survivors cluster at the back of the slate.
+
+**Do not punt a late slot on a pre-SNF line.** The honest read only arrives at MNF
+kickoff, exactly as the doctrine already said — week 2 is the proof.
+
+### The ladder paid, twice
+
+Both held slots beat their projections and both were cheap:
+
+- **Stafford 26.98** against a 16.8 projection, taken at 38 years old with no residual.
+  The single best points-per-asset burn of the season so far.
+- **Parkinson 3.5** — weekly TE32 / ROS TE36, delta +4, residual nil. He underperformed
+  and it did not matter. That is what a correct cheap burn looks like: the *asset* was
+  right even though the *outcome* was poor.
+
+Holding those two slots to Monday, rather than filling them Sunday at 1pm, was worth
+roughly 20 points over the placeholders (Theo Johnson + OBJ, ~4.5 combined).
+
+### What nearly went wrong — the punt that would have ended the season
+
+At 12:55 the live line read 20 against our 43.14 and the instinct was to punt everything
+remaining.
+
+**Punting the two Monday slots would have finished 70.84 against a 72.20 final line.
+Cut by 1.36 points, in week 2, with the entire bank still on the shelf.**
+
+The whole season turned on two slots held past Sunday afternoon. Every margin in this
+document that looked comfortable at the time — 2x the line at 1pm, +8.24 over the
+pre-MNF reading — was an artefact of reading an unfinished line.
+
+**The rule this buys: never punt a late slot against anything but a post-MNF-kickoff
+line.** Not a 1pm line, not a 4pm line, not a pre-SNF line. There is no cheaper
+version of this lesson available.
+
+Correlation note: Stafford and Parkinson are QB and TE on the same team, the worst kind
+of pairing (same drives, same script). We took it knowingly because the alternative cost
+Isaiah Likely, a TE12-ROS asset. Stafford's 4 TDs meant it never got tested. **Do not
+read this as a licence to stack — it was a priced risk that happened to win.**
+
+## Field dynamics: the line drifts, and you still cannot predict it
+
+The field you play in week N is not the field from week N-1. Two forces act on it, and
+they point in opposite directions.
+
+**Forces pushing the line up:**
+
+- **Selection.** Managers who punt badly get cut. Every week the survivor pool is
+  enriched in people who understand the ladder. You are always playing a better field
+  than you played last week, and the filtering is relentless — 122, 114, 107, 99...
+- **Learning.** Anyone who nearly died to a bad Monday punt learns the same lesson we
+  learned in week 2. Assume the tactics in this document are being independently
+  rediscovered across the surviving field.
+- **The cut rate itself.** 11.6% -> 63.2%. Independent of scoring, the *percentile* you
+  must beat rises every single week.
+
+**Forces pushing the line down:**
+
+- **Inventory depletion.** Every survivor burns 5-9 real players a week and never gets
+  them back. By week 14 the field has spent 100+ names each against a startable pool of
+  roughly 180. League-wide, late-season lineups are *worse* than early-season ones.
+- **Depletion compounds with the line.** A high line forces fewer punts, which burns
+  inventory faster, which degrades everyone's week-14 roster, which lowers scores. The
+  two effects feed each other.
+
+**Net shape:** early, the quality effect dominates — inventory is deep, so better play
+converts straight into points. Late, depletion dominates. The absolute line likely climbs
+then flattens or falls, and the turning point is not forecastable. Week 2 is the evidence:
+our own best projection was 55-65 and the answer was 72.20.
+
+### The reframe: optimise percentile, not points
+
+The line **in points** is unpredictable. The line **in percentile** is known exactly, for
+all 17 weeks, and was known before the season started. It is the `% cut` column of the
+elimination table.
+
+Week 3 does not ask for 72 points. It asks you to beat **13.1% of 817 teams.**
+
+So the weekly question is not "what score do I need" — it is **"what percentile am I
+buying, and what is the cheapest inventory that buys it?"** The percentile is knowable
+and fixed. The points are a translation that only resolves at MNF kickoff.
+
+This also explains why the checkpoint ratios are worth logging but will never be a
+formula: they translate percentile into points for *one particular week's* field and
+scoring environment. Log them, use them as a sanity check, never as a target.
+
+### The uncomfortable corollary
+
+If survivors are selected for discipline, then the field in week 14 is disproportionately
+made of managers who **also banked well**. The relative edge from banking erodes exactly
+when the cut is most brutal.
+
+The response is not to bank less. It is to bank *harder* early, because:
+
+1. The absolute requirement for late inventory is unchanged — you still need nine real
+   starters in weeks 14-16.
+2. The field you will face has been filtered for the same discipline, so the bar for
+   "good enough inventory" in week 15 is set by people who also hoarded.
+3. Early weeks remain the cheapest place to buy survival. That fact is structural and
+   does not erode.
+
+Banking early is not an edge over the field any more. **It is the entry fee for being in
+the week-14 conversation at all.**
+
 ## The league app's projection is not the consensus rank
 
 The app attaches a point projection to every player it suggests. Those numbers are
@@ -537,7 +786,10 @@ and both render as one orange letter.
 
 ## Week 3 plan (2026)
 
-Cut 13.1%. Week 1's line was 40.02; week 2 unlogged, so the line estimate is still n=1.
+Cut 13.1%. **Week 2 is now logged: final line 72.20, and the 18 burns are in
+`data/used_players.json`.** The n=1 caveat below is superseded — use the checkpoint
+ratios (final is 3.26x the 1pm line, 1.44x the 4pm line, 1.15x the post-SNF line) and
+remember that punting the Monday slots in week 2 would have missed the cut by 1.36.
 
 The app's suggested nine, with deltas:
 
@@ -664,10 +916,11 @@ slots still held assets worth preserving.
   two, not the month. He is still bankable for the endgame; do not panic-spend the
   TE board around his absence. Tre Tucker becomes Las Vegas's lead pass-catcher while
   he is out, which is a burn candidate in any week Kirk Cousins is not started.
-- **Isaiah Likely** (NYG) is weekly TE11 against ROS TE10 — a *negative* delta, so he
-  is a hoard, not a burn, and one of the few tight ends worth carrying toward weeks
-  9-11. SportsLine's model has him TE9 ahead of LaPorta and Kelce, as the clear No. 1
-  tight end for Jaxson Dart.
+- **Isaiah Likely** (NYG) — week 2 board has him weekly **TE7 / ROS TE12**, a +5 delta,
+  so the week-1 "negative delta, pure hoard" read is out of date. He is now a *good*
+  burn on delta alone, but ROS TE12 sits well inside a usable pool of ~18-20, so the
+  residual is real. Hold him for weeks 9-13 unless a week genuinely needs the points;
+  spend a TE30+ body first.
 
 ## Things we got wrong (so we don't re-derive them)
 
@@ -690,6 +943,17 @@ slots still held assets worth preserving.
 - **Stopped the elimination curve at week 11.** The real peak is 63.2% in week 16.
 - **"Cincinnati is the softest RB matchup on the board."** Built on 2025 splits. They
   rebuilt the defensive line over the offseason. Prior-year data needs a turnover check.
+- **"The final line will land 55-65."** It landed 72.20. Forecasting the line remains
+  fiction even with a checkpoint series in hand — the doctrine's "read it, do not
+  project it" rule survives week 2 intact, and the one time we projected anyway we
+  were 10+ points light in the direction that gets you eliminated.
+- **"Most teams are done by SNF, so the line barely moves after it."** Wrong, week 2:
+  +12.36 across SNF, then +9.60 more across MNF. The teams still live late are the ones deliberately holding
+  late slots, so the tail of the slate is *enriched* in movement, not drained of it.
+- **Asserted TE scarcity without pulling the ROS board.** Argued David Njoku was an
+  expensive burn on "TE pool is tight" grounds. He is ROS TE30 — residual near nil.
+  Pool tightness is an argument about a *position*; residual is a fact about a *player*.
+  Check the ROS rank before claiming an individual is worth protecting.
 - **"Protect Jacksonville's DST12 residual."** Applied the RB scarcity rule to a loose,
   matchup-driven pool. Residual value must be weighted by pool tightness.
 - **Trusted the league app's point projections.** They are not the FantasyPros
