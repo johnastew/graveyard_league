@@ -803,7 +803,8 @@ The app's suggested nine, with deltas:
 | TE | Kenyon Sadiq (NYJ) | TE24 | TE22 | **-2** | 7.7 | Sun 12:00 | Punt |
 | FLEX | Courtland Sutton (DEN) | WR45 | WR40 | **-5** | 9.3 | SNF | Swap -> Adams |
 | SFLX | Tyson Bagent (CHI) | QB34 | QB38 | +4 | 8.3 | MNF | Hold, flagged |
-| DST | Carolina | DST9 | — | — | 8.8 | Sun 12:00 | Upgrade |
+| DST | Carolina | DST9 | DST28 | **+19** | 8.8 | Sun 12:00 | **Keep** |
+| SFLX | **Michael Penix Jr. (ATL)** | QB28 | QB31 | +3 | **13.49** | **Thu** | **Start** |
 
 Four faults, in order of deadline:
 
@@ -819,23 +820,79 @@ Four faults, in order of deadline:
    same SNF game and the same FLEX slot at WR16/WR22 (+6), ~30 spots better this week
    and outside the hoard band.
 
-Plus: Carolina is DST9 when Seattle (1), KC (2), Houston (3) and Philadelphia (4) are
-unburned — ninth-best taken to protect a residual that is never scarce. And five of
-the nine sit in two games (SEA@WAS, NYJ@DET), against the decorrelate rule.
+Plus: five of the nine sit in two games (SEA@WAS, NYJ@DET), against the decorrelate rule.
 
-Revised ladder — **5-6 real, 3 punts (RB2, TE, SFLX)**:
+**Correction, made the same day:** an earlier pass in this session called Carolina an
+upgrade candidate "because it is only DST9," and floated Seattle instead. Both wrong,
+and wrong in the way the top-level rule exists to prevent — it read the raw rank
+instead of the delta. Carolina is DST9 weekly against **DST28 ROS (+19, nil residual)**
+and is one of the best buys on the board. Seattle is DST1 weekly *and* DST1 ROS: delta
+zero, and the single defense that does carry residual. **Keep Carolina.**
+
+Revised ladder — **8-9 real, 0-1 punts** (see the sizing note below):
 
 | When | Do |
 | --- | --- |
-| Thu, before 7:15 | Drop Brian Robinson. |
-| Sun ~11:55 | Lock (iff Darnold ruled out) · E. Wilson · Mitchell · best-matchup DST. |
-| Sun ~3:00 | Deebo, if the live line says you need him. |
-| Sun ~7:10 | FLEX: Adams over Sutton, only if still short. |
-| Mon ~7:00 | SFLX: punt by default; Bagent only if he clears protocol and you need it. |
+| Thu, before 7:15 | **SFLX: Michael Penix Jr.** Drop Brian Robinson. |
+| Sun ~11:55 | Lock (iff Darnold ruled out) · E. Wilson · Mitchell · Carolina DST. |
+| Sun ~3:00 | Deebo. |
+| Sun ~7:10 | FLEX: re-pull Sutton's delta first (see below), else Adams. |
+| Mon ~7:00 | Last slot. Do not punt it on a pre-SNF line. |
+
+### The 5-6 starter sizing in this section's first draft was wrong
+
+It was built on week 1's 40.02 line before week 2 was logged, and recommended 5-6 real
+players projecting ~50. **Week 2's line was 72.20 and week 3 cuts harder than week 2.**
+Fifty points would have been a comfortable elimination. The error was reaching for the
+"weeks 1-5: 4-5 real starters" row of the deployment table, which week 2 had already
+demoted to a floor rather than a target. When the log and the table disagree, the log
+wins — that is what it is for.
 
 Emanuel Wilson improved during the week rather than decaying: he out-touched Jadarian
 Price 21-13 in week 2, and Price is questionable with a chest injury. Positive
 role-by-absence, which is the rare direction that check points.
+
+### A returning franchise starter is the backup-QB tactic without the catch
+
+Week 3's superflex was taken for a non-fantasy reason — attending ATL @ GB — so the
+question was which Falcon costs least. The answer turned out to beat the planned play
+outright.
+
+**Michael Penix Jr.: QB28 weekly, QB31 ROS, 13.49 projected.** Below the quality cliff,
+so nil residual; a real starter's projection, so a real slot filled. That is exactly the
+backup-QB profile recorded above — but **without the role risk that the rule warns
+about.** Mariota and Bagent start only until someone heals. Penix *is* the franchise
+starter, returning from last season's knee injury and named by Rapoport. Nobody takes
+the job back.
+
+**Grade the direction of the role, not just its certainty.** The archetype splits in two:
+
+| | Role comes from | Risk |
+| --- | --- | --- |
+| Fill-in backup | Starter's absence | Evaporates when he returns |
+| **Returning starter** | **His own job** | **None — it only consolidates** |
+
+The second is strictly the better buy at the same price, and the doctrine had collapsed
+both into one category.
+
+It also beat the slot it replaced: Bagent projected 7.58 in concussion protocol with
+Case Keenum (11.04) ranked ahead of him. Penix is ~6 points better and already confirmed.
+**Taking the Thursday game cost nothing here** — the usual TNF objection is committing
+without information, and Penix's status was settled before kickoff while Bagent's was not.
+
+Placed in **SFLX rather than QB**, to leave the QB slot open for Sunday while Lock's job
+still depends on Darnold (Lock 11.11 projected, Darnold 12.85 — consensus is hedging).
+
+### Weekly boards move during the week; re-pull before each checkpoint
+
+Sutton was **WR33/WR42 (+9)** when pulled Tuesday and **WR45/WR40 (-5)** when pulled
+Thursday — a swing that flips him from buy to bank. Deebo moved WR24/WR44 to WR26/WR38
+over the same two days.
+
+Early-week weekly boards are thin because most experts have not submitted yet. **A delta
+computed on Tuesday is not valid on Sunday.** Re-pull at each ladder checkpoint, and
+treat any Tuesday delta as provisional — especially for a slot that is not committed
+until SNF or MNF, where there is no reason to be using stale numbers at all.
 
 ### The 1.4x core rule and the 4-5 starter rule conflict
 
@@ -962,6 +1019,14 @@ slots still held assets worth preserving.
   nine slots.
 - **Read the app's "Q" badge as the injury report.** It collapsed "ankle, cleared to
   play" and "in concussion protocol, backup expected to start" into the same icon.
+- **Sized week 3 off week 1's line after week 2 was already logged.** Recommended 5-6
+  real starters projecting ~50 against a line that had just come in at 72.20. Always
+  re-read the cut-line log before quoting the deployment table.
+- **Called Carolina DST an upgrade candidate for being "only DST9."** Raw rank, not
+  delta — at DST28 ROS it was a +19 buy. The top-level rule exists precisely to stop
+  this, and it still got applied per-position out of habit.
+- **Computed deltas once, early in the week, and reused them.** Weekly boards fill in
+  as experts submit; Sutton swung +9 to -5 in two days.
 
 ## Open questions
 
