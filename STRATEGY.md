@@ -839,6 +839,54 @@ Revised ladder — **8-9 real, 0-1 punts** (see the sizing note below):
 | Sun ~7:10 | FLEX: re-pull Sutton's delta first (see below), else Adams. |
 | Mon ~7:00 | Last slot. Do not punt it on a pre-SNF line. |
 
+### Final week 3 lineup
+
+Nine real starters, no punts. Projected **85.55** (half-PPR).
+
+| Slot | Player | Wk | ROS | Delta | Proj | Kickoff |
+| --- | --- | --- | --- | --- | --- | --- |
+| SFLX | Michael Penix Jr. (ATL) | QB28 | QB31 | +3 | 13.49 | **Thu 7:15** |
+| QB | Deshaun Watson (CLE) | QB27 | QB32 | +5 | 15.46 | Sun 12:00 |
+| WR | Adonai Mitchell (NYJ) | WR30 | WR52 | **+22** | 7.75 | Sun 12:00 |
+| RB | Emanuel Wilson (SEA) | RB44 | >RB48 | +4 | 6.41 | Sun 12:00 |
+| DST | Carolina | DST9 | DST28 | **+19** | 7.64 | Sun 12:00 |
+| WR | Deebo Samuel (SF) | WR26 | WR38 | +12 | 10.05 | Sun 3:05 |
+| FLEX | Davante Adams (LAR) | WR16 | WR22 | +6 | 10.84 | SNF |
+| RB | Woody Marks (HOU) | RB34 | RB46 | **+12** | 6.92 | unconfirmed |
+| TE | Oronde Gadsden II (LAC) | TE15 | TE21 | +6 | 6.99 | unconfirmed |
+
+Nine teams, no same-team pairs. Only shared game is Watson (CLE) against the Carolina
+DST — opposite sides, a hedge, which the correlation rule permits at any time.
+
+Three late changes from the first pass, all forced by status checks:
+
+- **Lock -> Watson.** Darnold came back 53.7% to play, making Lock a coin flip on 11.11.
+  Watson carries no role dependency, projects 15.46, and is QB32 ROS — below the cliff,
+  nil residual. Better on points *and* risk.
+- **Sadiq -> Gadsden.** Sadiq was the last negative delta in the lineup (-2). Gadsden is
+  +6 with a higher projection and TE21 ROS, outside the usable band.
+- **Brian Robinson -> Woody Marks.** Pollard was the first replacement chosen, then came
+  back questionable with an ankle and DNP Wednesday; Dowdle was in a boot. Marks was the
+  clean +12.
+
+### Delta-chasing caps the ceiling, and that matters once the line is high
+
+85.55 against a line that was 72.20 last week, in a week cutting 13.1% from a field that
+has already shed its worst teams. A ~1.18x cushion, where week 2 ran 1.40x on actuals.
+
+**The mechanism: every high-delta player is by definition one the market ranks low.**
+Nine of them sum to less than a lineup carrying two real studs. Week 2 cleared partly on
+Kenneth Walker (23.80) and Stafford (26.98) — both negative-delta spends from the bank.
+
+So the delta rule optimises *cost per point*, not *points*. That is the right objective
+while the line leaves slack, and the wrong one when it does not. The resolution is not to
+abandon delta up front but to **let the ladder decide**: lock the cheap core early, read
+the 4pm line, and spend into the bank at SNF/MNF only if the reading demands it. Deciding
+to overspend on Thursday is guessing; deciding at 8pm Sunday is reading.
+
+Week 3 locks ~51 by Sunday afternoon (Penix, Watson, Mitchell, Wilson, Carolina) and
+holds ~35 live.
+
 ### The 5-6 starter sizing in this section's first draft was wrong
 
 It was built on week 1's 40.02 line before week 2 was logged, and recommended 5-6 real
