@@ -883,6 +883,35 @@ without information, and Penix's status was settled before kickoff while Bagent'
 Placed in **SFLX rather than QB**, to leave the QB slot open for Sunday while Lock's job
 still depends on Darnold (Lock 11.11 projected, Darnold 12.85 — consensus is hedging).
 
+### "Cheapest" stops being the question once the line is known
+
+Jahan Dotson (ATL) was considered as the Falcon instead of Penix. He is **unranked
+weekly and unranked ROS** — off both boards past WR85 — with 3 receptions on 8 targets
+for 30 yards in two games, 4.5 half-PPR points on the season. That makes him genuinely
+cheaper inventory than Penix (QB31 ROS).
+
+He is still wrong, and the reason generalises:
+
+**Divide the cut line by nine.** Week 2: 72.20 / 9 = **8.0 points per slot to survive**;
+we cleared at 11.3 per slot. A slot projecting 2-3 is a five-point hole that has to be
+refilled from somewhere, and by the time the line is this high there is nowhere cheap
+left to refill from.
+
+Weeks 1-2 made inventory the binding constraint, because a 40-point line left slack
+everywhere. At 72 the binding constraint is **points per slot**, and the cheapest
+available player stops being the right answer. Run the division before reaching for the
+cheapest body.
+
+He is also a worse *punt* than a punt: the punt-selection rule wants no plausible path
+back (retired, unsigned, season-ending IR), and Dotson is a rostered receiver in his
+mid-twenties. Burning him for 2.5 points is the Jamal Haynes error.
+
+**Name-resolution note:** `injury_status` returned nothing for Dotson and he was absent
+from an 80-deep weekly board. Neither fact means anything on its own — the tool says so
+explicitly. `get_player_stats` resolved him to ATL with a real stat line. **Never infer
+a player's team or status from absence in a ranked board.** (The same lapse put Darnell
+Mooney on Atlanta in an earlier draft of this session; he is a Giant.)
+
 ### Weekly boards move during the week; re-pull before each checkpoint
 
 Sutton was **WR33/WR42 (+9)** when pulled Tuesday and **WR45/WR40 (-5)** when pulled
