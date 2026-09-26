@@ -846,7 +846,7 @@ Nine real starters, no punts. Projected **85.55** (half-PPR).
 | Slot | Player | Wk | ROS | Delta | Proj | Kickoff |
 | --- | --- | --- | --- | --- | --- | --- |
 | SFLX | Michael Penix Jr. (ATL) | QB28 | QB31 | +3 | 13.49 | **Thu 7:15** |
-| QB | Deshaun Watson (CLE) | QB27 | QB32 | +5 | 15.46 | Sun 12:00 |
+| QB | Deshaun Watson (CLE) | QB25 | QB32 | +7 | 15.42 | Sun 12:00 |
 | WR | Adonai Mitchell (NYJ) | WR30 | WR52 | **+22** | 7.75 | Sun 12:00 |
 | RB | Emanuel Wilson (SEA) | RB44 | >RB48 | +4 | 6.41 | Sun 12:00 |
 | DST | Carolina | DST9 | DST28 | **+19** | 7.64 | Sun 12:00 |
@@ -976,6 +976,16 @@ Mooney on Atlanta in an earlier draft of this session; he is a Giant.)
 Sutton was **WR33/WR42 (+9)** when pulled Tuesday and **WR45/WR40 (-5)** when pulled
 Thursday — a swing that flips him from buy to bank. Deebo moved WR24/WR44 to WR26/WR38
 over the same two days.
+
+Saturday added the sharpest example yet. **Drew Lock fell QB24 -> QB31 in 48 hours** once
+Darnold was back, and Watson rose QB27 -> QB25. The delta that made Lock the pick on
+Thursday (+16) was gone by the weekend.
+
+Note what the board did *not* say: Darnold returned at **QB33, below Lock at QB31.**
+The market's view was not "Darnold is better" but "this QB room is unusable either way."
+A role-by-absence risk landing does not necessarily promote the man who returns — it can
+simply delete the slot's value. Do not plan a fallback that assumes the returning starter
+inherits the projection.
 
 Early-week weekly boards are thin because most experts have not submitted yet. **A delta
 computed on Tuesday is not valid on Sunday.** Re-pull at each ladder checkpoint, and
