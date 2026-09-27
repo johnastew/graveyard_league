@@ -921,6 +921,33 @@ Second-order point: **a questionable player gets marked down whether or not he s
 Mitchell losing 15+ ranking spots is the market pricing a finger injury on a pass-catcher.
 "He'll probably play" and "he'll probably be himself" are different claims.
 
+### Role-by-absence cuts both ways, and it decided three of nine slots in one week
+
+The rule as written asks whether the *absent* player is still absent. Week 3 showed it is
+really a two-sided test, and that it is the highest-yield check in the whole method.
+
+| Slot | Thesis when picked | What happened | Outcome |
+| --- | --- | --- | --- |
+| QB | Lock starts while Darnold is hurt | Darnold cleared, **off the report** | Lock QB24 -> QB31. Swapped. |
+| RB | Wilson leads while Price is hurt | Price cleared, **no designation** | Wilson RB44 -> off board. Swapped. |
+| FLEX | Adams is WR1 while Nacua is out | Nacua **doubtful, 1.4%** | Adams WR16 -> **WR8**. Held. |
+
+Three of nine slots, none of which showed anything on their own injury line all week.
+Lock, Wilson and Adams were each perfectly healthy throughout.
+
+**The generalisation: a cheap player whose value comes from someone else's absence is a
+position in that absence, not in the player.** When the absence resolves, he does not drift
+— he falls off the board, because the market never rated him and only rated the vacancy.
+Wilson went from RB44 to unranked on news about a *different player's* chest.
+
+The reverse holds too, and is worth harvesting: **when the absence deepens, your man
+repriced upward for free.** Nacua going from questionable to doubtful moved Adams fourteen
+ranking spots without costing anything.
+
+So on every Sunday check, list each starter's dependency and grade the *other* player's
+report. Do not read your own starter's clean injury line as reassurance — for this class
+of pick it carries no information at all.
+
 ### Weighting the projection mean and ignoring the shape
 
 Brian Robinson was kept over the recommendation to cut him, and **scored 11.0 against a 4.3
