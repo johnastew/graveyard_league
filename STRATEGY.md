@@ -880,6 +880,66 @@ Three late changes from the first pass, all forced by status checks:
   back questionable with an ankle and DNP Wednesday; Dowdle was in a boot. Marks was the
   clean +12.
 
+### Sunday-morning status check: grade the practice log, not the badge
+
+The app showed Adonai Mitchell and Tyson Bagent with the same orange **Q**. The underlying
+reports were not close:
+
+| Player | Injury | Practice | P(play) |
+| --- | --- | --- | --- |
+| Adonai Mitchell | finger | Limit, Limit | **90.5%** |
+| Tyson Bagent | concussion | DNP, DNP, Full | **37.8%** |
+
+**The practice log is the signal; the badge is noise.** Two limited sessions and no DNP is
+a player who plays. Two DNPs and a late full practice, with protocol still not cleared, is
+a coin flip at best. `injury_status` returns `probability_of_playing` — read it every time
+rather than the app's letter.
+
+### A status flag is only a dilemma when the flagged player is better
+
+The rule says never start an unresolved flag unless you can verify active before lock, and
+a noon kickoff *is* verifiable — inactives post ~90 minutes out. So the default move is to
+wait.
+
+Week 3 showed the case where waiting is pointless. Mitchell projected **7.86** and had
+**fallen off the weekly WR45 board** (he was WR30 on Thursday). Every clean fallback
+projected higher:
+
+| Player | Wk | ROS | Delta | Proj |
+| --- | --- | --- | --- | --- |
+| Romeo Doubs (NE) | WR31 | WR45 | **+14** | 9.06 |
+| Xavier Worthy (KC) | WR35 | >WR50 | **+15** | 8.97 |
+| Michael Wilson (ARI) | WR29 | WR43 | +14 | 9.05 |
+| Adonai Mitchell (NYJ) | off board | off board | — | 7.86 |
+
+**Check the fallback before deciding whether to wait.** When the replacement is better on
+points *and* delta *and* carries no risk, there is no decision to make and no reason to
+hold the slot open. Waiting on inactives is only worth it when you are holding the flagged
+player because he is the better play.
+
+Second-order point: **a questionable player gets marked down whether or not he suits up.**
+Mitchell losing 15+ ranking spots is the market pricing a finger injury on a pass-catcher.
+"He'll probably play" and "he'll probably be himself" are different claims.
+
+### Weighting the projection mean and ignoring the shape
+
+Brian Robinson was kept over the recommendation to cut him, and **scored 11.0 against a 4.3
+projection** — one rushing touchdown. The case against him leaned on the gap to Penix
+(13.49 vs 4.3) and treated it as a ~9-point loss.
+
+That misread the distribution. As Atlanta's short-yardage back he carried touchdown equity
+that a mean projection compresses — precisely the **cheap player with TD equity** profile
+the lottery-ticket rule already endorses. The doctrine had the right principle and the
+week-3 analysis ignored it in favour of comparing means.
+
+One game is one game, and the point is not that Robinson was underrated. It is that
+**a 4-point projection with a goal-line role and a 12-point projection with a 4-catch role
+are not comparable numbers**, and ranking candidates by projected mean alone silently
+assumes they are.
+
+It also preserved the Monday slot that taking Penix would have spent — which, with Bagent
+at 37.8%, turned out to be worth holding.
+
 ### Delta-chasing caps the ceiling, and that matters once the line is high
 
 85.55 against a line that was 72.20 last week, in a week cutting 13.1% from a field that
