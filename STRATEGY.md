@@ -460,6 +460,38 @@ problem. Positive correlation raises variance in both directions; the upside is 
   starts to matter and stacks become defensible.
 - **Opposite-side pairs are fine at any time** — they are a hedge, and reduce variance.
 
+### "Opposite sides" is not the same as negatively correlated
+
+Two players in the same game can be on opposing teams and still rise together. Check the
+*game script*, not the jersey.
+
+| Pair | Same game | Actual correlation |
+| --- | --- | --- |
+| QB vs the opposing **DST** | yes | **strongly negative** — sacks, picks and points-allowed are the same events, scored twice |
+| QB vs the opposing **RB** | yes | **mildly positive** — the RB's team leading means his opponent trails and throws more |
+
+Week 3 had exactly this choice at QB. Watson paired against the Carolina DST already in the
+lineup; Winston paired against Pollard. Only the first is a real hedge — a trailing Giants
+team hands Winston volume, so Pollard's good game feeds Winston's rather than offsetting it.
+
+**The QB-versus-opposing-DST pair is the cleanest hedge available in this format**, because
+the two scoring lines are built from literally the same plays.
+
+### Which way to break a tie depends on whether you are ahead of the line
+
+Watson and Winston tied at **+8 delta with nil residual either way** — both below the QB28
+cliff, both jobs secure. The two rules that normally decide a slot said nothing.
+
+The tiebreaker is the format's own objective. **Surplus points are worthless, so when the
+lineup already projects clear of the expected line, take the variance reduction; when it
+projects short, take the ceiling.** Week 3 projected ~92 against a 72.20 line, so the hedge
+was the asset and the correlated pair was the liability.
+
+Secondary tiebreaker when that is also neutral: **read the direction of drift, not just the
+level.** Watson moved QB27 -> QB25 -> QB24 across three pulls that week while Winston went
+QB30 -> QB26 -> QB27. Same rank band, opposite trajectories, and the beat reporting
+explained why — the market expected the Giants' passing game to get worse with Winston.
+
 ## Uncertainty is a cost, not just a risk
 
 In redraft, starting a boom/bust player who busts costs you one week; you bench him next
