@@ -260,6 +260,11 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
 | 2 | 22.16 | 50.24 | 62.60 | **72.20** | 101.32 | +29.12 (survived) |
+| 3 | - | - | 67.44 | *pending* | 80.72 | +13.28 at MNF kickoff |
+
+Week 3 at MNF kickoff: **rank 614 of 817, first team cut at 711** — 97 places of cushion,
+with only PHI @ CHI left. Applying week 2's pre-MNF move of +9.60 projects a final line
+near **77.0**. Two independent reads, both surviving, neither comfortable.
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -911,6 +916,45 @@ Three late changes from the first pass, all forced by status checks:
 - **Brian Robinson -> Woody Marks.** Pollard was the first replacement chosen, then came
   back questionable with an ankle and DNP Wednesday; Dowdle was in a boot. Marks was the
   clean +12.
+
+### Week 3 scoring, through Sunday night
+
+80.72 against a 67.44 line, rank 614 of 817, cut at 711. Bagent (SFLX) still to play.
+
+| Slot | Player | Pts | Proj |
+| --- | --- | --- | --- |
+| QB | Jameis Winston (NYG) | **6.12** | 14.0 |
+| RB | Brian Robinson (ATL) | **11.00** | 4.3 |
+| RB | Tony Pollard (TEN) | **13.60** | 10.4 |
+| WR | Romeo Doubs (NE) | 7.90 | 10.0 |
+| WR | Deebo Samuel (SF) | **15.40** | 11.9 |
+| TE | Oronde Gadsden II (LAC) | **0.00** | 8.3 |
+| FLEX | Davante Adams (LAR) | **20.70** | 15.1 |
+| DST | Carolina | 6.00 | 8.9 |
+
+Both Sunday-morning swaps paid: Pollard returned 13.60 where Wilson's slot was projected
+5.8, and Doubs 7.90 where Mitchell projected 9.3 but carried the finger. The two biggest
+scores, Adams (20.70) and Deebo (15.40), were the two picks held longest and confirmed
+latest.
+
+### "A bigger role" from a coach is not a target share
+
+Gadsden scored **zero on three targets**. The buy signal was Njoku and Kolar both out plus
+Harbaugh saying he was "ready to step up," and the market moved him to TE15 on it.
+
+The thing that signal could not see: **he had seen three targets or fewer in every game of
+the season.** Vacated snaps in front of him did not change how often the offense actually
+looked his way.
+
+**Separate opportunity from usage.** An injury ahead of a player creates opportunity, which
+is a claim about snaps. Fantasy points come from usage, which is a claim about targets or
+carries. For a pass-catcher the two decouple badly — a tight end can play every snap and
+run routes nobody throws to. Before buying a role-vacancy story, check the player's own
+target count in the weeks *before* the vacancy. If it was three a game, promoting him to
+the top of the depth chart makes it four.
+
+This is the mirror image of the role-by-absence rule. That one asks whether the vacancy
+still exists; this one asks whether the vacancy was ever worth anything.
 
 ### Sunday-morning status check: grade the practice log, not the badge
 
