@@ -917,6 +917,57 @@ Three late changes from the first pass, all forced by status checks:
   back questionable with an ankle and DNP Wednesday; Dowdle was in a boot. Marks was the
   clean +12.
 
+### Position floors are not equal, and QB's is the highest on the board
+
+Week 3 produced the demonstration in a single lineup:
+
+| Player | Line | Pts |
+| --- | --- | --- |
+| Jameis Winston (QB) | 118 pass yds, 14 rush, **0 TD** | **6.12** |
+| Oronde Gadsden II (TE) | **3 targets, 0 catches** | **0.00** |
+
+Winston's was close to the worst a quarterback can post while playing a full game, and it
+still cleared six. **QB scoring is volume-driven — passing yards accrue whether or not the
+offense functions.** Every other position is usage-dependent, and usage can be zero.
+
+| Position | Realistic floor | Why |
+| --- | --- | --- |
+| **Starting QB** | **5-8** | Yards accrue regardless of efficiency |
+| Lead RB | 4-6 | Carries roughly assured |
+| Committee RB | 0-2 | Touches are game-script dependent |
+| WR / TE | 0-3 | Targets are never guaranteed |
+
+**This format is a floor problem, so the floor ranking is the one that matters**, and
+superflex hands you two of the highest-floor slots on the board. That is a separate and
+more useful reason to fill both QB slots than the scarcity argument above — scarcity says
+QBs are hard to *get*, this says they are the safest thing to *start* when you need a
+number rather than a ceiling.
+
+The caveat that does all the work: **the floor belongs to the quarterback who takes the
+first snap, not to the one on the depth chart.** A backup in an unresolved competition has
+a floor of zero, not five. When the job is contested and the game is late, hold the slot
+and name him after the starter is reported — inactives post ~90 minutes out.
+
+### Count live slots around the line, not ranks
+
+At week 3's MNF checkpoint the read was rank 614 of 817 with the cut at 711, which looks
+like 97 places of cushion. A hand check of ten teams sitting around the line found **ten of
+ten still holding one or two unplayed slots.**
+
+Rank cushion is worthless if the teams beneath you are all still scoring. Worse, the threat
+is not only the teams between you and the cut: entries well below the line holding two live
+slots can add 20-30 and vault past you from outside the band entirely.
+
+**So at the Monday checkpoint, sample the teams around the line and count their unplayed
+slots.** It takes a few minutes and it is the difference between "97 places clear" and a
+coin flip. An assumed exposure rate is not a substitute — the estimate used here before the
+check was 40%, and the truth was closer to 100%.
+
+This is the sharp form of week 2's finding that survivors cluster at the back of the slate.
+Teams near the cut are there *because* their played slots underperformed, and the ones who
+run a ladder are holding late players on purpose. Both effects push exposure toward 100%
+exactly where it hurts.
+
 ### Week 3 scoring, through Sunday night
 
 80.72 against a 67.44 line, rank 614 of 817, cut at 711. Bagent (SFLX) still to play.
