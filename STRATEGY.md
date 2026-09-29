@@ -1290,6 +1290,81 @@ So do not treat a core projecting 36 as failing. Treat the projected total as cl
 meaningless and **read the live line at the 4:00 checkpoint instead**. The 1.4x figure
 is a description of a good outcome, not a construction target.
 
+## Week 4 board (2026) — Tuesday pull, provisional
+
+Cut 13.9% of 710 (99 reaped, 611 survive). Week 3 final line was 79.64 and the field only
+gets stronger, so **size it as nine real starters, zero punts**, and punt a late slot only
+against a post-MNF-kickoff line. All boards re-pulled in **PPR**. Every delta below is a
+Tuesday delta — **re-pull at each checkpoint**. No practice reports exist yet, so no status
+below is graded, only flagged.
+
+`./gy` needs `FANTASYPROS_API_KEY` (no `.env` in the cloud container); this pull used the
+FantasyPros MCP tools instead. Burned list unchanged at 27.
+
+### Windows confirmed vs not
+
+Confirmed: **TNF** PIT@CLE · **London 9:30** IND@WAS · **1:00** DAL@HOU, LAR@PHI ·
+**4:25** KC@LV, DEN@SF · **SNF** DET@CAR · **MNF** ATL@NO. The other games' windows were
+not confirmable (schedule sites blocked by the egress proxy) — GB@TB, NYJ@CHI and ARI@NYG
+are the three that matter here. Verify in the app before committing anyone from them.
+
+### Working nine
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window |
+| --- | --- | --- | --- | --- | --- | --- |
+| QB | Jalon Daniels (TB) | QB32 | >QB50 | **+18** | 13.87 | ? (GB@TB) |
+| SFLX | Kirk Cousins (LV) | QB24 | QB30 | +6 | 13.22 | **4:25** |
+| RB | RJ Harvey (DEN) | RB27 | RB32 | +5 | 10.11 | **4:25** |
+| RB | Alvin Kamara (NO) | RB36 | RB49 | +13 | 8.91 | **MNF** |
+| WR | Garrett Wilson (NYJ) | WR4 | WR17 | **+13** | 16.91 | ? (NYJ@CHI) |
+| WR | Michael Wilson (ARI) | WR22 | WR39 | **+17** | 12.75 | ? (ARI@NYG) |
+| FLEX | Rashee Rice (KC) | WR17 | WR22 | +5 | 15.26 | **4:25** |
+| TE | Darren Waller (CAR) | TE19 | TE27 | +8 | 8.20 | **SNF** |
+| DST | Green Bay | DST4 | DST15 | +11 | not pulled | ? (GB@TB) |
+
+Eight players project ~99 in PPR before the DST. Nine teams, nine distinct. The only shared
+games are Daniels (TB) vs the Green Bay DST — the cleanest hedge in the format, taken on
+purpose — and Cousins vs Rice in KC@LV, opposite sides.
+
+Five late levers (Cousins, Harvey, Rice, Waller, Kamara) is one over the ~4 guideline. To
+trim, move Harvey to an early RB (Aaron Jones is the points play, see below).
+
+### Why these, and the flags that decide them
+
+- **Daniels** is the backup-QB tactic with the role risk removed: Mayfield (thumb) is out
+  ~3 weeks and the team named Daniels the starter for at least three. Undrafted rookie, so
+  the floor is the first-snap floor, not a veteran's. Paired with GB DST on purpose.
+- **Kamara** is a role-by-absence pick: Etienne "will miss time," no timetable. MNF resolves
+  it for free. Kendre Miller also gains work, so the ceiling is capped.
+- **G. Wilson** left the last drive of week 3 hurt. He is the biggest points-per-asset play
+  on the board (WR4, +13) and the one that most needs a Wednesday/Friday practice grade.
+- **Rice** is 4:25 at LV, 88 yards and 9 targets last week; ROS WR22 is below the WR15
+  band, so residual is close to nil.
+- **Waller** led CAR in targets last week (8) and has a nil residual (TE27 ROS),
+  but he shares a team with McMillan, so McMillan was left out of the FLEX on purpose.
+
+### Not taking, and why
+
+- **Thursday: Warren, Freiermuth, Metcalf, PIT/CLE DST.** Warren (+10) is the best RB value
+  on the board and is on TNF. Avoid.
+- **Mariota (+11).** Left last game with an undisclosed injury and plays the London 9:30
+  window — the earliest kickoff, so nothing can be held.
+- **Jefferson / Addison.** Jefferson "could play." Addison's +16 is a position in his absence.
+- **Braelon Allen (+20).** Real, but Hall is week-to-week and G. Wilson is already the NYJ
+  slot. Take him only if Wilson is scratched and Hall is confirmed out.
+- **Aaron Jones (+13, 14.38).** Best points play at RB, but RB28 ROS is inside the usable
+  pool. The upgrade if the line reads high.
+- **Negative deltas kept on the shelf:** Waddle, Sutton, Flowers, Egbuka, Godwin, Odunze,
+  Herbert, Willis, Loveland, all top-10 QBs and RBs, Seattle, Houston, LAR and DEN DSTs.
+
+### Checks before committing anyone
+
+1. G. Wilson practice log (Wed–Fri). If he is not a full participant by Friday, RB/WR swap.
+2. Etienne's report and whether Kamara's snap share actually rose in week 3.
+3. Confirm the GB@TB, NYJ@CHI and ARI@NYG windows and where the 1:00 core sits.
+4. Cousins: confirm still QB1 at LV (Bowers is back, which helps).
+5. Re-pull all boards Saturday; Tuesday deltas are not valid on Sunday.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
