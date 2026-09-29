@@ -4,6 +4,40 @@ Working doctrine for League Tycoon "Graveyard". Derived week 1 of the 2026 seaso
 from FantasyPros weekly + rest-of-season data, five published start/sit pieces, and
 the league's own elimination table.
 
+## The league is full PPR — every ranking pulled before week 4 used the wrong scoring
+
+Decoded from week 3's final stat lines. Five of six reconcile to the cent:
+
+| Player | Line | Computed | Actual |
+| --- | --- | --- | --- |
+| Winston | 118 pass, 14 rush | 6.12 | 6.12 |
+| B. Robinson | 50 rush, 1 RuTD | 11.00 | 11.00 |
+| Keenum | 247 pass, 2 PTD, 1 RuTD, 6 rush | 24.48 | 24.48 |
+| **Doubs** | 49 rec yds, **3 rec** | **7.90** | **7.90** |
+| **Pollard** | 74 rush, 22 rec yds, **4 rec** | **13.60** | **13.60** |
+| Deebo | 80 rec yds, 1 ReTD, 14 rush, **0 rec** | 15.40 | 15.40 |
+
+Scoring: **1 pt / 25 pass yds · 4 pt pass TD · 1 pt / 10 rush+rec yds · 6 pt rush/rec TD ·
+1.0 pt per reception.** Doubs and Pollard settle it — at HALF they score 6.40 and 11.60,
+and both miss by exactly 0.5 × receptions. All six lines reconcile to the cent.
+
+*The line that nearly broke the decode:* Deebo's 80 receiving yards and a touchdown on
+**zero receptions** looked impossible. It was a hook-and-ladder — another receiver caught
+the forward pass and lateralled to him, so the reception credits to the catcher while the
+yards and the score credit to Deebo.
+
+**Receiving yards and receptions can decouple.** Rare, but it matters here: forcing that
+row to fit would have produced a wrong scoring system from five correct observations and
+one misunderstood one. When one data point contradicts five, find out why before averaging
+it in or discarding it.
+
+**What it changes.** `graveyard.py` defaulted to HALF all season, so every board in this
+document undervalued high-reception players by 0.5/catch — pass-catching backs, slot
+receivers and target-heavy tight ends against touchdown-dependent runners and deep threats.
+Week 3 alone: Pollard was recommended on a 10.23 HALF projection and scored 13.60; Doubs on
+6.4-equivalent and scored 7.90. **The default is now `PPR`.** Re-pull any board carried
+over from an earlier week.
+
 ## Format
 
 - Full NFL player pool available every week. No draft, no waivers, no roster.
@@ -260,6 +294,21 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
 | 2 | 22.16 | 50.24 | 62.60 | **72.20** | 101.32 | +29.12 (survived) |
+| 3 | - | - | 67.44 | **79.64** | 105.20 | +25.56 (survived) |
+
+### The pre-MNF ratio, now at n=2
+
+| Week | pre-MNF line | Final | Move | Ratio |
+| --- | --- | --- | --- | --- |
+| 2 | 62.60 | 72.20 | +9.60 | **1.153x** |
+| 3 | 67.44 | 79.64 | +12.20 | **1.181x** |
+
+**Multiply a pre-MNF reading by ~1.15-1.18.** Two weeks, tight agreement, and this is the
+number the log exists to produce. A single Monday game moves the line 10-12 points because
+the teams still live at that hour are disproportionately the ones holding late slots.
+
+Week 3 ended with **710 teams standing** — the elimination table predicted exactly 710.
+Week 4 cuts 13.9% (99 reaped).
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -459,6 +508,38 @@ problem. Positive correlation raises variance in both directions; the upside is 
 - **Weeks 9+:** as the cut approaches 25%, you need to beat closer to the median. Ceiling
   starts to matter and stacks become defensible.
 - **Opposite-side pairs are fine at any time** — they are a hedge, and reduce variance.
+
+### "Opposite sides" is not the same as negatively correlated
+
+Two players in the same game can be on opposing teams and still rise together. Check the
+*game script*, not the jersey.
+
+| Pair | Same game | Actual correlation |
+| --- | --- | --- |
+| QB vs the opposing **DST** | yes | **strongly negative** — sacks, picks and points-allowed are the same events, scored twice |
+| QB vs the opposing **RB** | yes | **mildly positive** — the RB's team leading means his opponent trails and throws more |
+
+Week 3 had exactly this choice at QB. Watson paired against the Carolina DST already in the
+lineup; Winston paired against Pollard. Only the first is a real hedge — a trailing Giants
+team hands Winston volume, so Pollard's good game feeds Winston's rather than offsetting it.
+
+**The QB-versus-opposing-DST pair is the cleanest hedge available in this format**, because
+the two scoring lines are built from literally the same plays.
+
+### Which way to break a tie depends on whether you are ahead of the line
+
+Watson and Winston tied at **+8 delta with nil residual either way** — both below the QB28
+cliff, both jobs secure. The two rules that normally decide a slot said nothing.
+
+The tiebreaker is the format's own objective. **Surplus points are worthless, so when the
+lineup already projects clear of the expected line, take the variance reduction; when it
+projects short, take the ceiling.** Week 3 projected ~92 against a 72.20 line, so the hedge
+was the asset and the correlated pair was the liability.
+
+Secondary tiebreaker when that is also neutral: **read the direction of drift, not just the
+level.** Watson moved QB27 -> QB25 -> QB24 across three pulls that week while Winston went
+QB30 -> QB26 -> QB27. Same rank band, opposite trajectories, and the beat reporting
+explained why — the market expected the Giants' passing game to get worse with Winston.
 
 ## Uncertainty is a cost, not just a risk
 
@@ -754,6 +835,461 @@ The response is not to bank less. It is to bank *harder* early, because:
 Banking early is not an edge over the field any more. **It is the entry fee for being in
 the week-14 conversation at all.**
 
+## The league app's projection is not the consensus rank
+
+The app attaches a point projection to every player it suggests. Those numbers are
+**not** the FantasyPros consensus this doctrine is built on, and in week 3 they
+disagreed on three of nine slots:
+
+| Player | App proj | Consensus weekly rank |
+| --- | --- | --- |
+| Courtland Sutton | 9.3 | WR45 |
+| Kenyon Sadiq | 7.7 | TE24 |
+| Tyson Bagent | 8.3 | QB34 (behind his own backup, Keenum at QB32) |
+
+A projection sorts players by expected points. That is the wrong objective here —
+it cannot see burn cost, residual value, or the delta. **Re-rank anything the app
+suggests against the weekly and ROS boards before accepting it.** The app is a
+lineup optimizer for a format we are not playing.
+
+Corollary: an app projection that sits well above a player's consensus rank is
+usually pricing in a role the consensus does not believe in. Check why.
+
+## Status flags hide behind the app's own icons
+
+The app showed Tyson Bagent with a plain "Q". The actual reporting was **concussion
+protocol, may miss the game, Case Keenum expected to start.** Those are not the same
+fact, and the format punishes the difference twice — the asset *and* the zero.
+
+**Run `injury_status` on every starter, every week.** The app's badge is a summary of
+a summary. It does not distinguish "ankle, good to go" from "in protocol, likely out",
+and both render as one orange letter.
+
+## Week 3 plan (2026)
+
+Cut 13.1%. **Week 2 is now logged: final line 72.20, and the 18 burns are in
+`data/used_players.json`.** The n=1 caveat below is superseded — use the checkpoint
+ratios (final is 3.26x the 1pm line, 1.44x the 4pm line, 1.15x the post-SNF line) and
+remember that punting the Monday slots in week 2 would have missed the cut by 1.36.
+
+The app's suggested nine, with deltas:
+
+| Slot | Player | Wk | ROS | Delta | Proj | Window | Call |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| QB | Drew Lock (SEA) | QB24 | >QB40 | **+16** | 11.3 | Sun 12:00 | Keep, conditional |
+| RB | Brian Robinson (ATL) | >RB45 | >RB48 | ~0 | 4.1 | **Thu** | **Cut** |
+| RB | Emanuel Wilson (SEA) | RB44 | >RB48 | +5 | 6.2 | Sun 12:00 | Keep |
+| WR | Adonai Mitchell (NYJ) | WR30 | >WR50 | **+21** | 9.1 | Sun 12:00 | Keep |
+| WR | Deebo Samuel (SF) | WR26 | WR38 | +12 | 12.1 | Sun 3:05 | Keep |
+| TE | Kenyon Sadiq (NYJ) | TE24 | TE22 | **-2** | 7.7 | Sun 12:00 | Punt |
+| FLEX | Courtland Sutton (DEN) | WR45 | WR40 | **-5** | 9.3 | SNF | Swap -> Adams |
+| SFLX | Tyson Bagent (CHI) | QB34 | QB38 | +4 | 8.3 | MNF | Hold, flagged |
+| DST | Carolina | DST9 | DST28 | **+19** | 8.8 | Sun 12:00 | **Keep** |
+| SFLX | **Michael Penix Jr. (ATL)** | QB28 | QB31 | +3 | **13.49** | **Thu** | **Start** |
+
+Four faults, in order of deadline:
+
+1. **Brian Robinson is a Thursday lock projecting 4.1** — the lowest in the lineup,
+   outside both boards, ATL's RB2 behind Bijan. Barely distinguishable from a punt
+   while paying the full TNF optionality cost. His ankle cleared, which is beside
+   the point.
+2. **Drew Lock's role is Sam Darnold's** — Darnold questionable, limited Wednesday,
+   **53.7% to play**. The Etienne/Kamara trap again: Lock's own line stays clean
+   while the role evaporates. Biggest delta on the board and still a coin flip.
+3. **Bagent is in concussion protocol** (see above).
+4. **Sutton carries a negative delta** — a bank, not a burn. Davante Adams is in the
+   same SNF game and the same FLEX slot at WR16/WR22 (+6), ~30 spots better this week
+   and outside the hoard band.
+
+Plus: five of the nine sit in two games (SEA@WAS, NYJ@DET), against the decorrelate rule.
+
+**Correction, made the same day:** an earlier pass in this session called Carolina an
+upgrade candidate "because it is only DST9," and floated Seattle instead. Both wrong,
+and wrong in the way the top-level rule exists to prevent — it read the raw rank
+instead of the delta. Carolina is DST9 weekly against **DST28 ROS (+19, nil residual)**
+and is one of the best buys on the board. Seattle is DST1 weekly *and* DST1 ROS: delta
+zero, and the single defense that does carry residual. **Keep Carolina.**
+
+Revised ladder — **8-9 real, 0-1 punts** (see the sizing note below):
+
+| When | Do |
+| --- | --- |
+| Thu, before 7:15 | **SFLX: Michael Penix Jr.** Drop Brian Robinson. |
+| Sun ~11:55 | Lock (iff Darnold ruled out) · E. Wilson · Mitchell · Carolina DST. |
+| Sun ~3:00 | Deebo. |
+| Sun ~7:10 | FLEX: re-pull Sutton's delta first (see below), else Adams. |
+| Mon ~7:00 | Last slot. Do not punt it on a pre-SNF line. |
+
+### Final week 3 lineup
+
+Nine real starters, no punts. Projected **85.55** (half-PPR).
+
+| Slot | Player | Wk | ROS | Delta | Proj | Kickoff |
+| --- | --- | --- | --- | --- | --- | --- |
+| SFLX | Michael Penix Jr. (ATL) | QB28 | QB31 | +3 | 13.49 | **Thu 7:15** |
+| QB | Deshaun Watson (CLE) | QB25 | QB32 | +7 | 15.42 | Sun 12:00 |
+| WR | Adonai Mitchell (NYJ) | WR30 | WR52 | **+22** | 7.75 | Sun 12:00 |
+| RB | Emanuel Wilson (SEA) | RB44 | >RB48 | +4 | 6.41 | Sun 12:00 |
+| DST | Carolina | DST9 | DST28 | **+19** | 7.64 | Sun 12:00 |
+| WR | Deebo Samuel (SF) | WR26 | WR38 | +12 | 10.05 | Sun 3:05 |
+| FLEX | Davante Adams (LAR) | WR16 | WR22 | +6 | 10.84 | SNF |
+| RB | Woody Marks (HOU) | RB34 | RB46 | **+12** | 6.92 | unconfirmed |
+| TE | Oronde Gadsden II (LAC) | TE15 | TE21 | +6 | 6.99 | Sun 12:00 @ BUF |
+
+**The ladder is thinner than planned.** Gadsden turned out to be an early game, and
+taking Penix on Thursday removed the Monday slot, so five players lock at noon and only
+**two** live levers remain: Deebo (3:05) and Adams (7:20). There is no MNF look this week
+— the free-information window the doctrine leans on hardest is simply absent.
+
+Consequence: **the 3:00 checkpoint carries the weight Monday usually carries**, on a
+reading week 2 showed still needs multiplying by ~1.45. Taking a Thursday player costs
+more than the Thursday slot; it can cost the Monday option too, if the superflex was the
+only late slot left. Check what a Thursday pick does to the *back* of the ladder before
+taking it, not just the front.
+
+Nine teams, no same-team pairs. Only shared game is Watson (CLE) against the Carolina
+DST — opposite sides, a hedge, which the correlation rule permits at any time.
+
+Three late changes from the first pass, all forced by status checks:
+
+- **Lock -> Watson.** Darnold came back 53.7% to play, making Lock a coin flip on 11.11.
+  Watson carries no role dependency, projects 15.46, and is QB32 ROS — below the cliff,
+  nil residual. Better on points *and* risk.
+- **Sadiq -> Gadsden.** Sadiq was the last negative delta in the lineup (-2). Gadsden is
+  +6 with a higher projection and TE21 ROS, outside the usable band.
+- **Brian Robinson -> Woody Marks.** Pollard was the first replacement chosen, then came
+  back questionable with an ankle and DNP Wednesday; Dowdle was in a boot. Marks was the
+  clean +12.
+
+### Position floors are not equal, and QB's is the highest on the board
+
+Week 3 produced the demonstration in a single lineup:
+
+| Player | Line | Pts |
+| --- | --- | --- |
+| Jameis Winston (QB) | 118 pass yds, 14 rush, **0 TD** | **6.12** |
+| Oronde Gadsden II (TE) | **3 targets, 0 catches** | **0.00** |
+
+Winston's was close to the worst a quarterback can post while playing a full game, and it
+still cleared six. **QB scoring is volume-driven — passing yards accrue whether or not the
+offense functions.** Every other position is usage-dependent, and usage can be zero.
+
+| Position | Realistic floor | Why |
+| --- | --- | --- |
+| **Starting QB** | **5-8** | Yards accrue regardless of efficiency |
+| Lead RB | 4-6 | Carries roughly assured |
+| Committee RB | 0-2 | Touches are game-script dependent |
+| WR / TE | 0-3 | Targets are never guaranteed |
+
+**This format is a floor problem, so the floor ranking is the one that matters**, and
+superflex hands you two of the highest-floor slots on the board. That is a separate and
+more useful reason to fill both QB slots than the scarcity argument above — scarcity says
+QBs are hard to *get*, this says they are the safest thing to *start* when you need a
+number rather than a ceiling.
+
+The caveat that does all the work: **the floor belongs to the quarterback who takes the
+first snap, not to the one on the depth chart.** A backup in an unresolved competition has
+a floor of zero, not five. When the job is contested and the game is late, hold the slot
+and name him after the starter is reported — inactives post ~90 minutes out.
+
+### Count live slots around the line, not ranks
+
+At week 3's MNF checkpoint the read was rank 614 of 817 with the cut at 711, which looks
+like 97 places of cushion. A hand check of ten teams sitting around the line found **ten of
+ten still holding one or two unplayed slots.**
+
+Rank cushion is worthless if the teams beneath you are all still scoring. Worse, the threat
+is not only the teams between you and the cut: entries well below the line holding two live
+slots can add 20-30 and vault past you from outside the band entirely.
+
+**So at the Monday checkpoint, sample the teams around the line and count their unplayed
+slots.** It takes a few minutes and it is the difference between "97 places clear" and a
+coin flip. An assumed exposure rate is not a substitute — the estimate used here before the
+check was 40%, and the truth was closer to 100%.
+
+This is the sharp form of week 2's finding that survivors cluster at the back of the slate.
+Teams near the cut are there *because* their played slots underperformed, and the ones who
+run a ladder are holding late players on purpose. Both effects push exposure toward 100%
+exactly where it hurts.
+
+## Week 3 result (2026)
+
+**Survived.** Scored **105.20** against a final cut line of **79.64**. Nine real starters,
+zero punts. 27 players burned on the season.
+
+| Slot | Player | Pts | Proj | Window |
+| --- | --- | --- | --- | --- |
+| QB | Jameis Winston (NYG) | 6.12 | 14.0 | Sun 1:00 |
+| RB | Brian Robinson Jr. (ATL) | **11.00** | 4.3 | Thu |
+| RB | Tony Pollard (TEN) | **13.60** | 10.4 | Sun 1:00 |
+| WR | Romeo Doubs (NE) | 7.90 | 10.0 | Sun 1:00 |
+| WR | Deebo Samuel Sr. (SF) | **15.40** | 11.9 | Sun 4:05 |
+| TE | Oronde Gadsden II (LAC) | **0.00** | 8.3 | Sun 1:00 |
+| FLEX | Davante Adams (LAR) | **20.70** | 15.1 | SNF |
+| SFLX | Case Keenum (CHI) | **24.48** | 11.5 | **MNF** |
+| DST | Carolina | 6.00 | 8.9 | Sun 1:00 |
+
+### The margin was one point, and two calls made it twenty-five
+
+At Monday kickoff the score was 80.72 against a live line of 67.44. **Had the superflex
+been punted, the week would have finished 80.72 against 79.64 — alive by 1.08 points.**
+
+Two decisions turned a coin flip into a 25-point cushion, and both were the user's:
+
+1. **Counting live slots instead of assuming an exposure rate.** A hand check of ten teams
+   around the line found ten still holding unplayed slots. The estimate in play before that
+   check was 40%; the truth was ~100%, and the recommendation built on it ("very likely
+   safe, punting is defensible") would have survived by a single point.
+2. **Choosing a QB for its floor.** The argument — a starting quarterback floors around 5-8
+   because yards accrue regardless of efficiency, where a committee back floors at zero —
+   was right, and Keenum returned **24.48**, the highest score in the lineup.
+
+The suggestion those two calls replaced was Kyle Monangai, projected 7.56.
+
+### Held late, paid late
+
+The three slots decided last produced **60.58 of 105.20** — Deebo (4:05), Adams (SNF) and
+Keenum (MNF). Adams was WR16 on Thursday and WR8 by Sunday because Nacua deteriorated
+through the week; Keenum did not become startable until Monday afternoon.
+
+Neither was knowable on Saturday. **The ladder is not a hedge against being wrong, it is
+the mechanism that collects information other entrants have already committed against.**
+
+Against that, the two slots committed earliest were the two worst: Winston (6.12, locked
+Sunday morning on a coin-flip read) and Gadsden (0.00, a 1:00 kickoff).
+
+### "A bigger role" from a coach is not a target share
+
+Gadsden scored **zero on three targets**. The buy signal was Njoku and Kolar both out plus
+Harbaugh saying he was "ready to step up," and the market moved him to TE15 on it.
+
+The thing that signal could not see: **he had seen three targets or fewer in every game of
+the season.** Vacated snaps in front of him did not change how often the offense actually
+looked his way.
+
+**Separate opportunity from usage.** An injury ahead of a player creates opportunity, which
+is a claim about snaps. Fantasy points come from usage, which is a claim about targets or
+carries. For a pass-catcher the two decouple badly — a tight end can play every snap and
+run routes nobody throws to. Before buying a role-vacancy story, check the player's own
+target count in the weeks *before* the vacancy. If it was three a game, promoting him to
+the top of the depth chart makes it four.
+
+This is the mirror image of the role-by-absence rule. That one asks whether the vacancy
+still exists; this one asks whether the vacancy was ever worth anything.
+
+### Sunday-morning status check: grade the practice log, not the badge
+
+The app showed Adonai Mitchell and Tyson Bagent with the same orange **Q**. The underlying
+reports were not close:
+
+| Player | Injury | Practice | P(play) |
+| --- | --- | --- | --- |
+| Adonai Mitchell | finger | Limit, Limit | **90.5%** |
+| Tyson Bagent | concussion | DNP, DNP, Full | **37.8%** |
+
+**The practice log is the signal; the badge is noise.** Two limited sessions and no DNP is
+a player who plays. Two DNPs and a late full practice, with protocol still not cleared, is
+a coin flip at best. `injury_status` returns `probability_of_playing` — read it every time
+rather than the app's letter.
+
+### A status flag is only a dilemma when the flagged player is better
+
+The rule says never start an unresolved flag unless you can verify active before lock, and
+a noon kickoff *is* verifiable — inactives post ~90 minutes out. So the default move is to
+wait.
+
+Week 3 showed the case where waiting is pointless. Mitchell projected **7.86** and had
+**fallen off the weekly WR45 board** (he was WR30 on Thursday). Every clean fallback
+projected higher:
+
+| Player | Wk | ROS | Delta | Proj |
+| --- | --- | --- | --- | --- |
+| Romeo Doubs (NE) | WR31 | WR45 | **+14** | 9.06 |
+| Xavier Worthy (KC) | WR35 | >WR50 | **+15** | 8.97 |
+| Michael Wilson (ARI) | WR29 | WR43 | +14 | 9.05 |
+| Adonai Mitchell (NYJ) | off board | off board | — | 7.86 |
+
+**Check the fallback before deciding whether to wait.** When the replacement is better on
+points *and* delta *and* carries no risk, there is no decision to make and no reason to
+hold the slot open. Waiting on inactives is only worth it when you are holding the flagged
+player because he is the better play.
+
+Second-order point: **a questionable player gets marked down whether or not he suits up.**
+Mitchell losing 15+ ranking spots is the market pricing a finger injury on a pass-catcher.
+"He'll probably play" and "he'll probably be himself" are different claims.
+
+### Role-by-absence cuts both ways, and it decided three of nine slots in one week
+
+The rule as written asks whether the *absent* player is still absent. Week 3 showed it is
+really a two-sided test, and that it is the highest-yield check in the whole method.
+
+| Slot | Thesis when picked | What happened | Outcome |
+| --- | --- | --- | --- |
+| QB | Lock starts while Darnold is hurt | Darnold cleared, **off the report** | Lock QB24 -> QB31. Swapped. |
+| RB | Wilson leads while Price is hurt | Price cleared, **no designation** | Wilson RB44 -> off board. Swapped. |
+| FLEX | Adams is WR1 while Nacua is out | Nacua **doubtful, 1.4%** | Adams WR16 -> **WR8**. Held. |
+
+Three of nine slots, none of which showed anything on their own injury line all week.
+Lock, Wilson and Adams were each perfectly healthy throughout.
+
+**The generalisation: a cheap player whose value comes from someone else's absence is a
+position in that absence, not in the player.** When the absence resolves, he does not drift
+— he falls off the board, because the market never rated him and only rated the vacancy.
+Wilson went from RB44 to unranked on news about a *different player's* chest.
+
+The reverse holds too, and is worth harvesting: **when the absence deepens, your man
+repriced upward for free.** Nacua going from questionable to doubtful moved Adams fourteen
+ranking spots without costing anything.
+
+So on every Sunday check, list each starter's dependency and grade the *other* player's
+report. Do not read your own starter's clean injury line as reassurance — for this class
+of pick it carries no information at all.
+
+### Weighting the projection mean and ignoring the shape
+
+Brian Robinson was kept over the recommendation to cut him, and **scored 11.0 against a 4.3
+projection** — one rushing touchdown. The case against him leaned on the gap to Penix
+(13.49 vs 4.3) and treated it as a ~9-point loss.
+
+That misread the distribution. As Atlanta's short-yardage back he carried touchdown equity
+that a mean projection compresses — precisely the **cheap player with TD equity** profile
+the lottery-ticket rule already endorses. The doctrine had the right principle and the
+week-3 analysis ignored it in favour of comparing means.
+
+One game is one game, and the point is not that Robinson was underrated. It is that
+**a 4-point projection with a goal-line role and a 12-point projection with a 4-catch role
+are not comparable numbers**, and ranking candidates by projected mean alone silently
+assumes they are.
+
+It also preserved the Monday slot that taking Penix would have spent — which, with Bagent
+at 37.8%, turned out to be worth holding.
+
+### Delta-chasing caps the ceiling, and that matters once the line is high
+
+85.55 against a line that was 72.20 last week, in a week cutting 13.1% from a field that
+has already shed its worst teams. A ~1.18x cushion, where week 2 ran 1.40x on actuals.
+
+**The mechanism: every high-delta player is by definition one the market ranks low.**
+Nine of them sum to less than a lineup carrying two real studs. Week 2 cleared partly on
+Kenneth Walker (23.80) and Stafford (26.98) — both negative-delta spends from the bank.
+
+So the delta rule optimises *cost per point*, not *points*. That is the right objective
+while the line leaves slack, and the wrong one when it does not. The resolution is not to
+abandon delta up front but to **let the ladder decide**: lock the cheap core early, read
+the 4pm line, and spend into the bank at SNF/MNF only if the reading demands it. Deciding
+to overspend on Thursday is guessing; deciding at 8pm Sunday is reading.
+
+Week 3 locks ~51 by Sunday afternoon (Penix, Watson, Mitchell, Wilson, Carolina) and
+holds ~35 live.
+
+### The 5-6 starter sizing in this section's first draft was wrong
+
+It was built on week 1's 40.02 line before week 2 was logged, and recommended 5-6 real
+players projecting ~50. **Week 2's line was 72.20 and week 3 cuts harder than week 2.**
+Fifty points would have been a comfortable elimination. The error was reaching for the
+"weeks 1-5: 4-5 real starters" row of the deployment table, which week 2 had already
+demoted to a floor rather than a target. When the log and the table disagree, the log
+wins — that is what it is for.
+
+Emanuel Wilson improved during the week rather than decaying: he out-touched Jadarian
+Price 21-13 in week 2, and Price is questionable with a chest injury. Positive
+role-by-absence, which is the rare direction that check points.
+
+### A returning franchise starter is the backup-QB tactic without the catch
+
+Week 3's superflex was taken for a non-fantasy reason — attending ATL @ GB — so the
+question was which Falcon costs least. The answer turned out to beat the planned play
+outright.
+
+**Michael Penix Jr.: QB28 weekly, QB31 ROS, 13.49 projected.** Below the quality cliff,
+so nil residual; a real starter's projection, so a real slot filled. That is exactly the
+backup-QB profile recorded above — but **without the role risk that the rule warns
+about.** Mariota and Bagent start only until someone heals. Penix *is* the franchise
+starter, returning from last season's knee injury and named by Rapoport. Nobody takes
+the job back.
+
+**Grade the direction of the role, not just its certainty.** The archetype splits in two:
+
+| | Role comes from | Risk |
+| --- | --- | --- |
+| Fill-in backup | Starter's absence | Evaporates when he returns |
+| **Returning starter** | **His own job** | **None — it only consolidates** |
+
+The second is strictly the better buy at the same price, and the doctrine had collapsed
+both into one category.
+
+It also beat the slot it replaced: Bagent projected 7.58 in concussion protocol with
+Case Keenum (11.04) ranked ahead of him. Penix is ~6 points better and already confirmed.
+**Taking the Thursday game cost nothing here** — the usual TNF objection is committing
+without information, and Penix's status was settled before kickoff while Bagent's was not.
+
+Placed in **SFLX rather than QB**, to leave the QB slot open for Sunday while Lock's job
+still depends on Darnold (Lock 11.11 projected, Darnold 12.85 — consensus is hedging).
+
+### "Cheapest" stops being the question once the line is known
+
+Jahan Dotson (ATL) was considered as the Falcon instead of Penix. He is **unranked
+weekly and unranked ROS** — off both boards past WR85 — with 3 receptions on 8 targets
+for 30 yards in two games, 4.5 half-PPR points on the season. That makes him genuinely
+cheaper inventory than Penix (QB31 ROS).
+
+He is still wrong, and the reason generalises:
+
+**Divide the cut line by nine.** Week 2: 72.20 / 9 = **8.0 points per slot to survive**;
+we cleared at 11.3 per slot. A slot projecting 2-3 is a five-point hole that has to be
+refilled from somewhere, and by the time the line is this high there is nowhere cheap
+left to refill from.
+
+Weeks 1-2 made inventory the binding constraint, because a 40-point line left slack
+everywhere. At 72 the binding constraint is **points per slot**, and the cheapest
+available player stops being the right answer. Run the division before reaching for the
+cheapest body.
+
+He is also a worse *punt* than a punt: the punt-selection rule wants no plausible path
+back (retired, unsigned, season-ending IR), and Dotson is a rostered receiver in his
+mid-twenties. Burning him for 2.5 points is the Jamal Haynes error.
+
+**Name-resolution note:** `injury_status` returned nothing for Dotson and he was absent
+from an 80-deep weekly board. Neither fact means anything on its own — the tool says so
+explicitly. `get_player_stats` resolved him to ATL with a real stat line. **Never infer
+a player's team or status from absence in a ranked board.** (The same lapse put Darnell
+Mooney on Atlanta in an earlier draft of this session; he is a Giant.)
+
+### Weekly boards move during the week; re-pull before each checkpoint
+
+Sutton was **WR33/WR42 (+9)** when pulled Tuesday and **WR45/WR40 (-5)** when pulled
+Thursday — a swing that flips him from buy to bank. Deebo moved WR24/WR44 to WR26/WR38
+over the same two days.
+
+Saturday added the sharpest example yet. **Drew Lock fell QB24 -> QB31 in 48 hours** once
+Darnold was back, and Watson rose QB27 -> QB25. The delta that made Lock the pick on
+Thursday (+16) was gone by the weekend.
+
+Note what the board did *not* say: Darnold returned at **QB33, below Lock at QB31.**
+The market's view was not "Darnold is better" but "this QB room is unusable either way."
+A role-by-absence risk landing does not necessarily promote the man who returns — it can
+simply delete the slot's value. Do not plan a fallback that assumes the returning starter
+inherits the projection.
+
+Early-week weekly boards are thin because most experts have not submitted yet. **A delta
+computed on Tuesday is not valid on Sunday.** Re-pull at each ladder checkpoint, and
+treat any Tuesday delta as provisional — especially for a slot that is not committed
+until SNF or MNF, where there is no reason to be using stale numbers at all.
+
+### The 1.4x core rule and the 4-5 starter rule conflict
+
+Week 3 surfaced a contradiction between two rules in this document. "Early core should
+project ~1.4x the cut line" wants ~63 points against a 45-point line. "Weeks 1-5: 4-5
+real starters" buys cheap players projecting 6-12, which reaches ~50 at most.
+
+Both cannot hold. **The starter count is the rule that survives** — week 1 reached
+75.76 not because the projections were high but because two ~10-point projections
+returned 19.22 and 19.9. The core clears 1.4x on *hits*, not on projections.
+
+So do not treat a core projecting 36 as failing. Treat the projected total as close to
+meaningless and **read the live line at the 4:00 checkpoint instead**. The 1.4x figure
+is a description of a good outcome, not a construction target.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
@@ -859,6 +1395,20 @@ slots still held assets worth preserving.
   Check the ROS rank before claiming an individual is worth protecting.
 - **"Protect Jacksonville's DST12 residual."** Applied the RB scarcity rule to a loose,
   matchup-driven pool. Residual value must be weighted by pool tightness.
+- **Trusted the league app's point projections.** They are not the FantasyPros
+  consensus and they optimize for total points, which is the wrong objective in a
+  survival format. Week 3 had them disagreeing with the consensus rank on three of
+  nine slots.
+- **Read the app's "Q" badge as the injury report.** It collapsed "ankle, cleared to
+  play" and "in concussion protocol, backup expected to start" into the same icon.
+- **Sized week 3 off week 1's line after week 2 was already logged.** Recommended 5-6
+  real starters projecting ~50 against a line that had just come in at 72.20. Always
+  re-read the cut-line log before quoting the deployment table.
+- **Called Carolina DST an upgrade candidate for being "only DST9."** Raw rank, not
+  delta — at DST28 ROS it was a +19 buy. The top-level rule exists precisely to stop
+  this, and it still got applied per-position out of habit.
+- **Computed deltas once, early in the week, and reused them.** Weekly boards fill in
+  as experts submit; Sutton swung +9 to -5 in two days.
 
 ## Open questions
 

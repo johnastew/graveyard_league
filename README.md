@@ -37,7 +37,8 @@ python3 graveyard.py use "Player Name" --week 5
 ```
 
 - `--position` — `FLEX`, `QB`, `RB`, `WR`, `TE`, `K`, `DST`, `OP`, …
-- `--scoring` — `STD`, `HALF`, `PPR`
+- `--scoring` — `STD`, `HALF`, `PPR`. **Defaults to `PPR`** — the league scores
+  full PPR, decoded from week 3 stat lines. See STRATEGY.md.
 - `--limit 0` — print everyone instead of the top 50
 - `--refresh` — bypass the on-disk response cache in `data/cache/`
 

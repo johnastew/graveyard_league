@@ -6,7 +6,7 @@ you have already started this season (they are locked out permanently under
 League Tycoon "Graveyard" rules).
 
 Usage:
-    ./graveyard.py rankings [--week N] [--position FLEX] [--scoring HALF]
+    ./graveyard.py rankings [--week N] [--position FLEX] [--scoring PPR]
     ./graveyard.py use "Ja'Marr Chase" [more names...]
     ./graveyard.py unuse "Ja'Marr Chase"
     ./graveyard.py used
@@ -308,7 +308,10 @@ def main(argv: list[str] | None = None) -> None:
     r.add_argument("--week", type=int, default=default_week())
     r.add_argument("--position", default="FLEX",
                    help="FLEX/FLX, QB, RB, WR, TE, K, DST, OP, ...")
-    r.add_argument("--scoring", default="HALF")
+    # League Tycoon Graveyard scores full PPR — decoded from week 3 stat lines,
+    # see "The league is full PPR" in STRATEGY.md. HALF undervalues every
+    # high-reception player by 0.5/catch, so do not change this back casually.
+    r.add_argument("--scoring", default="PPR")
     r.add_argument("--limit", type=int, default=50, help="0 for all")
     r.add_argument("--csv", help="also write results to this CSV path")
     r.add_argument("--refresh", action="store_true", help="bypass the local cache")
