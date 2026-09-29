@@ -15,14 +15,21 @@ Decoded from week 3's final stat lines. Five of six reconcile to the cent:
 | Keenum | 247 pass, 2 PTD, 1 RuTD, 6 rush | 24.48 | 24.48 |
 | **Doubs** | 49 rec yds, **3 rec** | **7.90** | **7.90** |
 | **Pollard** | 74 rush, 22 rec yds, **4 rec** | **13.60** | **13.60** |
+| Deebo | 80 rec yds, 1 ReTD, 14 rush, **0 rec** | 15.40 | 15.40 |
 
 Scoring: **1 pt / 25 pass yds · 4 pt pass TD · 1 pt / 10 rush+rec yds · 6 pt rush/rec TD ·
 1.0 pt per reception.** Doubs and Pollard settle it — at HALF they score 6.40 and 11.60,
-and both miss by exactly 0.5 × receptions.
+and both miss by exactly 0.5 × receptions. All six lines reconcile to the cent.
 
-*Anomaly:* Deebo (80 rec yds, 1 ReTD, 14 rush) shows 15.40, which only works at zero
-receptions. Almost certainly a display quirk on that row, but **worth confirming against
-the league's own scoring page** before treating this as settled.
+*The line that nearly broke the decode:* Deebo's 80 receiving yards and a touchdown on
+**zero receptions** looked impossible. It was a hook-and-ladder — another receiver caught
+the forward pass and lateralled to him, so the reception credits to the catcher while the
+yards and the score credit to Deebo.
+
+**Receiving yards and receptions can decouple.** Rare, but it matters here: forcing that
+row to fit would have produced a wrong scoring system from five correct observations and
+one misunderstood one. When one data point contradicts five, find out why before averaging
+it in or discarding it.
 
 **What it changes.** `graveyard.py` defaulted to HALF all season, so every board in this
 document undervalued high-reception players by 0.5/catch — pass-catching backs, slot
