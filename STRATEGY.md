@@ -4,6 +4,33 @@ Working doctrine for League Tycoon "Graveyard". Derived week 1 of the 2026 seaso
 from FantasyPros weekly + rest-of-season data, five published start/sit pieces, and
 the league's own elimination table.
 
+## The league is full PPR — every ranking pulled before week 4 used the wrong scoring
+
+Decoded from week 3's final stat lines. Five of six reconcile to the cent:
+
+| Player | Line | Computed | Actual |
+| --- | --- | --- | --- |
+| Winston | 118 pass, 14 rush | 6.12 | 6.12 |
+| B. Robinson | 50 rush, 1 RuTD | 11.00 | 11.00 |
+| Keenum | 247 pass, 2 PTD, 1 RuTD, 6 rush | 24.48 | 24.48 |
+| **Doubs** | 49 rec yds, **3 rec** | **7.90** | **7.90** |
+| **Pollard** | 74 rush, 22 rec yds, **4 rec** | **13.60** | **13.60** |
+
+Scoring: **1 pt / 25 pass yds · 4 pt pass TD · 1 pt / 10 rush+rec yds · 6 pt rush/rec TD ·
+1.0 pt per reception.** Doubs and Pollard settle it — at HALF they score 6.40 and 11.60,
+and both miss by exactly 0.5 × receptions.
+
+*Anomaly:* Deebo (80 rec yds, 1 ReTD, 14 rush) shows 15.40, which only works at zero
+receptions. Almost certainly a display quirk on that row, but **worth confirming against
+the league's own scoring page** before treating this as settled.
+
+**What it changes.** `graveyard.py` defaulted to HALF all season, so every board in this
+document undervalued high-reception players by 0.5/catch — pass-catching backs, slot
+receivers and target-heavy tight ends against touchdown-dependent runners and deep threats.
+Week 3 alone: Pollard was recommended on a 10.23 HALF projection and scored 13.60; Doubs on
+6.4-equivalent and scored 7.90. **The default is now `PPR`.** Re-pull any board carried
+over from an earlier week.
+
 ## Format
 
 - Full NFL player pool available every week. No draft, no waivers, no roster.
@@ -260,11 +287,21 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
 | 2 | 22.16 | 50.24 | 62.60 | **72.20** | 101.32 | +29.12 (survived) |
-| 3 | - | - | 67.44 | *pending* | 80.72 | +13.28 at MNF kickoff |
+| 3 | - | - | 67.44 | **79.64** | 105.20 | +25.56 (survived) |
 
-Week 3 at MNF kickoff: **rank 614 of 817, first team cut at 711** — 97 places of cushion,
-with only PHI @ CHI left. Applying week 2's pre-MNF move of +9.60 projects a final line
-near **77.0**. Two independent reads, both surviving, neither comfortable.
+### The pre-MNF ratio, now at n=2
+
+| Week | pre-MNF line | Final | Move | Ratio |
+| --- | --- | --- | --- | --- |
+| 2 | 62.60 | 72.20 | +9.60 | **1.153x** |
+| 3 | 67.44 | 79.64 | +12.20 | **1.181x** |
+
+**Multiply a pre-MNF reading by ~1.15-1.18.** Two weeks, tight agreement, and this is the
+number the log exists to produce. A single Monday game moves the line 10-12 points because
+the teams still live at that hour are disproportionately the ones holding late slots.
+
+Week 3 ended with **710 teams standing** — the elimination table predicted exactly 710.
+Week 4 cuts 13.9% (99 reaped).
 
 **Anchor on the count of real starters, not a point target.** With n=1 a score target is
 guesswork; "how many real players do I need" is stabler and is the thing you control.
@@ -968,25 +1005,51 @@ Teams near the cut are there *because* their played slots underperformed, and th
 run a ladder are holding late players on purpose. Both effects push exposure toward 100%
 exactly where it hurts.
 
-### Week 3 scoring, through Sunday night
+## Week 3 result (2026)
 
-80.72 against a 67.44 line, rank 614 of 817, cut at 711. Bagent (SFLX) still to play.
+**Survived.** Scored **105.20** against a final cut line of **79.64**. Nine real starters,
+zero punts. 27 players burned on the season.
 
-| Slot | Player | Pts | Proj |
-| --- | --- | --- | --- |
-| QB | Jameis Winston (NYG) | **6.12** | 14.0 |
-| RB | Brian Robinson (ATL) | **11.00** | 4.3 |
-| RB | Tony Pollard (TEN) | **13.60** | 10.4 |
-| WR | Romeo Doubs (NE) | 7.90 | 10.0 |
-| WR | Deebo Samuel (SF) | **15.40** | 11.9 |
-| TE | Oronde Gadsden II (LAC) | **0.00** | 8.3 |
-| FLEX | Davante Adams (LAR) | **20.70** | 15.1 |
-| DST | Carolina | 6.00 | 8.9 |
+| Slot | Player | Pts | Proj | Window |
+| --- | --- | --- | --- | --- |
+| QB | Jameis Winston (NYG) | 6.12 | 14.0 | Sun 1:00 |
+| RB | Brian Robinson Jr. (ATL) | **11.00** | 4.3 | Thu |
+| RB | Tony Pollard (TEN) | **13.60** | 10.4 | Sun 1:00 |
+| WR | Romeo Doubs (NE) | 7.90 | 10.0 | Sun 1:00 |
+| WR | Deebo Samuel Sr. (SF) | **15.40** | 11.9 | Sun 4:05 |
+| TE | Oronde Gadsden II (LAC) | **0.00** | 8.3 | Sun 1:00 |
+| FLEX | Davante Adams (LAR) | **20.70** | 15.1 | SNF |
+| SFLX | Case Keenum (CHI) | **24.48** | 11.5 | **MNF** |
+| DST | Carolina | 6.00 | 8.9 | Sun 1:00 |
 
-Both Sunday-morning swaps paid: Pollard returned 13.60 where Wilson's slot was projected
-5.8, and Doubs 7.90 where Mitchell projected 9.3 but carried the finger. The two biggest
-scores, Adams (20.70) and Deebo (15.40), were the two picks held longest and confirmed
-latest.
+### The margin was one point, and two calls made it twenty-five
+
+At Monday kickoff the score was 80.72 against a live line of 67.44. **Had the superflex
+been punted, the week would have finished 80.72 against 79.64 — alive by 1.08 points.**
+
+Two decisions turned a coin flip into a 25-point cushion, and both were the user's:
+
+1. **Counting live slots instead of assuming an exposure rate.** A hand check of ten teams
+   around the line found ten still holding unplayed slots. The estimate in play before that
+   check was 40%; the truth was ~100%, and the recommendation built on it ("very likely
+   safe, punting is defensible") would have survived by a single point.
+2. **Choosing a QB for its floor.** The argument — a starting quarterback floors around 5-8
+   because yards accrue regardless of efficiency, where a committee back floors at zero —
+   was right, and Keenum returned **24.48**, the highest score in the lineup.
+
+The suggestion those two calls replaced was Kyle Monangai, projected 7.56.
+
+### Held late, paid late
+
+The three slots decided last produced **60.58 of 105.20** — Deebo (4:05), Adams (SNF) and
+Keenum (MNF). Adams was WR16 on Thursday and WR8 by Sunday because Nacua deteriorated
+through the week; Keenum did not become startable until Monday afternoon.
+
+Neither was knowable on Saturday. **The ladder is not a hedge against being wrong, it is
+the mechanism that collects information other entrants have already committed against.**
+
+Against that, the two slots committed earliest were the two worst: Winston (6.12, locked
+Sunday morning on a coin-flip read) and Gadsden (0.00, a 1:00 kickoff).
 
 ### "A bigger role" from a coach is not a target share
 
