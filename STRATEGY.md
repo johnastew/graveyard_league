@@ -1365,6 +1365,30 @@ trim, move Harvey to an early RB (Aaron Jones is the points play, see below).
 4. Cousins: confirm still QB1 at LV (Bowers is back, which helps).
 5. Re-pull all boards Saturday; Tuesday deltas are not valid on Sunday.
 
+### Wednesday morning update
+
+Boards re-pulled. The working nine holds, with these moves. No practice reports are in
+yet for anyone but Etienne and Coleman, so **G. Wilson is still ungraded**.
+
+| Player | Tue wk/delta | Wed wk/delta | Read |
+| --- | --- | --- | --- |
+| Etienne (NO) | flagged | **OUT** (hamstring) | Kamara's case is now firmer |
+| Kamara (NO) | RB36 / +13 | RB34 / **+15** | Stays, MNF |
+| Braelon Allen (NYJ) | RB28 / +20 | RB23 / **+25** | Now the better RB2 than Harvey *if Hall is ruled out* |
+| RJ Harvey (DEN) | RB27 / +5 | RB29 / **+3** | Weakest piece; Coleman on IR did not lift him |
+| Waller (CAR) | TE19 / +8 | TE16 / **+11** | Stays |
+| Rice (KC) | WR17 / +5 | WR15 / +7 | Stays; now at the edge of the hoard band |
+| G. Wilson (NYJ) | WR4 / +13 | WR5 / +12 | Holds; still ungraded |
+| M. Wilson (ARI) | WR22 / +17 | WR23 / +16 | Holds |
+| Daniels (TB) / Cousins (LV) | QB32 / QB24 | QB31 / QB24 | Unchanged |
+| GB DST | DST4 / +11 | DST5 / +10 | Holds as the Daniels hedge |
+
+**One reversal.** Tuesday's note took Allen only if Wilson was scratched. With Allen at +25
+and Harvey at +3, the better move is **Allen for Harvey once Hall is ruled out**, accepting
+the NYJ pairing with G. Wilson. Hall is still only week-to-week, so this waits on Friday's
+report. Etienne's `probability_of_playing` reads 0.32 against an OUT designation — treat
+OUT as the status.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
