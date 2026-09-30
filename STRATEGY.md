@@ -463,6 +463,16 @@ projected 7.70 at DST9 weekly / DST29 ROS (**+20**) while Kansas City projected 
 DST3 / DST13 (+10). Identical points, but Carolina is ranked ninth purely for its
 opponent and has nothing behind it. Take the big delta when the projections tie.
 
+### House rule (week 4): play the DST matchup, do not hold the slot
+
+Earlier sections say to hold the DST for the late windows. The owner's call from week 4
+on: **never wait on a defense — play the best matchup and commit it with the rest.** The
+cost is one fewer late lever, and it is accepted. It is cheap here because DST carries no
+residual to protect (53% pool consumption). Week 4: Green Bay at Tampa Bay, DST5 weekly
+against DST15 rest-of-season (+10), the second-easiest DST schedule on the board, facing
+a first-time starter. If Daniels is not the QB the Daniels hedge is gone, but the matchup
+stands alone.
+
 ### The one DST exception: a delta-0 elite unit
 
 "Never hoard" is right in spirit but slightly too absolute. Week 3 2026 has **Seattle at
@@ -1508,6 +1518,15 @@ slots still held assets worth preserving.
   this, and it still got applied per-position out of habit.
 - **Computed deltas once, early in the week, and reused them.** Weekly boards fill in
   as experts submit; Sutton swung +9 to -5 in two days.
+- **Sold Jalon Daniels (week 4) on a +19 delta.** He is an undrafted rookie with no
+  rest-of-season rank at all, so the delta was measuring a blank, not an edge. A delta
+  is only informative when the market has rated the player at *both* ends. For an
+  unranked-ROS player it is mechanical — all that survives is "costs nothing later,"
+  which makes him free, not good. Judge such a player on projection and floor.
+- **Applied the QB floor argument to a rookie.** The 5-8 floor came from veterans
+  (Winston 6.12) whose *role* was certain. It says nothing about quality. The backup-QB
+  tactic worked with Mariota, Bagent and Keenum because each was a known quantity; a
+  UDFA making his first start is not. Require a track record before using it.
 
 ## Open questions
 
