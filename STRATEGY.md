@@ -295,17 +295,27 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 1 | - | - | 40.02 | - | 75.76 | +35.74 (survived) |
 | 2 | 22.16 | 50.24 | 62.60 | **72.20** | 101.32 | +29.12 (survived) |
 | 3 | - | - | 67.44 | **79.64** | 105.20 | +25.56 (survived) |
+| 4 | - | 52.02 | 70.12 | **88.04** | 105.74 | +17.70 (survived) |
 
-### The pre-MNF ratio, now at n=2
+Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
+reading before MNF. Final lines have risen every week: 72.20, 79.64, 88.04 (+7.44, +8.40).
+
+### The pre-MNF ratio, now at n=3
 
 | Week | pre-MNF line | Final | Move | Ratio |
 | --- | --- | --- | --- | --- |
 | 2 | 62.60 | 72.20 | +9.60 | **1.153x** |
 | 3 | 67.44 | 79.64 | +12.20 | **1.181x** |
+| 4 | 70.12 | 88.04 | +17.92 | **1.256x** |
 
-**Multiply a pre-MNF reading by ~1.15-1.18.** Two weeks, tight agreement, and this is the
-number the log exists to produce. A single Monday game moves the line 10-12 points because
-the teams still live at that hour are disproportionately the ones holding late slots.
+**Multiply a pre-MNF reading by ~1.25, and treat 1.15-1.18 as too low.** Week 4 broke the
+two-week agreement: the estimate made that morning (80.9-82.8) was off by 5-7 points. The
+ratio is rising with the field's quality. A single Monday game moves the line 10-18 points
+because the teams still live at that hour are disproportionately the ones holding late
+slots.
+
+The post-4pm ratio has two points, 1.44x (week 2) and 1.69x (week 4), so a 4:25 reading
+still needs to be multiplied by 1.4-1.7.
 
 Week 3 ended with **710 teams standing** — the elimination table predicted exactly 710.
 Week 4 cuts 13.9% (99 reaped).
@@ -1398,6 +1408,93 @@ and Harvey at +3, the better move is **Allen for Harvey once Hall is ruled out**
 the NYJ pairing with G. Wilson. Hall is still only week-to-week, so this waits on Friday's
 report. Etienne's `probability_of_playing` reads 0.32 against an OUT designation — treat
 OUT as the status.
+
+## Week 4 result (2026)
+
+**Survived.** Scored **105.74** against a final cut line of **88.04**, a margin of +17.70.
+Nine burned, 36 on the season, recorded in `data/used_players.json`.
+
+| Slot | Player | Pts | Proj | Window |
+| --- | --- | --- | --- | --- |
+| QB | Marcus Mariota (WAS) | 5.34 | 16.2 | Sun 9:30 |
+| RB | Braelon Allen (NYJ) | 8.70 | 11.5 | Sun 1:00 |
+| RB | CJ Donaldson (NO) | 4.30 | 2.6 | MNF (punt) |
+| WR | Jordan Addison (MIN) | 9.10 | 13.6 | Sun 1:00 |
+| WR | Michael Wilson (ARI) | 16.50 | 12.9 | Sun 1:00 |
+| TE | Darren Waller (CAR) | 6.60 | 9.4 | SNF |
+| FLEX | Tetairoa McMillan (CAR) | **45.20** | 15.7 | SNF |
+| SFLX | Chris Blair (ATL) | 0.00 | 0.6 | MNF (punt) |
+| DST | Green Bay | 10.00 | 7.7 | Sun 1:00 |
+
+### What decided the week
+
+- **McMillan scored 45.2** (14 catches, 192 yards, 2 touchdowns) against a 15.7
+  projection. Without him the lineup finishes at 60.54, which is cut. The call was
+  right, but the outcome was an outlier. The FLEX decision was made on Sunday afternoon,
+  when Coker went inactive and McMillan became Carolina's clear WR1 (15.4 projected
+  against Jameson Williams's 11.2). That is the ladder paying: information that did not
+  exist at 1:00 changed the pick.
+- **Mariota scored 5.34.** He left in the first quarter with a knee injury on a sack, so
+  the 16.2 projection was missed by about 11 points. He was active and Daniels was out,
+  so he passed every pre-game check. A backup QB in the 9:30 slot has no later option if
+  he is hurt mid-game; the ladder cannot protect the earliest window.
+- **Garrett Wilson was avoided on purpose** and replaced by Michael Wilson at WR
+  (WR22 weekly, WR36 ROS). He returned 16.5 against 12.9 projected.
+
+### Jameson Williams fell after the Panthers news
+
+Both Carolina starting CBs went to injured reserve on Wednesday, and Williams moved the
+wrong way (WR29 -> WR33, delta -2) instead of up. News about a matchup does not mean the
+market will reprice the player upward; it can price down his target share. It also
+showed that the matchup rating the app used (DET WR 1.1 stars, rank 29) was pre-news.
+
+### The Monday punt
+
+At 101.44 with two Monday slots open, the live line was 70.12. It finished at **88.04**,
+a ratio of 1.256, against 1.15-1.18 the two previous weeks (see the cut-line log).
+Punting was still safe by a wide margin, and the reasoning is the durable part:
+
+> You are cut only if (teams standing - cut) teams finish above you. At rank R of 710
+> with a 99-team cut, the field must pass you **612 - R times** from below. Compare that
+> to the number of teams below you that could add enough with live slots.
+
+At rank 288, 324 of the 422 teams below would have had to pass, more than the entire
+band between the line and the score. The rank test is stronger than the line-ratio test
+because it does not depend on n=3.
+
+**Punts were rostered deep backups from the Monday game, not unsigned names.** CJ
+Donaldson (NO RB3, ranked 71) and Chris Blair (ATL WR5, ranked 141). Method: pull the
+depth charts for the two Monday teams (`get_nfl_depth_charts`), take players ranked
+beyond the usable pool (RB 35, WR 65, TE 20) with no role, and skip anyone whose role is
+growing (Kendre Miller, Kamara) or who is young with a plausible path (Branch, Lance,
+Brown, Delp). Rostered backups remove the risk that a "punt" turns out to be signed, and
+they can still return a few points; they carry a small injury-driven path back instead.
+Donaldson returned 4.3 and Blair 0.
+
+### Corrections made in-session
+
+- **Kamara is not free.** He was called free on the strength of ROS RB51, but while
+  Etienne is out he is the Saints' starter (RB28 weekly). A role-by-absence player is a
+  cheap fill-in with a **shelf life equal to the other player's absence**; spend him in a
+  week the points are needed. He was left unburned.
+- **Dotson is a fine punt.** He is WR81 weekly and WR105 ROS, outside the usable pool by
+  about 40 spots. Week 3's "Haynes error" note was about spending him in a slot that
+  needed points, not about using him in a slot that does not.
+- **Kendre Miller was saved:** he has a live role while Etienne is out.
+- **The doctrine's inventory math still holds.** After week 4: 36 burned (QB 7, RB 10,
+  WR 11, TE 4, DST 4). The top tier at every position is untouched; McMillan (WR18 ROS)
+  was the most expensive spend of the week.
+
+### Unburned and still available
+
+Penix, Kamara, Rice, Harvey, Downs, Jameson Williams, Geno Smith, Brissett and Cousins
+were all placed at some point and swapped out before their games, so none were burned.
+
+### Week 5
+
+Week 5 cuts 14.9% of 611 (91 reaped, 520 survive). The final line has risen about 8
+points a week (72.20, 79.64, 88.04); that is a trend to plan against, not a forecast.
+Start from nine real starters and a 1.25x pre-MNF ratio.
 
 ## Source notes
 
