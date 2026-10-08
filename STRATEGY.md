@@ -1496,6 +1496,76 @@ Week 5 cuts 14.9% of 611 (91 reaped, 520 survive). The final line has risen abou
 points a week (72.20, 79.64, 88.04); that is a trend to plan against, not a forecast.
 Start from nine real starters and a 1.25x pre-MNF ratio.
 
+## Week 5 board (2026) — Thursday pull, provisional
+
+Cut 14.9% of 611 (91 reaped, 520 survive). Plan against a line in the mid-90s (the trend
+is +8/week from 88.04), so **nine real starters**, with the MNF slot as the lever. All
+boards PPR, pulled Thursday morning before TNF. Burned list unchanged at 36.
+
+**Windows (ET).** Byes: CAR, KC. **TNF** TB@DAL · **London 9:30** PHI@JAC · **1:00**
+CIN@MIA, MIN@NO, NYG@WAS, HOU@TEN, LV@NE, CLE@NYJ, IND@PIT, **CHI@GB (flexed from 4:25)** ·
+**4:05** DEN@LAC · **4:25** DET@ARI, SF@SEA · **SNF** BAL@ATL · **MNF** BUF@LAR.
+
+### Working nine
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window |
+| --- | --- | --- | --- | --- | --- | --- |
+| SFLX | Tyson Bagent (CHI) | QB22 | QB38 | **+16** | 15.27 | 1:00 @ GB |
+| WR | DK Metcalf (PIT) | WR18 | WR38 | **+20** | 12.73 | 1:00 vs IND |
+| WR | Carnell Tate (TEN) | WR21 | WR39 | **+18** | 11.95 | 1:00 vs HOU |
+| RB | Ollie Gordon II (MIA) | RB29 | RB44 | +15 | 10.39 | 1:00 vs CIN |
+| TE | Mike Gesicki (CIN) | TE12 | TE25 | +13 | 7.92 | 1:00 @ MIA |
+| DST | NY Jets | DST14 | DST26 | +12 | 7.25 | 1:00 vs CLE |
+| QB | Jacoby Brissett (ARI) | QB7 | QB25 | **+18** | 18.13 | 4:25 vs DET |
+| RB | Emanuel Wilson (SEA) | RB17 | RB53 | **+36** | 12.13 | 4:25 vs SF |
+| FLEX | held: Shakir / Higbee / Kyren Williams / punt | | | | 7-18 | **MNF** |
+
+Eight project 95.77 before the FLEX. Nine teams, and the only shared game is Gordon vs
+Gesicki, which puts them on opposite sides. Brissett is the only spend with any residual
+(QB25 ROS, at the edge of the cliff). He is in the QB13-28 band the doctrine says to spend
+early, and his +18 is the largest QB delta on the board.
+
+### Why these, and the dependencies to re-grade
+
+- **Bagent**: Caleb Williams is OUT (hamstring, 4.2%). Ben Johnson named Bagent the
+  starter. The role is settled, but the game now locks at 1:00, not 4:25.
+- **E. Wilson**: Price is on IR and Charbonnet is OUT (limited Wednesday, "not expected
+  to return this week"). Wilson had 21 carries plus 3 catches in week 4 as the clear
+  workhorse. This is role-by-absence, and Charbonnet is the one to re-grade.
+- **Gordon**: Achane is on IR (weeks 3-5) and Gordon is splitting with Jaylen Wright.
+  The fallback that beat Kamara.
+- **Gesicki**: Chase is in concussion protocol (DNP, 20.9%) and Higgins has a groin
+  injury (DNP, 68.6%). Gesicki is a position in their absence, so read both
+  inactives at 11:30. He has 15 targets in 4 games (the Gadsden check). That is light,
+  and the bet is that it rises with Chase out.
+- **MNF FLEX**: decide off the live line × 1.25. Shakir (WR36/WR47, 10.02) by default.
+  Higbee (TE18/TE34, Ferguson on IR) is the cheap alternative. Kyren Williams (18.15,
+  RB10 ROS, a bank piece) only if the line demands it. Punt a rostered deep BUF/LAR
+  backup if the line is far clear.
+
+### Not taking, and why
+
+- **Kamara**: back, DNP Wednesday, 51.5% to play, at 1:00. Gordon is better on points
+  and delta and carries no flag, so there is nothing to wait for.
+- **Dallas DST (+21)**: the biggest DST delta, but it locks on TNF and projects 6.12,
+  below the Jets' 7.25. Cincinnati (+12, 7.30) was skipped because it plays against
+  Gordon.
+- **Huntley (QB28/QB40, +12, SNF)**: Lamar is at 5%. He is the SFLX alternative if an
+  SNF lever matters more than the 1.8 points.
+- **Jalon Daniels**: TNF, an unranked-ROS rookie (see "Things we got wrong").
+- **Aaron Jones (+14, 15.28) / Warren (+11, 15.81)**: the best RB points, but RB26 and
+  RB19 ROS sit inside the usable pool. Swap one in for Gordon only if the plan needs more
+  margin up front.
+- **Negative deltas on the shelf**: Egbuka, Pickens, Bucky Irving, Montgomery, Pitts,
+  Willis, Penix, plus all the delta-0 elite units (MIN, DEN DST).
+
+### Checks before committing anyone
+
+1. Friday practice: Metcalf, Tate, Gesicki, Gordon. Then Chase/Higgins (Gesicki) and
+   Charbonnet (Wilson).
+2. Re-pull the boards Saturday. Thursday deltas are not valid on Sunday.
+3. Inactives at ~11:30 Sunday for the 1:00 core.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
