@@ -1559,6 +1559,26 @@ early, and his +18 is the largest QB delta on the board.
 - **Negative deltas on the shelf**: Egbuka, Pickens, Bucky Irving, Montgomery, Pitts,
   Willis, Penix, plus all the delta-0 elite units (MIN, DEN DST).
 
+### Late-heavy variant (owner unavailable Sunday afternoon)
+
+If the 4:15 swap window can't be staffed, 4:05/4:25 players are morning commits too. So
+move the open decisions to SNF and MNF, where the information is better anyway:
+
+| Slot | Swap | Wk / ROS | Proj | Window |
+| --- | --- | --- | --- | --- |
+| SFLX | Bagent → **Tyler Huntley (BAL)** | QB28 / QB40 | 13.47 | SNF @ ATL |
+| TE | Gesicki → **Tyler Higbee (LAR)** | TE18 / TE34 | 7.05 | MNF vs BUF |
+
+The cost is 2.7 projected points (103.1 against 105.8, with Shakir at FLEX). In exchange,
+three slots are decided with near-complete information, and Gesicki's dependency on Chase
+is gone. Huntley's role rests on Lamar (ankle, DNP, 5%), and SNF inactives settle that.
+If Lamar is somehow active, the fallback is Penix (QB24 / QB23) in the same game.
+
+The SNF pool is thin. The only cheap burns are Huntley, Penix, Andrews (TE14 / TE15, a
+real residual, and a QB-TE stack with Huntley) and ATL DST (DST18 / DST27, but it is
+strongly negatively correlated with Huntley). Henry (17.17, RB9 ROS) and London (17.61,
+WR8 ROS) are bank pieces, so treat them as reinforcement only if the line demands it.
+
 ### Checks before committing anyone
 
 1. Friday practice: Metcalf, Tate, Gesicki, Gordon. Then Chase/Higgins (Gesicki) and
