@@ -1579,6 +1579,28 @@ real residual, and a QB-TE stack with Huntley) and ATL DST (DST18 / DST27, but i
 strongly negatively correlated with Huntley). Henry (17.17, RB9 ROS) and London (17.61,
 WR8 ROS) are bank pieces, so treat them as reinforcement only if the line demands it.
 
+### Friday update
+
+The owner set the original nine (Bagent SFLX at 1:00, Shakir at the MNF FLEX). The app
+projects them at 103.4. Boards re-pulled:
+
+| Player | Thu wk | Fri wk | Read |
+| --- | --- | --- | --- |
+| Brissett | QB7 | QB6 | Up |
+| Bagent | QB22 | QB20 | Up; Caleb Williams at 0% |
+| Gordon | RB29 | RB27 | **Jaylen Wright (foot) Q, limited**: positive role-by-absence |
+| E. Wilson | RB17 | RB19 | Charbonnet limited twice, 25.5%, still listed OUT |
+| Shakir | WR36 | WR31 | Up |
+| Gesicki | TE12 | TE12 | **Chase 21% → 80%** (limited Thu, in uniform Fri) |
+| Metcalf / Tate | WR18 / WR21 | same | Tate: feed shows Q (back), 84.6%; Wyatt reports him cleared |
+
+Lamar is officially OUT, so Huntley is confirmed for SNF.
+
+**Gesicki is the one weak link.** His thesis was Chase's absence, and that is now likely
+to reverse while his own line stays clean. The market has not moved him, and he still
+sits eight spots above Higbee, so he holds for now. If Chase clears protocol Saturday and
+Gesicki slides to ~TE15 or below, swap him for Higbee at MNF.
+
 ### Checks before committing anyone
 
 1. Friday practice: Metcalf, Tate, Gesicki, Gordon. Then Chase/Higgins (Gesicki) and
