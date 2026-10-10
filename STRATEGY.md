@@ -1601,6 +1601,36 @@ to reverse while his own line stays clean. The market has not moved him, and he 
 sits eight spots above Higbee, so he holds for now. If Chase clears protocol Saturday and
 Gesicki slides to ~TE15 or below, swap him for Higbee at MNF.
 
+### Saturday update: the Bagent dependency reopened
+
+**Caleb Williams went from OUT (0%) to Questionable on the final report.** He practiced
+DNP, DNP, then Limited, and is now at 17.8%. The coach had named Bagent the starter on
+Tuesday, and the injury feed showed Williams OUT through Friday. Bagent's own line never
+moved, and the market still has him at QB19. This is the role-by-absence trap again, and
+it arrived *after* the role looked settled.
+
+**Lesson: an early-week OUT is not a final designation.** Only the final Friday report
+(and Sunday inactives) closes a dependency. Treat a teammate listed OUT on Tuesday as
+provisional until the final report posts.
+
+The fallback is Huntley: Lamar is officially OUT and Huntley is confirmed as the starter.
+He is QB27, 13.5 projected, nil residual, and plays SNF. Bagent's expected value is
+roughly 0.82 × 15.3 ≈ 12.5, before even counting the double loss of a scratch. So the
+call is **SFLX: Bagent → Huntley**. The only reason to keep Bagent is if the owner can read
+the Bears inactives at ~11:30 and swap before 1:00, since Huntley stays available all day.
+
+Other moves:
+
+- **Tate**: Questionable (back), Limited Thu and Fri, 90.9%. The earlier "off the report"
+  item was wrong. The fallbacks are as good and unflagged: **Jameson Williams** (WR22,
+  4:25, no report) or **Mike Evans** (WR23, 4:25, off the report). So keep Tate only if
+  the inactives can be read; otherwise swap to Jameson Williams.
+- **Gesicki**: Chase was Full Friday (83%, still in protocol) and Higgins was Full Friday
+  (96.8%). The thesis is mostly gone, but the market still holds him at TE12, with Higbee
+  at TE21, so he stays.
+- **E. Wilson**: Charbonnet is formally OUT (0%), with Week 7 more likely. Clean.
+- **Gordon**: Wright Questionable, Limited Thu and Fri, 63%. Small upside for Gordon.
+
 ### Checks before committing anyone
 
 1. Friday practice: Metcalf, Tate, Gesicki, Gordon. Then Chase/Higgins (Gesicki) and
