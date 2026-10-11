@@ -1631,6 +1631,22 @@ Other moves:
 - **E. Wilson**: Charbonnet is formally OUT (0%), with Week 7 more likely. Clean.
 - **Gordon**: Wright Questionable, Limited Thu and Fri, 63%. Small upside for Gordon.
 
+### Sunday morning
+
+- **Caleb Williams: OUT** (final). Bagent's dependency is closed again, so Bagent (QB19)
+  is back ahead of Huntley (QB27). Either is clean.
+- **Tate: active.** Keep him.
+- **Chase cleared protocol; Higgins will play (Schefter).** Gesicki slid TE12 → TE15. That
+  met the swap trigger set on Friday, but **Higbee slid too, TE21 → TE24** (no practice
+  Saturday, then off the report). The gap is unchanged, so the trigger was the wrong
+  test. The Friday note compared Gesicki to a fixed rank instead of to the live
+  fallback. Every cheap TE between them carries residual or rates worse: Schultz TE16
+  (TE19 ROS), Henry TE17 (TE20 ROS). **Gesicki stays** (TE15 / TE25 ROS, +10, still the
+  best nil-residual TE on the board).
+
+**Lesson: a swap trigger has to be relative.** "Swap if X falls below rank N" silently
+assumes the fallback holds still. Re-rank both ends before acting.
+
 ### Checks before committing anyone
 
 1. Friday practice: Metcalf, Tate, Gesicki, Gordon. Then Chase/Higgins (Gesicki) and
