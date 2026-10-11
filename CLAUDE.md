@@ -36,7 +36,7 @@ The five things most likely to be re-derived wrongly:
 ## Working notes
 
 - Record burns **after** lineups lock, not before.
-- `cbssports.com` and `rotostreetjournal.com` are blocked by the egress proxy — the
+- `cbssports.com`, `rotostreetjournal.com` and `mailchi.mp` (Late Round newsletter) are blocked by the egress proxy — the
   user has to paste article text.
 - Keep `STRATEGY.md` current. When something is learned, commit it there rather than
   leaving it in a conversation that a future session cannot see.
