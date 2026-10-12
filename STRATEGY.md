@@ -296,7 +296,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 2 | 22.16 | 50.24 | 62.60 | **72.20** | 101.32 | +29.12 (survived) |
 | 3 | - | - | 67.44 | **79.64** | 105.20 | +25.56 (survived) |
 | 4 | - | 52.02 | 70.12 | **88.04** | 105.74 | +17.70 (survived) |
-| 5 | 36.04 (1pm games at Q4 2:00) | 68.48 | | | 44.1 → 85.5 at 4pm | |
+| 5 | 36.04 (1pm games at Q4 2:00) | 68.48 | 78.82 | | 44.1 → 85.5 → 109.62 pre-MNF | |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
 reading before MNF. Final lines have risen every week: 72.20, 79.64, 88.04 (+7.44, +8.40).
