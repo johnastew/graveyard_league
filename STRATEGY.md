@@ -296,27 +296,37 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 2 | 22.16 | 50.24 | 62.60 | **72.20** | 101.32 | +29.12 (survived) |
 | 3 | - | - | 67.44 | **79.64** | 105.20 | +25.56 (survived) |
 | 4 | - | 52.02 | 70.12 | **88.04** | 105.74 | +17.70 (survived) |
-| 5 | 36.04 (1pm games at Q4 2:00) | 68.48 | 78.82 | | 44.1 → 85.5 → 109.62 pre-MNF | |
+| 5 | 36.04 | 68.48 | 78.82 | **101.16** | 120.62 | +19.46 (survived) |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
-reading before MNF. Final lines have risen every week: 72.20, 79.64, 88.04 (+7.44, +8.40).
+reading before MNF. Week 5's 36.04 was read with the 1:00 games at Q4 2:00. Final lines
+have risen every week, and the rise is accelerating: 72.20, 79.64, 88.04, 101.16 (+7.44,
++8.40, +13.12).
 
-### The pre-MNF ratio, now at n=3
+### The pre-MNF ratio, now at n=4
 
 | Week | pre-MNF line | Final | Move | Ratio |
 | --- | --- | --- | --- | --- |
 | 2 | 62.60 | 72.20 | +9.60 | **1.153x** |
 | 3 | 67.44 | 79.64 | +12.20 | **1.181x** |
 | 4 | 70.12 | 88.04 | +17.92 | **1.256x** |
+| 5 | 78.82 | 101.16 | **+22.34** | **1.283x** |
 
-**Multiply a pre-MNF reading by ~1.25, and treat 1.15-1.18 as too low.** Week 4 broke the
+**The ratio has risen every week: 1.153, 1.181, 1.256, 1.283. Use ~1.30 for week 6, and do
+not treat the largest past ratio as a ceiling.** In week 5 the "worst case" was taken as
+the week-4 maximum (×1.256 = 99.0). The line finished at 101.16, beating that ceiling by
+2.2. The Monday move grows by about 4 points a week (9.6, 12.2, 17.9, 22.3), so the right
+worst case is the *next* point on the trend, not the last one.
+
+Week 4 broke the
 two-week agreement: the estimate made that morning (80.9-82.8) was off by 5-7 points. The
 ratio is rising with the field's quality. A single Monday game moves the line 10-18 points
 because the teams still live at that hour are disproportionately the ones holding late
 slots.
 
-The post-4pm ratio has two points, 1.44x (week 2) and 1.69x (week 4), so a 4:25 reading
-still needs to be multiplied by 1.4-1.7.
+The post-4pm ratio has three points: 1.44x (week 2), 1.69x (week 4) and 1.48x (week 5). So
+a 4:25 reading still needs to be multiplied by 1.4-1.7. The week-5 post-1pm ratio was
+2.81x (week 2: 3.26x).
 
 Week 3 ended with **710 teams standing** — the elimination table predicted exactly 710.
 Week 4 cuts 13.9% (99 reaped).
@@ -1654,6 +1664,67 @@ assumes the fallback holds still. Re-rank both ends before acting.
    Charbonnet (Wilson).
 2. Re-pull the boards Saturday. Thursday deltas are not valid on Sunday.
 3. Inactives at ~11:30 Sunday for the 1:00 core.
+
+## Week 5 result (2026)
+
+**Survived.** Scored **120.62** against a final cut line of **101.16**, a margin of
++19.46. Finished the Sunday-night checkpoint at rank 277 of 611, with the cut at 520.
+Nine burned, 45 on the season (QB 9, RB 12, WR 14, TE 5, DST 5), all recorded in
+`data/used_players.json`.
+
+| Slot | Player | Pts | Proj (FP PPR, Thu) | Window |
+| --- | --- | --- | --- | --- |
+| QB | Jacoby Brissett (ARI) | **25.28** | 18.13 | 4:25 |
+| SFLX | Tyler Huntley (BAL) | **24.04** | 13.47 | SNF |
+| DST | NY Jets | **18.00** | 7.25 | 1:00 |
+| RB | Ollie Gordon II (MIA) | 14.80 | 10.39 | 1:00 |
+| RB | Emanuel Wilson (SEA) | 13.20 | 12.13 | 4:25 |
+| FLEX | Khalil Shakir (BUF) | 11.00 | 10.02 | MNF |
+| TE | Mike Gesicki (CIN) | 7.40 | 7.92 | 1:00 |
+| WR | DK Metcalf (PIT) | 5.30 | 12.73 | 1:00 |
+| WR | Carnell Tate (TEN) | 1.60 | 11.95 | 1:00 |
+
+### What decided the week
+
+- **The two QB slots scored 49.32, 41% of the total.** Both were cheap burns: Brissett
+  at QB25 ROS and Huntley at QB40. The QB-floor argument from week 3 keeps paying, and
+  here it also produced the ceiling.
+- **The late windows outscored the early core.** The 1:00 slots produced 47.10; Brissett,
+  Wilson, Huntley and Shakir produced 73.52. That is the third straight week the back of
+  the ladder carried the lineup.
+- **The Bagent → Huntley swap was a role-by-absence call** (Caleb Williams moved OUT →
+  Questionable on Saturday). Williams was ruled out Sunday, so Bagent would have started.
+  The swap still produced 24.04 from the SNF slot and gave a later checkpoint.
+- **The Jets DST scored 18** (8 sacks, 2 fumble recoveries) as a +12-delta matchup buy, the
+  biggest overperformance in the lineup.
+- **Both WRs busted.** Tate (1.60) was questionable with a back injury, limited in practice,
+  in a 3-26 blowout. Metcalf scored 5.30. The newsletter's usage case for Tate (25%+ target
+  share three weeks running) was real and still returned nothing. One game is one game.
+
+### The Monday punt that wasn't needed, and the bound that was wrong
+
+At 109.62 with only the FLEX left, the pre-MNF line was 78.82 and the rank was 277 of 611
+(cut at 520). The FLEX was filled with Shakir anyway, for comfort; he scored 11.0.
+
+- **The rank test was right.** Without Shakir the week finishes 109.62 against 101.16:
+  alive by 8.46.
+- **The ratio-based worst case was wrong.** It used the largest past ratio (1.256 → 99.0),
+  and the line beat it by 2.2. The ratio is trending, not bounded, so take the next point
+  on the trend as the worst case (see the cut-line log).
+- So the honest pre-Monday read was "safe by ~5-10," not "safe by 10+." Still a correct
+  call to punt, but by less than it looked.
+
+### Unburned and still available
+
+Bagent, Penix, Kamara, Rice, Harvey, Downs, Jameson Williams, Geno Smith and Cousins
+were placed at some point and never burned. Ty Johnson (BUF RB2, Cook's backup) and
+Kyren Williams (held for a Monday emergency) were also left on the shelf.
+
+### Week 6
+
+Week 6 cuts 16.0% of 520 (83 reaped, 437 survive). The final line rose 13.12 this week
+against +7-8 in the two weeks before. Plan against a line above 105 and a pre-MNF ratio
+of ~1.30. Nine real starters, Monday slot held.
 
 ## Source notes
 
