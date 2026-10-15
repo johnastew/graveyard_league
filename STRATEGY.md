@@ -1536,6 +1536,24 @@ Gesicki, which puts them on opposite sides. Brissett is the only spend with any 
 (QB25 ROS, at the edge of the cliff). He is in the QB13-28 band the doctrine says to spend
 early, and his +18 is the largest QB delta on the board.
 
+### Owner revision: hold the FLEX
+
+The first draft committed Burden (CHI, 12.07) to the FLEX at 1:00. That left only two
+real pivots, since a 4:25 reading is the weakest checkpoint. Holding the FLEX costs
+nothing: Golden projects 2.5 points higher. FLEX also takes any position, so the slot
+stays live through every window:
+
+| Window | Options |
+| --- | --- |
+| 4:05 | Kyren Williams (20.0, bank), Higbee (7.4) |
+| 4:25 | Worthy (10.1) |
+| SNF | **Golden (14.6)**, Pickens (14.4, WR16 ROS), Javonte (15.5, bank), C. Watson (18.0) |
+| MNF | McLaurin (11.9), Kittle (15.3, bank), CMC (20.2, bank) |
+
+Considered and skipped: moving TE from Freiermuth to Okonkwo (MNF, 7.24, with Kittle as
+the upgrade). It costs 2.7 projected points, puts three slots in one game, and Kittle
+would stack with Evans.
+
 ### Why these, and the dependencies to re-grade
 
 - **Bagent**: Caleb Williams is OUT (hamstring, 4.2%). Ben Johnson named Bagent the
@@ -1748,16 +1766,17 @@ app.
 | QB | Daniel Jones (IND) | QB20 | QB29 | +9 | 16.26 | 1:00 @ TEN |
 | RB | Rhamondre Stevenson (NE) | RB11 | RB22 | +11 | 16.66 | 1:00 vs NYJ |
 | WR | Jalen Coker (CAR) | WR17 | WR26 | +9 | 12.65 | 1:00 @ PHI |
-| FLEX | Luther Burden III (CHI) | WR20 | WR28 | +8 | 12.07 | 1:00 @ ATL |
 | TE | Pat Freiermuth (PIT) | TE13 | TE25 | +12 | 9.96 | 1:00 @ TB |
 | DST | Baltimore | DST4 | DST11 | +7 | 7.92 | 1:00 @ CLE |
 | SFLX | Kirk Cousins (LV) | QB14 | QB27 | **+13** | 17.16 | **4:25** vs BUF |
 | RB | MarShawn Lloyd (GB) | RB21 | RB41 | **+20** | 11.38 | **SNF** vs DAL |
 | WR | Mike Evans (SF) | WR10 | WR20 | +10 | 16.94 | **MNF** vs WAS |
+| FLEX | **held** — default Matthew Golden (GB) | WR15 | WR22 | +7 | 14.60 | **SNF** vs DAL |
 
-Projected total: **126.94**, about 1.10x a 115 line. The 1:00 core is six slots at 75.5,
-and there are three late levers. The lineup uses nine teams in nine different games, so
-there are no same-game pairs. Stevenson (RB22 ROS) is the only spend that leaves real
+Projected total: **129.47**, about 1.13x a 115 line. The 1:00 core is five slots at 63.5,
+and there are four late levers (the doctrine's ceiling). Golden and Lloyd are both Packers, a
+mild same-team correlation. Swap Pickens in from the other side of the game at SNF to
+break it. Stevenson (RB22 ROS) is the only spend that leaves real
 residual. He gets the slot because he is the only RB on the board that clears 14 points
 without being a bank piece, and Henderson's injury makes him the workhorse (see below).
 
@@ -1781,8 +1800,8 @@ without being a bank piece, and Henderson's injury makes him the workhorse (see 
 - **Evans** caught 7 of 10 targets for 113 yards in week 5 and is off the injury report.
   He is the MNF default. The reinforcement option there is CMC (20.24, a bank piece),
   used only if the live line × 1.30 demands it.
-- **Coker** is back from a quad injury and practiced full Wednesday. **Burden** has 4+
-  catches in 4 of 5 games, and Caleb Williams (full practice) returns.
+- **Coker** is back from a quad injury and practiced full Wednesday. Burden (WR20 / WR28,
+  12.07) is the 1:00 fallback if the owner can't be present Sunday evening.
 
 ### Not taking, and why
 
@@ -1790,8 +1809,8 @@ without being a bank piece, and Henderson's injury makes him the workhorse (see 
   but WR15 ROS is the edge of the hoard band, and he would pair with Lloyd in the same
   GB offense. He is the SNF upgrade if the line demands it. Golden
   (WR15 / WR22) has the same pairing problem.
-- **Denzel Boston (+16)**: Q (foot), limited, 90.7%. Coker and Burden both project
-  higher and are clean, so there is nothing to wait for.
+- **Denzel Boston (+16)**: Q (foot), limited, 90.7%. Coker projects higher and is
+  clean, so there is nothing to wait for.
 - **Higbee (TE15 / TE31, +16)**: the best TE delta, but he projects 7.42 against
   Freiermuth's 9.96. He is the 4:05 fallback if Freiermuth draws a flag.
 - **NYG DST (+15)**: the biggest DST delta, but it projects 5.93 against BAL's 7.92. KC
@@ -1808,11 +1827,11 @@ without being a bank piece, and Henderson's injury makes him the workhorse (see 
 
 ### Checks before committing anyone
 
-1. Friday final report: **Henderson** (Stevenson), plus Coker, Burden, Freiermuth and
-   Jones's own lines.
+1. Friday final report: **Henderson** (Stevenson), plus Coker, Freiermuth and Jones's own
+   lines.
 2. Confirm IND@TEN is a 1:00 kickoff and which side is home in LAC/KC.
 3. Re-pull all boards on Saturday. Thursday deltas are not valid on Sunday.
-4. Read inactives at ~11:30 Sunday for the six-man 1:00 core.
+4. Read inactives at ~11:30 Sunday for the five-man 1:00 core.
 5. Read the 4:25 / SNF / MNF decisions against the live line × the checkpoint ratios
    (post-4pm ~1.5x, pre-MNF ~1.30x). Punt nothing on a pre-MNF line.
 
