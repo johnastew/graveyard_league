@@ -1536,24 +1536,6 @@ Gesicki, which puts them on opposite sides. Brissett is the only spend with any 
 (QB25 ROS, at the edge of the cliff). He is in the QB13-28 band the doctrine says to spend
 early, and his +18 is the largest QB delta on the board.
 
-### Owner revision: hold the FLEX
-
-The first draft committed Burden (CHI, 12.07) to the FLEX at 1:00. That left only two
-real pivots, since a 4:25 reading is the weakest checkpoint. Holding the FLEX costs
-nothing: Golden projects 2.5 points higher. FLEX also takes any position, so the slot
-stays live through every window:
-
-| Window | Options |
-| --- | --- |
-| 4:05 | Kyren Williams (20.0, bank), Higbee (7.4) |
-| 4:25 | Worthy (10.1) |
-| SNF | **Golden (14.6)**, Pickens (14.4, WR16 ROS), Javonte (15.5, bank), C. Watson (18.0) |
-| MNF | McLaurin (11.9), Kittle (15.3, bank), CMC (20.2, bank) |
-
-Considered and skipped: moving TE from Freiermuth to Okonkwo (MNF, 7.24, with Kittle as
-the upgrade). It costs 2.7 projected points, puts three slots in one game, and Kittle
-would stack with Evans.
-
 ### Why these, and the dependencies to re-grade
 
 - **Bagent**: Caleb Williams is OUT (hamstring, 4.2%). Ben Johnson named Bagent the
@@ -1779,6 +1761,24 @@ mild same-team correlation. Swap Pickens in from the other side of the game at S
 break it. Stevenson (RB22 ROS) is the only spend that leaves real
 residual. He gets the slot because he is the only RB on the board that clears 14 points
 without being a bank piece, and Henderson's injury makes him the workhorse (see below).
+
+### Owner revision: hold the FLEX
+
+The first draft committed Burden (CHI, 12.07) to the FLEX at 1:00. That left only two
+real pivots, since a 4:25 reading is the weakest checkpoint. Holding the FLEX costs
+nothing: Golden projects 2.5 points higher. FLEX also takes any position, so the slot
+stays live through every window:
+
+| Window | Options |
+| --- | --- |
+| 4:05 | Kyren Williams (20.0, bank), Higbee (7.4) |
+| 4:25 | Worthy (10.1) |
+| SNF | **Golden (14.6)**, Pickens (14.4, WR16 ROS), Javonte (15.5, bank), C. Watson (18.0) |
+| MNF | McLaurin (11.9), Kittle (15.3, bank), CMC (20.2, bank) |
+
+Considered and skipped: moving TE from Freiermuth to Okonkwo (MNF, 7.24, with Kittle as
+the upgrade). It costs 2.7 projected points, puts three slots in one game, and Kittle
+would stack with Evans.
 
 ### Why these, and the dependencies to re-grade
 
