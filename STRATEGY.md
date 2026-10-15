@@ -1726,6 +1726,96 @@ Week 6 cuts 16.0% of 520 (83 reaped, 437 survive). The final line rose 13.12 thi
 against +7-8 in the two weeks before. Plan against a line above 105 and a pre-MNF ratio
 of ~1.30. Nine real starters, Monday slot held.
 
+## Week 6 board (2026) — Thursday pull, provisional
+
+Cut 16.0% of 520 (83 reaped, 437 survive). Weekly increases in the final line were +7.44,
++8.40 and +13.12. The next step on that trend puts the line around **114-118**. Plan
+against 115, and use a pre-MNF ratio of 1.30 or more. That means **nine real starters**,
+with the late slots used to reinforce rather than to punt. All boards are PPR, pulled
+Thursday morning before TNF. The burned list is unchanged at 45.
+
+**Windows (ET).** Byes: CIN, DET, MIA, MIN. **TNF** SEA@DEN · **London 9:30** HOU@JAC ·
+**1:00** BAL@CLE, CHI@ATL, NYJ@NE, CAR@PHI, NO@NYG, PIT@TB, IND@TEN · **4:05** ARI@LAR ·
+**4:25** LAC/KC, BUF@LV · **SNF** DAL@GB · **MNF** WAS@SF. Schedule sites are blocked
+by the proxy, so these were pieced together from search snippets and the FantasyPros SOS
+matchups. IND@TEN's window and the LAC/KC home side are unconfirmed. Check them in the
+app.
+
+### Working nine
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window |
+| --- | --- | --- | --- | --- | --- | --- |
+| QB | Daniel Jones (IND) | QB20 | QB29 | +9 | 16.26 | 1:00 @ TEN |
+| RB | Rhamondre Stevenson (NE) | RB11 | RB22 | +11 | 16.66 | 1:00 vs NYJ |
+| WR | Jalen Coker (CAR) | WR17 | WR26 | +9 | 12.65 | 1:00 @ PHI |
+| FLEX | Luther Burden III (CHI) | WR20 | WR28 | +8 | 12.07 | 1:00 @ ATL |
+| TE | Pat Freiermuth (PIT) | TE13 | TE25 | +12 | 9.96 | 1:00 @ TB |
+| DST | Baltimore | DST4 | DST11 | +7 | 7.92 | 1:00 @ CLE |
+| SFLX | Kirk Cousins (LV) | QB14 | QB27 | **+13** | 17.16 | **4:25** vs BUF |
+| RB | MarShawn Lloyd (GB) | RB21 | RB41 | **+20** | 11.38 | **SNF** vs DAL |
+| WR | Mike Evans (SF) | WR10 | WR20 | +10 | 16.94 | **MNF** vs WAS |
+
+Projected total: **126.94**, about 1.10x a 115 line. The 1:00 core is six slots at 75.5,
+and there are three late levers. The lineup uses nine teams in nine different games, so
+there are no same-game pairs. Stevenson (RB22 ROS) is the only spend that leaves real
+residual. He gets the slot because he is the only RB on the board that clears 14 points
+without being a bank piece, and Henderson's injury makes him the workhorse (see below).
+
+### Why these, and the dependencies to re-grade
+
+- **Cousins**: +13, and QB27 ROS is right at the cliff. He has been placed and swapped out
+  twice without being burned. He threw 365 yards in week 4 and 243 in week 5.
+- **Jones vs Watson**: Watson is QB18 / QB31 (+13, 15.17), which is cheaper on ROS. He
+  took 8 sacks and fumbled 4 times last week, and he faces the BAL DST this lineup uses.
+  Jones gets the slot on 1.1 more projected points and a TEN defense ranked DST22. If
+  BAL DST is dropped, Watson becomes the better QB.
+- **Stevenson is a position in TreVeyon Henderson's absence.** Henderson has a high-ankle
+  sprain that was reported as "multiple weeks", but he **practiced limited on
+  Wednesday** (46.8%). This is the week-5 Caleb Williams pattern. Re-grade on Friday's
+  final report. If Henderson is active, the fallback is Swift (RB10 / RB14, 13.90) or
+  Kamara (Q back, 75%).
+- **Lloyd** is the nominal RB1 but sits in a three-way committee with Kaleb Johnson.
+  He has had fewer than 40 rushing yards in every game, so his value is touchdown
+  equity. He is SNF, so his slot is a free look. If the line reads high on Sunday night,
+  the RB slot can go to Javonte Williams (15.51, RB9 ROS, a bank piece) in the same game.
+- **Evans** caught 7 of 10 targets for 113 yards in week 5 and is off the injury report.
+  He is the MNF default. The reinforcement option there is CMC (20.24, a bank piece),
+  used only if the live line × 1.30 demands it.
+- **Coker** is back from a quad injury and practiced full Wednesday. **Burden** has 4+
+  catches in 4 of 5 games, and Caleb Williams (full practice) returns.
+
+### Not taking, and why
+
+- **Christian Watson (WR4 / WR15, +11, 18.01, SNF)**: the best points on the WR board,
+  but WR15 ROS is the edge of the hoard band, and he would pair with Lloyd in the same
+  GB offense. He is the SNF upgrade if the line demands it. Golden
+  (WR15 / WR22) has the same pairing problem.
+- **Denzel Boston (+16)**: Q (foot), limited, 90.7%. Coker and Burden both project
+  higher and are clean, so there is nothing to wait for.
+- **Higbee (TE15 / TE31, +16)**: the best TE delta, but he projects 7.42 against
+  Freiermuth's 9.96. He is the 4:05 fallback if Freiermuth draws a flag.
+- **NYG DST (+15)**: the biggest DST delta, but it projects 5.93 against BAL's 7.92. KC
+  (+7, 7.50, 4:25) is the alternative.
+- **Jalon Daniels (QB22 / QB40, +18)**: Mayfield is out again, but Daniels is a UDFA
+  rookie (QB40 ROS) facing the PIT DST (DST2). See "Things we got wrong".
+- **Dameon Pierce**: Saquon is at 11%, but Pierce ran 11 times for 14 yards last week and
+  projects 8.26.
+- **Huntley**: already burned, and Lamar is Q (DNP, 16.5%).
+- **TNF (SEA@DEN)**: avoid. JSN, Waddle, Nix, Darnold and the DEN DST are all negative
+  deltas or bank pieces anyway.
+- **Bank pieces on the shelf**: Kyren, CMC, Javonte, Nacua, Kittle, Jayden Daniels (QB15
+  ROS), Love (QB13 ROS), Likely, the top-10 QBs and RBs, and the SEA and HOU DSTs.
+
+### Checks before committing anyone
+
+1. Friday final report: **Henderson** (Stevenson), plus Coker, Burden, Freiermuth and
+   Jones's own lines.
+2. Confirm IND@TEN is a 1:00 kickoff and which side is home in LAC/KC.
+3. Re-pull all boards on Saturday. Thursday deltas are not valid on Sunday.
+4. Read inactives at ~11:30 Sunday for the six-man 1:00 core.
+5. Read the 4:25 / SNF / MNF decisions against the live line × the checkpoint ratios
+   (post-4pm ~1.5x, pre-MNF ~1.30x). Punt nothing on a pre-MNF line.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
