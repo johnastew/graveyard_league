@@ -1780,6 +1780,22 @@ Considered and skipped: moving TE from Freiermuth to Okonkwo (MNF, 7.24, with Ki
 the upgrade). It costs 2.7 projected points, puts three slots in one game, and Kittle
 would stack with Evans.
 
+### Saturday update
+
+All nine picks hold. Two of them now have flags, and both get settled before their
+kickoffs:
+
+| Player | Thu | Sat | Read |
+| --- | --- | --- | --- |
+| Evans | WR10, clean | WR9, **Q (ribs + new Achilles), DNP Thu/Fri, 64%** | MNF, so the status settles before his kickoff. If he is out, play McLaurin (WR23) in the MNF slot. |
+| Stevenson | RB11 | RB10 | **Henderson: Q, limited all three days, 48%.** Read NE inactives at 11:30. If Henderson is active, swap to Swift (RB11). |
+| Cousins / Jones | QB14 / QB20 | QB13 / QB18 | Both moved up |
+| Coker / Golden / Lloyd | WR17 / WR15 / RB21 | WR16 / WR15 / RB19 | Coker and Lloyd moved up, Golden held |
+| Freiermuth, BAL DST | TE13, DST4 | same | |
+
+Josh Jacobs comes off the Commissioner Exempt list Monday and is eligible in week 7.
+That gives Lloyd a shelf life of one week, which makes this the week to spend him.
+
 ### Why these, and the dependencies to re-grade
 
 - **Cousins**: +13, and QB27 ROS is right at the cliff. He has been placed and swapped out
