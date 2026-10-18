@@ -1798,6 +1798,8 @@ That gives Lloyd a shelf life of one week, which makes this the week to spend hi
 
 ### Sunday checkpoint: 1:00 games at halftime
 
+Stevenson played the RB slot. Swift was not used and stays unburned.
+
 **48.52 against a live line of 22.56 (2.15x).** No reading has been taken this early
 before. Every earlier "post-1pm" reading was taken at the end of the 1:00 games, and those
 still multiplied 2.8-3.3x to reach the final line. A halftime reading needs an even bigger
