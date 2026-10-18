@@ -1800,9 +1800,9 @@ That gives Lloyd a shelf life of one week, which makes this the week to spend hi
 
 **48.52 against a live line of 22.56 (2.15x).** No reading has been taken this early
 before. Every earlier "post-1pm" reading was taken at the end of the 1:00 games, and those
-still multiplied 2.8-3.3x to reach the final line. Take 22.56 × ~3.3 as a floor, which
-gives a final line around **~75-115+**. That fits the plan against 115, and it is not a
-reason to change anything. Week 2 looked 2x clear at this point and was behind by 4pm.
+still multiplied 2.8-3.3x to reach the final line. A halftime reading needs an even bigger
+multiplier than that, so 22.56 says nothing beyond "the line is still forming." Keep
+planning against 115. Week 2 looked 2x clear at this point and was behind by 4pm.
 No late slot gets punted on this reading. The next decision is Cousins at ~4:20.
 
 ### Why these, and the dependencies to re-grade
