@@ -1796,6 +1796,15 @@ kickoffs:
 Josh Jacobs comes off the Commissioner Exempt list Monday and is eligible in week 7.
 That gives Lloyd a shelf life of one week, which makes this the week to spend him.
 
+### Sunday checkpoint: 1:00 games at halftime
+
+**48.52 against a live line of 22.56 (2.15x).** No reading has been taken this early
+before. Every earlier "post-1pm" reading was taken at the end of the 1:00 games, and those
+still multiplied 2.8-3.3x to reach the final line. Take 22.56 × ~3.3 as a floor, which
+gives a final line around **~75-115+**. That fits the plan against 115, and it is not a
+reason to change anything. Week 2 looked 2x clear at this point and was behind by 4pm.
+No late slot gets punted on this reading. The next decision is Cousins at ~4:20.
+
 ### Why these, and the dependencies to re-grade
 
 - **Cousins**: +13, and QB27 ROS is right at the cliff. He has been placed and swapped out
