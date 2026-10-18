@@ -1807,6 +1807,14 @@ multiplier than that, so 22.56 says nothing beyond "the line is still forming." 
 planning against 115. Week 2 looked 2x clear at this point and was behind by 4pm.
 No late slot gets punted on this reading. The next decision is Cousins at ~4:20.
 
+**Post-1pm: 62.9 against 30.9 (2.04x).** The week-5 post-1pm reading was 36.04, so this
+line is running *lower* than last week's at the same point. Past final / post-1pm ratios
+were 3.26x (week 2) and 2.81x (week 5), which put the final line around **87-101**, or
+~105-108 at 3.4-3.5x if the ratio keeps rising. The five-man core produced 62.9 against
+63.5 projected. The remaining slots project about 58 (Cousins 17.2, Lloyd 11.5, Golden
+14.6, Evans/McLaurin 12-17), for **~120**. **Cousins plays.** Punting him leaves ~103
+against a possible ~105, and no late slot is punted before MNF kickoff in any case.
+
 ### Why these, and the dependencies to re-grade
 
 - **Cousins**: +13, and QB27 ROS is right at the cliff. He has been placed and swapped out
