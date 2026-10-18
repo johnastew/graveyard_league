@@ -1824,6 +1824,16 @@ bank pieces (Javonte, C. Watson). Golden is kept over Pickens despite the GB pai
 the projections are equal, and Golden's WR22 ROS is cheaper than Pickens's WR16. Evans
 is up to 71% (game-time decision Monday).
 
+**Correction from the app at 7:55pm:** Burden was committed at WR at 1:00 (17.5), and
+Evans sits in the FLEX. The held-FLEX revision was not used, so Golden is not in the
+lineup and only **two slots remain**: Lloyd (RB, SNF) and the FLEX (MNF). Final scores
+so far: Jones 13.76, Stevenson 3.6, Coker 15.7, Burden 17.5, Freiermuth 3.1, Cousins
+18.52, BAL 10. That totals **82.18**. Lloyd (10.4) and Evans (15.4) project ~108,
+against a final line of ~81-99. **Lloyd plays**: his role expires when Jacobs returns,
+and Javonte (+5 projected) is a bank piece. The **MNF FLEX is the reinforcement lever**:
+Evans if active, McLaurin if not, and CMC (20.2) only if the MNF-kickoff line × 1.30
+demands it.
+
 ### Why these, and the dependencies to re-grade
 
 - **Cousins**: +13, and QB27 ROS is right at the cliff. He has been placed and swapped out
