@@ -1815,6 +1815,15 @@ were 3.26x (week 2) and 2.81x (week 5), which put the final line around **87-101
 14.6, Evans/McLaurin 12-17), for **~120**. **Cousins plays.** Punting him leaves ~103
 against a possible ~105, and no late slot is punted before MNF kickoff in any case.
 
+**Post-4pm, pre-SNF: 76.42 against 56.58.** Cousins scored 13.52. Past post-4pm ratios
+were 1.44, 1.69 and 1.48. Those put the final line at **81-96**, or ~100 at 1.75x. Lloyd
+(11.5), Golden (14.6) and Evans/McLaurin (12-17) project about 40 more, for **~116**.
+Punting both SNF slots would leave ~90 against a line that could reach 100, so **both
+SNF slots play the defaults**. A ~16-point projected cushion does not justify spending
+bank pieces (Javonte, C. Watson). Golden is kept over Pickens despite the GB pairing:
+the projections are equal, and Golden's WR22 ROS is cheaper than Pickens's WR16. Evans
+is up to 71% (game-time decision Monday).
+
 ### Why these, and the dependencies to re-grade
 
 - **Cousins**: +13, and QB27 ROS is right at the cliff. He has been placed and swapped out
