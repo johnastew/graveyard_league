@@ -1835,6 +1835,12 @@ That gives Lloyd a shelf life of one week, which makes this the week to spend hi
   rookie (QB40 ROS) facing the PIT DST (DST2). See "Things we got wrong".
 - **Dameon Pierce**: Saquon is at 11%, but Pierce ran 11 times for 14 yards last week and
   projects 8.26.
+- **Jeanty (RB12 / RB14, -2, 16.15, 4:25)**: there were rumors the Raiders would sit him
+  to heal his foot. Kubiak answered "he's playing," and Jeanty practiced full Wednesday
+  (news of Oct 14-15). ROS RB14 has not moved, so the market is not pricing a shutdown.
+  He is a negative delta inside the usable RB pool, and he plays for the same team as
+  Cousins. Bank him. The only case for spending him is the Stevenson fallback if
+  Henderson is active, and Swift does that job for 1.7 fewer points with no stack.
 - **Huntley**: already burned, and Lamar is Q (DNP, 16.5%).
 - **TNF (SEA@DEN)**: avoid. JSN, Waddle, Nix, Darnold and the DEN DST are all negative
   deltas or bank pieces anyway.
