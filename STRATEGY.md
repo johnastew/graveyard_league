@@ -1849,6 +1849,19 @@ the live line. The 129 teams below have historically held MNF slots at close to 
 (week 3 hand check). The Monday move has grown 9.6 → 12.2 → 17.9 → 22.3, so expect
 ~25. Both tests say the same thing: **CMC**, the highest-floor option available.
 
+**Live-slot hand check (owner, pre-MNF):** teams just above and just below the cut mostly
+hold **two** unplayed MNF slots, and some hold **three**. TE is the most common open slot,
+almost certainly Kittle. That is more MNF exposure than any earlier week. Two slots at
+~13 each lift a 74-point team to ~100; three slots lift it past 110. We hold one slot.
+CMC is the highest-projected non-QB in the game and the only lever left, so the call
+stands. The finish will be close.
+
+**Lesson for week 7+: the field has learned the ladder, so match its late depth.** By
+week 6, survivors near the cut keep 2-3 slots open for MNF. A lineup that reaches Monday
+with one slot can reinforce at most one player's worth, while the teams around it
+reinforce two or three. Keep at least two slots open for MNF (or SNF + MNF) unless the
+pre-MNF rank cushion is large, and decide early-week who those players would be.
+
 ### Why these, and the dependencies to re-grade
 
 - **Cousins**: +13, and QB27 ROS is right at the cliff. He has been placed and swapped out
