@@ -1844,6 +1844,11 @@ aggravation risk. McLaurin (11.9) falls short. **Call: CMC (RB3 weekly / RB5 ROS
 weeks, he is a positive delta, and this is the Monday slot the bank exists for. Week 2
 was decided on exactly this kind of slot.
 
+**Rank test: 391 of 520, cut at 438.** That is 47 places of cushion and 8.74 points over
+the live line. The 129 teams below have historically held MNF slots at close to 100%
+(week 3 hand check). The Monday move has grown 9.6 → 12.2 → 17.9 → 22.3, so expect
+~25. Both tests say the same thing: **CMC**, the highest-floor option available.
+
 ### Why these, and the dependencies to re-grade
 
 - **Cousins**: +13, and QB27 ROS is right at the cliff. He has been placed and swapped out
