@@ -297,6 +297,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 3 | - | - | 67.44 | **79.64** | 105.20 | +25.56 (survived) |
 | 4 | - | 52.02 | 70.12 | **88.04** | 105.74 | +17.70 (survived) |
 | 5 | 36.04 | 68.48 | 78.82 | **101.16** | 120.62 | +19.46 (survived) |
+| 6 | 30.9 | 56.58 | 74.44 | - | - | - |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
 reading before MNF. Week 5's 36.04 was read with the 1:00 games at Q4 2:00. Final lines
@@ -1833,6 +1834,15 @@ against a final line of ~81-99. **Lloyd plays**: his role expires when Jacobs re
 and Javonte (+5 projected) is a bank piece. The **MNF FLEX is the reinforcement lever**:
 Evans if active, McLaurin if not, and CMC (20.2) only if the MNF-kickoff line × 1.30
 demands it.
+
+**Pre-MNF: 83.18 against 74.44.** Lloyd scored 1.0. The pre-MNF ratio has run 1.153,
+1.181, 1.256 and 1.283, so the next point on the trend is ~1.31-1.35. That puts the
+final line at **~97-100**, which leaves ~14-17 needed from one MNF slot. Evans (Q,
+ribs + Achilles, DNP all week, 15.4) lands right on the line and carries mid-game
+aggravation risk. McLaurin (11.9) falls short. **Call: CMC (RB3 weekly / RB5 ROS, +2,
+20.2).** He has the highest floor in the game as an 18-touch workhorse who scores most
+weeks, he is a positive delta, and this is the Monday slot the bank exists for. Week 2
+was decided on exactly this kind of slot.
 
 ### Why these, and the dependencies to re-grade
 
