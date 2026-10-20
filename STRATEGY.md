@@ -297,7 +297,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 3 | - | - | 67.44 | **79.64** | 105.20 | +25.56 (survived) |
 | 4 | - | 52.02 | 70.12 | **88.04** | 105.74 | +17.70 (survived) |
 | 5 | 36.04 | 68.48 | 78.82 | **101.16** | 120.62 | +19.46 (survived) |
-| 6 | 30.9 | 56.58 | 74.44 | - | - | - |
+| 6 | 30.9 | 56.58 | 74.44 | **93.30** | 113.88 | +20.58 (survived) |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
 reading before MNF. Week 5's 36.04 was read with the 1:00 games at Q4 2:00. Final lines
@@ -312,6 +312,7 @@ have risen every week, and the rise is accelerating: 72.20, 79.64, 88.04, 101.16
 | 3 | 67.44 | 79.64 | +12.20 | **1.181x** |
 | 4 | 70.12 | 88.04 | +17.92 | **1.256x** |
 | 5 | 78.82 | 101.16 | **+22.34** | **1.283x** |
+| 6 | 74.44 | 93.30 | +18.86 | **1.253x** |
 
 **The ratio has risen every week: 1.153, 1.181, 1.256, 1.283. Use ~1.30 for week 6, and do
 not treat the largest past ratio as a ceiling.** In week 5 the "worst case" was taken as
@@ -1922,6 +1923,63 @@ pre-MNF rank cushion is large, and decide early-week who those players would be.
 4. Read inactives at ~11:30 Sunday for the five-man 1:00 core.
 5. Read the 4:25 / SNF / MNF decisions against the live line × the checkpoint ratios
    (post-4pm ~1.5x, pre-MNF ~1.30x). Punt nothing on a pre-MNF line.
+
+## Week 6 result (2026)
+
+**Survived.** Scored **113.88** against a final cut line of **93.30**, a margin of +20.58.
+Pre-MNF rank was 391 of 520, with the cut at 438. Nine burned, 54 on the season (QB 11,
+RB 15, WR 16, TE 6, DST 6), all recorded in `data/used_players.json`.
+
+| Slot | Player | Pts | Proj (FP PPR) | Window |
+| --- | --- | --- | --- | --- |
+| FLEX | Christian McCaffrey (SF) | **30.70** | 20.2 | MNF |
+| SFLX | Kirk Cousins (LV) | 18.52 | 17.2 | 4:25 |
+| WR | Luther Burden III (CHI) | 17.50 | 12.1 | 1:00 |
+| WR | Jalen Coker (CAR) | 15.70 | 12.7 | 1:00 |
+| QB | Daniel Jones (IND) | 13.76 | 16.3 | 1:00 |
+| DST | Baltimore | 10.00 | 7.9 | 1:00 |
+| RB | Rhamondre Stevenson (NE) | 3.60 | 16.7 | 1:00 |
+| TE | Pat Freiermuth (PIT) | 3.10 | 10.0 | 1:00 |
+| RB | MarShawn Lloyd (GB) | 1.00 | 11.4 | SNF |
+
+### What decided the week
+
+- **The Monday slot was the week.** Without CMC the lineup finishes 83.18 against 93.30:
+  **cut by 10.12.** Evans (Q, DNP all week) was the default for that slot. CMC was
+  chosen on three readings taken at MNF kickoff: the ratio trend, a thin rank cushion
+  (47 places), and the owner's hand check showing teams around the cut holding 2-3 MNF
+  slots. He scored 30.70 (64 rush yards, 9 catches for 53, 2 TDs). This was the week 2
+  lesson again, with a bank piece spent at the moment it mattered.
+- **The two role-by-absence RBs combined for 4.6 points against 28 projected.** Stevenson
+  managed 14 carries for 36 yards with Henderson's status unresolved. Lloyd managed 8
+  carries for 10 yards in a three-way committee. Both were cheap burns with weak floors,
+  as the board warned. Committee backs floor at 0-2, and the format punishes that.
+- **The cheap WRs carried the early window.** Burden (8/8, 95) and Coker (6/13, 97) beat
+  their projections by 8.4 combined.
+- **The pre-MNF ratio broke trend: 1.253x** after 1.283x, on a +18.86 move. The line came
+  in lower than every estimate (97-100), and the whole week ran ~17% below week 5 at
+  every checkpoint. Lesson: the ratio is noisy at n=5. Plan against ~1.30 and expect
+  ±0.03.
+
+### What went wrong in the process
+
+- **The held-FLEX revision was not executed.** Burden went in at 1:00, which left two
+  late slots instead of four. The pivot available on Sunday night was a single RB slot.
+  Make the plan executable from the app: name the exact player per slot and the window
+  in which to fill it.
+- **One MNF slot against a field holding 2-3** (see the hand check above). It worked
+  only because the one slot could take a bank RB.
+
+### Unburned and still available
+
+Swift, Golden, Pickens, Javonte, Kittle, Evans, McLaurin, Jeanty and Watson were all
+considered and left on the shelf.
+
+### Week 7
+
+Week 7 cuts 17.4% of 437 (76 reaped, 361 survive). Final lines: 101.16 then 93.30, so
+the climb has stalled for now. Plan against ~100-105, nine real starters, and **at least
+two slots held for SNF/MNF**.
 
 ## Source notes
 
