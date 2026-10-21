@@ -1981,6 +1981,102 @@ Week 7 cuts 17.4% of 437 (76 reaped, 361 survive). Final lines: 101.16 then 93.3
 the climb has stalled for now. Plan against ~100-105, nine real starters, and **at least
 two slots held for SNF/MNF**.
 
+## Week 7 board (2026) — Wednesday pull, provisional
+
+Cut 17.4% of 437 (76 reaped, 361 survive). Plan against ~100-105 with a pre-MNF ratio of
+~1.30 (±0.03). Nine real starters, **two slots held for MNF** per the week 6 lesson. All
+boards PPR, pulled Wednesday before any practice reports. Burned list unchanged at 54.
+
+**Windows (ET).** Byes: BUF, JAC, LAC, WAS. **TNF** NE@CHI · **Paris 9:30** PIT@NO ·
+**1:00** SF@ATL, TB@CAR, CIN@BAL, NYG@HOU, IND@MIN, CLE@TEN, MIA@NYJ · **4:05** DEN@ARI ·
+**4:25** LAR@LV, GB@DET · **SNF** KC@SEA · **MNF** DAL@PHI. (FantasyPros schedule page,
+confirmed against ESPN/CBS listings via search.)
+
+### Working nine — exact player per slot, and when to set it
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| WR | Germie Bernard (PIT) | WR23 | WR35 | +12 | 12.07 | Paris 9:30 @ NO | Sat night |
+| QB | Deshaun Watson (CLE) | QB17 | QB29 | **+12** | 15.01 | 1:00 @ TEN | Sun 12:55 |
+| RB | Woody Marks (HOU) | RB20 | RB27 | +7 | 10.87 | 1:00 vs NYG | Sun 12:55 |
+| WR | Emeka Egbuka (TB) | WR27 | WR31 | +4 | 12.30 | 1:00 @ CAR | Sun 12:55 |
+| DST | Tennessee | DST11 | DST29 | **+18** | 7.63 | 1:00 vs CLE | Sun 12:55 |
+| RB | J.K. Dobbins (DEN) | RB24 | RB37 | **+13** | 11.68 | 4:05 @ ARI | Sun 4:00 |
+| TE | Tyler Higbee (LAR) | TE11 | TE33 | **+22** | 8.83 | 4:25 @ LV | Sun 4:20 |
+| SFLX | Tanner McKee (PHI) | QB19 | QB30 | +11 | 14.54 | **MNF** vs DAL | Mon 8:10 |
+| FLEX | **held** — see MNF menu | | | | 13-16 | **MNF** | Mon 8:10 |
+
+Projected ~107.6 with Pickens at FLEX (~109 with DeVonta Smith). The early core (Paris +
+1:00) is five slots at 57.9. Nine teams. The only shared game is Watson against the TEN
+DST, which is the QB-vs-opposing-DST hedge the correlation section endorses. Every spend is
+outside its usable pool (WR35, QB29, RB27, WR31, DST29, RB37, TE33, QB30). Nothing from
+the bank.
+
+**MNF FLEX menu (decide off the MNF-kickoff line × ~1.30 and the rank test):**
+
+| Option | Wk / ROS | Proj | Note |
+| --- | --- | --- | --- |
+| George Pickens (DAL) | WR16 / WR17 | 13.3 | Default. Opposite side from McKee, so no same-team stack. |
+| DeVonta Smith (PHI) | WR15 / WR18 | 14.7 | 35 targets in his last three games, but stacks with McKee. |
+| Dameon Pierce (PHI) | RB19 / unranked | 6.3* | Only if Saquon (hamstring) is out again. *Projection is blended with Saquon playing; he had 16 touches as the lead back in week 6. Free look: MNF. |
+| Dallas Goedert (PHI) | TE8 / TE12 | 10.7 | 17 targets in two games. Real TE residual. |
+| Javonte Williams (DAL) | RB9 / RB9 | 15.8 | Bank piece. The CMC slot: only if the line demands it. |
+
+### Why these, and the dependencies to re-grade
+
+- **McKee is the Penix archetype, not the Bagent one.** Hurts is out for the season (blood
+  clots in the lungs, Oct 19). McKee starts with nobody coming back for the job, sits at
+  QB30 ROS, and plays MNF. Cole Payton is the only threat, and only "towards the end of the
+  year". Role risk ~nil.
+- **Watson**: QB29 ROS, the biggest QB delta on the board. Low ceiling (164 scoreless yards
+  in week 6), but the QB floor is the point of the slot. Swap for Geno Smith (QB21 / QB25,
+  16.22, 1:00 vs MIA) if dropping the TEN DST hedge.
+- **Marks is role-by-absence on Montgomery** (groin, week-to-week, reported as likely back
+  after the week 8 bye). Re-grade on Friday's report. Jawhar Jordan stole the TD last week.
+  Fallback: Bucky Irving (RB12 / RB15, 14.97), which costs real RB residual.
+- **Dobbins** is DEN's workhorse (17 and 18 carries the last two weeks) in the best QB/RB
+  matchup tier (DEN qb_stars rank 1). He is inefficient, so TD-dependent. Harvey is the
+  same backfield; do not pair them.
+- **Bernard is role-by-absence** on Pittman and Roman Wilson, both on IR. 11 of 12 targets
+  last week. Paris is the earliest kickoff, so he cannot be held; set him Saturday night.
+- **Egbuka**: 16 targets last week. Mayfield (thumb) threw well Wednesday, and a decision
+  comes Friday. Either answer is fine for Egbuka, and Mayfield back is an upgrade.
+- **Higbee is role-by-absence** on Terrance Ferguson (IR, not expected to be activated
+  next week). TE33 ROS, and the LAR TE matchup rates top-3. He went 4-22 last week, but
+  he has 18-212-1 over the three weeks before.
+- **TEN DST**: +18, nil residual, facing a CLE offense the matchup tool rates near the
+  bottom. Judkins (ankle) is expected back, which slightly raises CLE's floor.
+
+### Not taking, and why
+
+- **TNF (NE@CHI)**: Swift (RB10 / RB13) and the rest. Avoid.
+- **Aaron Jones (RB16 / RB23, +7)**: left week 5 with a knee injury, then had the bye.
+  Jordan Mason comes off IR this week, which makes it a committee. Check Friday's report;
+  Marks has no flag.
+- **Shough (QB13 / QB16)**: Paris. A QB16 ROS residual, and it can't be held.
+- **Stroud / Murray / Young (+6 / +6 / +3)**: better points, but ROS QB13-17, at the edge
+  of what is left of the QB pool. Burned so far: 11 QBs. About 20 QB starts remain in weeks
+  8-17 against ~26 usable QBs.
+- **Christian Watson / Golden (4:25 vs DET)**: WR12 / WR16 ROS, at the hoard edge, and the
+  window is the weak 4:25 read. Golden is the 4:25 reinforcement if Sunday reads high.
+- **Keenan Allen (+21) / Tre Tucker (+19)**: real deltas, but 9-10 projected. Below the
+  ~11/slot the line requires.
+- **Kelce (SNF, TE7 / TE9)**: the SNF reinforcement for TE if Higbee's slot is still
+  open; it costs a bank-ish TE.
+- **Rice** (hamstring, DNP Wednesday) and **Evans** (Achilles soreness, left MNF): flagged.
+- **Bank pieces on the shelf**: Kyren, Henry, Javonte, JT, Gibbs, Bijan, Nacua, JSN,
+  Kittle, Likely, Kraft, Prescott, Mahomes, Love, and the SEA, MIN and HOU DSTs.
+
+### Checks before committing anyone
+
+1. Friday final report: **Montgomery** (Marks), **Saquon** (Pierce), Aaron Jones,
+   Mayfield, and Bernard/Egbuka/Higbee/Dobbins's own lines.
+2. Re-pull all boards Saturday. Wednesday deltas are not valid on Sunday.
+3. Bernard locks at 9:30 Paris: read PIT inactives ~8:00 or set him Saturday.
+4. Inactives at ~11:30 for the 1:00 core.
+5. At MNF kickoff: the rank test plus a hand count of live MNF slots around the line, then
+   fill the FLEX. Two MNF slots match the field's depth this time.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
