@@ -38,5 +38,7 @@ The five things most likely to be re-derived wrongly:
 - Record burns **after** lineups lock, not before.
 - `cbssports.com`, `rotostreetjournal.com` and `mailchi.mp` (Late Round newsletter) are blocked by the egress proxy — the
   user has to paste article text.
+- The Athletic (Ciely) projections `.xlsx` linked in his weekly rankings article downloads
+  fine from `static01.nyt.com`. It is **half-PPR**: add 0.5 × REC for this league.
 - Keep `STRATEGY.md` current. When something is learned, commit it there rather than
   leaving it in a conversation that a future session cannot see.

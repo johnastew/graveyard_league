@@ -2147,6 +2147,30 @@ default). Two late levers remain, which meets the week 6 rule: Kelce at SNF and 
 **~115.7 projected.** The early core is five slots at 61.4. Alternative if a second MNF
 slot is wanted: put Bernard at WR in place of C. Watson and hold the FLEX for MNF (~113.6).
 
+### Thursday cross-check: Ciely (The Athletic) week 7 rankings + projections
+
+His projections file is half-PPR, so add 0.5 × REC to convert:
+
+| Player | FP PPR | Ciely PPR | Ciely's note |
+| --- | --- | --- | --- |
+| Germie Bernard | 12.07 | 11.55 | Rodgers' top two got 53% and 61% of targets the last two weeks; NO "shouldn't slow his roll". **Endorsed.** |
+| Deshaun Watson | 15.01 | 13.90 | CLE may get Judkins and Sampson back. |
+| Woody Marks | 10.87 | **14.70** | NYG has allowed a 10+ RB every week. He likes Jawhar Jordan as a boom/bust RB3 too, so there's vulture risk. |
+| Garrett Wilson | 15.81 | **16.90** | MIA and NYJ are both bottom-7 in plays per game, which is "some floor risk". He still projects him higher than FP. |
+| Tennessee DST | 7.63 | 7.30 | (CLE DST 7.6, HOU 8.5) |
+| J.K. Dobbins | 11.68 | 10.50 | — |
+| Christian Watson | 16.84 | **17.80** | — |
+| Travis Kelce | 11.24 | 11.55 | Tough SEA matchup. If Rice returns, he's a mid-low WR2. (Goedert 11.1, Hockenson 9.6) |
+| Tanner McKee | 14.54 | 14.10 | Saquon not ranked: "can't wait without a backup plan for MNF". |
+
+**Total ~118 on Ciely against ~116 on FP.** Two independent sources agree within 2 points,
+and no pick drops on either. No changes. The weakest piece on Ciely's numbers is Dobbins
+(10.5). The upgrade is Bucky Irving (16.95 Ciely / 14.97 FP), but RB is the short
+position, so it stays unspent unless Friday's reports move something.
+
+Considered and rejected: moving the G. Wilson slot to MNF (DeVonta Smith or Pickens) to
+dodge the low-volume game. Ciely projects both 3-5 points below Wilson.
+
 **Doctrine note.** "Bank relentlessly" was written when the bank was untouched at every
 position. By week 7 the question is not *whether* to spend the bank. It is **which
 position's bank exceeds the endgame's demand**. Recount by position each week; the
