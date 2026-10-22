@@ -2077,6 +2077,63 @@ the bank.
 5. At MNF kickoff: the rank test plus a hand count of live MNF slots around the line, then
    fill the FLEX. Two MNF slots match the field's depth this time.
 
+### Thursday revision: push chips where the bank is long, not where it is short
+
+The owner's challenge: the Wednesday nine is too weak for week 7. It is right, on two
+counts:
+
+1. **This was the thinnest projected cushion of the season.** 108 against ~100-105 is
+   1.03-1.08x. Earlier weeks went in at 1.13-1.25x. A 5-point cushion is smaller than one
+   bust (week 6's two RBs missed by 23 combined). Four of the nine sat below the ~11.7
+   points per slot that a 105 line needs.
+2. **The MNF lever is small this week.** DAL@PHI's best reinforcements are Lamb (17.9) and
+   Javonte (15.8), against defaults of 13-15. Prescott over McKee and Lamb over the FLEX
+   default add only **~6 projected points between them**. Week 6 had CMC at 20.2. So
+   "hold and reinforce late" cannot fix a weak early core this week.
+
+But "push the chips in" is a position-by-position question, because the bank is not
+evenly deep. **Inventory after week 6, against what weeks 10-17 need:**
+
+| Pos | Elite left (ROS) | Next tier left | Starts needed wk 7-17 | Read |
+| --- | --- | --- | --- | --- |
+| QB | 12 of top 12 | 11 in QB13-28, +3 below | 22 (16 at quality for wk 10-17) | **Short.** Elite 12 + Young/Stroud/Shough/Murray is exactly 16. |
+| RB | 12 of top 15 | 13 in RB16-30 | 22 + FLEX | **Short.** About 25 usable for 22 starts. |
+| WR | 19 of top 20 | ~20 in WR21-45, and it refills | ~24 at quality for wk 10-17 | **Long.** The middle is flat and breakouts (Bernard, Golden) keep arriving. |
+| TE | 10 of top 10 | — | 8 for wk 10-17 | **Long by 2.** Kelce (37) is also a decaying asset. |
+
+So: **spend top-20 WRs and a surplus TE now, and keep QB and RB cheap.** Murray or
+Stroud over Watson is worth +2.6 / +3.8 this week, but it takes one of exactly 16
+quality QBs away from weeks 10-13.
+
+**Revised nine (proposed):**
+
+| Slot | Player | Wk / ROS | Delta | Proj | Window | Change |
+| --- | --- | --- | --- | --- | --- | --- |
+| QB | Deshaun Watson (CLE) | QB17 / QB29 | +12 | 15.01 | 1:00 | — |
+| RB | Woody Marks (HOU) | RB20 / RB27 | +7 | 10.87 | 1:00 | — |
+| WR | **Garrett Wilson (NYJ)** | WR14 / WR15 | +1 | 15.81 | 1:00 vs MIA | for Egbuka (+3.5) |
+| DST | Tennessee | DST11 / DST29 | +18 | 7.63 | 1:00 | — |
+| RB | J.K. Dobbins (DEN) | RB24 / RB37 | +13 | 11.68 | 4:05 | — |
+| WR | **Christian Watson (GB)** | WR6 / WR12 | +6 | 16.84 | 4:25 @ DET | for Bernard (+4.8) |
+| TE | **Travis Kelce (KC)** | TE7 / TE9 | +2 | 11.24 | **SNF** | for Higbee (+2.4); becomes an SNF lever |
+| SFLX | Tanner McKee (PHI) | QB19 / QB30 | +11 | 14.54 | MNF | — (Prescott is the reinforcement) |
+| FLEX | held: DeVonta Smith default | WR15 / WR18 | +3 | 14.71 | MNF | Lamb / Javonte if the read demands |
+
+**~118 projected (~1.15x)**, up about 10, all of it from WR and TE. Three held levers (SNF
+TE, two MNF). Flags, all in late windows, so each settles before its kickoff:
+- **C. Watson** (ankle, limited Wednesday, 93%). Fallback: Golden, same game.
+- **Kelce** (ankle, limited, 95%; "being managed"). Fallback: Goedert at MNF.
+
+**McKee is not the weak link he looks like.** Week 6 was 26/45, 215 yards, 1 TD, 0 INT =
+**12.6**. That is a normal QB-floor game (Watson scored 9.5 the same week). This week PHI
+has the third-easiest QB matchup on the slate, and the slot is MNF, so it costs nothing
+to hold. If the MNF read is short, it converts to Prescott.
+
+**Doctrine note.** "Bank relentlessly" was written when the bank was untouched at every
+position. By week 7 the question is not *whether* to spend the bank. It is **which
+position's bank exceeds the endgame's demand**. Recount by position each week; the
+long position changes as injuries and breakouts land.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
