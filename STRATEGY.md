@@ -2171,6 +2171,17 @@ position, so it stays unspent unless Friday's reports move something.
 Considered and rejected: moving the G. Wilson slot to MNF (DeVonta Smith or Pickens) to
 dodge the low-volume game. Ciely projects both 3-5 points below Wilson.
 
+**Evans (The Athletic) week 7 sleepers.** Only one of his five names touches the
+lineup: **McKee is his QB sleeper.** He cites Dallas as rock bottom in EPA pass defense
+(8.02 yards per attempt, 239 passing yards a game, 12 total TDs allowed, seventh-most
+fantasy points to QBs). In McKee's three career starts: 241.7 passing yards a game and a
+4:1 TD:INT ratio. Evans forecasts 221 yards, 2 TD, 1 INT, which is ~16-17 here before the
+INT. That makes three sources at 14.1 / 14.5 / ~16, and it answers the "awful last week"
+worry. His Houston-shootout case for Marvin Harrison Jr. (three of six HOU games went over
+60 total points) is mild support for Marks. The rest (Dowdle on the light side of a
+platoon, Kupp, Engram at TE39) are ceiling flyers, the wrong profile for this format per
+the source notes. Ignored.
+
 **Doctrine note.** "Bank relentlessly" was written when the bank was untouched at every
 position. By week 7 the question is not *whether* to spend the bank. It is **which
 position's bank exceeds the endgame's demand**. Recount by position each week; the
