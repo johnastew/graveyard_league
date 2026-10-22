@@ -2129,6 +2129,24 @@ TE, two MNF). Flags, all in late windows, so each settles before its kickoff:
 has the third-easiest QB matchup on the slate, and the slot is MNF, so it costs nothing
 to hold. If the MNF read is short, it converts to Prescott.
 
+**Owner call: keep Bernard, in the FLEX.** Pittman and Roman Wilson are both on IR, and he
+has 17 catches on 21 targets over the last two games. That PPR volume is a floor his
+12.07 projection may lag. Putting him in the FLEX keeps both WR upgrades and gives up the
+held MNF FLEX. This week that FLEX was worth only ~3 points of reinforcement (Lamb over the
+default). Two late levers remain, which meets the week 6 rule: Kelce at SNF and McKee at MNF
+(Prescott if short).
+
+| Window | Slots | Proj |
+| --- | --- | --- |
+| Paris 9:30 | FLEX **Bernard** (set Sat night, or read PIT inactives ~8:00) | 12.07 |
+| 1:00 | QB Watson · RB Marks · WR G. Wilson · DST Tennessee | 49.32 |
+| 4:05 / 4:25 | RB Dobbins · WR C. Watson (Golden if he sits) | 28.52 |
+| SNF | TE Kelce (Goedert at MNF if he sits) | 11.24 |
+| MNF | SFLX McKee (Prescott if the read is short) | 14.54 |
+
+**~115.7 projected.** The early core is five slots at 61.4. Alternative if a second MNF
+slot is wanted: put Bernard at WR in place of C. Watson and hold the FLEX for MNF (~113.6).
+
 **Doctrine note.** "Bank relentlessly" was written when the bank was untouched at every
 position. By week 7 the question is not *whether* to spend the bank. It is **which
 position's bank exceeds the endgame's demand**. Recount by position each week; the
