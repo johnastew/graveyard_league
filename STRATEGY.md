@@ -2171,6 +2171,27 @@ position, so it stays unspent unless Friday's reports move something.
 Considered and rejected: moving the G. Wilson slot to MNF (DeVonta Smith or Pickens) to
 dodge the low-volume game. Ciely projects both 3-5 points below Wilson.
 
+### Friday update: nothing moves, one fallback changes
+
+All nine hold. The boards were re-pulled (PPR weekly) and nobody has a designation:
+
+| Player | Wed | Fri | Read |
+| --- | --- | --- | --- |
+| Bernard | WR23 | **WR21** | Up |
+| Marks | RB20 | **RB16** | **Montgomery OUT** (DNP all week). Role confirmed. |
+| Dobbins | RB24 | RB22 | Up |
+| G. Wilson | WR14 | WR15 | Flat |
+| C. Watson | WR6 | WR8 | **Cleared, off the report.** Golden also cleared. |
+| Kelce | TE7 | TE8 | No longer on the injury feed. **Rice OUT** (DNP x3), so more targets for Kelce. |
+| Watson | QB17 | QB17 | Judkins off the report. Small boost for Watson, small cost to TEN DST. |
+| TEN DST | DST11 | **DST9** | Up |
+| McKee | QB19 | QB21 | Goedert Q (knee, DNP x2, 28%). Saquon Q but practicing (limited x2, 63%). Roughly a wash. |
+
+**Kelce's fallback is no longer Goedert** (28% to play). New order:
+- If Kelce draws a Saturday designation: **Higbee** (TE10, 4:25). He locks before KC's
+  inactives, so decide on the final report.
+- If he is a surprise Sunday-evening inactive: **AJ Barner** (SEA, TE20, same SNF game).
+
 **Evans (The Athletic) week 7 sleepers.** Only one of his five names touches the
 lineup: **McKee is his QB sleeper.** He cites Dallas as rock bottom in EPA pass defense
 (8.02 yards per attempt, 239 passing yards a game, 12 total TDs allowed, seventh-most
