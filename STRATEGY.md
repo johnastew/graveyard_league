@@ -2192,6 +2192,27 @@ All nine hold. The boards were re-pulled (PPR weekly) and nobody has a designati
   inactives, so decide on the final report.
 - If he is a surprise Sunday-evening inactive: **AJ Barner** (SEA, TE20, same SNF game).
 
+### Saturday app check
+
+The app has Higbee at TE instead of Kelce, and Bernard and C. Watson in each other's slots
+(WR and FLEX). The slot swap is better as entered: the latest-locking player sits in
+FLEX, so that slot can still change position until 4:25. App total: 111.3.
+
+**Higbee vs Kelce is a ladder question, not a points question.** With Higbee, nothing is
+left after 4:25 except McKee: one late slot, the exact week 6 failure. With Kelce in the
+TE slot, the decision moves to 8:15pm Sunday:
+- If Sunday reads short, play Kelce (11.2-11.6 projected, and Rice is OUT).
+- If Sunday reads well clear, bank Kelce and defer the TE slot to MNF with Jake Ferguson
+  (DAL), or take Barner at SNF.
+
+The downgrade costs only ~1.5 points against Higbee, and it creates a second MNF slot.
+**Swap Higbee → Kelce before 4:25 Sunday**, or Higbee locks and burns.
+
+New flag for McKee: **DeVonta Smith** is Q (hamstring, DNP x2, 24%), on top of Goedert
+(28%). Philadelphia may be down both top targets. Dallas is still the worst EPA pass
+defense, and McKee is still the MNF slot. Read PHI's Saturday report; if both are out,
+Prescott is the MNF upgrade if the line demands it.
+
 **Evans (The Athletic) week 7 sleepers.** Only one of his five names touches the
 lineup: **McKee is his QB sleeper.** He cites Dallas as rock bottom in EPA pass defense
 (8.02 yards per attempt, 239 passing yards a game, 12 total TDs allowed, seventh-most
