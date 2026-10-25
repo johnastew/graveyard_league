@@ -2226,6 +2226,30 @@ Prescott is the MNF upgrade if the line demands it.
 - TE is still Higbee in the app. The Kelce recommendation stands, and the deadline is
   4:25.
 
+### Sunday ~3:55: behind at the 1:00 checkpoint, the ladder reinforces
+
+**33.52 against a live line of 37.1**, with the 1:00 games in Q4. Watson 16.22, Bernard
+5.7, Marks 5, G. Wilson 4.6, TEN 2. The Watson/TEN hedge did its job; the WR/RB busts were
+the problem. Post-1pm ratios (2.81 in week 5, 3.02 in week 6) put the final line at
+**~104-112**. The default path (Dobbins, C. Watson, Kelce, McKee) projected ~85, and even
+with every MNF upgrade only ~95.
+
+Moves:
+- **Dobbins → Javonte Williams** before 4:05, as an MNF placeholder. This keeps the RB slot
+  alive to Monday: Javonte if short, Pierce or Saquon if clear.
+- **FLEX C. Watson → Puka Nacua** (4:25, 23.9). +7.5, spent from the long position (WR).
+  Nacua was Q (calf, DNP Friday) but officially active per Rapoport at 3:01pm, so the
+  status was resolved. The aggravation risk is accepted.
+- Considered and declined: Gibbs (the owner's call to keep the RB1), and Kyren at RB (+3
+  for a top-8 RB and the loss of the MNF lever).
+- Offered: Kelce → Bowers (+5.7, same game as Nacua). Nacua + Bowers was the only path to
+  ~108.
+
+**Lesson: this week the MNF lever could not cover a bad 1:00 window.** DAL@PHI's best
+reinforcement was worth ~+10 over the defaults, so the big upside left was all at 4:25.
+At the early-week board, size the late pool's *reinforcement capacity*, not just its
+slot count. If it is thin, the 4:25 window carries the comeback.
+
 **Evans (The Athletic) week 7 sleepers.** Only one of his five names touches the
 lineup: **McKee is his QB sleeper.** He cites Dallas as rock bottom in EPA pass defense
 (8.02 yards per attempt, 239 passing yards a game, 12 total TDs allowed, seventh-most
