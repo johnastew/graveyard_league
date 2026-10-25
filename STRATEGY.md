@@ -2213,6 +2213,19 @@ New flag for McKee: **DeVonta Smith** is Q (hamstring, DNP x2, 24%), on top of G
 defense, and McKee is still the MNF slot. Read PHI's Saturday report; if both are out,
 Prescott is the MNF upgrade if the line demands it.
 
+### Sunday morning
+
+- All nine are clean on the final reports. Pittman and Roman Wilson are still on IR, so
+  Bernard's role holds.
+- **DeVonta Smith OUT.** Goedert is not in the final feed, and the last news (Friday) had
+  him missing practice. Saquon is Q but trending in (Limit / Limit / Full, 75%). McKee
+  slid QB19 → **QB23**, but he stays in the slot as the MNF placeholder. At MNF kickoff the
+  call is McKee vs **Prescott** (QB8), off the live line × ~1.30 and the rank test.
+  Do not move SFLX to an earlier QB: with Higbee at TE, that would leave zero slots after
+  4:25.
+- TE is still Higbee in the app. The Kelce recommendation stands, and the deadline is
+  4:25.
+
 **Evans (The Athletic) week 7 sleepers.** Only one of his five names touches the
 lineup: **McKee is his QB sleeper.** He cites Dallas as rock bottom in EPA pass defense
 (8.02 yards per attempt, 239 passing yards a game, 12 total TDs allowed, seventh-most
