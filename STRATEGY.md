@@ -2245,6 +2245,18 @@ Moves:
 - Offered: Kelce → Bowers (+5.7, same game as Nacua). Nacua + Bowers was the only path to
   ~108.
 
+**Post-4pm, pre-SNF: 59.42 against 71.24.** Past post-4pm ratios (1.44, 1.69, 1.48,
+1.65) put the final line at **~103-120, midpoint ~111**. Remaining: Kelce (SNF), plus
+SFLX and RB at MNF. Paths (FP / Ciely averaged):
+- Kelce + McKee + Javonte: ~101
+- Prescott at SFLX: ~102.5
+- Lamb at SFLX (MNF): ~105
+- **JSN at SFLX (SNF, 21.2 FP / 23.6 Ciely): ~109.5**
+
+Call: **SFLX → Jaxon Smith-Njigba before 8:20.** He is the bank's top WR, but the deficit
+means the MNF information would not change the answer; we would need max either way.
+Javonte stays in the RB slot as the last MNF decision.
+
 **Lesson: this week the MNF lever could not cover a bad 1:00 window.** DAL@PHI's best
 reinforcement was worth ~+10 over the defaults, so the big upside left was all at 4:25.
 At the early-week board, size the late pool's *reinforcement capacity*, not just its
