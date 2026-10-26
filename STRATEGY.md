@@ -2257,6 +2257,15 @@ Call: **SFLX → Jaxon Smith-Njigba before 8:20.** He is the bank's top WR, but 
 means the MNF information would not change the answer; we would need max either way.
 Javonte stays in the RB slot as the last MNF decision.
 
+**Pre-MNF: 99.12 against 78.2.** JSN scored **31.3** (9/12, 150 yards, 1 TD) against
+the defense that allows the fewest WR points. Nacua 21.8, Kelce 8.4 (Bowers was not
+used), Watson 18.22, TEN DST 0. Pre-MNF ratios (1.153, 1.181, 1.256, 1.283, 1.253) put the
+final line at **~98-104** at 1.25-1.33. That is essentially **on our score**, so the last
+slot must be a real player. Call: **Javonte** (15.8 FP / 17.55 Ciely), the highest-floor
+RB in the game (8 TDs in 6 games, DAL's lead back). Saquon (Q hamstring, limited, limited,
+full) is the cheaper RB18, but carries workload and aggravation risk; take him only if
+the MNF-kickoff rank test shows a large cushion. Pierce does not clear the bar.
+
 **Lesson: this week the MNF lever could not cover a bad 1:00 window.** DAL@PHI's best
 reinforcement was worth ~+10 over the defaults, so the big upside left was all at 4:25.
 At the early-week board, size the late pool's *reinforcement capacity*, not just its
