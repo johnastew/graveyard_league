@@ -2266,6 +2266,15 @@ RB in the game (8 TDs in 6 games, DAL's lead back). Saquon (Q hamstring, limited
 full) is the cheaper RB18, but carries workload and aggravation risk; take him only if
 the MNF-kickoff rank test shows a large cushion. Pierce does not clear the bar.
 
+**Rank test at MNF kickoff: 212 of 437, cut at 361.** That is 149 places, between week 6
+(47 places, +8.7 over the line; would have been cut by 10 without CMC) and week 5 (243
+places, +30.8; survived the punt by 8.5). The line has moved +17.9 / +22.3 / +18.9 on
+Monday nights, so +20.9 over the line is roughly break-even with no player. Both tests say
+the same thing: **Javonte plays.** Saquon would probably suffice on his mean (~13.8), but
+his hamstring risk lands exactly on the floor the slot exists to buy. The RB9 → RB18
+inventory saving is not worth a few points of survival probability in a week that
+would end the season.
+
 **Lesson: this week the MNF lever could not cover a bad 1:00 window.** DAL@PHI's best
 reinforcement was worth ~+10 over the defaults, so the big upside left was all at 4:25.
 At the early-week board, size the late pool's *reinforcement capacity*, not just its
