@@ -298,6 +298,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 4 | - | 52.02 | 70.12 | **88.04** | 105.74 | +17.70 (survived) |
 | 5 | 36.04 | 68.48 | 78.82 | **101.16** | 120.62 | +19.46 (survived) |
 | 6 | 30.9 | 56.58 | 74.44 | **93.30** | 113.88 | +20.58 (survived) |
+| 7 | 37.1 | 71.24 | 78.2 | *to log* | 120.62 | survived |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
 reading before MNF. Week 5's 36.04 was read with the 1:00 games at Q4 2:00. Final lines
@@ -2295,6 +2296,159 @@ the source notes. Ignored.
 position. By week 7 the question is not *whether* to spend the bank. It is **which
 position's bank exceeds the endgame's demand**. Recount by position each week; the
 long position changes as injuries and breakouts land.
+
+## Week 7 result (2026)
+
+**Survived.** Scored **120.62**. Final cut line: **not yet logged** (pre-MNF it was 78.2,
+rank 212 of 437 with the cut at 361). Nine burned, 63 on the season (QB 12, RB 16, WR 21,
+TE 7, DST 7), all recorded in `data/used_players.json`.
+
+| Slot | Player | Pts | Window |
+| --- | --- | --- | --- |
+| SFLX | Jaxon Smith-Njigba (SEA) | **31.30** | SNF |
+| FLEX | Puka Nacua (LAR) | **21.80** | 4:25 |
+| RB | Javonte Williams (DAL) | **21.50** | MNF |
+| QB | Deshaun Watson (CLE) | 18.22 | 1:00 |
+| RB | Woody Marks (HOU) | 9.10 | 1:00 |
+| TE | Travis Kelce (KC) | 8.40 | SNF |
+| WR | Germie Bernard (PIT) | 5.70 | Paris 9:30 |
+| WR | Garrett Wilson (NYJ) | 4.60 | 1:00 |
+| DST | Tennessee | 0.00 | 1:00 |
+
+### What decided the week
+
+- **The early window busted and the late window rebuilt it.** The 1:00 + Paris slots
+  scored 37.62 against ~61 projected. Three slots reinforced after 3:55 (Nacua, JSN,
+  Javonte) scored 74.60. That is the week 7 lesson in numbers: when the MNF pool is thin,
+  the 4:25 window carries the comeback, and the reinforcements must come from the long
+  position (WR) plus one bank RB.
+- **Three bank pieces spent in one week**: JSN (WR1 ROS), Nacua (WR2 ROS), Javonte (RB9
+  ROS). The first two came from the long position. Javonte was the Monday-slot spend that
+  the RB bank exists for.
+- **Watson (18.22) was the best early pick**, again the QB-floor argument. The TEN DST
+  hedge against him cost 0 points.
+
+## Week 8 board (2026) — Tuesday pull, provisional
+
+Cut 18.8% of 361 (68 reaped, 293 survive). Final lines: 101.16, 93.30, then week 7 (to be
+logged; ~98-104 on the pre-MNF ratio). **Plan against ~105**, nine real starters, two
+slots held past 4:25. All boards PPR, pulled Tuesday morning, before any practice reports.
+Burned list: 63.
+
+**Windows (ET).** Byes: **HOU, NO, NYG, SF**. **TNF** CAR@GB · **1:00** BAL@BUF,
+TEN@CIN, CLE@PIT, IND@JAC, ARI@DAL, MIN@DET, LV@NYJ, ATL@TB · **4:05** LAC@LAR ·
+**4:25** KC@DEN, NE@MIA · **SNF** PHI@WAS · **MNF** CHI@SEA. Matchups from the FantasyPros
+schedule grid; kickoff times from nflplayoffpass.com. Clocks fall back Sunday Nov 1.
+Confirm the windows in the app.
+
+### Inventory recount (week 7 doctrine: spend where the bank is long)
+
+| Pos | Burned | Usable left | Starts needed wk 8-17 | Read |
+| --- | --- | --- | --- | --- |
+| QB | 12 | 12 of top 12, 12 in QB13-27, + McKee, Ward | ~20 | **Long by ~6.** Spend the QB24-32 band. |
+| RB | 16 | ~22 in the top 30 (Walker, CMC, Javonte, Hubbard gone) | ~20-22 | **Even to short.** Keep it cheap. |
+| WR | 21 | 15 of top 20, and WR21-45 keeps refilling | ~20-25 | **Long.** Spend top-20 WRs with a positive delta. |
+| TE | 7 | 13 of top 14 (Kelce gone) | ~10 | **Long by ~3.** One mid TE is fine. |
+
+### Late-pool reinforcement capacity (size it before Sunday)
+
+| Window | Cheap default | Reinforcement | Gain |
+| --- | --- | --- | --- |
+| 4:05 LAC@LAR | Hampton (10.0) | **Kyren Williams** (17.7, RB7 ROS) | +7.7 |
+| 4:25 KC@DEN, NE@MIA | H. Henry (10.5) | Walker (19.4, RB3 ROS), Maye (22.5, QB2 ROS) | bank-only |
+| SNF PHI@WAS | McKee (13.0), R. White (10.6) | **Jayden Daniels** (20.1, QB11 ROS) | +7.2 |
+| MNF CHI@SEA | Darnold (16.4) | Caleb Williams (15.9), Swift (12.6, **-6 delta**) | ~0 |
+
+**MNF is the thinnest pool of the season.** JSN and Burden are burned, Swift is a negative
+delta, and Odunze (9.4) and Charbonnet (9.9) don't clear the ~11.7 points per slot that a
+105 line requires. So the Monday slot is a **savings lever** this week (punt Darnold if
+far clear), not a reinforcement lever. The real reinforcement is Kyren at 4:05 and
+Daniels at SNF. The field faces the same thin Monday, so expect fewer live MNF slots
+around the cut than in weeks 6-7. Confirm with the hand check.
+
+### Working nine — exact player per slot, and when to set it
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| WR | Justin Jefferson (MIN) | WR7 | WR13 | **+6** | 16.87 | 1:00 @ DET | Sun 12:55 |
+| WR | George Pickens (DAL) | WR13 | WR18 | +5 | 15.42 | 1:00 vs ARI | Sun 12:55 |
+| FLEX | Tee Higgins (CIN) | WR12 | WR15 | +3 | 16.32 | 1:00 vs TEN | Sun 12:55 |
+| RB | Bhayshul Tuten (JAC) | RB13 | RB16 | +3 | 14.19 | 1:00 vs IND | Sun 12:55 |
+| DST | Pittsburgh | DST3 | DST7 | +4 | 8.56 | 1:00 vs CLE | Sun 12:55 |
+| TE | Hunter Henry (NE) | TE13 | TE19 | +6 | 10.54 | 4:25 @ MIA | Sun 4:20 |
+| RB | Rachaad White (WAS) | RB24 | RB30 | +6 | 10.60 | **SNF** vs PHI | Sun 8:15 (or Kyren by 4:05) |
+| SFLX | Tanner McKee (PHI) | QB22 | QB30 | **+8** | 12.98 | **SNF** @ WAS | Sun 8:15 |
+| QB | Sam Darnold (SEA) | QB19 | QB26 | **+7** | 16.43 | **MNF** vs CHI | Mon 8:10 |
+
+**Projected 120.7 (~1.15x a 105 line).** The 1:00 core is five slots at 71.4. Nine
+teams, all distinct. The only shared game is McKee against White (PHI QB vs WAS RB,
+mildly positive). Spends: three top-20 WRs from the long position, one RB16, and
+nothing else inside a usable pool (TE19, RB30, QB30, QB26).
+
+**Why Darnold at QB rather than Geno Smith at 1:00:** Geno (QB21 / QB24, 16.53, vs LV) is
+the same points and the same tier of QB. Putting the QB at MNF keeps a late slot that can
+still be punted if the line is far clear, and Higgins takes the 1:00 slot instead, from
+the long position. If the owner can't be present Monday night, set Geno at 1:00 instead
+and give up the Monday option.
+
+### Decision points
+
+1. **~4:00 Sunday (before 4:05):** score vs. live line × the post-1pm ratio (2.81-3.26).
+   If the 1:00 core is short (the week 7 pattern), **RB White → Kyren Williams** before
+   4:05. Otherwise White stays.
+2. **~4:20:** Henry plays unless flagged. Fallback: Goedert at SNF (knee, check).
+3. **~8:15 Sunday:** live line × the post-4pm ratio (1.44-1.69). Short: **SFLX McKee →
+   Jayden Daniels**. Clear: McKee.
+4. **~8:10 Monday:** rank test + hand count of live MNF slots around the cut. Far clear:
+   punt the QB slot with a rostered deep CHI/SEA backup. Otherwise Darnold.
+
+### Why these, and the dependencies to re-grade
+
+- **Jefferson**: limited with an ankle last Wednesday, then played (4-7-44). A quiet
+  passing game; @DET is a 4.6-star QB matchup. Check Wednesday-Friday practice.
+- **Pickens**: 4-6-57-1 Monday night. ARI is the softest QB/pass matchup on the slate
+  (DAL qb_stars 5.0, rank 1). Lamb (WR4 / WR6) is the bank piece in the same game.
+- **Higgins**: 6-7-148-1 in week 7. TEN is a soft matchup. No flag.
+- **Tuten**: JAC's lead back, 5-7-48-2 receiving in week 6 before the bye. The cheaper RB
+  options (Judkins @ PIT, Mason/A. Jones in the MIN committee) project ~10, and week 6
+  showed what committee backs floor at.
+- **Rachaad White is role-by-absence** on Croskey-Merritt (IR, groin; listed for weeks
+  6-8, "four weeks" from Oct 19). He shares the backfield with Ekeler. SNF is the free
+  look, and the dependency resolves itself.
+- **McKee**: Hurts is out for the season, so there is no role risk. 23-35-211-1-1 Monday
+  (~11.4 here). DeVonta Smith (hamstring) and Goedert (knee) are both banged up, which
+  caps the ceiling. He is the placeholder for the Daniels lever.
+- **Darnold**: Macdonald shut down benching talk (Oct 16); 257 yards and 1 TD in week 7.
+  CHI is a 5-star DST matchup by the SOS, so this is a floor play, not a ceiling one.
+- **PIT DST** over CIN DST (+9, 7.30): PIT projects 1.26 more and does not stack with
+  Higgins. CIN is the swap if PIT's matchup changes (CLE's QB situation).
+
+### Not taking, and why
+
+- **TNF (CAR@GB)**: Golden (+4), C. Watson, Jacobs (+7), Kraft (+4), Love, Young. Avoid.
+- **Henry (+3, 17.0, RB8 ROS)**: the best RB points, but RB is the short position. He is
+  33 and decaying, so he is a candidate the next time a week needs a bank RB.
+- **Hockenson (TE8 / TE15, +7, 10.6, 1:00)**: equal to Hunter Henry, but TE15 is inside
+  the usable pool, and the 4:25 slot keeps one more decision live.
+- **Goedert (TE4 / TE13, +9, SNF)**: knee, DNP all of last week, then played. The TE
+  fallback.
+- **Tre Tucker (+20), Keenan Allen (+16), Omar Cooper (+14), Malik Washington (+12)**:
+  real deltas, but they project 9-11, below the per-slot requirement.
+- **Washington DST (+21, 6.15, SNF)**: the biggest DST delta, but it plays McKee, and the
+  house rule commits the DST at 1:00.
+- **Swift (RB16 / RB10, -6)**, **Hall (-3)**, **Willis (-7)**, **Egbuka (-5)**, **Warren
+  TE (-7)**: negative deltas. Bank.
+- **Bank pieces on the shelf**: Gibbs, Bijan, Cook, JT, Kyren, Henry, Chase, ARSB,
+  Flowers, Lamb, London, Bowers, McBride, LaPorta, Loveland, all top-12 QBs, and the SEA,
+  MIN, DEN and HOU DSTs.
+
+### Checks before committing anyone
+
+1. **Log week 7's final cut line** (and confirm the pre-MNF reading of 78.2).
+2. Friday final report: Jefferson's own line; Croskey-Merritt stays on IR (White);
+   DeVonta Smith and Goedert (McKee's targets).
+3. Re-pull all boards Saturday. Tuesday deltas are not valid on Sunday.
+4. Inactives at ~11:30 for the five-man 1:00 core.
 
 ## Source notes
 
