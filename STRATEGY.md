@@ -2354,7 +2354,7 @@ Confirm the windows in the app.
 
 | Window | Cheap default | Reinforcement | Gain |
 | --- | --- | --- | --- |
-| 4:05 LAC@LAR | Hampton (10.0) | **Kyren Williams** (17.7, RB7 ROS) | +7.7 |
+| 4:05 LAC@LAR | FLEX: Hampton (10.0) / McConkey (10.5) | **Kyren Williams** (17.7, RB7 ROS) | +7.2-7.7 |
 | 4:25 KC@DEN, NE@MIA | H. Henry (10.5) | Walker (19.4, RB3 ROS), Maye (22.5, QB2 ROS) | bank-only |
 | SNF PHI@WAS | McKee (13.0), R. White (10.6) | **Jayden Daniels** (20.1, QB11 ROS) | +7.2 |
 | MNF CHI@SEA | Darnold (16.4) | Caleb Williams (15.9), Swift (12.6, **-6 delta**) | ~0 |
@@ -2372,30 +2372,56 @@ around the cut than in weeks 6-7. Confirm with the hand check.
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | WR | Justin Jefferson (MIN) | WR7 | WR13 | **+6** | 16.87 | 1:00 @ DET | Sun 12:55 |
 | WR | George Pickens (DAL) | WR13 | WR18 | +5 | 15.42 | 1:00 vs ARI | Sun 12:55 |
-| FLEX | Tee Higgins (CIN) | WR12 | WR15 | +3 | 16.32 | 1:00 vs TEN | Sun 12:55 |
 | RB | Bhayshul Tuten (JAC) | RB13 | RB16 | +3 | 14.19 | 1:00 vs IND | Sun 12:55 |
 | DST | Pittsburgh | DST3 | DST7 | +4 | 8.56 | 1:00 vs CLE | Sun 12:55 |
+| FLEX | **held** — Omarion Hampton (LAC) default | RB32 | RB34 | +2 | 10.01 | **4:05** @ LAR | Sun 4:00 (Kyren if short) |
 | TE | Hunter Henry (NE) | TE13 | TE19 | +6 | 10.54 | 4:25 @ MIA | Sun 4:20 |
-| RB | Rachaad White (WAS) | RB24 | RB30 | +6 | 10.60 | **SNF** vs PHI | Sun 8:15 (or Kyren by 4:05) |
+| RB | Rachaad White (WAS) | RB24 | RB30 | +6 | 10.60 | **SNF** vs PHI | Sun 8:15 |
 | SFLX | Tanner McKee (PHI) | QB22 | QB30 | **+8** | 12.98 | **SNF** @ WAS | Sun 8:15 |
 | QB | Sam Darnold (SEA) | QB19 | QB26 | **+7** | 16.43 | **MNF** vs CHI | Mon 8:10 |
 
-**Projected 120.7 (~1.15x a 105 line).** The 1:00 core is five slots at 71.4. Nine
-teams, all distinct. The only shared game is McKee against White (PHI QB vs WAS RB,
-mildly positive). Spends: three top-20 WRs from the long position, one RB16, and
-nothing else inside a usable pool (TE19, RB30, QB30, QB26).
+**Projected ~114.3 (~1.09x a 105 line), ~122 with Kyren.** The 1:00 core is four slots
+at 55.0. Nine teams, all distinct. The only shared game is McKee against White (PHI QB vs
+WAS RB, mildly positive). Spends: two top-20 WRs from the long position, one RB16, and
+nothing else inside a usable pool (TE19, RB34, RB30, QB30, QB26).
+
+### Owner check (Tuesday): are we spending the WR bank too fast?
+
+**Yes, by one player.** The first draft had Jefferson (WR13 ROS), Higgins (WR15) and
+Pickens (WR18). "WR is long" is true of the position, not of its top tier:
+
+| | Top-20 ROS WRs left |
+| --- | --- |
+| Start of week 7 (McMillan, Coker gone) | 18 |
+| After week 7 (JSN, Nacua, G. Wilson) | **15** |
+| After the first week 8 draft | **12** (only 11 in the top 15) |
+
+Weeks 14-17 cut 40-63% and need max lineups: 2 WR + FLEX for four weeks is ~10-12
+top-tier WR starts. Weeks 9-13 cut 21-34% and need quality too. Spending three top-20 WRs
+a week (week 7, then week 8) empties the tier by week 12. **The WR21-45 band refills; the
+top 15 does not.** So "spend where long" applies to the band below WR20, and top-15 WRs
+are spent only with a big delta or in a week that needs them.
+
+Fix: **Higgins out** (smallest delta, +3, at the WR15 hoard edge). The FLEX becomes the
+4:05 lever, which also gives the Kyren option its own slot so White stays at SNF.
+Jefferson (+6) and Pickens (+5, WR18) stay. Taking Jefferson out too (for Tre Tucker,
+WR44 ROS, 10.7) drops the projection to ~108, 1.03x, the cushion week 7 rejected.
+
+If the owner can't be present at 4:00, the FLEX goes to **Tre Tucker** (LV @ NYJ, 1:00,
+WR24 / WR44, +20, 10.72): 12 targets for 103 yards and a TD in week 7, and 97 yards and 2
+TDs the week before. McConkey (10.52) is the better default only if he is out of
+concussion protocol (hurt Oct 18; LAC had the week 7 bye).
 
 **Why Darnold at QB rather than Geno Smith at 1:00:** Geno (QB21 / QB24, 16.53, vs LV) is
 the same points and the same tier of QB. Putting the QB at MNF keeps a late slot that can
-still be punted if the line is far clear, and Higgins takes the 1:00 slot instead, from
-the long position. If the owner can't be present Monday night, set Geno at 1:00 instead
+still be punted if the line is far clear. If the owner can't be present Monday night, set Geno at 1:00 instead
 and give up the Monday option.
 
 ### Decision points
 
 1. **~4:00 Sunday (before 4:05):** score vs. live line × the post-1pm ratio (2.81-3.26).
-   If the 1:00 core is short (the week 7 pattern), **RB White → Kyren Williams** before
-   4:05. Otherwise White stays.
+   If the 1:00 core is short (the week 7 pattern), **FLEX → Kyren Williams** before
+   4:05. Otherwise Hampton (or McConkey, if cleared).
 2. **~4:20:** Henry plays unless flagged. Fallback: Goedert at SNF (knee, check).
 3. **~8:15 Sunday:** live line × the post-4pm ratio (1.44-1.69). Short: **SFLX McKee →
    Jayden Daniels**. Clear: McKee.
@@ -2408,7 +2434,6 @@ and give up the Monday option.
   passing game; @DET is a 4.6-star QB matchup. Check Wednesday-Friday practice.
 - **Pickens**: 4-6-57-1 Monday night. ARI is the softest QB/pass matchup on the slate
   (DAL qb_stars 5.0, rank 1). Lamb (WR4 / WR6) is the bank piece in the same game.
-- **Higgins**: 6-7-148-1 in week 7. TEN is a soft matchup. No flag.
 - **Tuten**: JAC's lead back, 5-7-48-2 receiving in week 6 before the bye. The cheaper RB
   options (Judkins @ PIT, Mason/A. Jones in the MIN committee) project ~10, and week 6
   showed what committee backs floor at.
@@ -2426,6 +2451,8 @@ and give up the Monday option.
 ### Not taking, and why
 
 - **TNF (CAR@GB)**: Golden (+4), C. Watson, Jacobs (+7), Kraft (+4), Love, Young. Avoid.
+- **Higgins (WR12 / WR15, +3, 16.3)**: pulled on the owner's check above. A top-15 WR
+  with the smallest delta of the three.
 - **Henry (+3, 17.0, RB8 ROS)**: the best RB points, but RB is the short position. He is
   33 and decaying, so he is a candidate the next time a week needs a bank RB.
 - **Hockenson (TE8 / TE15, +7, 10.6, 1:00)**: equal to Hunter Henry, but TE15 is inside
