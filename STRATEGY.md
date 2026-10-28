@@ -298,7 +298,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 4 | - | 52.02 | 70.12 | **88.04** | 105.74 | +17.70 (survived) |
 | 5 | 36.04 | 68.48 | 78.82 | **101.16** | 120.62 | +19.46 (survived) |
 | 6 | 30.9 | 56.58 | 74.44 | **93.30** | 113.88 | +20.58 (survived) |
-| 7 | 37.1 | 71.24 | 78.2 | *to log* | 120.62 | survived |
+| 7 | 37.1 | 71.24 | 78.2 | **100.80** | 120.62 | +19.82 (survived) |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
 reading before MNF. Week 5's 36.04 was read with the 1:00 games at Q4 2:00. Final lines
@@ -314,6 +314,12 @@ have risen every week, and the rise is accelerating: 72.20, 79.64, 88.04, 101.16
 | 4 | 70.12 | 88.04 | +17.92 | **1.256x** |
 | 5 | 78.82 | 101.16 | **+22.34** | **1.283x** |
 | 6 | 74.44 | 93.30 | +18.86 | **1.253x** |
+| 7 | 78.20 | 100.80 | +22.60 | **1.289x** |
+
+**At n=6 the ratio has settled at 1.25-1.29 for four weeks** (1.256, 1.283, 1.253,
+1.289), and the Monday move at +19 to +23. Use **1.29 as the central estimate and 1.32 as
+the worst case.** Week 7's other ratios: post-4pm 1.415x (the lowest of four: 1.44, 1.69,
+1.48, 1.415), post-1pm 2.72x (read with the 1:00 games in Q4).
 
 **The ratio has risen every week: 1.153, 1.181, 1.256, 1.283. Use ~1.30 for week 6, and do
 not treat the largest past ratio as a ceiling.** In week 5 the "worst case" was taken as
@@ -2299,8 +2305,8 @@ long position changes as injuries and breakouts land.
 
 ## Week 7 result (2026)
 
-**Survived.** Scored **120.62**. Final cut line: **not yet logged** (pre-MNF it was 78.2,
-rank 212 of 437 with the cut at 361). Nine burned, 63 on the season (QB 12, RB 16, WR 21,
+**Survived.** Scored **120.62** against a final cut line of **100.80**, a margin of +19.82.
+Pre-MNF the line was 78.2 and the rank was 212 of 437, with the cut at 361. Nine burned, 63 on the season (QB 12, RB 16, WR 21,
 TE 7, DST 7), all recorded in `data/used_players.json`.
 
 | Slot | Player | Pts | Window |
@@ -2327,11 +2333,24 @@ TE 7, DST 7), all recorded in `data/used_players.json`.
   the RB bank exists for.
 - **Watson (18.22) was the best early pick**, again the QB-floor argument. The TEN DST
   hedge against him cost 0 points.
+- **Javonte was the margin. Without him the week finishes 99.12 against 100.80: cut by
+  1.68.** At MNF kickoff that position read as 149 places of rank cushion and +20.9 over
+  the live line, and the in-session call ("+20.9 over the line is roughly break-even")
+  was exactly right. The line moved +22.6 on Monday.
+
+### The rank cushion does not mean what it looks like
+
+149 places sounded safe. It was not. Weeks 6 and 7 now give the same answer from opposite
+ends: **at MNF kickoff, points over the live line are the test, and the bar is the
+expected Monday move (~+20 to +23).** Rank places translate into points only through the
+spread of scores near the cut, and that spread is tight: 149 places covered about 21
+points in week 7. Rule from week 8 on: **punt the last slot only if the score clears the
+live line × 1.32.** Below that, play the highest-floor player available.
 
 ## Week 8 board (2026) — Tuesday pull, provisional
 
-Cut 18.8% of 361 (68 reaped, 293 survive). Final lines: 101.16, 93.30, then week 7 (to be
-logged; ~98-104 on the pre-MNF ratio). **Plan against ~105**, nine real starters, two
+Cut 18.8% of 361 (68 reaped, 293 survive). Final lines: 101.16, 93.30, 100.80. The line has been
+flat at ~93-101 for three weeks while the cut % rises. **Plan against ~105**, nine real starters, two
 slots held past 4:25. All boards PPR, pulled Tuesday morning, before any practice reports.
 Burned list: 63.
 
@@ -2471,11 +2490,10 @@ and give up the Monday option.
 
 ### Checks before committing anyone
 
-1. **Log week 7's final cut line** (and confirm the pre-MNF reading of 78.2).
-2. Friday final report: Jefferson's own line; Croskey-Merritt stays on IR (White);
+1. Friday final report: Jefferson's own line; Croskey-Merritt stays on IR (White);
    DeVonta Smith and Goedert (McKee's targets).
-3. Re-pull all boards Saturday. Tuesday deltas are not valid on Sunday.
-4. Inactives at ~11:30 for the five-man 1:00 core.
+2. Re-pull all boards Saturday. Tuesday deltas are not valid on Sunday.
+3. Inactives at ~11:30 for the four-man 1:00 core.
 
 ## Source notes
 
