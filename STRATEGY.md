@@ -2373,8 +2373,8 @@ Confirm the windows in the app.
 
 | Window | Cheap default | Reinforcement | Gain |
 | --- | --- | --- | --- |
-| 4:05 LAC@LAR | (FLEX held for 4:25) | Kyren Williams (17.7, RB7 ROS) | +6.9 over Waddle |
-| 4:25 KC@DEN, NE@MIA | FLEX Waddle (10.8), TE H. Henry (10.5) | **A.J. Brown** (15.95, WR19 ROS); Walker (19.4, RB3) emergency only | +5.2 |
+| 4:05 LAC@LAR | (FLEX held for 4:25) | Kyren Williams (17.7, RB7 ROS) | +7.8 over the placeholder |
+| 4:25 KC@DEN, NE@MIA | FLEX M. Washington (9.9), TE H. Henry (10.5) | **A.J. Brown** (15.95, WR19 ROS); Walker (19.4, RB3) emergency only | +6.1 |
 | SNF PHI@WAS | McKee (13.0), R. White (10.6) | **Jayden Daniels** (20.1, QB11 ROS) | +7.2 |
 | MNF CHI@SEA | Darnold (16.4) | Caleb Williams (15.9), Swift (12.6, **-6 delta**) | ~0 |
 
@@ -2393,13 +2393,13 @@ around the cut than in weeks 6-7. Confirm with the hand check.
 | WR | George Pickens (DAL) | WR13 | WR18 | +5 | 15.42 | 1:00 vs ARI | Sun 12:55 |
 | RB | Bhayshul Tuten (JAC) | RB13 | RB16 | +3 | 14.19 | 1:00 vs IND | Sun 12:55 |
 | DST | Pittsburgh | DST3 | DST7 | +4 | 8.56 | 1:00 vs CLE | Sun 12:55 |
-| FLEX | **held** — Jaylen Waddle (DEN) default | WR32 | WR34 | +2 | 10.79 | **4:25** vs KC | Sun 4:00 / 4:20 (see decision points) |
+| FLEX | **held** — Malik Washington (MIA) placeholder | WR34 | WR46 | +12 | 9.88 | **4:25** vs NE | Sun 4:00 / 4:20 (see decision points) |
 | TE | Hunter Henry (NE) | TE13 | TE19 | +6 | 10.54 | 4:25 @ MIA | Sun 4:20 |
 | RB | Rachaad White (WAS) | RB24 | RB30 | +6 | 10.60 | **SNF** vs PHI | Sun 8:15 |
 | SFLX | Tanner McKee (PHI) | QB22 | QB30 | **+8** | 12.98 | **SNF** @ WAS | Sun 8:15 |
 | QB | Sam Darnold (SEA) | QB19 | QB26 | **+7** | 16.43 | **MNF** vs CHI | Mon 8:10 |
 
-**Projected ~109.5 (~1.04x a 105 line); ~117 with one late reinforcement, ~124 with
+**Projected ~108.5 (~1.03x a 105 line); ~116 with one late reinforcement, ~123 with
 two.** The 1:00 core is four slots at 48.9. Nine teams, all distinct. The only shared
 game is McKee against White (PHI QB vs WAS RB, mildly positive). Spends: one WR18, one
 RB16, and nothing else inside a usable pool (WR44, WR34, TE19, RB30, QB30, QB26).
@@ -2466,10 +2466,10 @@ and give up the Monday option.
 
 1. **~4:00 Sunday (before 4:05):** score vs. live line × the post-1pm ratio (2.72-3.26).
    Only if the 1:00 core is **badly** short (week 7: 33.5 vs 37.1), **FLEX → Kyren
-   Williams** (17.7) before 4:05. Otherwise leave Waddle and wait.
-2. **~4:20 (before 4:25):** if still short, **FLEX Waddle → A.J. Brown** (NE @ MIA,
+   Williams** (17.7) before 4:05. Otherwise leave the placeholder and wait.
+2. **~4:20 (before 4:25):** if still short, **FLEX placeholder → A.J. Brown** (NE @ MIA,
    WR19 / WR19, 15.95), the WR-band reinforcement. Walker (19.4, RB3 ROS) only in an
-   emergency. Clear: Waddle. Note A.J. Brown shares the NE offense with Henry.
+   emergency. Clear: the placeholder plays. Note A.J. Brown shares the NE offense with Henry.
 3. **~4:20:** Henry plays unless flagged. Fallback: Goedert at SNF (knee, check).
 4. **~8:15 Sunday:** live line × the post-4pm ratio (1.44-1.69). Short: **SFLX McKee →
    Jayden Daniels**. Clear: McKee.
@@ -2480,7 +2480,15 @@ and give up the Monday option.
 
 - **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
   (Mendoza projects 2.7). No flag. Check Friday.
-- **Waddle**: DEN vs KC, a placeholder whose job is to keep the FLEX open to 4:25.
+- **FLEX placeholder: Malik Washington** (MIA vs NE, 4:25). Its job is to keep the FLEX
+  open past 4:05 so both levers (Kyren at 4:05, A.J. Brown at 4:25) stay live, and to be
+  a nil-residual play (WR46 ROS) if neither is needed. **Pick the placeholder from the
+  latest window that still has a usable player, not from the reinforcement's own game**:
+  a 4:05 placeholder would kill the 4:25 option. Waddle (10.79) was the first choice but
+  aggravated a chest injury in week 7 (news Oct 28); switch back to him only if he has no
+  designation on Friday. Washington's targets fell to 3 last week with Caleb Douglas
+  back, so this is a placeholder, not a pick. Alternatives at 4:25: Worthy (KC, WR43 ROS,
+  8.96), Harvey (DEN, 8.36, committee).
 - **Pickens**: 4-6-57-1 Monday night. ARI is the softest QB/pass matchup on the slate
   (DAL qb_stars 5.0, rank 1). Lamb (WR4 / WR6) is the bank piece in the same game.
 - **Tuten**: JAC's lead back, 5-7-48-2 receiving in week 6 before the bye. The cheaper RB
