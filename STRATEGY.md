@@ -2373,36 +2373,38 @@ Confirm the windows in the app.
 
 | Window | Cheap default | Reinforcement | Gain |
 | --- | --- | --- | --- |
-| 4:05 LAC@LAR | FLEX: Hampton (10.0) / McConkey (10.5) | **Kyren Williams** (17.7, RB7 ROS) | +7.2-7.7 |
-| 4:25 KC@DEN, NE@MIA | H. Henry (10.5) | Walker (19.4, RB3 ROS), Maye (22.5, QB2 ROS) | bank-only |
+| 4:05 LAC@LAR | (FLEX held for 4:25) | Kyren Williams (17.7, RB7 ROS) | +6.9 over Waddle |
+| 4:25 KC@DEN, NE@MIA | FLEX Waddle (10.8), TE H. Henry (10.5) | **A.J. Brown** (15.95, WR19 ROS); Walker (19.4, RB3) emergency only | +5.2 |
 | SNF PHI@WAS | McKee (13.0), R. White (10.6) | **Jayden Daniels** (20.1, QB11 ROS) | +7.2 |
 | MNF CHI@SEA | Darnold (16.4) | Caleb Williams (15.9), Swift (12.6, **-6 delta**) | ~0 |
 
 **MNF is the thinnest pool of the season.** JSN and Burden are burned, Swift is a negative
 delta, and Odunze (9.4) and Charbonnet (9.9) don't clear the ~11.7 points per slot that a
 105 line requires. So the Monday slot is a **savings lever** this week (punt Darnold if
-far clear), not a reinforcement lever. The real reinforcement is Kyren at 4:05 and
-Daniels at SNF. The field faces the same thin Monday, so expect fewer live MNF slots
+far clear), not a reinforcement lever. The real reinforcement is the FLEX (A.J.
+Brown at 4:25, or Kyren at 4:05) and Daniels at SNF. The field faces the same thin Monday, so expect fewer live MNF slots
 around the cut than in weeks 6-7. Confirm with the hand check.
 
 ### Working nine — exact player per slot, and when to set it
 
 | Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WR | Justin Jefferson (MIN) | WR7 | WR13 | **+6** | 16.87 | 1:00 @ DET | Sun 12:55 |
+| WR | Tre Tucker (LV) | WR24 | WR44 | **+20** | 10.72 | 1:00 @ NYJ | Sun 12:55 |
 | WR | George Pickens (DAL) | WR13 | WR18 | +5 | 15.42 | 1:00 vs ARI | Sun 12:55 |
 | RB | Bhayshul Tuten (JAC) | RB13 | RB16 | +3 | 14.19 | 1:00 vs IND | Sun 12:55 |
 | DST | Pittsburgh | DST3 | DST7 | +4 | 8.56 | 1:00 vs CLE | Sun 12:55 |
-| FLEX | **held** — Omarion Hampton (LAC) default | RB32 | RB34 | +2 | 10.01 | **4:05** @ LAR | Sun 4:00 (Kyren if short) |
+| FLEX | **held** — Jaylen Waddle (DEN) default | WR32 | WR34 | +2 | 10.79 | **4:25** vs KC | Sun 4:00 / 4:20 (see decision points) |
 | TE | Hunter Henry (NE) | TE13 | TE19 | +6 | 10.54 | 4:25 @ MIA | Sun 4:20 |
 | RB | Rachaad White (WAS) | RB24 | RB30 | +6 | 10.60 | **SNF** vs PHI | Sun 8:15 |
 | SFLX | Tanner McKee (PHI) | QB22 | QB30 | **+8** | 12.98 | **SNF** @ WAS | Sun 8:15 |
 | QB | Sam Darnold (SEA) | QB19 | QB26 | **+7** | 16.43 | **MNF** vs CHI | Mon 8:10 |
 
-**Projected ~114.3 (~1.09x a 105 line), ~122 with Kyren.** The 1:00 core is four slots
-at 55.0. Nine teams, all distinct. The only shared game is McKee against White (PHI QB vs
-WAS RB, mildly positive). Spends: two top-20 WRs from the long position, one RB16, and
-nothing else inside a usable pool (TE19, RB34, RB30, QB30, QB26).
+**Projected ~109.5 (~1.04x a 105 line); ~117 with one late reinforcement, ~124 with
+two.** The 1:00 core is four slots at 48.9. Nine teams, all distinct. The only shared
+game is McKee against White (PHI QB vs WAS RB, mildly positive). Spends: one WR18, one
+RB16, and nothing else inside a usable pool (WR44, WR34, TE19, RB30, QB30, QB26).
+*(The earlier ~114.3 figure was an arithmetic slip: the Jefferson version actually totals
+115.6.)*
 
 ### Owner check (Tuesday): are we spending the WR bank too fast?
 
@@ -2423,13 +2425,37 @@ are spent only with a big delta or in a week that needs them.
 
 Fix: **Higgins out** (smallest delta, +3, at the WR15 hoard edge). The FLEX becomes the
 4:05 lever, which also gives the Kyren option its own slot so White stays at SNF.
-Jefferson (+6) and Pickens (+5, WR18) stay. Taking Jefferson out too (for Tre Tucker,
-WR44 ROS, 10.7) drops the projection to ~108, 1.03x, the cushion week 7 rejected.
+### Owner check (Wednesday): Jefferson too
 
-If the owner can't be present at 4:00, the FLEX goes to **Tre Tucker** (LV @ NYJ, 1:00,
-WR24 / WR44, +20, 10.72): 12 targets for 103 yards and a TD in week 7, and 97 yards and 2
-TDs the week before. McConkey (10.52) is the better default only if he is out of
-concussion protocol (hurt Oct 18; LAC had the week 7 bye).
+**Jefferson is out as well, for Tre Tucker.** He is WR7 this week but **WR13 ROS, inside
+the doctrine's own WR15 hoard band** (pool-tightness table). Pickens stays: he is WR13
+*this week* but **WR18 ROS**, outside the band, with a +5 delta and the softest pass
+matchup on the slate. The weekly rank is what the matchup makes him; the ROS rank is what
+we are spending.
+
+Tucker (LV @ NYJ, WR24 / WR44, **+20**, 10.72) has nil residual and is hot: a team-high
+12 targets for 103 yards and a TD in week 7, and 97 yards and 2 TDs the week before.
+
+The cost is ~6 projected points (115.6 → 109.5, 1.10x → 1.04x), and the doctrine's answer
+to that is the ladder: **buy the cushion conditionally, late, only if the live line asks
+for it**, instead of committing a hoard-band WR at 1:00 on a Tuesday projection. Week 3:
+"Deciding to overspend on Thursday is guessing; deciding at 8pm Sunday is reading."
+
+The catch, stated plainly: the late reinforcements are **Kyren (RB7 ROS, the short
+position)** and **Jayden Daniels (QB11)**. If the four-man 1:00 core busts like week 7's
+did, we spend one of those instead of Jefferson, which is worse. So the FLEX now holds to
+**4:25 with a WR reinforcement as the first option** (A.J. Brown, WR19 ROS), and Kyren is
+the second.
+
+**If the owner can't be present Sunday afternoon and evening, use the Jefferson version**
+(Jefferson at WR, Hampton or Tucker at FLEX): without someone to pull the levers, the
+committed points are worth more than the saved asset.
+
+| | Top-20 ROS WRs left after week 8 |
+| --- | --- |
+| First draft (Jefferson, Higgins, Pickens) | 12 |
+| Tuesday revision (Jefferson, Pickens) | 13 |
+| **Now (Pickens only)** | **14, with all 13 of the remaining top 15** |
 
 **Why Darnold at QB rather than Geno Smith at 1:00:** Geno (QB21 / QB24, 16.53, vs LV) is
 the same points and the same tier of QB. Putting the QB at MNF keeps a late slot that can
@@ -2438,19 +2464,23 @@ and give up the Monday option.
 
 ### Decision points
 
-1. **~4:00 Sunday (before 4:05):** score vs. live line × the post-1pm ratio (2.81-3.26).
-   If the 1:00 core is short (the week 7 pattern), **FLEX → Kyren Williams** before
-   4:05. Otherwise Hampton (or McConkey, if cleared).
-2. **~4:20:** Henry plays unless flagged. Fallback: Goedert at SNF (knee, check).
-3. **~8:15 Sunday:** live line × the post-4pm ratio (1.44-1.69). Short: **SFLX McKee →
+1. **~4:00 Sunday (before 4:05):** score vs. live line × the post-1pm ratio (2.72-3.26).
+   Only if the 1:00 core is **badly** short (week 7: 33.5 vs 37.1), **FLEX → Kyren
+   Williams** (17.7) before 4:05. Otherwise leave Waddle and wait.
+2. **~4:20 (before 4:25):** if still short, **FLEX Waddle → A.J. Brown** (NE @ MIA,
+   WR19 / WR19, 15.95), the WR-band reinforcement. Walker (19.4, RB3 ROS) only in an
+   emergency. Clear: Waddle. Note A.J. Brown shares the NE offense with Henry.
+3. **~4:20:** Henry plays unless flagged. Fallback: Goedert at SNF (knee, check).
+4. **~8:15 Sunday:** live line × the post-4pm ratio (1.44-1.69). Short: **SFLX McKee →
    Jayden Daniels**. Clear: McKee.
-4. **~8:10 Monday:** rank test + hand count of live MNF slots around the cut. Far clear:
+5. **~8:10 Monday:** live line × 1.32 + hand count of live MNF slots around the cut. Clear:
    punt the QB slot with a rostered deep CHI/SEA backup. Otherwise Darnold.
 
 ### Why these, and the dependencies to re-grade
 
-- **Jefferson**: limited with an ankle last Wednesday, then played (4-7-44). A quiet
-  passing game; @DET is a 4.6-star QB matchup. Check Wednesday-Friday practice.
+- **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
+  (Mendoza projects 2.7). No flag. Check Friday.
+- **Waddle**: DEN vs KC, a placeholder whose job is to keep the FLEX open to 4:25.
 - **Pickens**: 4-6-57-1 Monday night. ARI is the softest QB/pass matchup on the slate
   (DAL qb_stars 5.0, rank 1). Lamb (WR4 / WR6) is the bank piece in the same game.
 - **Tuten**: JAC's lead back, 5-7-48-2 receiving in week 6 before the bye. The cheaper RB
@@ -2464,14 +2494,13 @@ and give up the Monday option.
   caps the ceiling. He is the placeholder for the Daniels lever.
 - **Darnold**: Macdonald shut down benching talk (Oct 16); 257 yards and 1 TD in week 7.
   CHI is a 5-star DST matchup by the SOS, so this is a floor play, not a ceiling one.
-- **PIT DST** over CIN DST (+9, 7.30): PIT projects 1.26 more and does not stack with
-  Higgins. CIN is the swap if PIT's matchup changes (CLE's QB situation).
+- **PIT DST** over CIN DST (+9, 7.30): PIT projects 1.26 more. CIN is the swap if PIT's matchup changes (CLE's QB situation).
 
 ### Not taking, and why
 
 - **TNF (CAR@GB)**: Golden (+4), C. Watson, Jacobs (+7), Kraft (+4), Love, Young. Avoid.
-- **Higgins (WR12 / WR15, +3, 16.3)**: pulled on the owner's check above. A top-15 WR
-  with the smallest delta of the three.
+- **Higgins (WR12 / WR15, +3, 16.3)** and **Jefferson (WR7 / WR13, +6, 16.9)**: pulled
+  on the owner's checks above. Both are inside the WR15 hoard band.
 - **Henry (+3, 17.0, RB8 ROS)**: the best RB points, but RB is the short position. He is
   33 and decaying, so he is a candidate the next time a week needs a bank RB.
 - **Hockenson (TE8 / TE15, +7, 10.6, 1:00)**: equal to Hunter Henry, but TE15 is inside
