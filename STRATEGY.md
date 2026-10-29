@@ -614,6 +614,42 @@ Cashius Howell, Kyle Dugger and Bryan Cook. A projected elite matchup was actual
   2025 defensive ranking.
 - By roughly week 5 current-season defensive data becomes usable and this caveat relaxes.
 
+## Matchups from current-season EPA (`./gy m N`)
+
+Added week 8. `./gy m 8` joins two public, keyless feeds:
+
+- **rbsdm.com** (Ben Baldwin, built on nflfastR): this season's offensive and defensive
+  EPA per play, split by pass and rush, through the last completed week.
+- **The nflverse schedule** (`nfldata/games.csv`): kickoff day and time, plus the Vegas
+  spread and total. **Implied team total** = (total ± spread) / 2.
+
+It prints, for every team on the slate: kickoff, opponent, implied total, its own pass and
+run EPA, the opponent's pass and run defense (EPA allowed, ranked 1 = softest), and for
+DSTs the opponent's offense (ranked 1 = weakest) and the opponent's implied total.
+`--sort total|pass|rush|dst` re-orders it.
+
+**How it enters the method: as a tiebreaker and a veto, never as an override.**
+
+1. **The FantasyPros consensus stays primary.** Projections and ranks already price the
+   matchup. The EPA table is team-level; it knows nothing about a player's role, snaps
+   or targets (the Gadsden lesson). It never promotes a player the board does not like.
+2. **Tiebreak.** When two candidates are within ~1.5 projected points and the delta and
+   residual are similar, take the better matchup: implied team total first, then the
+   opponent's split for the player's job (pass D for QB/WR/TE, run D for RB).
+3. **Veto.** A pick facing a bottom-3 unit (rank 30-32 for his job) gets swapped if a
+   clean alternative projects within ~1.5 points at equal or lower cost.
+4. **DST.** Rank by the opponent's implied total first (lowest wins), then by the
+   opponent's offensive EPA. This replaces "SOS stars", which are opaque.
+5. **Lottery tickets and late levers** come from high implied totals. A cheap player on
+   a team implied under ~19 needs a specific usage reason.
+6. **Kickoff windows.** The same feed is the schedule source, replacing the search
+   snippets used weeks 4-7 (schedule sites are blocked by the proxy).
+
+**Sample size.** EPA per play settles slowly: weeks 1-4 are mostly noise, and the
+prior-year caveat above is the reason this did not exist earlier. From week 5 on it is
+usable; by week 8 each team has ~6-7 games. Team totals move during the week, so
+re-run with `--refresh` on Saturday.
+
 ## Shelf-life caveat
 
 Decay only matters for players you would *actually start*. A QB31 with benching risk is not
@@ -2376,12 +2412,13 @@ Confirm the windows in the app.
 | 4:05 LAC@LAR | (FLEX held for 4:25) | Kyren Williams (17.7, RB7 ROS) | +7.8 over the placeholder |
 | 4:25 KC@DEN, NE@MIA | FLEX M. Washington (9.9), TE H. Henry (10.5) | **A.J. Brown** (15.95, WR19 ROS); Walker (19.4, RB3) emergency only | +6.1 |
 | SNF PHI@WAS | McKee (13.0), R. White (10.6) | **Jayden Daniels** (20.1, QB11 ROS) | +7.2 |
-| MNF CHI@SEA | Darnold (16.4) | Caleb Williams (15.9), Swift (12.6, **-6 delta**) | ~0 |
+| MNF CHI@SEA | (no slot held) | Caleb Williams (15.9), Swift (12.6, **-6 delta**) | ~0 |
 
 **MNF is the thinnest pool of the season.** JSN and Burden are burned, Swift is a negative
 delta, and Odunze (9.4) and Charbonnet (9.9) don't clear the ~11.7 points per slot that a
-105 line requires. So the Monday slot is a **savings lever** this week (punt Darnold if
-far clear), not a reinforcement lever. The real reinforcement is the FLEX (A.J.
+105 line requires. A Monday slot could only be a **savings lever** this week, and at a
+1.03x projection the 1.32x punt bar will not be met, so no slot is held for MNF (see the
+Thursday EPA check). The real reinforcement is the FLEX (A.J.
 Brown at 4:25, or Kyren at 4:05) and Daniels at SNF. The field faces the same thin Monday, so expect fewer live MNF slots
 around the cut than in weeks 6-7. Confirm with the hand check.
 
@@ -2397,12 +2434,13 @@ around the cut than in weeks 6-7. Confirm with the hand check.
 | TE | Hunter Henry (NE) | TE13 | TE19 | +6 | 10.54 | 4:25 @ MIA | Sun 4:20 |
 | RB | Rachaad White (WAS) | RB24 | RB30 | +6 | 10.60 | **SNF** vs PHI | Sun 8:15 |
 | SFLX | Tanner McKee (PHI) | QB22 | QB30 | **+8** | 12.98 | **SNF** @ WAS | Sun 8:15 |
-| QB | Sam Darnold (SEA) | QB19 | QB26 | **+7** | 16.43 | **MNF** vs CHI | Mon 8:10 |
+| QB | Geno Smith (NYJ) | QB21 | QB24 | +3 | 16.53 | 1:00 vs LV | Sun 12:55 |
 
-**Projected ~108.5 (~1.03x a 105 line); ~116 with one late reinforcement, ~123 with
-two.** The 1:00 core is four slots at 48.9. Nine teams, all distinct. The only shared
-game is McKee against White (PHI QB vs WAS RB, mildly positive). Spends: one WR18, one
-RB16, and nothing else inside a usable pool (WR44, WR34, TE19, RB30, QB30, QB26).
+**Projected ~108.6 (~1.03x a 105 line); ~116 with one late reinforcement, ~123 with
+two.** The 1:00 core is five slots at 65.4. Nine teams, all distinct. Two shared games,
+both opposite sides and mildly positive: Geno against Tucker (LV @ NYJ), and McKee
+against White (PHI @ WAS). Spends: one WR18, one RB16, and nothing else inside a usable
+pool (WR44, WR46, TE19, RB30, QB30, QB24).
 *(The earlier ~114.3 figure was an arithmetic slip: the Jefferson version actually totals
 115.6.)*
 
@@ -2425,6 +2463,7 @@ are spent only with a big delta or in a week that needs them.
 
 Fix: **Higgins out** (smallest delta, +3, at the WR15 hoard edge). The FLEX becomes the
 4:05 lever, which also gives the Kyren option its own slot so White stays at SNF.
+
 ### Owner check (Wednesday): Jefferson too
 
 **Jefferson is out as well, for Tre Tucker.** He is WR7 this week but **WR13 ROS, inside
@@ -2457,10 +2496,31 @@ committed points are worth more than the saved asset.
 | Tuesday revision (Jefferson, Pickens) | 13 |
 | **Now (Pickens only)** | **14, with all 13 of the remaining top 15** |
 
-**Why Darnold at QB rather than Geno Smith at 1:00:** Geno (QB21 / QB24, 16.53, vs LV) is
-the same points and the same tier of QB. Putting the QB at MNF keeps a late slot that can
-still be punted if the line is far clear. If the owner can't be present Monday night, set Geno at 1:00 instead
-and give up the Monday option.
+### Thursday EPA cross-check (`./gy m 8`)
+
+First run of the matchup tool (see "Matchups from current-season EPA"). Ranks are 1-32,
+1 = friendliest. Implied totals are from the Vegas lines.
+
+| Pick | Team implied | Opponent's defense vs this player | Read |
+| --- | --- | --- | --- |
+| Pickens (DAL) | **30.8, highest on the slate** | ARI pass D **#2 softest** | Confirmed |
+| Tuten (JAC) | 28.2 | IND run D #6 softest | Confirmed |
+| Tucker (LV) | 22.0 | NYJ pass D #9; LV pass offense +0.168 | Fine |
+| PIT DST | CLE implied **18.0**, 2nd-lowest | CLE offense #13 weakest | Confirmed |
+| H. Henry (NE) | 25.2 | MIA pass D **#1 softest** | Confirmed, and A.J. Brown is the right 4:25 lever |
+| R. White (WAS) | 23.2, 6-pt favorite | PHI run D #13 | Fine (WAS run offense is poor) |
+| McKee (PHI) | **17.2, lowest on the slate** | WAS pass D #6 softest | Weak placeholder, as planned. Daniels (WAS 23.2, PHI pass D #7) is the right lever |
+| **Darnold (SEA)** | 24.8 | **CHI pass D #30, third-toughest** | **Flagged** |
+
+**One change: QB Darnold → Geno Smith** (NYJ vs LV, 1:00, QB21 / QB24, 16.53). FantasyPros
+has them level (16.43 vs 16.53) and both are QB24-26 ROS, so the tiebreaker decides it:
+Geno draws the #9 pass defense, Darnold the #30. The cost is the Monday slot, and this
+week it is worth almost nothing: the Monday pool has no reinforcement (see above), and
+punting would need a score above the live line × 1.32 from a lineup projecting 1.03x. In
+exchange the 1:00 core gains a QB floor (48.9 → 65.4), the week 7 weak point.
+
+Geno and Tucker are opposite sides of LV @ NYJ (total 45.5): mildly positive, since a
+shootout lifts both. Acceptable.
 
 ### Decision points
 
@@ -2473,8 +2533,7 @@ and give up the Monday option.
 3. **~4:20:** Henry plays unless flagged. Fallback: Goedert at SNF (knee, check).
 4. **~8:15 Sunday:** live line × the post-4pm ratio (1.44-1.69). Short: **SFLX McKee →
    Jayden Daniels**. Clear: McKee.
-5. **~8:10 Monday:** live line × 1.32 + hand count of live MNF slots around the cut. Clear:
-   punt the QB slot with a rostered deep CHI/SEA backup. Otherwise Darnold.
+5. **Monday:** nothing to decide. Log the pre-MNF line and rank.
 
 ### Why these, and the dependencies to re-grade
 
@@ -2500,8 +2559,8 @@ and give up the Monday option.
 - **McKee**: Hurts is out for the season, so there is no role risk. 23-35-211-1-1 Monday
   (~11.4 here). DeVonta Smith (hamstring) and Goedert (knee) are both banged up, which
   caps the ceiling. He is the placeholder for the Daniels lever.
-- **Darnold**: Macdonald shut down benching talk (Oct 16); 257 yards and 1 TD in week 7.
-  CHI is a 5-star DST matchup by the SOS, so this is a floor play, not a ceiling one.
+- **Geno Smith**: NYJ's starter, no role dependency. LV's pass defense is #9 softest by
+  EPA. Darnold (SEA, MNF) is the swap if Geno draws a flag. Same points, worse matchup.
 - **PIT DST** over CIN DST (+9, 7.30): PIT projects 1.26 more. CIN is the swap if PIT's matchup changes (CLE's QB situation).
 
 ### Not taking, and why
@@ -2515,10 +2574,12 @@ and give up the Monday option.
   the usable pool, and the 4:25 slot keeps one more decision live.
 - **Goedert (TE4 / TE13, +9, SNF)**: knee, DNP all of last week, then played. The TE
   fallback.
-- **Tre Tucker (+20), Keenan Allen (+16), Omar Cooper (+14), Malik Washington (+12)**:
-  real deltas, but they project 9-11, below the per-slot requirement.
-- **Washington DST (+21, 6.15, SNF)**: the biggest DST delta, but it plays McKee, and the
-  house rule commits the DST at 1:00.
+- **Keenan Allen (+16), Omar Cooper (+14)**: real deltas, but they project 9-9.5. (Tucker
+  and Malik Washington came onto the board later, as the Jefferson swap and the FLEX
+  placeholder.)
+- **Washington DST (+21, 6.15, SNF)**: the biggest DST delta, and PHI's implied 17.2 is
+  the lowest on the slate. But it plays McKee, and PIT projects 2.4 more against the
+  second-lowest implied total.
 - **Swift (RB16 / RB10, -6)**, **Hall (-3)**, **Willis (-7)**, **Egbuka (-5)**, **Warren
   TE (-7)**: negative deltas. Bank.
 - **Bank pieces on the shelf**: Gibbs, Bijan, Cook, JT, Kyren, Henry, Chase, ARSB,
@@ -2527,10 +2588,11 @@ and give up the Monday option.
 
 ### Checks before committing anyone
 
-1. Friday final report: Jefferson's own line; Croskey-Merritt stays on IR (White);
-   DeVonta Smith and Goedert (McKee's targets).
+1. Friday final report: Tucker, Geno and Henry's own lines; Croskey-Merritt stays on IR
+   (White); Waddle (FLEX placeholder); DeVonta Smith and Goedert (McKee's targets).
 2. Re-pull all boards Saturday. Tuesday deltas are not valid on Sunday.
-3. Inactives at ~11:30 for the four-man 1:00 core.
+3. Inactives at ~11:30 for the five-man 1:00 core.
+4. Re-run `./gy m 8 --refresh` Saturday: the lines move during the week.
 
 ## Source notes
 

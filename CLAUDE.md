@@ -32,6 +32,9 @@ The five things most likely to be re-derived wrongly:
 - `./gy` / `graveyard.py` — pulls FantasyPros rankings, subtracts burned players
 - `data/used_players.json` — the burned list. Commit it.
 - `./gy u "Name"` marks a player used; `./gy x "Name"` undoes it
+- `./gy m N` — week N matchups: rbsdm.com current-season EPA joined to the nflverse
+  schedule (kickoff windows, Vegas implied team totals). No API key. Tiebreaker, not override:
+  see "Matchups from current-season EPA" in `STRATEGY.md`.
 
 ## Working notes
 

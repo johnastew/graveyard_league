@@ -247,6 +247,134 @@ def cmd_rankings(args: argparse.Namespace) -> None:
         write_csv(eligible, args.csv)
 
 
+# ------------------------------------------------------------------- matchups
+# Current-season EPA from rbsdm.com (Ben Baldwin, nflfastR) joined to the
+# nflverse schedule, which carries kickoff times and Vegas lines. Neither needs
+# an API key. See "Matchups from current-season EPA" in STRATEGY.md.
+RBSDM_API = "https://rbsdm.com/api"
+NFLVERSE_GAMES = "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+# nflverse/rbsdm spell two teams differently from FantasyPros.
+FP_TEAM = {"LA": "LAR", "JAX": "JAC"}
+
+
+def fetch_url(url: str, cache_name: str, refresh: bool, body: dict | None = None) -> str:
+    """GET (or POST JSON) with a once-a-day cache, since both sources update daily."""
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    cache = os.path.join(CACHE_DIR, f"{dt.date.today().isoformat()}-{cache_name}")
+    if os.path.exists(cache) and not refresh:
+        with open(cache, encoding="utf-8") as fh:
+            return fh.read()
+    data = json.dumps(body).encode("utf-8") if body is not None else None
+    req = urllib.request.Request(url, data=data, headers={
+        "Content-Type": "application/json",
+        "User-Agent": "graveyard-league/1.0",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            text = resp.read().decode("utf-8")
+    except urllib.error.HTTPError as exc:
+        sys.exit(f"HTTP {exc.code} from {url}:\n{exc.read().decode('utf-8', 'replace')[:400]}")
+    except urllib.error.URLError as exc:
+        sys.exit(f"Could not reach {url}: {exc.reason}")
+    with open(cache, "w", encoding="utf-8") as fh:
+        fh.write(text)
+    return text
+
+
+def fetch_team_epa(season: int, through_week: int, refresh: bool) -> dict[str, dict]:
+    body = {
+        "season_min": season, "season_max": season,
+        "week_min": 1, "week_max": through_week,
+        "weeks_post_start": "None", "weeks_post_end": "None",
+        "downs": [1, 2, 3, 4], "quarters": [1, 2, 3, 4, 5],
+        "wp_filter": 0, "exclude_turnovers": False,
+        # The API rejects null here; the team only drives the site's highlight.
+        "team_abbr": "SEA",
+        "qb_min_plays": 100, "qb_active_only": False,
+        "fourth_wp_min": 20, "fourth_wp_max": 100, "fourth_go_boost_min": 1,
+    }
+    text = fetch_url(f"{RBSDM_API}/team-tiers", f"rbsdm-{season}-thru{through_week}.json",
+                     refresh, body)
+    return {r["team_abbr"]: r for r in json.loads(text).get("rows", [])}
+
+
+def fetch_week_games(season: int, week: int, refresh: bool) -> list[dict]:
+    text = fetch_url(NFLVERSE_GAMES, "nflverse-games.csv", refresh)
+    rows = csv.DictReader(text.splitlines())
+    return [g for g in rows
+            if g["season"] == str(season) and g["week"] == str(week) and g["game_type"] == "REG"]
+
+
+def rank_map(teams: dict[str, dict], key: str, high_is_1: bool) -> dict[str, int]:
+    order = sorted(teams, key=lambda t: teams[t][key], reverse=high_is_1)
+    return {t: i + 1 for i, t in enumerate(order)}
+
+
+def cmd_matchups(args: argparse.Namespace) -> None:
+    through = args.week - 1
+    if through < 1:
+        sys.exit("No current-season EPA exists before week 2.")
+    epa = fetch_team_epa(args.season, through, args.refresh)
+    games = fetch_week_games(args.season, args.week, args.refresh)
+    if not games:
+        sys.exit(f"No week {args.week} games in the nflverse schedule for {args.season}.")
+
+    # Rank 1 = the friendliest matchup for the player using the column.
+    soft_pass = rank_map(epa, "def_pass_epa", high_is_1=True)
+    soft_rush = rank_map(epa, "def_rush_epa", high_is_1=True)
+    weak_off = rank_map(epa, "off_epa", high_is_1=False)
+
+    rows = []
+    for g in games:
+        total, spread = as_num(g["total_line"]), as_num(g["spread_line"])
+        for side, opp, sign in (("home_team", "away_team", 1), ("away_team", "home_team", -1)):
+            team, foe = g[side], g[opp]
+            implied = (total + sign * spread) / 2 if total is not None and spread is not None else None
+            foe_implied = total - implied if implied is not None else None
+            mine, theirs = epa.get(team, {}), epa.get(foe, {})
+            rows.append({
+                "kick": f"{g['weekday'][:3]} {g['gametime']}",
+                "team": FP_TEAM.get(team, team),
+                "opp": ("vs " if side == "home_team" else "@ ") + FP_TEAM.get(foe, foe),
+                "implied": implied,
+                "off_pass": mine.get("off_pass_epa"),
+                "off_rush": mine.get("off_rush_epa"),
+                "opp_def_pass": theirs.get("def_pass_epa"),
+                "pass_rk": soft_pass.get(foe),
+                "opp_def_rush": theirs.get("def_rush_epa"),
+                "rush_rk": soft_rush.get(foe),
+                "opp_off": theirs.get("off_epa"),
+                "dst_rk": weak_off.get(foe),
+                "opp_implied": foe_implied,
+            })
+
+    sort_keys = {
+        "kick": lambda r: (r["kick"][:3] != "Thu", r["kick"][:3] == "Mon", r["kick"], -(r["implied"] or 0)),
+        "total": lambda r: -(r["implied"] or 0),
+        "pass": lambda r: r["pass_rk"] or 99,
+        "rush": lambda r: r["rush_rk"] or 99,
+        "dst": lambda r: (r["opp_implied"] or 99, r["dst_rk"] or 99),
+    }
+    rows.sort(key=sort_keys[args.sort])
+
+    def f(v, fmt):
+        return format(v, fmt) if v is not None else ""
+
+    print(f"Graveyard matchups — {args.season} week {args.week} | EPA weeks 1-{through} "
+          f"(rbsdm.com) | lines: nflverse")
+    print("Rank 1 = friendliest: softest pass D, softest run D, weakest opposing offense.\n")
+    hdr = (f"{'KICK':<9} {'TEAM':<4} {'OPP':<7} {'IMPL':>5}  {'OFFpass':>7} {'OFFrush':>7}  "
+           f"{'oppDpass':>8} {'rk':>2}  {'oppDrush':>8} {'rk':>2}  {'oppOFF':>6} {'DSTrk':>5} {'oppIMPL':>7}")
+    print(hdr)
+    print("-" * len(hdr))
+    for r in rows:
+        print(f"{r['kick']:<9} {r['team']:<4} {r['opp']:<7} {f(r['implied'], '5.1f'):>5}  "
+              f"{f(r['off_pass'], '+7.3f'):>7} {f(r['off_rush'], '+7.3f'):>7}  "
+              f"{f(r['opp_def_pass'], '+8.3f'):>8} {f(r['pass_rk'], '2d'):>2}  "
+              f"{f(r['opp_def_rush'], '+8.3f'):>8} {f(r['rush_rk'], '2d'):>2}  "
+              f"{f(r['opp_off'], '+6.3f'):>6} {f(r['dst_rk'], '5d'):>5} {f(r['opp_implied'], '7.1f'):>7}")
+
+
 def cmd_use(args: argparse.Namespace) -> None:
     entries = load_used()
     have = {norm(e["name"]) for e in entries}
@@ -318,6 +446,14 @@ def main(argv: list[str] | None = None) -> None:
     r.add_argument("--debug", action="store_true",
                    help="dump the raw API structure before formatting")
     r.set_defaults(func=cmd_rankings)
+
+    m = sub.add_parser("matchups",
+                       help="current-season EPA matchups + Vegas implied totals for a week")
+    m.add_argument("--season", type=int, default=season_default)
+    m.add_argument("--week", type=int, default=default_week())
+    m.add_argument("--sort", choices=["kick", "total", "pass", "rush", "dst"], default="kick")
+    m.add_argument("--refresh", action="store_true", help="bypass today's cache")
+    m.set_defaults(func=cmd_matchups)
 
     u = sub.add_parser("use", help="mark players as started (locks them out)")
     u.add_argument("names", nargs="+")

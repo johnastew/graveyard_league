@@ -5,12 +5,15 @@
 #   ./gy u "Name"   -> mark a player used
 #   ./gy l          -> list used players
 #   ./gy x "Name"   -> undo a used player
+#   ./gy m [8]      -> week 8 matchups: current-season EPA + Vegas implied totals
 set -euo pipefail
 cd "$(dirname "$0")"
 case "${1:-}" in
   u) shift; exec python3 graveyard.py use "$@" ;;
   x) shift; exec python3 graveyard.py unuse "$@" ;;
   l) exec python3 graveyard.py used ;;
+  m) shift; if [ -n "${1:-}" ] && [ "$1" -eq "$1" ] 2>/dev/null; then wk="$1"; shift; exec python3 graveyard.py matchups --week "$wk" "$@"; fi
+     exec python3 graveyard.py matchups "$@" ;;
   ''|*[!0-9]*) exec python3 graveyard.py rankings "$@" ;;
   *) wk="$1"; shift; exec python3 graveyard.py rankings --week "$wk" "$@" ;;
 esac

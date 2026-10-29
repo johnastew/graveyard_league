@@ -26,6 +26,7 @@ beyond the Python 3 standard library.
 ./gy u "Bijan Robinson"   # mark used after you start them
 ./gy l                    # list everyone burned so far
 ./gy x "Bijan Robinson"   # undo a mistaken mark
+./gy m 8                  # week 8 matchups: current-season EPA (rbsdm.com) + Vegas implied totals
 ```
 
 The full CLI, if you want the knobs:
