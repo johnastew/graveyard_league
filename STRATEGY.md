@@ -2522,6 +2522,19 @@ exchange the 1:00 core gains a QB floor (48.9 → 65.4), the week 7 weak point.
 Geno and Tucker are opposite sides of LV @ NYJ (total 45.5): mildly positive, since a
 shootout lifts both. Acceptable.
 
+### Thursday app check (week 8)
+
+The app matches the board exactly (app total 106.1). Two orange Qs, graded off the
+Wednesday report:
+
+| Player | Report | P(play) | Read |
+| --- | --- | --- | --- |
+| **Pickens** (1:00) | Q, shoulder on the report; the news says a **hamstring** from MNF. Limited in a walkthrough | 96.5% | **The one to watch.** A hamstring is the aggravation risk the flag rules exist for. Keep him if he is Full (or Limited, no designation) on Friday's final report. If he carries a Q into Sunday off a DNP or a second Limited, swap Saturday to **Keenan Allen** (IND @ JAC, WR47 ROS, +16, 9.5) or **Omar Cooper** (NYJ, WR37 ROS, +14, 9.4; stacks with Geno). |
+| M. Washington (4:25 FLEX placeholder) | Q, knee, Limited | 91.8% | Low stakes: MIA inactives post ~2:55, before the 4:20 decision. If he is ruled out Friday, the placeholder becomes **Xavier Worthy** (KC, no flag, 8.96; DEN pass D is #29, so placeholder only). |
+
+Waddle (DNP, 67.6%) is off the placeholder list. Diggs (DNP, hand, 36%) is not a SNF
+option. Every other starter is clean.
+
 ### Decision points
 
 1. **~4:00 Sunday (before 4:05):** score vs. live line × the post-1pm ratio (2.72-3.26).
