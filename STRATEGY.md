@@ -2535,14 +2535,31 @@ Wednesday report:
 Waddle (DNP, 67.6%) is off the placeholder list. Diggs (DNP, hand, 36%) is not a SNF
 option. Every other starter is clean.
 
+### Friday check (week 8)
+
+| Player | Report | Read |
+| --- | --- | --- |
+| Pickens | Q (shoulder; news says hamstring), Limited Wed, Limited Thu, Friday not yet posted, 94% | **Keep, subject to Friday's report and the 11:30 inactives.** Thursday's trigger ("swap off a second Limited") was stricter than the doctrine, which only requires verifying active before lock, and a 1:00 kickoff allows that. He projects ~6 more than Keenan Allen, worth ~4 after pricing the aggravation risk. Swap to Allen only on a Friday DNP, a Doubtful, or an inactive. |
+| **A.J. Brown** | Q, knee + ankle, **DNP Thu and Fri** | **The 4:25 FLEX reinforcement is gone.** Do not use him even if he is active: a new knee injury and no practice all week. |
+| H. Henry | clean | **Positive role-by-absence**: Brown out takes ~6-7 targets off the NE board. |
+| M. Washington | Q, knee, Limited x2, 90% | Placeholder only; MIA inactives at ~2:55 settle it. |
+| Croskey-Merritt | IR (weeks 6-8) | White's role holds. |
+
+**Revised FLEX reinforcement order:** Kyren Williams at 4:05 (17.7, RB7 ROS) becomes the
+first option, then Walker at 4:25 (19.4, RB3 ROS) in an emergency only. The 4:25 window
+has no other reinforcement: Rice is Q (hamstring), Worthy/Sutton/Harvey are placeholders.
+Because the only FLEX levers are now RB bank pieces, the 4:00 read decides more than
+planned. Daniels at SNF is unchanged. The Vegas lines did not move (re-run with
+`--refresh`).
+
 ### Decision points
 
 1. **~4:00 Sunday (before 4:05):** score vs. live line × the post-1pm ratio (2.72-3.26).
    Only if the 1:00 core is **badly** short (week 7: 33.5 vs 37.1), **FLEX → Kyren
    Williams** (17.7) before 4:05. Otherwise leave the placeholder and wait.
-2. **~4:20 (before 4:25):** if still short, **FLEX placeholder → A.J. Brown** (NE @ MIA,
-   WR19 / WR19, 15.95), the WR-band reinforcement. Walker (19.4, RB3 ROS) only in an
-   emergency. Clear: the placeholder plays. Note A.J. Brown shares the NE offense with Henry.
+2. **~4:20 (before 4:25):** A.J. Brown is out of the plan (Friday check). If still short
+   and Kyren was not used, Walker (19.4, RB3 ROS) is the only 4:25 option: emergency only.
+   Clear: the placeholder plays.
 3. **~4:20:** Henry plays unless flagged. Fallback: Goedert at SNF (knee, check).
 4. **~8:15 Sunday:** live line × the post-4pm ratio (1.44-1.69). Short: **SFLX McKee →
    Jayden Daniels**. Clear: McKee.
