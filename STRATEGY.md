@@ -2565,6 +2565,39 @@ planned. Daniels at SNF is unchanged. The Vegas lines did not move (re-run with
    Jayden Daniels**. Clear: McKee.
 5. **Monday:** nothing to decide. Log the pre-MNF line and rank.
 
+### Sunday checkpoint (week 8)
+
+**1:00 games in Q3: 48.52 against a live line of 40.04** (Geno 15.72, Tuten 15.7, PIT
+15, Pickens 2.1, Tucker 0). The line is already above week 7's Q4 reading (37.1) at an
+earlier point in the games: a high-scoring 1:00 slate.
+
+**A better estimator than the ratio: the absolute rise after the 1:00 games.** From a
+late-1:00 reading to the final line, the field has added almost the same number of
+points three weeks running, with the same late slate shape (one 4:05, two 4:25, SNF, MNF):
+
+| Week | Late-1:00 line | Final | Rise | Post-4pm → final |
+| --- | --- | --- | --- | --- |
+| 5 | 36.04 (Q4 2:00) | 101.16 | +65.1 | +32.7 |
+| 6 | 30.9 (end) | 93.30 | +62.4 | +36.7 |
+| 7 | 37.1 (Q4) | 100.80 | +63.7 | +29.6 |
+
+The ratio (2.72-3.26) swings with how early the field committed; the rise depends on the
+late slate, which is the same shape every week. This week's late games have low totals
+(40.5-46.5), so use **+60, worst case +65**, and **+30 to +37 after the 4:25 games**.
+
+Our defaults after 1:00 are Henry 11.1, M. Washington 8.7, White 10.8 and McKee 12.6
+(app projections): 43.2. So the **gap G = our score − live line at ~4:00** decides it:
+
+| G at ~4:00 | Do |
+| --- | --- |
+| ≥ 22 | No levers. |
+| 13-22 | **Kyren into the FLEX before 4:05** (+9). Re-read at 8:15. |
+| 5-13 | Kyren at 4:05, **and plan Daniels at SNF** (+7.5). |
+| < 5 | Both, and **RB White → Walker before 4:25** (+8.6). |
+
+At 8:15: skip Daniels only if our score − the live line is ≥ ~15 (we have White + McKee,
+23.4, against a +30 to +37 rise).
+
 ### Why these, and the dependencies to re-grade
 
 - **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
