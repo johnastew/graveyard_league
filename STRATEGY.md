@@ -2614,6 +2614,25 @@ Henry 6 (live, an in-game **Q** in the app; no news yet). Estimates: line ≈ 53
 Henry + White/McKee 23.5 = **~116**: a coin flip on the defaults. **Daniels at SNF is
 very likely** (+7.5 → ~124). Confirm at 8:15 with the ≥15 rule.
 
+**Owner question: who has the best matchups among the remaining options?** Two open
+slots (SFLX McKee, FLEX White), two games left (PHI @ WAS SNF, CHI @ SEA MNF):
+
+| Option | Slot | Proj | Implied | Opp D for his job | ROS | Read |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Jayden Daniels** (WAS) | SFLX | 20.1 | 23.2 | PHI pass D #7 softest | QB11 | Best matchup and best points. The lever. |
+| **Sam Darnold** (SEA, MNF) | SFLX | 16.4 | 24.8 | CHI pass D #30 | QB26 | **Strictly better than McKee**: +3.7 projected at the same nil cost, and a later lock. |
+| Caleb Williams (CHI, MNF) | SFLX | 15.9 | 21.8 | SEA pass D #22 | QB7 | Bank. No. |
+| Tanner McKee (PHI) | SFLX | 12.7 | **17.2, lowest** | WAS pass D #6 | QB30 | Worst of the four. |
+| Rachaad White (WAS) | FLEX | 10.8 | 23.2, 6-pt fav | PHI run D #13 | RB30 | Keep. |
+| Saquon Barkley (PHI) | FLEX | 12.5 | 17.2 | **WAS run D #2 softest** | RB20 | Best run matchup on paper; off the report (Pelissero), but re-tweaked hamstring/back last week and on the lowest-implied team. +1.7 is not worth RB20. |
+| Goedert (PHI) | FLEX | 10.2 | 17.2 | WAS pass D #6 | TE13 | DeVonta Smith OUT lifts him; level with White. |
+| Swift (CHI, MNF) | FLEX | 12.6 | 21.8 | SEA run D #18 | RB10 (-6) | Bank. No. |
+
+**Change: SFLX McKee → Darnold now.** The Daniels decision stays live, because Darnold's
+game is later. Defaults are now White + Darnold = 27.2, so the 8:15 rule becomes:
+**Daniels only if our score − the live line is under ~10** (post-4pm rise +30 to +37).
+Daniels is now worth +3.7 over the default, not +7.4.
+
 ### Why these, and the dependencies to re-grade
 
 - **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
