@@ -2598,6 +2598,12 @@ Our defaults after 1:00 are Henry 11.1, M. Washington 8.7, White 10.8 and McKee 
 At 8:15: skip Daniels only if our score − the live line is ≥ ~15 (we have White + McKee,
 23.4, against a +30 to +37 rise).
 
+**Late Q4 (~3:55): 72.10 against 48.96, G = +23.1.** Tuten 29.9, Geno 19.4, PIT 16,
+Pickens 6.8, Tucker 0. Projected finish 72 + ~3 + 43 = ~118 against 49 + 60-65 = ~109-114.
+**No Kyren.** The gap clears the 22 threshold, and the remaining lever (Daniels at SNF,
++7.5) is the cheaper asset (QB is long, RB is short) and is decided later, on better
+information. Walker at 4:25 stays an emergency only.
+
 ### Why these, and the dependencies to re-grade
 
 - **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
