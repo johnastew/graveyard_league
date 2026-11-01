@@ -2604,6 +2604,16 @@ Pickens 6.8, Tucker 0. Projected finish 72 + ~3 + 43 = ~118 against 49 + 60-65 =
 +7.5) is the cheaper asset (QB is long, RB is short) and is decided later, on better
 information. Walker at 4:25 stays an emergency only.
 
+**Then the line jumped to 53.6 before 4:05** (the gap fell to ~20, the Kyren band), so
+**Kyren went in**, at RB, with White moved to the FLEX and M. Washington out (unburned).
+
+**Mid-afternoon (4:05 game in Q3, 4:25 games at the half): 84.20 against 68.26, G =
++15.9.** Geno 18 (final), Tuten 29.9, PIT 16, Pickens 6.8, Tucker 0, Kyren 7.5 (live),
+Henry 6 (live, an in-game **Q** in the app; no news yet). Estimates: line ≈ 53.6 + 60-65
+= **114-119**; post-4pm line ≈ 53.6 + 26-34 = 80-88. Ours ≈ 84 + ~9 more from Kyren and
+Henry + White/McKee 23.5 = **~116**: a coin flip on the defaults. **Daniels at SNF is
+very likely** (+7.5 → ~124). Confirm at 8:15 with the ≥15 rule.
+
 ### Why these, and the dependencies to re-grade
 
 - **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
