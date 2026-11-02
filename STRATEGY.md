@@ -2661,6 +2661,12 @@ not with how high the Sunday line is, so the absolute method is the better model
 slight favorite to survive, not a safe one. CHI @ SEA has a 46.5 total, and teams still
 holding JSN or Swift are the threat.
 
+**Rank test at MNF kickoff: 183 of 361, cut at 294.** 111 places and +23.4 over the live
+line. The line needs a Monday move of more than +23.4 to reach us; recent moves were
++17.9, +22.3, +18.9 and +22.6, and none cleared it. 111 places covering 23.4 points
+(0.21 per place) is a wider spread than week 7 (149 places for 20.9, 0.14 per place), so
+the cushion is more real than week 7's. Read: **favored, not safe.**
+
 ### Why these, and the dependencies to re-grade
 
 - **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
