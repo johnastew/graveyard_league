@@ -2633,6 +2633,18 @@ game is later. Defaults are now White + Darnold = 27.2, so the 8:15 rule becomes
 **Daniels only if our score − the live line is under ~10** (post-4pm rise +30 to +37).
 Daniels is now worth +3.7 over the default, not +7.4.
 
+**Post-4pm (NE @ MIA at Q4 1:51): 89.60 against 77.40, G = +12.2.** Kyren 12.9 (final),
+**Henry 6, ruled OUT in-game** (no second half), Darnold now in SFLX (app 15.3).
+Estimate: line ≈ 77.4 + ~1 + 30-37 = **108-115**; ours = 89.6 + White 10.8 + Darnold
+15.3 = **115.7**. Margin +1 to +8 on the defaults.
+
+**Correction to the 8:15 rule.** "Daniels if G < 10" only reached worst-case break-even;
+it priced no variance for our own two remaining players (~±8 between them). Add a ~5-point
+buffer: **keep the cheap default only if G ≥ ~16.** At 12.2: **Daniels for Darnold**,
+unless a hand check of 5-10 teams around the cut shows them holding ≤ 1 unplayed slot
+(the thin late pool may have kept the field early this week, which would shrink the
++30-37 rise).
+
 ### Why these, and the dependencies to re-grade
 
 - **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
