@@ -2645,6 +2645,22 @@ unless a hand check of 5-10 teams around the cut shows them holding ≤ 1 unplay
 (the thin late pool may have kept the field early this week, which would shrink the
 +30-37 rise).
 
+**Daniels went in.** **Pre-MNF: 118.58, final, against a live line of 95.20.** White 14,
+Daniels 14.98. SNF added +17.8 to the line (weeks 5-7: +10.3, +17.9, +7.0). Nothing left
+to play; all nine burned (72 on the season).
+
+The two estimators disagree, which is worth recording:
+
+| Method | Monday move | Final line | Margin |
+| --- | --- | --- | --- |
+| Absolute (weeks 5-7: +22.3, +18.9, +22.6) | +19 to +23 | 114-118 | **+0.8 to +4.6** |
+| Ratio (1.25-1.29, worst 1.32) | +24 to +31 | 119-126 | **-0.4 to -7** |
+
+The Monday move should scale with what the MNF game produces for the teams still live,
+not with how high the Sunday line is, so the absolute method is the better model: a
+slight favorite to survive, not a safe one. CHI @ SEA has a 46.5 total, and teams still
+holding JSN or Swift are the threat.
+
 ### Why these, and the dependencies to re-grade
 
 - **Tucker**: LV's target leader two weeks running. Cousins-to-Mendoza is not a factor
