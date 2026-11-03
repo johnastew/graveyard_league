@@ -2814,7 +2814,7 @@ live for the field. Expect a Monday move of **+18 to +23**, not week 8's +13.9.
 
 | Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| RB | Quinshon Judkins (CLE) — owner call over Coleman (see owner check) | RB20 | RB23 | +3 | 12.36 | 1:00 @ NO | Sun 12:55 |
+| RB | Jonah Coleman (DEN) — owner call, Judkins banked (see owner check) | RB15 | RB22 | +7 | 11.54 | 1:00 @ CAR | Sun 12:55 |
 | WR | Rashee Rice (KC) | WR18 | WR24 | +6 | 14.11 | 1:00 vs NYJ | Sun 12:55 |
 | WR | Jameson Williams (DET) | WR22 | WR21 | -1 | 12.82 | 1:00 @ MIA | Sun 12:55 |
 | TE | Tyler Warren (IND) | TE8 | TE11 | +3 | 13.33 | 1:00 vs DAL | Sun 12:55 |
@@ -2900,6 +2900,19 @@ is the one the doctrine already ranks above a tiebreak, **role certainty**. He i
 back, and Coleman is in a three-way committee where the floor is 0-2. The gap is 0.8
 points, so this is a coin flip, and the floor argument breaks it toward Judkins. Coleman
 is the 1:00 fallback.
+
+**Owner revision: Coleman now, bank Judkins.** Turn the same facts around and they say
+*spend* Coleman. Judkins's value is stable: a settled lead role and the #4 easiest RB
+schedule for weeks 10-17. That makes him exactly what to keep for the weeks that need a
+floor. Coleman's value is uncertain in both directions. A committee can swing back to
+Dobbins or Harvey, and the market already rates him as a now-asset (+7 delta, against +3).
+The doctrine's shelf-life rule says to spend the asset whose future is the shakier one.
+The cost is this week's floor (0.8 projected points plus committee risk) in a 1:00 slot
+with six slots behind it to absorb a miss. **Coleman starts; Judkins is the 1:00 fallback
+only if Coleman draws a flag.**
+
+General form: **when two cheap players tie this week, spend the one with the less certain
+future role and bank the one with the settled role and the easier schedule.**
 
 Every other slot passes the tiebreak as is. Williams vs Evans is the only other pair
 within 1.5. Evans has the better total (SF 30.8) and Williams has the better opponent (MIA
