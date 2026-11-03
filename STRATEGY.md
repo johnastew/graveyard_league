@@ -2814,7 +2814,7 @@ live for the field. Expect a Monday move of **+18 to +23**, not week 8's +13.9.
 
 | Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| RB | Quinshon Judkins (CLE) | RB20 | RB23 | +3 | 12.36 | 1:00 @ NO | Sun 12:55 |
+| RB | Jonah Coleman (DEN) — Judkins fallback (see owner check) | RB15 | RB22 | +7 | 11.54 | 1:00 @ CAR | Sun 12:55 |
 | WR | Rashee Rice (KC) | WR18 | WR24 | +6 | 14.11 | 1:00 vs NYJ | Sun 12:55 |
 | WR | Jameson Williams (DET) | WR22 | WR21 | -1 | 12.82 | 1:00 @ MIA | Sun 12:55 |
 | TE | Tyler Warren (IND) | TE8 | TE11 | +3 | 13.33 | 1:00 vs DAL | Sun 12:55 |
@@ -2872,6 +2872,28 @@ weakest offense by EPA.
 - **Judkins**: 11-25 against PIT, but 17-96-2 the week before and NO is the softest run
   defense on the slate. Fallbacks at 1:00: Coleman (DEN, out-touched Dobbins 15-7, 11.54),
   Saquon (split with E. Mitchell, 13.43, lowest implied team).
+
+### Owner check (Tuesday): was the matchup rule applied, or only quoted?
+
+Applied as a veto: **no pick faces a bottom-3 unit for his job** (worst is Jacobs, NE run
+D #19). But the **tiebreak was skipped at RB1**, and run strictly it flips the slot:
+
+| | Proj | Wk / ROS | Delta | Team implied | Opp run D |
+| --- | --- | --- | --- | --- | --- |
+| Judkins (CLE @ NO) | 12.36 | RB20 / RB23 | +3 | 20.5 | **#1 softest** |
+| **Jonah Coleman (DEN @ CAR)** | 11.54 | **RB15** / RB22 | **+7** | **23.0** | #8 |
+
+The two are within 0.8 points at the same residual. The rule's order is implied total first,
+then the opponent split, and Coleman wins on implied total. He also wins on the consensus
+rank (RB15 against RB20) and on delta. Judkins's only edge is the opponent's run defense,
+which is the second key. Coleman's risk is the committee (Dobbins, Harvey). His role is
+consolidating, though: 24 carries to Dobbins's 13 over two games, and 15-7 in touches last
+week. **Lean: RB1 → Coleman, Judkins the fallback.** Both lock at 1:00, so confirm on the
+Saturday re-pull with refreshed lines.
+
+Every other slot passes the tiebreak as is. Williams vs Evans is the only other pair
+within 1.5. Evans has the better total (SF 30.8) and Williams has the better opponent (MIA
+#1), so that one is still settled by Evans's Achilles report.
 - **Hockenson** (FLEX placeholder): TDs in two straight. The slot is a lever, not a pick.
 
 ### Decision points
