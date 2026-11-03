@@ -299,6 +299,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 5 | 36.04 | 68.48 | 78.82 | **101.16** | 120.62 | +19.46 (survived) |
 | 6 | 30.9 | 56.58 | 74.44 | **93.30** | 113.88 | +20.58 (survived) |
 | 7 | 37.1 | 71.24 | 78.2 | **100.80** | 120.62 | +19.82 (survived) |
+| 8 | 48.96 | 77.40 | 95.20 | **109.14** | 118.58 | +9.44 (survived) |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
 reading before MNF. Week 5's 36.04 was read with the 1:00 games at Q4 2:00. Final lines
@@ -315,6 +316,15 @@ have risen every week, and the rise is accelerating: 72.20, 79.64, 88.04, 101.16
 | 5 | 78.82 | 101.16 | **+22.34** | **1.283x** |
 | 6 | 74.44 | 93.30 | +18.86 | **1.253x** |
 | 7 | 78.20 | 100.80 | +22.60 | **1.289x** |
+| 8 | 95.20 | 109.14 | **+13.94** | **1.146x** |
+
+**Week 8 broke the ratio, and the reason is the Monday pool, not the Sunday line.** The
+Tuesday board called CHI@SEA "the thinnest MNF pool of the season" and predicted the field
+would hold fewer live Monday slots. It did: the move was +13.94, the smallest since week 2,
+against +19 to +23 from the absolute method and +24 to +31 from the ratio. **The Monday move
+scales with what the Monday game offers the teams still live, so size it from the MNF
+pool's reinforcement capacity at the start of the week**: thin pool → +12 to +16, normal →
++18 to +23. The ratio is now the worse of the two estimators; retire it for Monday.
 
 **At n=6 the ratio has settled at 1.25-1.29 for four weeks** (1.256, 1.283, 1.253,
 1.289), and the Monday move at +19 to +23. Use **1.29 as the central estimate and 1.32 as
@@ -2725,6 +2735,186 @@ the cushion is more real than week 7's. Read: **favored, not safe.**
 2. Re-pull all boards Saturday. Tuesday deltas are not valid on Sunday.
 3. Inactives at ~11:30 for the five-man 1:00 core.
 4. Re-run `./gy m 8 --refresh` Saturday: the lines move during the week.
+
+## Week 8 result (2026)
+
+**Survived.** Scored **118.58** against a final cut line of **109.14**, a margin of +9.44,
+the thinnest of the season. Pre-MNF the line was 95.20 and the rank 183 of 361, with the
+cut at 294. Nine burned, 72 on the season (QB 14, RB 20, WR 22, TE 8, DST 8), all recorded
+in `data/used_players.json`. 293 teams remain.
+
+| Slot | Player | Pts | Window |
+| --- | --- | --- | --- |
+| RB | Bhayshul Tuten (JAC) | **29.90** | 1:00 |
+| QB | Geno Smith (NYJ) | 18.00 | 1:00 |
+| DST | Pittsburgh | 16.00 | 1:00 |
+| SFLX | Jayden Daniels (WAS) | 14.98 | SNF |
+| FLEX | Rachaad White (WAS) | 14.00 | SNF |
+| RB | Kyren Williams (LAR) | 12.90 | 4:05 |
+| WR | George Pickens (DAL) | 6.80 | 1:00 |
+| TE | Hunter Henry (NE) | 6.00 | 4:25 (left in-game) |
+| WR | Tre Tucker (LV) | 0.00 | 1:00 |
+
+### What decided the week
+
+- **Kyren was needed; Daniels was not.** Kyren (12.90) replaced an ~8.7 placeholder.
+  Daniels scored 14.98, while the Darnold default he replaced went 17-34-188-2-1 on Monday,
+  about 15.5 here before any interception penalty. **The swap gained nothing and spent a QB11 ROS asset** (QB10 this week).
+  The G ≥ 16 buffer was priced on a +30 to +37 rise plus a +19 to +23 Monday move. The
+  Monday move came in at +13.9, so the buffer bought insurance against a move that the
+  thin Monday pool had already ruled out. The fix is in the ratio log: size the Monday
+  move from the MNF pool. The line rose +55.5 from the 4:05 reading and +31.7 from the
+  post-4pm reading, both inside the ranges set on Sunday.
+- **The two WRs scored 6.80.** Pickens (Q, hamstring) and Tucker (0 on a +20 delta) were
+  the cheap WR spends. Second week running the 1:00 WR pair has busted (week 7: 10.3).
+- **Henry was ruled out mid-game** (6.0 at the half). A 4:25 player who leaves early
+  cannot be replaced; only the SNF/MNF slots absorb it.
+- **The Monday move was +13.94**, the smallest since week 2 (see the ratio log). The thin
+  Monday pool called on Tuesday showed up in the line.
+
+### Process error found in week 9 prep
+
+The week 8 board listed **Kenneth Walker III as the 4:25 emergency lever twice. He was
+burned in week 2.** Nobody reached for him, so it cost nothing. Rule: **every name on a
+lever list gets checked against `./gy l` before it is written down**, not just the starters.
+
+## Week 9 board (2026) — Tuesday pull, provisional
+
+Cut 20.8% of 293 (61 reaped, 232 survive). Final lines: 101.16, 93.30, 100.80, 109.14. The
+cut % keeps rising, so **plan against ~112-115** (≈12.6 points per slot). Nine real
+starters, **two slots past 4:25**. All boards PPR, pulled Tuesday morning, before any
+practice report. Burned list: 72.
+
+**Windows (ET, from `./gy m 9`).** Byes: **PIT, TEN**. **TNF** JAC@BAL · **Sun 9:30**
+CIN@ATL · **1:00** DAL@IND, DET@MIA, NYJ@KC, LAR@WAS, DEN@CAR, CLE@NO, NYG@PHI · **4:05**
+LV@SF, HOU@LAC · **4:25** ARI@SEA, GB@NE · **SNF** TB@CHI · **MNF** BUF@MIN.
+
+### Inventory recount
+
+| Pos | Burned | Usable left | Starts needed wk 9-17 | Read |
+| --- | --- | --- | --- | --- |
+| QB | 14 | 11 of top 12 (Daniels gone), 10 in QB13-27, + Ward, McKee | 18 | **Long by ~5.** Spend QB20-28 again. |
+| RB | 20 | 20 in the top 30 ROS, + Etienne, Hampton, A. Jones, M. Washington Jr. | 18 + FLEX | **Short.** Spend only RB20-30, never the top 15. |
+| WR | 22 | **14 of top 20 ROS** (JSN, Nacua, G. Wilson, Burden, McMillan, Pickens gone) | ~20 | **Long below WR20 only.** Spend WR21-45. |
+| TE | 8 | 13 of top 14 | ~9 | **Long by ~4.** A mid TE is fine. |
+
+### Late-pool reinforcement capacity
+
+| Window | Cheap default | Reinforcement (unburned, checked) | Gain |
+| --- | --- | --- | --- |
+| 4:05 LV@SF, HOU@LAC | HOU DST, (Evans) | Nico Collins (15.5, WR14 ROS), Kittle (14.9, bank) | ~+3 |
+| 4:25 ARI@SEA, GB@NE | Darnold, Jacobs | Maye (20.5) / Love (16.7) at QB; C. Watson (14.9, WR9); McBride (15.4, bank) | ~+3 |
+| SNF TB@CHI | (FLEX held) | **Bucky Irving** (15.9, RB13 ROS) | +5.6 over the MNF placeholder |
+| MNF BUF@MIN | Murray (SFLX), Hockenson (FLEX) | **Josh Allen** (21.0, QB1), Jefferson (16.7, WR13), Cook (15.8, RB4) | +4 / +6.4 |
+
+The MNF pool is **normal, not thin**: Allen, Cook, Jefferson, Murray and Hockenson are all
+live for the field. Expect a Monday move of **+18 to +23**, not week 8's +13.9.
+
+### Working nine — exact player per slot, and when to set it
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| RB | Quinshon Judkins (CLE) | RB20 | RB23 | +3 | 12.36 | 1:00 @ NO | Sun 12:55 |
+| WR | Rashee Rice (KC) | WR18 | WR24 | +6 | 14.11 | 1:00 vs NYJ | Sun 12:55 |
+| WR | Jameson Williams (DET) | WR22 | WR21 | -1 | 12.82 | 1:00 @ MIA | Sun 12:55 |
+| TE | Tyler Warren (IND) | TE8 | TE11 | +3 | 13.33 | 1:00 vs DAL | Sun 12:55 |
+| DST | Houston | DST3 | DST5 | +2 | 7.98 | 4:05 @ LAC | Sun 4:00 |
+| QB | Sam Darnold (SEA) | QB15 | QB24 | **+9** | 17.43 | 4:25 vs ARI | Sun 4:20 |
+| RB | Josh Jacobs (GB) | RB10 | RB20 | **+10** | 15.11 | 4:25 @ NE | Sun 4:20 |
+| FLEX | **held** — T.J. Hockenson (MIN) placeholder | TE9 | TE14 | +5 | 10.34 | **MNF** vs BUF | Sun 8:15 / Mon 8:10 |
+| SFLX | Kyler Murray (MIN) | QB18 | QB25 | +7 | 17.05 | **MNF** vs BUF | Mon 8:10 |
+
+**Projected ~120.5 (~1.06x a 113 line); ~126 with Irving at SNF, ~127 with Allen at MNF.**
+The 1:00 core is four slots at 52.6, but six slots stay open after it, and the 4:00 read
+reaches the 4:05 and 4:25 slots too. Spends: QB24, QB25 (long), RB23, RB20 (short, the
+cheapest two that clear 12), WR24, WR21, TE11, DST5. Nothing from the top 15 at RB or WR.
+
+Correlation: nine teams except the MIN pair. **Murray + Hockenson is a QB-TE stack**; it is
+accepted only as a placeholder. If both are still in at MNF kickoff and the read is
+comfortable, it is fine; if the read is short, the FLEX goes to Jefferson or Cook, which
+is also a stack (Jefferson) or a hedge-free RB (Cook). Darnold vs ARI and HOU DST vs LAC
+are the matchup cores: ARI implied **15.5** (lowest on the slate), LAC **18.0** with the
+weakest offense by EPA.
+
+### EPA cross-check (`./gy m 9`, Tuesday lines)
+
+| Pick | Team implied | Opponent's defense vs this player | Read |
+| --- | --- | --- | --- |
+| Darnold (SEA) | 26.0 | ARI pass D **#2 softest** | Confirmed. Risk is a blowout that ends with SEA running. |
+| Jameson Williams (DET) | **28.8** | MIA pass D **#1 softest** | Confirmed; TD in three straight. |
+| Rice (KC) | 28.0 | NYJ pass D #5 | Confirmed |
+| Warren (IND) | 22.8 | DAL pass D #3 | Confirmed; IND trails → volume |
+| Judkins (CLE) | 20.5 | NO run D **#1 softest** | Fine; low team total |
+| Jacobs (GB) | 22.0 | NE run D #19 | Neutral; GB rush offense is the worst by EPA. Volume (27 touches) is the case. |
+| Murray (MIN) | 21.0 | BUF pass D #7 | Fine |
+| HOU DST | LAC implied **18.0** | LAC offense **#1 weakest** | Best non-bank DST matchup (SEA vs ARI 15.5 is the delta-0 elite unit; leave it). |
+
+### Why these, and the dependencies to re-grade
+
+- **Darnold / Murray**: the two best nil-residual QBs on the board, both in late windows.
+  QB is the long position, and QB24-25 ROS is what to spend. Darnold went 17-34-188-2-1
+  on MNF; the floor is the point.
+- **Murray: sore hamstring (evaluated Monday, day-to-day).** MNF resolves it for free.
+  **Wentz is MIN's backup and he is burned**, so if Murray sits the SFLX goes to Allen
+  (if the read is short) or to Jefferson/Cook/A. Jones. If Friday's report says Doubtful,
+  move SFLX earlier instead: Nix (DEN @ CAR, 16.06, QB23 ROS) at 1:00.
+- **Jacobs**: 27 touches Thursday, the GB workhorse. **Off-field flag**: Schefter (Oct 31)
+  reports additional accusers. That is a shelf-life risk, which argues for spending him
+  now, but a return to the Exempt list would be a scratch. Re-check Saturday; fallback
+  Charbonnet (SEA, 4:25, RB38 ROS, 11.2) or Coleman at 1:00.
+- **Jameson Williams vs Evans**: Evans (SF, 4:05, WR15 / WR22, +7, 13.74, SF implied
+  **30.8**, highest on the slate) is the better buy on paper, but he sat week 7 with the
+  Achilles before the bye. **Default Williams.** Swap to Evans only if he is Full by
+  Friday's report, since Williams locks before SF's inactives post.
+- **Warren**: back from the groin, 10 targets for 18 yards in a 42-7 loss. The targets are
+  the point (the Gadsden check passes). IND sold veterans at the deadline, so the target
+  share should rise.
+- **Judkins**: 11-25 against PIT, but 17-96-2 the week before and NO is the softest run
+  defense on the slate. Fallbacks at 1:00: Coleman (DEN, out-touched Dobbins 15-7, 11.54),
+  Saquon (split with E. Mitchell, 13.43, lowest implied team).
+- **Hockenson** (FLEX placeholder): TDs in two straight. The slot is a lever, not a pick.
+
+### Decision points
+
+1. **~4:00 (before 4:05):** gap G = our score − the live line. Defaults left after 1:00 are
+   HOU 8 + Darnold 17.4 + Jacobs 15.1 + Hockenson 10.3 + Murray 17.1 = **~68**. Use week 8's
+   absolute rise (+55 to +65 from late-1:00). If G is badly negative, FLEX → Nico Collins
+   (4:05) and keep reading.
+2. **~4:20 (before 4:25):** Darnold and Jacobs play unless flagged. Reinforcing here means
+   a bank QB (Maye/Love), so only on a week 7-style collapse.
+3. **~8:15 Sunday:** live line + 30-37 (post-4pm rise). If our score − live line is under
+   ~16 with FLEX and SFLX left: **FLEX → Irving** (SNF).
+4. **MNF kickoff:** points over the live line against an expected **+18 to +23** Monday
+   move, plus a hand count of live MNF slots around the cut. Punt nothing unless the score
+   clears the live line + 25. Short: SFLX → Allen, FLEX → Jefferson or Cook.
+
+### Not taking, and why
+
+- **TNF (JAC@BAL)** and **9:30 CIN@ATL**: Chase Brown (+3, 16.1, RB15), Higgins (+3, 16.4,
+  WR11 ROS, hoard band), Penix. Too early to hold, and the RB/WR are inside the bank.
+- **Willis (QB13 / QB16, 17.65)**: QB16 ROS is in the band we need for weeks 10-13;
+  Darnold/Murray are the same points for less.
+- **Irving (RB8 / RB13, +5, 15.9)**: RB13 is inside the short position's top tier. The SNF
+  lever only.
+- **Saquon (+7) / Skattebo (+6)**: Saquon split work and is on the lowest-implied team;
+  Skattebo has a hamstring (side-field work Monday).
+- **Caleb Douglas (+19), DeMario Douglas (+23), Keenan Allen (+12), M. Washington (+12)**:
+  real deltas, 8.5-10.5 projected, below the ~12.6 per slot the line needs.
+- **NYG DST (+15, 6.27) / NO DST (+4, 7.76)**: NO is the 1:00 swap if HOU's matchup moves;
+  it plays against Judkins, which is a hedge, not a problem.
+- **Negative deltas**: JT (-9), Cook (-7), Hall (-6), DJ Moore (-6), Young (-6), Kincaid
+  (-7), Egbuka (-16), Boston (-5). Bank.
+- **Bank pieces on the shelf**: Gibbs, Bijan, Cook, JT, Swift, Henry, Chase, ARSB, Lamb,
+  Nabers, London, Olave, C. Watson, Golden, Jefferson, Collins, Bowers, McBride, Kittle,
+  Loveland, Likely, LaPorta, all top-12 QBs, and the SEA, MIN, DEN DSTs.
+
+### Checks before committing anyone
+
+1. Wednesday-Friday reports: **Murray** (hamstring), **Evans** (Achilles), Warren (groin),
+   Rice (hamstring/knee history), Judkins, Hockenson. **Jacobs's** off-field status.
+2. Re-pull all boards Saturday, and re-run `./gy m 9 --refresh`.
+3. Inactives ~11:30 for the four-man 1:00 core.
+4. Every lever name against `./gy l` before it goes on a list (the Walker error).
 
 ## Source notes
 
