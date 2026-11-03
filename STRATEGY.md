@@ -2814,7 +2814,7 @@ live for the field. Expect a Monday move of **+18 to +23**, not week 8's +13.9.
 
 | Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| RB | Jonah Coleman (DEN) — Judkins fallback (see owner check) | RB15 | RB22 | +7 | 11.54 | 1:00 @ CAR | Sun 12:55 |
+| RB | Quinshon Judkins (CLE) — owner call over Coleman (see owner check) | RB20 | RB23 | +3 | 12.36 | 1:00 @ NO | Sun 12:55 |
 | WR | Rashee Rice (KC) | WR18 | WR24 | +6 | 14.11 | 1:00 vs NYJ | Sun 12:55 |
 | WR | Jameson Williams (DET) | WR22 | WR21 | -1 | 12.82 | 1:00 @ MIA | Sun 12:55 |
 | TE | Tyler Warren (IND) | TE8 | TE11 | +3 | 13.33 | 1:00 vs DAL | Sun 12:55 |
@@ -2890,6 +2890,16 @@ which is the second key. Coleman's risk is the committee (Dobbins, Harvey). His 
 consolidating, though: 24 carries to Dobbins's 13 over two games, and 15-7 in touches last
 week. **Lean: RB1 → Coleman, Judkins the fallback.** Both lock at 1:00, so confirm on the
 Saturday re-pull with refreshed lines.
+
+**Owner call: Judkins stays.** The owner's reason was that Coleman is the more useful
+back later. On the numbers, the residuals are a wash: RB22 against RB23 ROS. The FantasyPros
+RB schedule for weeks 10-17 actually favors **Judkins** (CLE 5.0 stars, #4 easiest, against
+DEN 3.6, #10). So the later-value argument holds only on Coleman's role trajectory: a
+rookie whose share is still growing, whose ROS rank lags it. The stronger case for Judkins
+is the one the doctrine already ranks above a tiebreak, **role certainty**. He is CLE's lead
+back, and Coleman is in a three-way committee where the floor is 0-2. The gap is 0.8
+points, so this is a coin flip, and the floor argument breaks it toward Judkins. Coleman
+is the 1:00 fallback.
 
 Every other slot passes the tiebreak as is. Williams vs Evans is the only other pair
 within 1.5. Evans has the better total (SF 30.8) and Williams has the better opponent (MIA
