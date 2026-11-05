@@ -2822,7 +2822,7 @@ live for the field. Expect a Monday move of **+18 to +23**, not week 8's +13.9.
 | QB | ~~Sam Darnold~~ **Drew Lock (SEA)** (Thursday update) | QB29 | unranked | — | 17.21 | 4:25 vs ARI | Sun 4:20 |
 | RB | Josh Jacobs (GB) | RB10 | RB20 | **+10** | 15.11 | 4:25 @ NE | Sun 4:20 |
 | FLEX | **held** — T.J. Hockenson (MIN) placeholder | TE9 | TE14 | +5 | 10.34 | **MNF** vs BUF | Sun 8:15 / Mon 8:10 |
-| SFLX | ~~Kyler Murray~~ **Bo Nix (DEN)** (Thursday: Wentz starts MNF) | QB17 | QB23 | +6 | 16.11 | 1:00 @ CAR | Sun 12:55 |
+| SFLX | **Dak Prescott (DAL)** — the week's anchor (owner call; Murray out, Nix the fallback) | QB5 | QB11 | +6 | 20.11 | 1:00 @ IND | Sun 12:55 |
 
 **Projected ~120.5 (~1.06x a 113 line); ~126 with Irving at SNF, ~127 with Allen at MNF.**
 The 1:00 core is four slots at 52.6, but six slots stay open after it, and the 4:00 read
@@ -2906,6 +2906,8 @@ bottom of the elite tier (QB8-12, TE5-8), not the top: Allen, Burrow, Bowers and
 are the endgame. QB is the best anchor position because it has the highest floor in the
 format. Place the anchor in the latest window that has one, so it can still be withheld
 if Sunday reads clear. Commit it early only when no late version exists.
+
+**Owner call: Prescott.** Nix is the 1:00 fallback if Prescott draws a flag.
 
 **This week:** the late QB path is gone (Darnold and Murray both out, and Allen is the
 only MNF QB), so the anchor has to be committed. **Proposed: SFLX Nix → Dak Prescott**
