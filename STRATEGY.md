@@ -2822,7 +2822,7 @@ live for the field. Expect a Monday move of **+18 to +23**, not week 8's +13.9.
 | QB | ~~Sam Darnold~~ **Drew Lock (SEA)** (Thursday update) | QB29 | unranked | — | 17.21 | 4:25 vs ARI | Sun 4:20 |
 | RB | Josh Jacobs (GB) | RB10 | RB20 | **+10** | 15.11 | 4:25 @ NE | Sun 4:20 |
 | FLEX | **held** — T.J. Hockenson (MIN) placeholder | TE9 | TE14 | +5 | 10.34 | **MNF** vs BUF | Sun 8:15 / Mon 8:10 |
-| SFLX | Kyler Murray (MIN) | QB18 | QB25 | +7 | 17.05 | **MNF** vs BUF | Mon 8:10 |
+| SFLX | ~~Kyler Murray~~ **Bo Nix (DEN)** (Thursday: Wentz starts MNF) | QB17 | QB23 | +6 | 16.11 | 1:00 @ CAR | Sun 12:55 |
 
 **Projected ~120.5 (~1.06x a 113 line); ~126 with Irving at SNF, ~127 with Allen at MNF.**
 The 1:00 core is four slots at 52.6, but six slots stay open after it, and the 4:00 read
@@ -2846,6 +2846,31 @@ weakest offense by EPA.
 | Coleman | clean | **Positive role-by-absence**: RJ Harvey is on IR (knee, at least four games). That leaves Dobbins as the only other back, and Dobbins went 7-13 last week. |
 | Murray | no MIN report yet (MNF teams start Thursday) | Still day-to-day (hamstring). Re-grade Friday. |
 | Jacobs, Warren, J. Williams, Hockenson | clean, no new news | Hold. |
+
+**Thursday afternoon: Murray is out. Carson Wentz will start Monday** (FantasyPros, Nov 5,
+citing Schefter's "trending toward Wentz"). Wentz is burned (week 1). **SFLX → Bo Nix**
+(DEN @ CAR, 1:00, QB17 weekly / QB23 ROS, +6, 16.11, DEN implied 23.5, CAR pass D #14).
+
+| Option | Window | Proj | ROS | Why not |
+| --- | --- | --- | --- | --- |
+| **Nix** | 1:00 | **16.11** | QB23 | — the pick: clean, a real starter, in the QB band we spend |
+| Mayfield (TB) | SNF | 14.53 | QB22 | Would keep a second late slot, but he threw **3 passes** last week and 11 the week before. TB is running the offense; the QB floor assumes volume. |
+| Shedeur Sanders (CLE) | 1:00 | 14.07 | QB36 | Backup-QB tactic, but Watson's concussion is unresolved ("could start"). Revisit only if Watson is ruled out Friday and Nix draws a flag. |
+| Joe Milton III (PHI) | 1:00 | 13.93 | — | Named starter (McKee benched), but PHI is implied 17.5, lowest on the slate. |
+| Allen (BUF) | MNF | 20.5 | QB1 | Bank. |
+
+**What it costs the ladder:** MNF drops from two slots to one (FLEX, Hockenson placeholder),
+and Allen is no longer a reachable lever (he can only go in SFLX). That trade is accepted
+because the alternative late QB (Mayfield) has no floor, and Nix gives the 1:00 core a QB,
+which weeks 7 and 8 both asked for. The remaining late levers are FLEX (Irving at SNF;
+Jefferson or Cook at MNF), plus Lock and Jacobs at 4:25.
+
+**The field loses Murray too.** Teams that had him penciled in for MNF lose that slot, and
+Wentz is a lesser lever. Expect the Monday move toward the thin end: **+14 to +18**.
+
+Board: Lock 17.2 · Nix 16.1 · Jacobs 15.1 · Rice 14.1 · Warren 13.3 · J. Williams 12.8 ·
+Coleman 11.5 · Hockenson 10.3 · HOU 8.0 = **~118.5**. 1:00 core: five slots, 67.9.
+Nix and Coleman share a team; a QB-RB pair is mildly positive, accepted.
 
 Lines moved slightly: SEA implied 26.0 → **24.0** (Darnold out, priced in), KC 28.0 → 28.8,
 DEN 23.0 → 23.5, CLE 20.5 → 19.8 (further support for Coleman over Judkins). LAC is still
