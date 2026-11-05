@@ -2819,7 +2819,7 @@ live for the field. Expect a Monday move of **+18 to +23**, not week 8's +13.9.
 | WR | Jameson Williams (DET) | WR22 | WR21 | -1 | 12.82 | 1:00 @ MIA | Sun 12:55 |
 | TE | Tyler Warren (IND) | TE8 | TE11 | +3 | 13.33 | 1:00 vs DAL | Sun 12:55 |
 | DST | Houston | DST3 | DST5 | +2 | 7.98 | 4:05 @ LAC | Sun 4:00 |
-| QB | Sam Darnold (SEA) | QB15 | QB24 | **+9** | 17.43 | 4:25 vs ARI | Sun 4:20 |
+| QB | ~~Sam Darnold~~ **Drew Lock (SEA)** (Thursday update) | QB29 | unranked | — | 17.21 | 4:25 vs ARI | Sun 4:20 |
 | RB | Josh Jacobs (GB) | RB10 | RB20 | **+10** | 15.11 | 4:25 @ NE | Sun 4:20 |
 | FLEX | **held** — T.J. Hockenson (MIN) placeholder | TE9 | TE14 | +5 | 10.34 | **MNF** vs BUF | Sun 8:15 / Mon 8:10 |
 | SFLX | Kyler Murray (MIN) | QB18 | QB25 | +7 | 17.05 | **MNF** vs BUF | Mon 8:10 |
@@ -2835,6 +2835,25 @@ comfortable, it is fine; if the read is short, the FLEX goes to Jefferson or Coo
 is also a stack (Jefferson) or a hedge-free RB (Cook). Darnold vs ARI and HOU DST vs LAC
 are the matchup cores: ARI implied **15.5** (lowest on the slate), LAC **18.0** with the
 weakest offense by EPA.
+
+### Thursday update (Wednesday practice, refreshed lines)
+
+| Player | Report | Read |
+| --- | --- | --- |
+| **Darnold** | **OUT** (quad, hurt on MNF), ruled out by SEA Wednesday | **QB → Drew Lock**, same slot, same 4:25 game. Backup-QB tactic: QB29 weekly, not ROS-ranked, 17.21 projected (Darnold was 17.43), against the #2 softest pass D. A veteran with starts behind him, not a UDFA. The role is settled by an official ruling, not a "week-to-week". |
+| Evans | Q, Achilles, **DNP**, 33% | Off the list. Jameson Williams stays. |
+| Rice | Q, hamstring, **Limited**, 90% | Keep, subject to Friday's report and the 11:30 inactives (1:00 kickoff, verifiable). Swap on a Friday DNP or Doubtful to **Diggs** (WAS vs LAR, 1:00, WR26 ROS, 12.4). |
+| Coleman | clean | **Positive role-by-absence**: RJ Harvey is on IR (knee, at least four games). That leaves Dobbins as the only other back, and Dobbins went 7-13 last week. |
+| Murray | no MIN report yet (MNF teams start Thursday) | Still day-to-day (hamstring). Re-grade Friday. |
+| Jacobs, Warren, J. Williams, Hockenson | clean, no new news | Hold. |
+
+Lines moved slightly: SEA implied 26.0 → **24.0** (Darnold out, priced in), KC 28.0 → 28.8,
+DEN 23.0 → 23.5, CLE 20.5 → 19.8 (further support for Coleman over Judkins). LAC is still
+18.0 for HOU DST.
+
+Board total ~119.5 with Lock. Two QB slots are now backup/streamer QBs (Lock, Murray), and
+both are late. If Murray is Doubtful Friday, **Nix (QB17 weekly, 16.11, 1:00 @ CAR)** is
+the SFLX move. Do not double down on a second flagged QB.
 
 ### EPA cross-check (`./gy m 9`, Tuesday lines)
 
