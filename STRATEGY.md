@@ -2880,6 +2880,42 @@ Board total ~119.5 with Lock. Two QB slots are now backup/streamer QBs (Lock, Mu
 both are late. If Murray is Doubtful Friday, **Nix (QB17 weekly, 16.11, 1:00 @ CAR)** is
 the SFLX move. Do not double down on a second flagged QB.
 
+### Owner question (Thursday): one "anchor" every week from here on?
+
+**What the last three weeks show:** each of them needed at least one bank-tier player to
+survive. Week 6 needed CMC (cut by 10.12 without him). Week 7 needed JSN, Nacua and
+Javonte (cut by 1.68 without Javonte). Week 8 needed Kyren (RB7 ROS) and won by 9.44.
+Margins are shrinking (+20.6, +19.8, +9.4), and the line per slot is now ~12.6. That is
+above what a lineup of cheap positive-delta players projects (~11-13 each). We are
+*already* spending about one anchor a week; we just buy it late.
+
+**Can the bank afford one a week?** Elite stock (top-12 QB, top-15 RB/WR, top-8 TE ROS,
+unburned) against what weeks 14-17 need (4 weeks of max lineups):
+
+| Pos | Elite left | Wk 14-17 need | Spare for wk 9-13 |
+| --- | --- | --- | --- |
+| QB | 11 | 8 (2/wk) | **+3** |
+| RB | 9 | ~10 (2 + some FLEX) | **-1** (already short) |
+| WR | 12 | ~10 | +2 |
+| TE | 8 | 4 | **+4** |
+| **Total** | 40 | ~32 | **~+8 → ~1.5 per week for weeks 9-13** |
+
+**Rule from week 9 on: budget one anchor per week, and take it from QB or TE, never RB.**
+WR's spare 2 are a reserve for a week that needs two. Make it a non-negative delta from the
+bottom of the elite tier (QB8-12, TE5-8), not the top: Allen, Burrow, Bowers and McBride
+are the endgame. QB is the best anchor position because it has the highest floor in the
+format. Place the anchor in the latest window that has one, so it can still be withheld
+if Sunday reads clear. Commit it early only when no late version exists.
+
+**This week:** the late QB path is gone (Darnold and Murray both out, and Allen is the
+only MNF QB), so the anchor has to be committed. **Proposed: SFLX Nix → Dak Prescott**
+(DAL @ IND, 1:00, QB5 weekly / QB11 ROS, **+6**, 20.11, DAL implied **28.5**, IND pass D
+**#3 softest**). That adds +4.0 projected, takes the board to **~122.5 (~1.08x)**, and
+spends a bottom-of-tier QB from the long position. The alternative is Mahomes (QB9 / QB9,
+0 delta, 20.12, KC 28.8 vs NYJ #5), which is a zero delta. Prescott and Rice are not
+correlated, and Prescott does not pair with any of our players (CeeDee Lamb, Pickens and
+Javonte are bank or burned).
+
 ### EPA cross-check (`./gy m 9`, Tuesday lines)
 
 | Pick | Team implied | Opponent's defense vs this player | Read |
