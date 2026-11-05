@@ -2913,8 +2913,9 @@ only MNF QB), so the anchor has to be committed. **Proposed: SFLX Nix → Dak Pr
 **#3 softest**). That adds +4.0 projected, takes the board to **~122.5 (~1.08x)**, and
 spends a bottom-of-tier QB from the long position. The alternative is Mahomes (QB9 / QB9,
 0 delta, 20.12, KC 28.8 vs NYJ #5), which is a zero delta. Prescott and Rice are not
-correlated, and Prescott does not pair with any of our players (CeeDee Lamb, Pickens and
-Javonte are bank or burned).
+correlated. **Prescott and Warren (IND) are opposite sides of DAL @ IND**, which is mildly
+positive: a shootout lifts both, and DAL implied 28.5 makes IND chase. That is acceptable at
+a 1.08x projection.
 
 ### EPA cross-check (`./gy m 9`, Tuesday lines)
 
