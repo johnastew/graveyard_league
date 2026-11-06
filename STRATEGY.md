@@ -3012,9 +3012,21 @@ within 1.5. Evans has the better total (SF 30.8) and Williams has the better opp
    a bank QB (Maye/Love), so only on a week 7-style collapse.
 3. **~8:15 Sunday:** live line + 30-37 (post-4pm rise). If our score − live line is under
    ~16 with FLEX and SFLX left: **FLEX → Irving** (SNF).
-4. **MNF kickoff:** points over the live line against an expected **+18 to +23** Monday
-   move, plus a hand count of live MNF slots around the cut. Punt nothing unless the score
-   clears the live line + 25. Short: SFLX → Allen, FLEX → Jefferson or Cook.
+4. **MNF kickoff (revised Friday; SFLX is now Prescott at 1:00, so only the FLEX is live):**
+   G = our score − the live line. Expected Monday move **+14 to +18** (Murray out, see
+   above), plus a ~5-point buffer for our own slot's variance.
+   - **G ≥ ~25:** punt the FLEX (a rostered deep MIN/BUF backup), keeping Hockenson.
+   - **G 13-25:** Hockenson (10.3) plays.
+   - **G < ~13:** **FLEX → Justin Jefferson** (MIN, WR10 weekly / WR13 ROS, +3, 16.3 with
+     Wentz). Cook (15.8, RB4 ROS) is not better and costs the short position.
+
+   **Owner question (Friday): why not commit Jefferson now?** He can only go in the FLEX,
+   which is already the MNF slot, so committing early gains nothing and gives up the
+   free look. He would also be a second anchor in a week that already has Prescott, and
+   he comes from WR's spare-of-2 reserve. His recent floor is soft: under 45 yards in
+   three of his last four, and Wentz now replaces Murray. Holding WR2 to MNF for him
+   instead (dropping J. Williams) was considered and rejected. The only cheap MNF WRs
+   project ~8, so the default would lose ~5 points to buy a second lever.
 
 ### Not taking, and why
 
