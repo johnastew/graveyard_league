@@ -2933,6 +2933,27 @@ a 1.08x projection.
 - Lock: elbow, "good to go" (Nov 6). Everyone else is clean.
 - Lines at kickoff: DAL 28.0, KC 28.5, DET 28.5, DEN 23.5, LAC 17.5 (HOU DST), SEA 24.0.
 
+### Sunday checkpoint (week 9): 1:00 games in Q3
+
+**27.66 against a live line of 28.4** (Prescott 11.76, Coleman 6.3, J. Williams 5.0, Rice
+4.6, Warren 0). The app has Prescott at QB and Lock at SFLX. The line is running far below
+week 8's at the same point (40.04 in Q3), so this is a low-scoring 1:00 slate.
+
+Rough read: week 8 rose +69 from its Q3 reading to the final. With Monday thinned by
+Murray's absence, call it +65-72 → **final line ~93-100**. Ours: 27.7 + ~18 more from the
+1:00 games + HOU 9.4 + Jacobs 14.3 + Lock 16.7 + Hockenson 9.9 = **~96**. A coin flip on
+the defaults, not a collapse. We hold four of nine slots for later windows, and most of
+the field holds fewer.
+
+Lever order, cheapest first, priced against the week 9 anchor budget (Prescott is
+already the anchor; WR has 2 spare elites, QB 3, RB none):
+1. **FLEX Hockenson → Jefferson at MNF** (+6.4, WR13 ROS). Best value, decided with the
+   most information.
+2. **SFLX Lock → Maye** (4:25, +3.8, QB6) or **→ Purdy** (4:05, +5.6, QB3, SF implied
+   30.5). Endgame QBs; only if the ~3:55 gap is badly negative (G < -10).
+3. Irving at SNF (+6, RB13): last resort, since it spends the short position and kills
+   the Jefferson option.
+
 ### EPA cross-check (`./gy m 9`, Tuesday lines)
 
 | Pick | Team implied | Opponent's defense vs this player | Read |
