@@ -2919,6 +2919,20 @@ correlated. **Prescott and Warren (IND) are opposite sides of DAL @ IND**, which
 positive: a shootout lifts both, and DAL implied 28.5 makes IND chase. That is acceptable at
 a 1.08x projection.
 
+### Sunday morning (week 9)
+
+- **Pickens inactive** (hamstring, announced 11:31 ET). **Flournoy (DAL) was considered and
+  passed on.** The board has not repriced yet (Flournoy WR42, Pickens still WR18). His own
+  usage is 4 targets in each of the last two games (the Gadsden check). The ~6-7 targets
+  Pickens leaves are split three ways with Lamb and Jake Ferguson. Best case is ~11-12 PPR,
+  below J. Williams (13.6, MIA pass D #1) and Rice (14.1). He would also make three of
+  our players in DAL @ IND (Prescott, Flournoy, Warren), a stack at a 1.08x projection.
+  **Small Prescott downgrade:** he loses his WR2, but Lamb's volume holds the floor.
+- **Rice has dropped off the injury feed** and moved up to WR15. Read KC's inactives in the
+  app before 1:00 to confirm. If he is inactive, the fallback is Diggs (1:00).
+- Lock: elbow, "good to go" (Nov 6). Everyone else is clean.
+- Lines at kickoff: DAL 28.0, KC 28.5, DET 28.5, DEN 23.5, LAC 17.5 (HOU DST), SEA 24.0.
+
 ### EPA cross-check (`./gy m 9`, Tuesday lines)
 
 | Pick | Team implied | Opponent's defense vs this player | Read |
