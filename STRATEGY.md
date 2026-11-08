@@ -2954,6 +2954,21 @@ already the anchor; WR has 2 spare elites, QB 3, RB none):
 3. Irving at SNF (+6, RB13): last resort, since it spends the short position and kills
    the Jefferson option.
 
+**3:58 (1:00 games mid-to-late Q4): 52.36 against 44.6, G = +7.8.** Prescott 16.16,
+Coleman 17.1 (13-40-1, 4-4-31), Rice 9.9, Warren 4.2, J. Williams 5.0 (final). Our defaults
+after the 1:00 games are now **50.7** (HOU 9.4, Jacobs 14.7, Lock 16.7, Hockenson 9.9),
+against week 8's 43.2. So the week 8 gap table reads ~7.5 points richer: an effective G of
+~15, the one-lever band. Estimate: line 44.6 + 56-64 (weeks 5-8 rise from a late-1:00
+reading, trimmed for the thinner Monday) = **~100-108**. Ours ≈ 52.4 + ~4 more from the 1:00
+games + 50.7 = **~107**: favored by a few points on the defaults.
+
+**Call: no moves at 4:05 or 4:25.** Purdy and Maye were priced only for G < -10. The one
+lever this needs is the FLEX, and it is cheapest **at MNF**: Jefferson (+6.4) with
+near-perfect information. Irving at SNF is the same size of lever, and taking him would
+kill the Jefferson option, so **skip the 8:15 decision** unless Jefferson becomes
+unavailable. The MNF rule stands (G vs the live line: ≥ 25 punt, 13-25 Hockenson,
+< 13 Jefferson).
+
 ### EPA cross-check (`./gy m 9`, Tuesday lines)
 
 | Pick | Team implied | Opponent's defense vs this player | Read |
