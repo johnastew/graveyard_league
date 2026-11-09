@@ -2982,6 +2982,11 @@ RB4 ROS) is the same size, but from the short position and more touchdown-depend
 project short, so the tiebreak is ceiling, and that is **Jefferson. Keep him.** This is
 the maximum available. Honest read: **a coin flip, slightly worse than even.**
 
+**Pre-MNF: 86.70 against 80.32, G = +6.4.** SNF added only +5.8 (week 8: +17.8). Monday
+move expected **+13 to +19** (thin pool, Murray out) → final ~93-99. We need about 7-13 from
+the FLEX. Jefferson (16.1) → ~102.8, +4 to +10. Hockenson (9.9) → ~96.6, -3 to +3. **G < 13
+→ Jefferson stays**, as the rule set on Friday said.
+
 ### EPA cross-check (`./gy m 9`, Tuesday lines)
 
 | Pick | Team implied | Opponent's defense vs this player | Read |
