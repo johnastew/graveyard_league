@@ -2969,6 +2969,19 @@ kill the Jefferson option, so **skip the 8:15 decision** unless Jefferson become
 unavailable. The MNF rule stands (G vs the live line: ≥ 25 punt, 13-25 Hockenson,
 < 13 Jefferson).
 
+**Post-4pm (8:31, SNF just kicked off): 86.70 against 74.5, G = +12.2.** Prescott 19.5,
+Coleman 18.8, HOU DST 12, Lock 12.6 (Q tag in-game), Rice 9.9, Warren 8.4, J. Williams 5.0,
+**Jacobs 0.5** (4-5, Q tag in-game: the 4:25 bust). The owner has Jefferson in the FLEX
+already. Past post-4pm → final rises: +32.7, +36.7, +29.6, +31.7. SNF (TB @ CHI: Irving,
+Swift, C. Williams, Loveland) is a rich pool and Monday is thin, so **+27 to +35 → final
+~101.5-109.5**. Ours: 86.7 + FLEX.
+
+The FLEX is the only slot left, and only MNF players can still go in it. Jefferson (16.1)
+→ **~102.8**, at the low edge of the range. Hockenson (9.9) → ~96.6, short. Cook (15.8,
+RB4 ROS) is the same size, but from the short position and more touchdown-dependent. We
+project short, so the tiebreak is ceiling, and that is **Jefferson. Keep him.** This is
+the maximum available. Honest read: **a coin flip, slightly worse than even.**
+
 ### EPA cross-check (`./gy m 9`, Tuesday lines)
 
 | Pick | Team implied | Opponent's defense vs this player | Read |
