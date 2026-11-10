@@ -328,8 +328,8 @@ scales with what the Monday game offers the teams still live, so size it from th
 pool's reinforcement capacity at the start of the week**: thin pool → +12 to +16, normal →
 +18 to +23. The ratio is now the worse of the two estimators; retire it for Monday.
 
-**Week 9 confirms it and moves the thin end down.** The Monday pool lost Murray (Wentz,
-burned by many, started instead), and the move was **+8.78**, below even the +13 to +19
+**Week 9 confirms it and moves the thin end down.** The Monday pool lost Murray (Wentz
+started instead), and the move was **+8.78**, below even the +13 to +19
 called on Sunday night. Revised sizing: **thin pool with a starting QB out → +8 to +12;
 thin → +12 to +16; normal → +18 to +23.** Two weeks running the Monday estimate has
 overshot, and both times the overshoot cost an asset (week 8 Daniels, week 9 Jefferson).
