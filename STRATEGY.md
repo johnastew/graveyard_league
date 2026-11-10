@@ -3193,6 +3193,147 @@ About seven spare elite pieces cover four weeks, so **one anchor a week, from QB
 still holds, and the TE stock is now the deepest spare. Jefferson's cost comes out of the
 WR reserve. If a week needs two anchors, take the second from TE (TE5-8), not WR.
 
+## Week 10 board (2026) — Tuesday pull, provisional
+
+Cut 22.8% of 232 (53 reaped, 179 survive). Final lines: 101.16, 93.30, 100.80, 109.14,
+89.1 (mean 98.7). Week 9 was depressed by injuries. This week four byes (CHI, DEN, PHI, TB)
+shrink everyone's pool, and the cut % keeps rising. **Plan against ~102, worst case ~108**
+(≈11.3-12 per slot). Nine real starters, **two slots held to MNF**. All boards PPR, pulled
+Tuesday morning, before any practice report. Burned list: 81.
+
+**Windows (ET, from `./gy m 10`).** Byes: **CHI, DEN, PHI, TB**. **TNF** NYG@WAS ·
+**Sun 9:30** NE@DET · **1:00** BUF@NYJ, JAC@TEN, CAR@NO, KC@ATL, MIN@GB, HOU@CLE, MIA@IND ·
+**4:05** LAR@ARI, SEA@LV · **4:25** SF@DAL · **SNF** PIT@CIN · **MNF** LAC@BAL.
+
+### Inventory recount
+
+| Pos | Burned | Usable left | Starts needed wk 10-17 | Read |
+| --- | --- | --- | --- | --- |
+| QB | 16 | **10 of top 12 ROS**; 10 in QB13-28 (Shough, Young, Willis, Nix, Penix, McCarthy, Mayfield, Darnold, Murray, Herbert) + Ward, Beck, Mendoza | 16 (8 elite for wk 14-17) | **Long by ~2 elite.** Spend QB13-28. |
+| RB | 22 | **8 of top 15 ROS** (Gibbs, Bijan, Cook, Swift, Irving, Warren, JT, C. Brown); 10 in RB16-30 | 16 + FLEX | **Short.** Spend RB16-35 only. |
+| WR | 25 | **12 of top 15 ROS** (Chase, ARSB, Lamb, Nabers, Golden, C. Watson, Higgins, Olave, London, Flowers, P. Washington, Collins) | ~10 elite for wk 14-17 | **Long below WR20; ~2 spare elite.** |
+| TE | 9 | **8 of top 8 ROS** (Bowers, McBride, Kittle, Loveland, Likely, LaPorta, Kraft, Fannin) | 4 elite for wk 14-17 | **Long by ~4.** |
+
+### Late-pool reinforcement capacity
+
+| Window | Cheap default | Reinforcement (unburned, checked against `./gy l`) | Gain |
+| --- | --- | --- | --- |
+| 4:05 LAR@ARI, SEA@LV | Charbonnet, LAR DST | Jeanty (13.2, same game); Bowers / McBride (bank TEs) | ~+2 |
+| 4:25 SF@DAL | (FLEX held) | **Kittle** (16.1, TE3), Lamb (20.5, WR4): bank, emergency only | +6.6 / +11 |
+| SNF PIT@CIN | (FLEX held) | **Higgins** (17.2, WR9 ROS, **+4**), Warren (15.9, RB10), C. Brown (14.5, RB14) | **+7.7** over the placeholder |
+| MNF LAC@BAL | Henry (RB), Hampton (FLEX) | Flowers (14.7, WR12) | +5.2 |
+
+**MNF is thin.** BAL has scored 13 or fewer in four straight games, and LAC is implied
+16.5. The usable names are Henry, Flowers, Herbert and Hampton. By the week 9 sizing, expect
+a Monday move of **+12 to +16**. The real reinforcement is Higgins at SNF. The Monday slots
+are mainly **savings levers**: Henry can be withheld if Sunday reads clear.
+
+### Working nine — exact player per slot, and when to set it
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| QB | Bryce Young (CAR) | QB13 | QB15 | +2 | 18.99 | 1:00 @ NO | Sun 12:55 |
+| SFLX | Tyler Shough (NO) | QB11 | QB14 | +3 | 18.19 | 1:00 vs CAR | Sun 12:55 |
+| WR | DJ Moore (BUF) | WR22 | WR20 | -2 | 12.73 | 1:00 @ NYJ | Sun 12:55 |
+| WR | Keenan Allen (IND) | WR34 | WR46 | **+12** | 10.45 | 1:00 vs MIA | Sun 12:55 |
+| TE | Dalton Kincaid (BUF) | TE8 | TE9 | +1 | 10.53 | 1:00 @ NYJ | Sun 12:55 |
+| RB | Zach Charbonnet (SEA) | RB22 | RB34 | **+12** | 11.47 | 4:05 @ LV | Sun 4:00 |
+| DST | LA Rams | DST5 | DST8 | +3 | 7.60 | 4:05 @ ARI | Sun 4:00 |
+| FLEX | **held** — Omarion Hampton (LAC) placeholder | RB33 | RB33 | 0 | 9.50 | **MNF** @ BAL | Sun 8:15 / Mon 8:10 |
+| RB | Derrick Henry (BAL) | RB12 | RB18 | +6 | 16.21 | **MNF** vs LAC | Mon 8:10 |
+
+**Projected ~115.7 (~1.13x a 102 line); ~123.4 with Higgins at SNF.** The 1:00 core is five
+slots at 70.9, built on two QB floors. **No anchor is committed by default.** The dearest
+spends are Henry (RB18, 33 years old, the decaying piece week 8 flagged for "the next time a
+week needs a bank RB"), Moore (WR20) and Kincaid (TE9). Everything else sits outside its
+usable pool. The anchor budget goes to the SNF lever (Higgins) if Sunday asks for it.
+
+**Correlation.** Young and Shough are **opposite QBs in CAR @ NO** (total 48.5). That is
+mildly positive, since a shootout lifts both. Accepted: Shough is the same points as
+Mahomes (18.19 vs 18.46) at QB14 ROS instead of QB11, with a +3 delta against +3. Moore +
+Kincaid is a **BUF WR-TE pair** in the highest implied total on the slate (29.5, NYJ pass D
+#3 softest). Henry and Hampton are opposite sides of LAC @ BAL. Decorrelated swaps if
+wanted: SFLX → Stroud (HOU, 17.02, QB12) or Willis (MIA, 16.43, QB17, -2); TE → Fannin (CLE,
+10.35, TE8, but CLE implied 17.5).
+
+**The WR pair is the known weak point.** Cheap 1:00 WRs have returned about half their
+projection three weeks running (see the week 9 result). Moore + Allen project 23.2;
+discount to ~15 and the defaults land at ~107, at the worst-case line. That is why the FLEX
+stays open to SNF and MNF and Higgins is pre-named, rather than buying Olave (WR10, 16.62)
+at 1:00. **Owner option:** Olave for Allen (+6.2) commits the WR spare now, and he would be a
+third player in CAR @ NO.
+
+### Why these, and the dependencies to re-grade
+
+- **Young**: 28-39-276-3-1 last week against DEN. NO pass D is #11 softest, CAR is implied
+  23.5. No role dependency.
+- **Shough**: 265 yards plus 10-51 rushing against CLE. The rushing raises the floor. No
+  role dependency.
+- **Moore**: healthy after shoulder and knee scares (news Nov 1, Nov 10). BUF implied
+  **29.5**, the highest on the slate. A -2 delta is a mild premium, accepted for the context:
+  the next cheap WR (Boston, +6) projects 10.37 on a 17.5 team total.
+- **Keenan Allen**: led IND with 8 targets in week 9 and 7-7-67 the week before. He has
+  trade rumors (Nov 2). Confirm he is still a Colt before Sunday.
+- **Kincaid**: "feast or famine" (3 targets Monday, 6+ the two games before). The BUF
+  total is the case.
+- **Charbonnet over Jeanty** (same game, 4:05): Charbonnet went 16-77 in his second game
+  back from the knee, with the role growing. SEA is implied 23.5 against the #9 softest run
+  D. He is RB34 ROS, nil residual. Jeanty projects 1.7 more but had **2 and 6 carries the
+  last two games**, with Mike Washington Jr. taking the work "as the plan". That is a 0-2
+  committee floor. Charbonnet's risk is the Price split (re-grade Friday).
+- **LAR DST**: highest projection among unburned DSTs (7.60) against the lowest implied
+  total on the slate (ARI 15.5).
+- **Henry**: BAL is turning to Brissett (Lamar on IR, Huntley toe). Henry has 17-57 and
+  11-53-1 in his last two games. LAC run D is #12. MNF, so it is a free look.
+- **Hampton** (FLEX placeholder): LAC's carries leader, 13-60 last week, on a weak offense.
+  He is a placeholder only, keeping the FLEX open past SNF.
+
+### Not taking, and why
+
+- **TNF (NYG@WAS)**: McCarthy (+4, 15.98), Nabers, Likely, Skattebo, Diggs. Avoid.
+- **9:30 (NE@DET)**: Maye, Goff, Gibbs, ARSB, LaPorta, DeMario Douglas (+24, 9.85). Can't
+  be held.
+- **Mahomes (QB11 ROS, 18.46)**: the anchor if Young or Shough draws a flag. Lawrence (QB6,
+  21.11) is endgame.
+- **Olave (WR10, +3, 16.62)**: see owner option above. **Parker Washington (WR13, +3, 15.13)**:
+  vetoed, since TEN's pass D is #30.
+- **Kamara (RB20 / RB42, +22)**: projects 8.93. Estime is taking carries while Etienne is on IR.
+- **Hall (+6, 12.12, RB20)**: the 1:00 alternative to Charbonnet, but he splits with
+  Braelon Allen.
+- **JT, Cook, Warren, C. Brown**: bank RBs. Warren and Brown are SNF reinforcement only.
+- **Herbert (MNF, 13.42)**: LAC is implied 16.5, and taking him gives up a QB floor at 1:00.
+  No MNF QB upgrade exists to make holding SFLX worthwhile.
+- **Bank on the shelf**: Allen, Burrow, Purdy, Maye, Lawrence, Love, Goff, Gibbs, Bijan,
+  Cook, Swift, Irving, Chase, ARSB, Lamb, Nabers, Golden, C. Watson, London, Collins,
+  Bowers, McBride, Kittle, Loveland, Likely, LaPorta, Kraft, and the SEA and MIN DSTs.
+
+### Decision points
+
+1. **11:30 Sunday**: inactives for the five-man 1:00 core.
+2. **~4:00 (before 4:05)**: Charbonnet and LAR DST lock. Defaults left after the 1:00 games:
+   Charbonnet 11.5 + LAR 7.6 + Hampton 9.5 + Henry 16.2 = **44.8**. The rise from a late-1:00
+   reading to the final line has been +62 to +65 (weeks 5-8), but +44.5 in week 9; call it
+   **+50 to +60** with a thin Monday. No 4:05 reinforcement exists for the RB slot.
+3. **~4:20 (before 4:25)**: emergency only. If badly short (G < -10), FLEX → Kittle (+6.6)
+   or Lamb (+11).
+4. **~8:15 Sunday**: post-4pm → final rises were +32.7, +36.7, +29.6, +31.7 and +14.6. Use
+   **+25 to +33**. Defaults left are Hampton + Henry (25.7), plus a 5-point buffer. **If our
+   score − the live line is under ~10, FLEX → Higgins.** Otherwise hold the FLEX to Monday.
+5. **MNF kickoff**: G = our score − the live line, with a Monday move of +12 to +16 plus a
+   5-point buffer.
+   - **G ≥ ~21**: punt both MNF slots (rostered deep LAC/BAL backups) and bank Henry.
+   - **G 10-21**: Henry plays; punt the FLEX.
+   - **G < 10**: Henry, and FLEX → Flowers (14.7) over Hampton.
+
+### Checks before committing anyone
+
+1. Wednesday-Friday reports: all nine, plus **Price** (Charbonnet's split), **Keenan
+   Allen's** team (trade), Lamar/Huntley (Henry's game script), Higgins and Warren (the SNF
+   levers).
+2. Re-pull all boards Saturday, and re-run `./gy m 10 --refresh`.
+3. Every lever name against `./gy l` before it goes on a list. Higgins, Warren, C. Brown,
+   Flowers, Kittle, Lamb and Jeanty were all checked Tuesday.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
