@@ -300,6 +300,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 6 | 30.9 | 56.58 | 74.44 | **93.30** | 113.88 | +20.58 (survived) |
 | 7 | 37.1 | 71.24 | 78.2 | **100.80** | 120.62 | +19.82 (survived) |
 | 8 | 48.96 | 77.40 | 95.20 | **109.14** | 118.58 | +9.44 (survived) |
+| 9 | 44.6 | 74.5 | 80.32 | **89.1** | 95.5 | +6.4 (survived) |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
 reading before MNF. Week 5's 36.04 was read with the 1:00 games at Q4 2:00. Final lines
@@ -317,6 +318,7 @@ have risen every week, and the rise is accelerating: 72.20, 79.64, 88.04, 101.16
 | 6 | 74.44 | 93.30 | +18.86 | **1.253x** |
 | 7 | 78.20 | 100.80 | +22.60 | **1.289x** |
 | 8 | 95.20 | 109.14 | **+13.94** | **1.146x** |
+| 9 | 80.32 | 89.1 | **+8.78** | **1.109x** |
 
 **Week 8 broke the ratio, and the reason is the Monday pool, not the Sunday line.** The
 Tuesday board called CHI@SEA "the thinnest MNF pool of the season" and predicted the field
@@ -325,6 +327,12 @@ against +19 to +23 from the absolute method and +24 to +31 from the ratio. **The
 scales with what the Monday game offers the teams still live, so size it from the MNF
 pool's reinforcement capacity at the start of the week**: thin pool → +12 to +16, normal →
 +18 to +23. The ratio is now the worse of the two estimators; retire it for Monday.
+
+**Week 9 confirms it and moves the thin end down.** The Monday pool lost Murray (Wentz,
+burned by many, started instead), and the move was **+8.78**, below even the +13 to +19
+called on Sunday night. Revised sizing: **thin pool with a starting QB out → +8 to +12;
+thin → +12 to +16; normal → +18 to +23.** Two weeks running the Monday estimate has
+overshot, and both times the overshoot cost an asset (week 8 Daniels, week 9 Jefferson).
 
 **At n=6 the ratio has settled at 1.25-1.29 for four weeks** (1.256, 1.283, 1.253,
 1.289), and the Monday move at +19 to +23. Use **1.29 as the central estimate and 1.32 as
@@ -3123,6 +3131,67 @@ within 1.5. Evans has the better total (SF 30.8) and Williams has the better opp
 2. Re-pull all boards Saturday, and re-run `./gy m 9 --refresh`.
 3. Inactives ~11:30 for the four-man 1:00 core.
 4. Every lever name against `./gy l` before it goes on a list (the Walker error).
+
+## Week 9 result (2026)
+
+**Survived.** Scored **95.5** against a final cut line of **89.1**, a margin of +6.4, the
+thinnest of the season (+20.6, +19.8, +9.4, +6.4). Nine burned, **81 on the season (QB 16,
+RB 22, WR 25, TE 9, DST 9)**, all recorded in `data/used_players.json`. 232 teams remain.
+
+| Slot | Player | Pts | Window |
+| --- | --- | --- | --- |
+| QB/SFLX | Dak Prescott (DAL) | **19.5** | 1:00 |
+| RB | Jonah Coleman (DEN) | **18.8** | 1:00 |
+| QB/SFLX | Drew Lock (SEA) | 12.6 | 4:25 |
+| DST | Houston | 12.0 | 4:05 |
+| WR | Rashee Rice (KC) | 9.9 | 1:00 |
+| FLEX | Justin Jefferson (MIN) | 8.8 | MNF |
+| TE | Tyler Warren (IND) | 8.4 | 1:00 |
+| WR | Jameson Williams (DET) | 5.0 | 1:00 |
+| RB | Josh Jacobs (GB) | 0.5 | 4:25 (hurt in-game) |
+
+The final line **fell 20 points** from week 8 (109.14 → 89.1), the first big drop of the
+season. A low-scoring slate (byes PIT and TEN, Darnold and Murray out) dragged the whole
+field down. Same-checkpoint readings showed it from the 1:00 games on (Q3: 28.4 against
+week 8's 40.04).
+
+### What decided the week
+
+- **The owner's Coleman revision was the week.** Coleman 18.8; Judkins, the original pick,
+  went 15-43, 1-2 for **5.5**. With Judkins we score 82.2 and are cut by 6.9. Settling the
+  tie by spending the shakier future role and banking the settled one also paid on the scoreboard.
+- **Jefferson was not needed.** Hockenson, the placeholder he replaced, caught 4-33 for
+  **7.3** → 94.0, which still survives by 4.9. The swap gained 1.5 points and spent a WR13
+  ROS asset from WR's spare-of-2 reserve. The call was consistent with the rule (G = 6.4
+  against a +13 to +19 Monday estimate), but the estimate was high again: the move was
+  +8.78. Even on the revised thin-pool sizing (+8 to +12), G = 6.4 sits on the edge where
+  Hockenson is a coin flip, so the swap was defensible. The fix is the estimate, not the
+  rule. A punt would have lost (86.70 < 89.1).
+- **The 1:00 WR pair busted for the third straight week**: Rice + J. Williams 14.9 on
+  ~26.9 projected (week 7: 10.3, week 8: 6.8). Over three weeks the cheap WR21-45 spends
+  have returned about half their projection. That is now a pattern, not noise. When the
+  line per slot is ~12, a WR projected 12-14 in this band is a ~7-point expected player.
+- **A 4:25 player left mid-game for the second week running** (Jacobs 4-5, after Henry in
+  week 8). Nothing in those windows can be replaced once it locks, so only SNF and MNF slots
+  absorb an in-game injury.
+- **Irving went 28.5 at SNF** and was correctly skipped: he would have killed the MNF
+  option, and the read at 8:15 did not need him. He stays banked (RB13 ROS, short position).
+- Cook has no week 9 stat row in the FantasyPros feed. Check before he goes on any list.
+
+### Anchor budget after week 9
+
+Week 9 spent **two** elite pieces (Prescott QB11, Jefferson WR13) against a budget of ~1.5.
+
+| Pos | Spare for wk 10-13 (was) | Now |
+| --- | --- | --- |
+| QB | +3 | **+2** |
+| RB | -1 | -1 |
+| WR | +2 | **+1** |
+| TE | +4 | +4 |
+
+About seven spare elite pieces cover four weeks, so **one anchor a week, from QB or TE**,
+still holds, and the TE stock is now the deepest spare. Jefferson's cost comes out of the
+WR reserve. If a week needs two anchors, take the second from TE (TE5-8), not WR.
 
 ## Source notes
 
