@@ -3325,6 +3325,40 @@ third player in CAR @ NO.
    - **G 10-21**: Henry plays; punt the FLEX.
    - **G < 10**: Henry, and FLEX → Flowers (14.7) over Hampton.
 
+### Thursday update (Wednesday practice, refreshed lines)
+
+| Player | Report | Read |
+| --- | --- | --- |
+| **Keenan Allen** | **Traded to SF** (Nov 10) for a 2027 6th. Now WR38, 6.18, behind Evans/Deebo | **Out. WR2 → KC Concepcion Jr.** (see below). Josh Downs was also traded (to KC), so IND's passing game is thin. |
+| **Kincaid** | Q, ankle, **Limited** Wed, 94.5% | Keep, subject to Friday's report and the 11:30 inactives (1:00 kickoff, verifiable). **Swap on a Friday DNP or Doubtful to Brenton Strange** (JAC @ TEN, 10.83, clean). Strange also breaks the BUF pair. Fannin (groin, Limited) and Hockenson (wrist, DNP) are flagged too, so they are not fallbacks. |
+| Charbonnet | clean; 12.97 (up from 11.47) | Price is a pass-down complement (4-4-54 last week); Charbonnet had the 16 carries. Holds. |
+| Henry | clean; 16.71 | Holds. |
+| Young, Shough, Moore | clean | Hold. |
+| Mahomes (anchor fallback) | Full Wednesday (elbow) | Still the SFLX fallback. |
+
+**WR2 replacement.** The cheap band is thin and flagged:
+
+| Option | Wk / ROS | Delta | Proj | Team implied | Status | Read |
+| --- | --- | --- | --- | --- | --- | --- |
+| **KC Concepcion Jr. (CLE)** | WR25 / WR28 | +3 | 10.22 | 18.5 | **clean** (hobbled off Sunday, returned, scored 64 yds) | **The pick.** Positive role-by-absence if Boston (toe) sits. |
+| Denzel Boston (CLE) | WR22 / WR29 | +7 | 10.72 | 18.5 | **Q, toe, DNP, 65%** | Better on paper; flagged at 1:00. Take him over Concepcion only if Friday is Full. |
+| Jakobi Meyers (JAC) | WR29 / WR38 | +9 | 10.75 | 28.5 | **Q, ankle, DNP, 57%** | Flagged; TEN pass D #30. |
+| Adonai Mitchell (NYJ) | WR34 / WR48 | +14 | 9.60 | 21.0 | clean | 0-for-7 then 7-142-1; too volatile. |
+| **Chris Olave (NO)** | **WR6** / WR10 | +4 | 16.88 | 25.5 | clean | Owner option, +6.7. It would be the week's anchor (from WR's spare), a QB-WR stack with Shough, and a third player in CAR @ NO. |
+
+Concepcion matches Allen's projection (10.22 vs 10.45) at nil residual, so the structure
+is unchanged and **Higgins stays the conditional SNF lever** rather than a commitment. The
+case for Olave is the bust pattern: a 10-point WR is a ~6-point WR on recent form. But the
+ladder already prices that in, through Higgins (17.56) at 8:15 with the 1:00 results known. CLE's QB is unsettled
+(Watson in protocol, Sanders threw 297-2 last week), and that is Concepcion's main risk.
+Both CLE QBs are known quantities.
+
+**Board ~115.9** (Young 18.99, Shough 18.19, Moore 12.41, Concepcion 10.22, Kincaid 10.03,
+Charbonnet 12.97, LAR 7.60, Hampton 8.79, Henry 16.71); **~124.7 with Higgins.**
+
+**Lines moved slightly:** ARI 15.5 → **15.0** (LAR DST better), NO 25.0 → 25.5, CAR 23.5 →
+23.0, CIN 26.5, BAL 21.5 / LAC 17.0 (MNF still thin). No pick changes on the EPA table.
+
 ### Checks before committing anyone
 
 1. Wednesday-Friday reports: all nine, plus **Price** (Charbonnet's split), **Keenan
