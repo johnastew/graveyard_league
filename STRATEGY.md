@@ -3385,6 +3385,15 @@ day ahead. Trust the owner's clock over the environment's.)*
   Charbonnet 12.97, LAR 7.60, Hampton 8.79, Henry 16.71), about 1.20x a 102 line. **~130.7
   with Higgins.** App total: 118.1.
 
+### Sunday morning (week 10, 10:45 CT)
+
+- **Boston officially active** (news 10:36 CT). Concepcion stays; Boston playing takes
+  away the role-by-absence bump.
+- **Watson is back at QB for CLE** (same item): a known quantity, no change.
+- No inactive news on any of the four 12:00 CT players (Young, Shough, Moore, Concepcion)
+  and no new designations. Absence of news is not confirmation, so read the app's inactive
+  flags before 12:00 CT.
+
 ### Owner travelling Sunday: default committed, presence only saves
 
 The ladder needs someone at 3:20 and 7:15 CT. Without that, the levers expire. Week 8's rule
