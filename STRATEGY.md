@@ -3428,6 +3428,14 @@ then Warren + Higgins + Henry = 50.6, against a post-4pm rise of +25-33 plus a 5
 Lamb (3:25 CT, 20.74) is the same trade decided on worse information, so skip him.
 Bowers (15.2) and McBride (15.2) are not upgrades on Kittle (16.1).
 
+### Sunday 2:35 CT (noon games ending): 38 against 57.5, G = -19.5
+
+The gap closed from -28 to -19.5: we gained +26 and the line +17.5. Still to come (with
+Warren in): LAR 7.6, Kittle 16.1, Warren 16.3, Higgins 17.6, Henry 16.7 = **74.3 → ours
+~112**. Line from a late-noon reading: +44.5 (week 9) to +60-65 (weeks 5-8), and this week's
+Monday is thin, so **+45-60 → ~102-117, midpoint ~110**. **A coin flip, slightly favored.**
+Charbonnet → Warren stands (G < -10). Chase at 7:15 CT stays the last resort (G < ~-12).
+
 ### Owner travelling Sunday: default committed, presence only saves
 
 The ladder needs someone at 3:20 and 7:15 CT. Without that, the levers expire. Week 8's rule
