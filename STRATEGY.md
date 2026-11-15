@@ -3412,6 +3412,22 @@ live line of ~23. This is the expected shape: **~71 projected is still to come a
 
 Upgrade capacity is nearly exhausted: Warren (+3.3) is the only meaningful lever left.
 
+### Sunday 1:56 CT (noon games in Q3): 12 against 40, G = -28
+
+Worse than the -10 trigger, and too far for the last quarter of the noon games to close.
+**Call: Charbonnet → Warren now** (SNF, 16.3), without waiting for 2:55.
+
+Rough finish: ours ≈ 12 + ~8 more at noon + ~74 late = **~94**. Line ≈ 40 + ~9 to the end of
+the noon games + 50-60 = **~99-109**. Slightly behind, not a collapse.
+
+**Lever left: FLEX Higgins → Ja'Marr Chase (SNF, 20.75, +3.2).** That swaps WR9 for WR2 ROS,
+so it costs a better asset for 3 points: last resort only. Decide at 7:15 CT. Remaining is
+then Warren + Higgins + Henry = 50.6, against a post-4pm rise of +25-33 plus a 5-point buffer:
+- G ≥ ~-12 → leave it.
+- G < ~-12 → Higgins → Chase.
+Lamb (3:25 CT, 20.74) is the same trade decided on worse information, so skip him.
+Bowers (15.2) and McBride (15.2) are not upgrades on Kittle (16.1).
+
 ### Owner travelling Sunday: default committed, presence only saves
 
 The ladder needs someone at 3:20 and 7:15 CT. Without that, the levers expire. Week 8's rule
