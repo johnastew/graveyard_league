@@ -3382,6 +3382,23 @@ Darnell Washington (SNF) or Andrews (MNF). Higgins stays the conditional second 
   Charbonnet 12.97, LAR 7.60, Hampton 8.79, Henry 16.71), about 1.20x a 102 line. **~130.7
   with Higgins.** App total: 118.1.
 
+### Owner travelling Monday: set the MNF slots Sunday night
+
+**After SNF ends, the live line does not move until MNF kicks off**, so the pre-MNF read
+is available Sunday ~10:45 CT. The only thing lost by deciding then is Monday's inactive
+news, and Henry, Hampton and Flowers were all clean on the final reports. Thresholds are
+widened ~4 points because nobody can react on Monday, and close calls go to real players
+(you can always punt, never un-punt):
+
+- **7:15 CT (before SNF):** FLEX → Higgins if G < ~12, up from ~10.
+- **~10:45 CT (after SNF), Higgins in:** Henry plays unless G ≥ ~25.
+- **FLEX still open:** G ≥ ~25 → punt both MNF slots. G 12-25 → Henry plus Hampton (nil
+  residual, so his points are free). G < 12 → Henry plus Flowers.
+
+General form: **when the owner can't be present for a window, make the decision at the
+last checkpoint before it whose information is the same.** For MNF that is the end of
+SNF.
+
 ### Checks before committing anyone
 
 1. Wednesday-Friday reports: all nine, plus **Price** (Charbonnet's split), **Keenan
