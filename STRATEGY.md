@@ -3435,6 +3435,8 @@ Warren in): LAR 7.6, Kittle 16.1, Warren 16.3, Higgins 17.6, Henry 16.7 = **74.3
 ~112**. Line from a late-noon reading: +44.5 (week 9) to +60-65 (weeks 5-8), and this week's
 Monday is thin, so **+45-60 → ~102-117, midpoint ~110**. **A coin flip, slightly favored.**
 Charbonnet → Warren stands (G < -10). Chase at 7:15 CT stays the last resort (G < ~-12).
+**Warren confirmed in the RB slot; Charbonnet unburned.** Noon players at 38.78 with ~9-13
+minutes left (Young 5.58, Shough 3.8, Moore 19.4, Concepcion 10.0).
 
 ### Owner travelling Sunday: default committed, presence only saves
 
