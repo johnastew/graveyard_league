@@ -3359,6 +3359,29 @@ Charbonnet 12.97, LAR 7.60, Hampton 8.79, Henry 16.71); **~124.7 with Higgins.**
 **Lines moved slightly:** ARI 15.5 → **15.0** (LAR DST better), NO 25.0 → 25.5, CAR 23.5 →
 23.0, CIN 26.5, BAL 21.5 / LAC 17.0 (MNF still thin). No pick changes on the EPA table.
 
+### Owner call (Friday): TE Kincaid → George Kittle
+
+Kittle is SF @ DAL at 4:25, TE3 weekly and ROS (delta 0), 16.06 projected, with SF implied 29.5. He is the week's
+committed anchor, taken from TE's +4 spare. This bends the "bottom of the elite tier" rule:
+every TE5-8 option was unusable (Likely TNF, LaPorta 9:30 with -3, Kraft -4, Fannin Q).
+Bowers and McBride, the endgame TEs, stay banked. Kincaid's ankle and the BUF pairing both drop out. The TE
+slot moves to 4:25, which adds a savings lever: if the 3:20 CT read is far clear, Kittle →
+Darnell Washington (SNF) or Andrews (MNF). Higgins stays the conditional second anchor.
+
+### Sunday morning (week 10)
+
+- **All nine are clean on the final reports** (no designations): Young, Shough, Moore,
+  Concepcion, Kittle, Charbonnet, LAR, Hampton, Henry. Higgins, Warren and Flowers (levers)
+  are clean too.
+- **Boston: Q (toe), DNP / DNP / Limited, 89%.** Expected to play, so Concepcion loses the
+  role-by-absence bump. The Thursday trigger (swap to Boston only on a Full Friday) was not met.
+  **Concepcion stays.**
+- Lines at kickoff: BUF 29.0, NO 25.5, CAR 23.0, CLE 18.0, SEA 23.5, ARI 15.0 (LAR DST),
+  SF 29.5, CIN 26.5, BAL 21.5 / LAC 17.0.
+- **Board: ~121.9** (Young 18.99, Shough 18.19, Moore 12.41, Concepcion 10.22, Kittle 16.06,
+  Charbonnet 12.97, LAR 7.60, Hampton 8.79, Henry 16.71), about 1.20x a 102 line. **~130.7
+  with Higgins.** App total: 118.1.
+
 ### Checks before committing anyone
 
 1. Wednesday-Friday reports: all nine, plus **Price** (Charbonnet's split), **Keenan
