@@ -3365,10 +3365,13 @@ Kittle is SF @ DAL at 4:25, TE3 weekly and ROS (delta 0), 16.06 projected, with 
 committed anchor, taken from TE's +4 spare. This bends the "bottom of the elite tier" rule:
 every TE5-8 option was unusable (Likely TNF, LaPorta 9:30 with -3, Kraft -4, Fannin Q).
 Bowers and McBride, the endgame TEs, stay banked. Kincaid's ankle and the BUF pairing both drop out. The TE
-slot moves to 4:25, which adds a savings lever: if the 3:20 CT read is far clear, Kittle →
+slot moves to 4:25, which adds a savings lever: if the 3:20 CT Sunday read is far clear, Kittle →
 Darnell Washington (SNF) or Andrews (MNF). Higgins stays the conditional second anchor.
 
-### Sunday morning (week 10)
+### Saturday check (week 10)
+
+*(Dated wrong the first time. This was Saturday, Nov 14, not Sunday: the session clock was a
+day ahead. Trust the owner's clock over the environment's.)*
 
 - **All nine are clean on the final reports** (no designations): Young, Shough, Moore,
   Concepcion, Kittle, Charbonnet, LAR, Hampton, Henry. Higgins, Warren and Flowers (levers)
@@ -3376,28 +3379,34 @@ Darnell Washington (SNF) or Andrews (MNF). Higgins stays the conditional second 
 - **Boston: Q (toe), DNP / DNP / Limited, 89%.** Expected to play, so Concepcion loses the
   role-by-absence bump. The Thursday trigger (swap to Boston only on a Full Friday) was not met.
   **Concepcion stays.**
-- Lines at kickoff: BUF 29.0, NO 25.5, CAR 23.0, CLE 18.0, SEA 23.5, ARI 15.0 (LAR DST),
+- Lines Saturday: BUF 29.0, NO 25.5, CAR 23.0, CLE 18.0, SEA 23.5, ARI 15.0 (LAR DST),
   SF 29.5, CIN 26.5, BAL 21.5 / LAC 17.0.
 - **Board: ~121.9** (Young 18.99, Shough 18.19, Moore 12.41, Concepcion 10.22, Kittle 16.06,
   Charbonnet 12.97, LAR 7.60, Hampton 8.79, Henry 16.71), about 1.20x a 102 line. **~130.7
   with Higgins.** App total: 118.1.
 
-### Owner travelling Monday: set the MNF slots Sunday night
+### Owner travelling Sunday: default committed, presence only saves
 
-**After SNF ends, the live line does not move until MNF kicks off**, so the pre-MNF read
-is available Sunday ~10:45 CT. The only thing lost by deciding then is Monday's inactive
-news, and Henry, Hampton and Flowers were all clean on the final reports. Thresholds are
-widened ~4 points because nobody can react on Monday, and close calls go to real players
-(you can always punt, never un-punt):
+The ladder needs someone at 3:20 and 7:15 CT. Without that, the levers expire. Week 8's rule
+applies: **without someone to pull the levers, committed points are worth more than the
+saved asset.** So flip the default:
 
-- **7:15 CT (before SNF):** FLEX → Higgins if G < ~12, up from ~10.
-- **~10:45 CT (after SNF), Higgins in:** Henry plays unless G ≥ ~25.
-- **FLEX still open:** G ≥ ~25 → punt both MNF slots. G 12-25 → Henry plus Hampton (nil
-  residual, so his points are free). G < 12 → Henry plus Flowers.
+- **Saturday night: FLEX Hampton → Higgins (SNF).** The untouched lineup is then ~130.7
+  (1.28x a 102 line) and needs nothing on Sunday. Kittle and Henry play by default.
+- **Any check Sunday can only save an asset, never rescue a short read:**
+  - ~7:15 CT, if our score is ≥ ~12 over the live line: Higgins → Hampton (bank Higgins).
+  - After SNF (~10:45 CT), or Monday if free: Henry → a deep LAC/BAL backup only if G ≥ ~25.
+    Otherwise leave it.
+- 1:00 inactives can't be read on the move. All five 1:00 players are clean on the final
+  report, so the residual risk is a surprise inactive, which is low.
 
-General form: **when the owner can't be present for a window, make the decision at the
-last checkpoint before it whose information is the same.** For MNF that is the end of
-SNF.
+General form: **when the owner will be absent for a window, set the default to the
+committed (higher-points) choice and let presence be the thing that saves assets.** The
+error to avoid is the reverse: a cheap default that needs a live intervention to reach the
+line.
+
+The MNF line does not move between the end of SNF and MNF kickoff, so the Monday call can
+be made Sunday night after SNF if Monday is busy too.
 
 ### Checks before committing anyone
 
