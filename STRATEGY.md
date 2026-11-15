@@ -3393,6 +3393,8 @@ day ahead. Trust the owner's clock over the environment's.)*
 - No inactive news on any of the four 12:00 CT players (Young, Shough, Moore, Concepcion)
   and no new designations. Absence of news is not confirmation, so read the app's inactive
   flags before 12:00 CT.
+- **Higgins is in the FLEX** (owner confirmed), so the travel default is set. Untouched
+  lineup: ~130.7 projected.
 
 ### Owner travelling Sunday: default committed, presence only saves
 
