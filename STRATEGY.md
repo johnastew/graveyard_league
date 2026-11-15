@@ -3396,6 +3396,22 @@ day ahead. Trust the owner's clock over the environment's.)*
 - **Higgins is in the FLEX** (owner confirmed), so the travel default is set. Untouched
   lineup: ~130.7 projected.
 
+### Sunday Q2 (12:00 CT games): ~20 behind the live line
+
+Young 2.96, Shough -2.02 (INT, fumble), Moore 0.4, Concepcion 1.6: **2.94**, about 20 under a
+live line of ~23. This is the expected shape: **~71 projected is still to come after noon**
+(Charbonnet 13.0, LAR 7.6, Kittle 16.1, Higgins 17.6, Henry 16.7). Weeks 8 and 9 had 43 and
+51 left at the same point. The line usually rises +50 to +60 from late-noon to final.
+
+**Charbonnet swap plan (decide ~2:55 CT, before the 3:05 CT lock):**
+- G better than about -10 → keep Charbonnet.
+- G worse than about -10 → **Charbonnet → Jaylen Warren** (SNF, 16.3, +3.3). If a 7:15 CT
+  look shows G ≥ ~12, Warren → Dowdle to save him.
+- No check possible → keep Charbonnet. +3.3 does not justify RB10 from the short position
+  without the noon result in hand.
+
+Upgrade capacity is nearly exhausted: Warren (+3.3) is the only meaningful lever left.
+
 ### Owner travelling Sunday: default committed, presence only saves
 
 The ladder needs someone at 3:20 and 7:15 CT. Without that, the levers expire. Week 8's rule
