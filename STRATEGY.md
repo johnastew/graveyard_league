@@ -3438,6 +3438,18 @@ Charbonnet → Warren stands (G < -10). Chase at 7:15 CT stays the last resort (
 **Warren confirmed in the RB slot; Charbonnet unburned.** Noon players at 38.78 with ~9-13
 minutes left (Young 5.58, Shough 3.8, Moore 19.4, Concepcion 10.0).
 
+### Pre-MNF (week 10): 99.28 against 106.92, G = -7.64
+
+Played: Young 8.1, Shough 11.0, Moore 19.4, Concepcion 11.7, Kittle 13.4, LAR ~15.0, Warren
+9.1, Higgins 11.6. **Warren and Higgins combined for 20.7 on 34.2 projected**, and SNF is where the gap
+stayed open. Only Henry (16.7 projected) is left, and he is already the best RB-eligible
+player in LAC @ BAL (Hampton 8.8 is the alternative). **No decision remains: Henry plays.**
+
+The Monday move is sized thin: +12-16, or +8-12 by the week 9 reading. Henry has to outscore
+the move by 7.64, i.e. roughly 16-24 points. **An underdog, ~35-45%.** Henry's points are
+partly in the move too, since teams near the cut hold him, so a Henry boom lifts the line
+as well.
+
 ### Owner travelling Sunday: default committed, presence only saves
 
 The ladder needs someone at 3:20 and 7:15 CT. Without that, the levers expire. Week 8's rule
