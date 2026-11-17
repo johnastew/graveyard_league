@@ -301,6 +301,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 7 | 37.1 | 71.24 | 78.2 | **100.80** | 120.62 | +19.82 (survived) |
 | 8 | 48.96 | 77.40 | 95.20 | **109.14** | 118.58 | +9.44 (survived) |
 | 9 | 44.6 | 74.5 | 80.32 | **89.1** | 95.5 | +6.4 (survived) |
+| 10 | 57.5 | - | 106.92 | **114.54** | 118.28 | +3.74 (survived) |
 
 Week 4's 52.02 was read after the 4:25 games and before SNF; its 70.12 was the Monday
 reading before MNF. Week 5's 36.04 was read with the 1:00 games at Q4 2:00. Final lines
@@ -319,6 +320,7 @@ have risen every week, and the rise is accelerating: 72.20, 79.64, 88.04, 101.16
 | 7 | 78.20 | 100.80 | +22.60 | **1.289x** |
 | 8 | 95.20 | 109.14 | **+13.94** | **1.146x** |
 | 9 | 80.32 | 89.1 | **+8.78** | **1.109x** |
+| 10 | 106.92 | 114.54 | **+7.62** | **1.071x** |
 
 **Week 8 broke the ratio, and the reason is the Monday pool, not the Sunday line.** The
 Tuesday board called CHI@SEA "the thinnest MNF pool of the season" and predicted the field
@@ -331,7 +333,9 @@ pool's reinforcement capacity at the start of the week**: thin pool → +12 to +
 **Week 9 confirms it and moves the thin end down.** The Monday pool lost Murray (Wentz
 started instead), and the move was **+8.78**, below even the +13 to +19
 called on Sunday night. Revised sizing: **thin pool with a starting QB out → +8 to +12;
-thin → +12 to +16; normal → +18 to +23.** Two weeks running the Monday estimate has
+thin → +12 to +16; normal → +18 to +23.** *Week 10 (LAC @ BAL, no QB out, BAL
+scoring ≤13 four straight) came in at **+7.62**: a thin pool is +8 to +12 whether or not a
+QB is out. Use +8 to +12 for any Monday game whose usable names fit on one hand.* Two weeks running the Monday estimate has
 overshot, and both times the overshoot cost an asset (week 8 Daniels, week 9 Jefferson).
 
 **At n=6 the ratio has settled at 1.25-1.29 for four weeks** (1.256, 1.283, 1.253,
@@ -3481,6 +3485,74 @@ be made Sunday night after SNF if Monday is busy too.
 2. Re-pull all boards Saturday, and re-run `./gy m 10 --refresh`.
 3. Every lever name against `./gy l` before it goes on a list. Higgins, Warren, C. Brown,
    Flowers, Kittle, Lamb and Jeanty were all checked Tuesday.
+
+## Week 10 result (2026)
+
+**Survived.** Scored **118.28** against a final cut line of **114.54**, a margin of **+3.74**,
+the thinnest of the season for the fifth week running (+20.6, +19.8, +9.4, +6.4, +3.7). Nine
+burned, **90 on the season (QB 18, RB 24, WR 28, TE 10, DST 10)**, all recorded in
+`data/used_players.json`. 179 teams remain; week 11 cuts 25.7%.
+
+| Slot | Player | Pts | Proj | Window |
+| --- | --- | --- | --- | --- |
+| WR | DJ Moore (BUF) | **19.4** | 12.4 | 12:00 CT |
+| RB | Derrick Henry (BAL) | **19.0** | 16.7 | MNF |
+| DST | LA Rams | **16.0** | 7.6 | 3:05 CT |
+| TE | George Kittle (SF) | 13.4 | 16.1 | 3:25 CT |
+| WR | KC Concepcion Jr. (CLE) | 11.7 | 10.2 | 12:00 CT |
+| FLEX | Tee Higgins (CIN) | 11.6 | 17.6 | SNF |
+| SFLX | Tyler Shough (NO) | 9.98 | 18.2 | 12:00 CT |
+| RB | Jaylen Warren (PIT) | 9.1 | 16.3 | SNF |
+| QB | Bryce Young (CAR) | 8.1 | 19.0 | 12:00 CT |
+
+The line jumped **25.4 points** from week 9 (89.1 → 114.54), the highest of the season. The
+Tuesday plan (~102, worst ~108) was low by 6.5 even at the worst case. Final lines now run
+89-115 with no trend. **Plan against the season high, not the mean.**
+
+### What decided the week
+
+- **Henry was the margin.** Pre-MNF the score was 99.28 against 106.92. He scored 19.0 (two
+  TDs) against a Monday move of +7.62, and survived by 3.74. That is the week 6/7 lesson again:
+  the last slot is a real player, not a punt.
+- **Kittle over Kincaid was also the margin.** Kittle 13.4 against Kincaid 7.8: without the
+  Friday owner call the week finishes 112.68 and is **cut by 1.86**. Spending the TE spare
+  on the one usable elite TE was right.
+- **The same-game QB pair busted together.** CAR @ NO finished **20-17**. Young 8.1 + Shough
+  9.98 = **18.1 on 37.2 projected**. Tuesday's estimate (correlation adds only ~2-3% to the
+  spread of the total) was right on average, but this is the downside landing: both slots
+  missed by ~9 for one shared reason. Mahomes, the decorrelated alternative, scored **35.4**.
+  Outcome bias is real here (Mahomes cost an elite QB), but the lesson stands: **in weeks
+  that already project near the line, do not let two QB slots share one game script.** The
+  doctrine's tie-break ("projecting clear → take the variance reduction") pointed this way,
+  and it was overridden for cost.
+- **The cheap 1:00 WR pattern broke.** Moore + Concepcion scored 31.1 on 22.6 projected.
+  Weeks 7-9 had returned half. Treat the pattern as noise around a real risk, not a rule.
+- **Charbonnet → Warren gained nothing.** Charbonnet 9.4 (20-94, no catches), Warren 9.1.
+  The swap was +3.3 projected on paper and spent RB10 ROS from the short position instead of
+  RB34. **A late swap that upgrades a cheap player to an expensive one for under ~5 points
+  is not worth the asset.** The trigger (G < -10) was set before checking how small the
+  upgrade was. Size the gain before writing the trigger.
+- **SNF was weak:** Warren + Higgins 20.7 on 33.9 projected. Ja'Marr Chase (the last-resort
+  lever) scored 34.1. The SNF lever existed, but the 7:15 CT read was not sent (owner
+  travelling), so the default played. That is what the travel default was for.
+- **Rams DST 16** (5 sacks, 2 INT, 6 allowed) against the lowest implied total on the slate.
+  The DST rule (lowest opponent implied total first) keeps paying.
+
+### Inventory and anchor budget after week 10
+
+Week 10 spent **three** elite-tier pieces: Kittle (TE3), Higgins (WR9) and Warren (RB10).
+Henry (RB18) was the planned decaying spend.
+
+| Pos | Top tier left | Wk 14-17 need | Spare for wk 11-13 |
+| --- | --- | --- | --- |
+| QB | 10 of top 12 (Allen, Burrow, Purdy, Maye, Caleb Williams, Lawrence, Love, Goff, Mahomes, Stroud) | 8 | **+2** |
+| RB | 7 of top 15 (Gibbs, Bijan, Cook, Swift, Irving, JT, C. Brown) | ~10 | **-3** |
+| WR | 11 of top 15 (Chase, ARSB, Lamb, Nabers, Golden, C. Watson, Olave, London, Flowers, P. Washington, Collins) | ~10 | **+1** |
+| TE | 7 of top 8 (Bowers, McBride, Loveland, Likely, LaPorta, Kraft, Fannin) | 4 | **+3** |
+
+About three spares remain across three weeks, so **one anchor a week, from QB or TE only.**
+RB is now 3 short of the endgame. **No RB from the top 15 goes in before week 14** unless
+a week cannot be survived otherwise.
 
 ## Source notes
 
