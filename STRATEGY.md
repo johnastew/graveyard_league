@@ -3563,6 +3563,9 @@ Cut 25.7% of 179 (46 reaped, 133 survive). Final lines: 101.16, 93.30, 100.80, 1
 worst case ~122** (≈12.8-13.5 per slot). Nine real starters. All boards PPR, pulled Nov 18
 (UTC) before any practice report. Burned list: 90. Every name below was checked against it.
 
+**All times ET from week 11 on**: the owner is back on Eastern (week 10's checkpoints were
+in CT while travelling).
+
 **Windows (ET, from `./gy m 11`).** Byes: **ATL, CLE, GB, LAR, NE, SEA**. **TNF** IND@HOU ·
 **1:00** TEN@DAL, MIA@BUF, NO@CHI, ARI@KC, JAC@NYG, TB@DET, BAL@CAR · **4:05** NYJ@LAC ·
 **4:25** LV@DEN, PIT@PHI · **SNF** MIN@SF · **MNF** CIN@WAS.
