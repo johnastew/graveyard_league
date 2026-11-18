@@ -300,6 +300,8 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 6 | 30.9 | 56.58 | 74.44 | **93.30** | 113.88 | +20.58 (survived) |
 | 7 | 37.1 | 71.24 | 78.2 | **100.80** | 120.62 | +19.82 (survived) |
 | 8 | 48.96 | 77.40 | 95.20 | **109.14** | 118.58 | +9.44 (survived) |
+| 9 | 44.6 (Q4) | 74.5 | 80.32 | **89.10** | 95.50 | +6.40 (survived) |
+| 10 | 57.5 (late) | - | 106.92 | **114.54** | 118.28 | +3.74 (survived) |
 | 9 | 44.6 | 74.5 | 80.32 | **89.1** | 95.5 | +6.4 (survived) |
 | 10 | 57.5 | - | 106.92 | **114.54** | 118.28 | +3.74 (survived) |
 
@@ -3553,6 +3555,141 @@ Henry (RB18) was the planned decaying spend.
 About three spares remain across three weeks, so **one anchor a week, from QB or TE only.**
 RB is now 3 short of the endgame. **No RB from the top 15 goes in before week 14** unless
 a week cannot be survived otherwise.
+
+## Week 11 board (2026) — early-week pull, provisional
+
+Cut 25.7% of 179 (46 reaped, 133 survive). Final lines: 101.16, 93.30, 100.80, 109.14,
+89.1, 114.54. Week 10's lesson is to plan against the season high, so **plan against ~115,
+worst case ~122** (≈12.8-13.5 per slot). Nine real starters. All boards PPR, pulled Nov 18
+(UTC) before any practice report. Burned list: 90. Every name below was checked against it.
+
+**Windows (ET, from `./gy m 11`).** Byes: **ATL, CLE, GB, LAR, NE, SEA**. **TNF** IND@HOU ·
+**1:00** TEN@DAL, MIA@BUF, NO@CHI, ARI@KC, JAC@NYG, TB@DET, BAL@CAR · **4:05** NYJ@LAC ·
+**4:25** LV@DEN, PIT@PHI · **SNF** MIN@SF · **MNF** CIN@WAS.
+
+### Inventory recount: Maye is gone
+
+**Drake Maye fractured his ankle** (Nov 15-16, "feared out for the season"), so he drops out
+of the QB elite pool. That leaves 9 of the top 12 ROS (Allen, Burrow, Purdy, Lawrence, Caleb
+Williams, Love, Goff, Mahomes, Stroud) against 8 needed for weeks 14-17.
+
+| Pos | Spare elites for wk 11-13 | Read |
+| --- | --- | --- |
+| QB | **+1** (was +2) | No QB anchor this week. Spend the QB14-27 band: Nix, Ward, McCarthy, Penix, Mayfield, Darnold, Mendoza, Herbert. |
+| RB | -3 | No top-15 RB. Spend RB16-35. |
+| WR | +1 | 11 of the top 15 ROS left: Chase, Lamb, ARSB, Golden, Nabers, C. Watson, Olave, P. Washington, Collins, London, Flowers. |
+| TE | +3 | Bowers, McBride, Likely, Loveland, Fannin, LaPorta, Kraft. The deepest spare. |
+
+### Late-pool reinforcement capacity
+
+| Window | Cheap default | Reinforcement (unburned) | Gain |
+| --- | --- | --- | --- |
+| 4:05 NYJ@LAC | Hampton (RB) | Hall (13.0, RB20 ROS) | ~+1 |
+| 4:25 LV@DEN, PIT@PHI | Nix (SFLX) | Saquon (12.5), Jeanty (12.4), Bowers if healthy (bank) | ~0 |
+| SNF MIN@SF | (nothing held) | Purdy (bank), A. Jones (9.1), Hockenson (8.9, TE10 ROS) | ~0 |
+| MNF CIN@WAS | Diggs (FLEX), Okonkwo (TE) | **Ja'Marr Chase** (21.8, WR2 ROS) | **+8** |
+
+**MNF is a rich pool this week**: CIN is implied 30.0 (total 53.5), with Burrow, Chase, Chase
+Brown, Diggs and Okonkwo all live for the field. **Expect a Monday move of +18 to +23**, not
+the thin +8 to +14 of weeks 8-10. The field will hold MNF slots, so we hold two.
+
+The only real late reinforcement is Chase, and he is the endgame (WR2 ROS), not the bottom
+of the elite tier. So unlike week 8, **buying the cushion late is the expensive path this
+week**. The bottom-of-tier anchor gets committed at 1:00 instead.
+
+### Working nine — exact player per slot, and when to set it
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| QB | Cam Ward (TEN) | QB15 | QB21 | **+6** | 17.16 | 1:00 @ DAL | Sun 12:55 |
+| RB | Emmett Johnson (KC) | RB16 | RB31 | **+15** | 12.64* | 1:00 vs ARI | Sun 12:55, **iff Walker OUT** |
+| WR | Parker Washington (JAC) — the anchor | WR6 | WR11 | +5 | 15.40 | 1:00 @ NYG | Sun 12:55 |
+| WR | Jordyn Tyson (NO) | WR18 | WR28 | **+10** | 9.79* | 1:00 @ CHI | Sun 12:55 |
+| DST | Kansas City | DST1 | DST7 | +6 | 8.08 | 1:00 vs ARI | Sun 12:55 |
+| RB | Omarion Hampton (LAC) | RB22 | RB28 | +6 | 12.29 | 4:05 vs NYJ | Sun 4:00 |
+| SFLX | Bo Nix (DEN) | QB14 | QB16 | +2 | 18.51 | 4:25 vs LV | Sun 4:20 |
+| FLEX | **held** — Stefon Diggs (WAS) default | WR17 | WR23 | +6 | 13.80 | **MNF** vs CIN | Mon 8:10 |
+| TE | Chig Okonkwo (WAS) | TE11 | TE14 | +3 | 9.68 | **MNF** vs CIN | Mon 8:10 |
+
+\*FantasyPros projections lag both ranks. Emmett Johnson went 22-101 plus 6-70-2 as the
+workhorse last week; Tyson saw 13 targets (39% share). At rank-implied values (~14 and ~13)
+the board is **~122**; on the raw projections it is **117.4**. **~130 with Chase at MNF.**
+That is 1.02-1.06x on the defaults, the same thin range as weeks 8-10.
+
+The 1:00 core is five slots, ~63-69, built on Ward's QB floor. Spends: one WR11 (the anchor,
+from WR's +1), and nothing else inside a top tier (QB21, RB31, WR28, RB28, QB16, WR23, TE14).
+
+**Correlation.** Emmett Johnson and the KC DST are the same team: a KC rout helps both. It is
+accepted because the board projects near the line, where the doctrine takes ceiling. The
+decorrelated swap is BUF DST (DST6 / DST16, +10, 7.96, MIA implied 14.5). Diggs and Okonkwo
+are a WAS pair in MNF: mild. Ward and Nix are in different games (week 10's lesson).
+
+### Why these, and the dependencies to re-grade
+
+- **Ward**: DAL's pass D is #2 softest by EPA, TEN is implied 23.0 in the highest total on
+  the slate (54.5). TEN has gone no-huddle (43% in one-score games since week 8, plays 54 →
+  63.5), and Ward rushed for 41 and 39 yards in those two games. 28-39-231-2-1 last week.
+- **Emmett Johnson is role-by-absence on Kenneth Walker** (groin). Walker sat week 10, and
+  Rapoport "wouldn't be surprised" if he sits again (Nov 18). KC is a 16.5-point favorite
+  implied 29.0, which favors a run-heavy script. **If Walker is active, Johnson is out.** The
+  fallback is **Saquon** (4:25, RB22 ROS, PIT run D #4 softest; PHI implied only 17.0) or
+  Jeanty (4:25, RB23 ROS, but 9 carries for 18 yards last week).
+- **Parker Washington** is the week's anchor, taken from WR's spare. He is the only
+  positive-delta WR at the bottom of the elite tier: WR6 this week, WR11 ROS (+5), 7-9-152-1
+  last week, JAC implied 26.2 against NYG (#18 pass D). It beats the alternatives: Loveland
+  spends the TE spare for 12.0, Mahomes spends the now-thin QB spare, and Chase spends the
+  endgame.
+- **Tyson**: 13 targets on 31 routes in week 10, with Olave at 12%. The usage is real (the
+  Gadsden check passes). The risk is NO's implied 18.5 against CHI's #26 pass D, and a rookie
+  who is "so-good-it's-unsustainable" by target rate.
+- **KC DST**: ARI is implied **12.5**, the lowest on the slate, with Carson Beck at QB and the
+  worst offense by EPA. DST1 weekly.
+- **Hampton**: 22-105-1 on MNF; the Chargers finally gave him the backfield. NYJ run D #8
+  softest. **NYJ's QB is unsettled** (Geno Smith ankle, tests clean; Klubnik if not), which
+  helps the LAC script.
+- **Nix**: LV pass D #5 softest, DEN implied 25.2, 20.4 points a game over his last three.
+- **Diggs**: 27% target share since McLaurin went down; 6-10-86-1 last week. CIN is the
+  #3 composite slot matchup and Diggs runs 55% of his routes from the slot.
+- **Okonkwo**: 8 targets last week (left briefly with a back issue, returned), 20% share,
+  64% of routes from the slot. Same slot matchup. Re-grade the back on Wednesday's report.
+
+### Not taking, and why
+
+- **TNF (IND@HOU)**: Stroud, Collins, JT, Montgomery (+15, Marks out), Tank Dell. Avoid.
+- **Mahomes (QB3 / QB9, +6, 21.6)**: the QB spare is down to +1 after Maye. KC are 16.5-point
+  favorites, and Mahomes has averaged 14.3 in games where KC was a touchdown favorite.
+- **Loveland (TE5 / TE5, 0, 12.0)**: the owner option for TE (+2.4 over Okonkwo), from TE's
+  +3 spare. Taking him gives up the second MNF slot.
+- **Kincaid (TE7 / TE12, +5, 10.2)**: BUF implied 31.0 and MIA allows 83% completions to TEs,
+  but he has seen **3 targets in each of his last three games** on a 50% route share. That
+  fails the Gadsden check.
+- **Likely (TE2 / TE4)**: elite TE in a tough matchup (JAC pass D #28).
+- **Herbert (QB20 / QB27, +7, 16.6, 4:05)**: cheaper on ROS, but 12-18-129 last week and LAC's
+  pass offense is the second-worst by EPA. The QB fallback if Ward or Nix draws a flag.
+- **Flournoy (+16, 8.6)**: 13% target share; Pickens (37%) and Lamb are back. **Caleb Douglas
+  (+26, 8.6)**: MIA implied 14.5 in a bottom-5 WR matchup.
+- **Flowers (WR11 / WR15, +4, 15.2)**: the alternative anchor; same price tier as Washington
+  on a worse team total (BAL 21.0).
+- **Chase Brown (RB10 / RB12)**: inside RB's top 15, and RB is 3 short.
+- **Bank on the shelf**: Allen, Burrow, Purdy, Lawrence, Caleb Williams, Goff, Gibbs, Cook,
+  Swift (Monangai is back), Irving, Chase, Lamb, ARSB, Nabers, Olave, Bowers, McBride.
+
+### Decision points
+
+1. **Friday report**: **Walker** (decides Emmett Johnson), Okonkwo's back, Bowers (only
+   matters if he would be considered), Geno Smith (LAC script). Re-pull boards Saturday and
+   re-run `./gy m 11 --refresh`.
+2. **11:30 Sunday**: inactives for the five-man 1:00 core. If Walker is active, RB1 →
+   Saquon at 4:25.
+3. **~4:00 and ~4:20**: Hampton and Nix play unless flagged. There is no 4:05/4:25 upgrade
+   worth its cost, so these are not decision points unless someone is inactive.
+4. **SNF**: nothing held.
+5. **MNF kickoff**: G = our score − the live line. Defaults left are Diggs + Okonkwo (~23.5)
+   against a Monday move of **+18 to +23** plus a 5-point buffer.
+   - **G ≥ ~30**: punt Okonkwo (a rostered deep CIN/WAS backup), keep Diggs.
+   - **G ~5-30**: both defaults play.
+   - **G < ~5**: **FLEX Diggs → Ja'Marr Chase** (+8). It spends the endgame WR, so only here.
+   Hand-check the teams around the cut for live MNF slots first. Expect two or more.
 
 ## Source notes
 
