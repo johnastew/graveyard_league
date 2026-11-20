@@ -3694,6 +3694,28 @@ are a WAS pair in MNF: mild. Ward and Nix are in different games (week 10's less
    - **G < ~5**: **FLEX Diggs → Ja'Marr Chase** (+8). It spends the endgame WR, so only here.
    Hand-check the teams around the cut for live MNF slots first. Expect two or more.
 
+### Friday update (week 11)
+
+Boards re-pulled and lines refreshed. **Nothing moves**: every pick held or rose.
+
+| Player | Early week | Fri | Read |
+| --- | --- | --- | --- |
+| **Emmett Johnson** | RB16 | **RB5** | **Walker: DNP / DNP, 10% to play**, "trending towards missing a second straight game". The dependency is close to settled. Confirm at 11:30. |
+| Cam Ward | QB15 | QB13 | Up |
+| Bo Nix | QB14 | QB11 | Up |
+| Okonkwo | TE11 | **TE8** | Not on the injury feed (last week's back issue did not carry over). Bowers has dropped off the weekly TE board. |
+| Hampton | RB22 | RB21 | Geno Smith full Friday, so the Jets have their starter. Small cost to the LAC script. |
+| P. Washington | WR6 | WR6 | Clean |
+| Diggs | WR17 | WR18 | Thursday was a scheduled rest day, not an injury |
+| **Tyson** | WR18 | WR19 | **New flag: Q, chest, Limit / Limit, 94%.** The market barely moved him. 1:00 kickoff, so read the NO inactives at 11:30. |
+| KC DST | DST1 | — | ARI implied 12.5 → **12.0**. |
+
+**Tyson's flag is not a reason to swap now.** The rule is to check the fallback first: the
+clean 1:00 WRs are Flournoy (WR29) and Meyers (WR30), ten spots below him and ~9 projected. He
+is the better play, so hold him and verify active. If he is **inactive at 11:30**, WR →
+**Ryan Flournoy** (DAL vs TEN, implied 31.5). If he is active but listed limited in-game, keep
+him.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
