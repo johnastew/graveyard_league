@@ -3741,6 +3741,14 @@ The lever is **Ja'Marr Chase for Diggs at MNF** (+9), decided with ~95% of the f
 scoring known. The MNF rule stands: **G < ~5 at kickoff → Chase.** Burrow (illness Thursday,
 practiced Friday) is trending to play, which keeps Chase's ceiling intact.
 
+**3:38 (1:00 games mid-to-late Q4): 51.12 against 63.36, G = -12.2.** Ward 16.82, Emmett
+Johnson 24.3 (23-105-1, 4-4-38), KC DST 8, Tyson 2. Rise from a late-1:00 reading to the final:
++62 to +65 (weeks 5-8), +44.5 (week 9), +57 (week 10). Four afternoon games plus a rich MNF,
+so **+55 to +65 → ~118-128, midpoint ~123**. Ours: 51 + ~3 + 67.1 (Hampton 11, Washington 15,
+Nix 18.8, Diggs 12.7, Okonkwo 9.6) = **~121**. Still a coin flip, ~2 behind on the means.
+**No moves**: the only pre-4:05 upgrade is Hampton → Chase Brown (+4.8, RB12 from the short
+position), under the 5-point bar. Chase at MNF (+9) covers a ~2-point gap with room.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
