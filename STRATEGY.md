@@ -3716,6 +3716,31 @@ is the better play, so hold him and verify active. If he is **inactive at 11:30*
 **Ryan Flournoy** (DAL vs TEN, implied 31.5). If he is active but listed limited in-game, keep
 him.
 
+### Sunday checkpoint (week 11): 1:00 games in Q3/Q4
+
+**49.0 against a live line of 58.28, G = -9.3.** Ward 16.1 (Q3), Emmett Johnson 21.9 (20-81-1,
+4-4-38, start of Q4), KC DST 9 (27-7, start of Q4), Tyson 2 (1-2-6, Q3). Walker sat and Tyson
+was active, as planned.
+
+**Kickoff correction: JAX @ NYG is a 4:25 game in the app**, not 1:00 as the nflverse feed
+had it. Parker Washington is therefore still unlocked. Trust the app's kickoff over the feed.
+
+This is the highest line seen at this point of a Sunday (weeks 8-10 read 40.04, 28.4 and ~40
+at Q3). Rise from a Q3 reading to the final: +69 (week 8), +61 (week 9), +74.5 (week 10).
+Four afternoon games, SNF and a rich MNF, so use **+61 to +75 → final ~119-133, midpoint
+~126**. Ours: 49 + ~8 to finish the 1:00 games + Hampton 11 + Washington 15 + Nix 18.7 +
+Diggs 12.7 + Okonkwo 9.6 (app) = **~124**. **A coin flip, slightly behind**, with the Monday
+lever still to come.
+
+**Call: no moves at 4:05 or 4:25.** Every afternoon upgrade costs more than it buys:
+- Hampton → Chase Brown (MNF, +4.8): RB12 from the short position, under the 5-point bar.
+- Nix → Burrow (+5): QB1, the endgame, decided on a 4:20 read.
+- Washington is already the best 4:25 WR.
+
+The lever is **Ja'Marr Chase for Diggs at MNF** (+9), decided with ~95% of the field's
+scoring known. The MNF rule stands: **G < ~5 at kickoff → Chase.** Burrow (illness Thursday,
+practiced Friday) is trending to play, which keeps Chase's ceiling intact.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
