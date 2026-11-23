@@ -3749,6 +3749,14 @@ Nix 18.8, Diggs 12.7, Okonkwo 9.6) = **~121**. Still a coin flip, ~2 behind on t
 **No moves**: the only pre-4:05 upgrade is Hampton → Chase Brown (+4.8, RB12 from the short
 position), under the 5-point bar. Chase at MNF (+9) covers a ~2-point gap with room.
 
+**Post-4pm (4:25 games in Q4): 96.92 against 89.52, G = +7.4.** Ward 22.22, Johnson 24.3,
+Washington 18.4 (8-16-104, Q4 4:50), Hampton 10.3, Nix 11.7 (Q4 1:20), KC 8, Tyson 2.
+**The app screenshot showed TE and FLEX empty**: Diggs and Okonkwo must be in those slots
+before Monday 8:15, or they score zero. Post-4pm → final rises: +32.7, +36.7, +29.6, +31.7,
++14.6. SNF is MIN@SF (totals 21/24) and MNF is rich, so **+25 to +35 → ~115-125**. Ours:
+~98 + Diggs 12.7 + Okonkwo 9.6 = **~120**. Coin flip. Nothing at SNF is worth a slot (A. Jones
+9.1, Hockenson 8.9, Keenan Allen), so both open slots stay for MNF. Re-read before MNF kickoff.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
