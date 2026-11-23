@@ -3768,6 +3768,19 @@ before Monday 8:15, or they score zero. Post-4pm → final rises: +32.7, +36.7, 
   leaves Okonkwo with an opposite-side receiver. If the read is comfortable, both play, and a
   slightly wider spread costs little with a cushion.
 
+**4:25 games final: 96.62 against 93.6, G = +3.0.** Ward 22.22, Johnson 24.3, Washington 18.3
+(8-17-103), Nix 11.5, Hampton 10.3, KC 8, Tyson 2. TE and FLEX are back in the app (Okonkwo,
+Diggs). **Call: FLEX Diggs → Ja'Marr Chase**, whether or not SNF has been played yet:
+- If this is the pre-MNF line: G = 3.0 < 5. Defaults (Diggs 12.6 + Okonkwo 9.6 = 22.2) against
+  a Monday move of +18 to +23 land at **-2 to +7**. Chase (21.8) makes it **+6 to +16**.
+- If SNF is still to come: it has added +5.8 to +17.8 to the line, so G at MNF kickoff would be
+  about -15 to -3, and Chase is needed even more.
+
+It spends the endgame WR (WR2 ROS), taking WR's spare to -1 after Parker Washington. Accepted:
+this is the week-6/7/10 shape (last slot decides survival), and Chase is the only reinforcement
+in the Monday game. Set it in the app now so it cannot be missed. Check CIN's inactives
+(~6:45pm Monday): if Chase is inactive, put Diggs back.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
