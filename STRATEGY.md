@@ -3757,6 +3757,17 @@ before Monday 8:15, or they score zero. Post-4pm → final rises: +32.7, +36.7, 
 ~98 + Diggs 12.7 + Okonkwo 9.6 = **~120**. Coin flip. Nothing at SNF is worth a slot (A. Jones
 9.1, Hockenson 8.9, Keenan Allen), so both open slots stay for MNF. Re-read before MNF kickoff.
 
+**Owner question: Diggs + Okonkwo are both WAS. Worried?** Mildly, and it is priced:
+- It is a WR-TE pair, not a QB pair, so the shared risk is WAS's pass volume, not one player's
+  whole line. At a ~0.25 correlation the two-slot spread widens ~10% (≈9 → ≈10 points SD).
+- The script favors both: CIN is a 6-point favorite (29.8 vs 23.8), so WAS should be throwing
+  from behind, and both run most of their routes from the slot against a slot-soft defense.
+- There is no clean TE swap. CIN's TEs project ~5, and Hockenson (SNF, 8.9) is TE10 ROS with
+  a -11 delta. Spending a bank TE to remove a mild correlation is the wrong trade.
+- **The pair breaks itself when it matters.** If the MNF read is short, Diggs → Chase, which
+  leaves Okonkwo with an opposite-side receiver. If the read is comfortable, both play, and a
+  slightly wider spread costs little with a cushion.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
