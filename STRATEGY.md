@@ -302,6 +302,7 @@ Track this every week. It is the only way to calibrate how many slots can be pun
 | 8 | 48.96 | 77.40 | 95.20 | **109.14** | 118.58 | +9.44 (survived) |
 | 9 | 44.6 (Q4) | 74.5 | 80.32 | **89.10** | 95.50 | +6.40 (survived) |
 | 10 | 57.5 (late) | - | 106.92 | **114.54** | 118.28 | +3.74 (survived) |
+| 11 | 63.36 (Q4) | 89.52 (4:25 Q4) | 93.6 (4:25 final) | **113.04** | 115.32 | +2.28 (survived) |
 | 9 | 44.6 | 74.5 | 80.32 | **89.1** | 95.5 | +6.4 (survived) |
 | 10 | 57.5 | - | 106.92 | **114.54** | 118.28 | +3.74 (survived) |
 
@@ -3780,6 +3781,89 @@ It spends the endgame WR (WR2 ROS), taking WR's spare to -1 after Parker Washing
 this is the week-6/7/10 shape (last slot decides survival), and Chase is the only reinforcement
 in the Monday game. Set it in the app now so it cannot be missed. Check CIN's inactives
 (~6:45pm Monday): if Chase is inactive, put Diggs back.
+
+## Week 11 result (2026)
+
+**Survived.** Scored **115.32** against a final cut line of **113.04**, a margin of **+2.28**,
+the thinnest of the season for the sixth week running (+20.6, +19.8, +9.4, +6.4, +3.7, +2.3).
+Nine burned, **99 on the season (QB 20, RB 26, WR 31, TE 11, DST 11)**, all recorded in
+`data/used_players.json`. 133 teams remain; week 12 cuts 29.3% (39 reaped, 94 survive).
+
+| Slot | Player | Pts | Proj (app) | Window |
+| --- | --- | --- | --- | --- |
+| RB | Emmett Johnson (KC) | **24.3** | 20.3 | 1:00 |
+| QB | Cam Ward (TEN) | **22.22** | 16.7 | 1:00 |
+| WR | Parker Washington (JAC) | **18.3** | 15.1 | 4:25 |
+| SFLX | Bo Nix (DEN) | 11.5 | 18.7 | 4:25 |
+| TE | Chig Okonkwo (WAS) | 10.6 | 9.6 | MNF |
+| RB | Omarion Hampton (LAC) | 10.3 | 10.9 | 4:05 |
+| FLEX | Ja'Marr Chase (CIN) | 8.1 | 22.2 | MNF |
+| DST | Kansas City | 8.0 | 10.2 | 1:00 |
+| WR | Jordyn Tyson (NO) | 2.0 | 10.1 | 1:00 |
+
+Final lines now: 101.16, 93.30, 100.80, 109.14, 89.1, 114.54, 113.04. Two weeks running at
+~113-115, which is where the "plan against the season high" rule put it.
+
+### What decided the week
+
+- **The role-by-absence RB was the week.** Walker sat (DNP all week, 10%), and Emmett Johnson
+  went 23-105-1 plus 4-4-38. Johnson + the KC DST (the same-team pair, taken for ceiling)
+  scored 32.3 on 30.5 projected.
+- **Ward was the 1:00 QB floor again**: 22.22 on 16.7, in the highest-total game on the slate.
+- **Parker Washington paid as the anchor** (8-17-103). Seventeen targets is the usage the
+  bottom-of-tier pick was buying.
+- **The cheap 1:00 WR busted for the fourth time in five weeks.** Tyson 1-2-6 on 10.1
+  projected, playing through a chest injury (Limit / Limit, 94%). His 13 targets the week
+  before did not carry over, and a flagged rookie on a team implied 18.5 was the riskiest
+  piece on the board. Weeks 7-11 in the WR21-45 band: 10.3, 6.8, 14.9, 31.1, 2.0. **Treat a
+  cheap 1:00 WR as a ~half-projection player until a week says otherwise**, and do not add a
+  status flag on top of it.
+- **Chase did not gain anything.** Chase 5-9-31 for **8.1**; Diggs, the default he replaced,
+  went 4-6-45 for **8.5**. With Diggs the week finishes 115.72, alive by 2.68. The swap cost
+  0.4 points and the season's WR2.
+
+### The Chase call, ex ante
+
+The outcome does not make the call wrong. At the 4:25-final read (G = +3.0), with a Monday
+move of +18 to +23 and ~10 points of spread on the last two slots plus the line:
+
+| MNF choice | Mean margin | P(survive) |
+| --- | --- | --- |
+| Diggs + Okonkwo | ~+4.7 | ~68% |
+| Chase + Okonkwo | ~+13.9 | ~92% |
+
+About 24 points of survival probability for an endgame WR in a week cutting 26% is a trade the
+doctrine takes. **But record the pattern:** four straight late swaps into bank pieces have
+returned roughly nothing (week 8 Daniels over Darnold, week 9 Jefferson +1.5, week 10 Warren
+-0.3, week 11 Chase -0.4), at a cost of QB11, WR13, RB10 and WR2 ROS. Each was right on its
+own numbers. Four is a small sample, and single-game outcomes dwarf a +4 to +9 projected gap,
+so the rule stands. What changes is the bar: from week 12, **price every late swap in
+survival probability, not projected points**, and only spend a top-10 ROS piece when it moves
+survival by ~15+ points. On this week's numbers that test still says Chase.
+
+The Monday move (SNF + MNF combined, from the 4:25-final read) was **+19.44**, inside the
++18 to +23 range set on Tuesday from the size of the MNF pool. The pool-sizing method has now
+called three Mondays correctly.
+
+### Process notes
+
+- **The nflverse schedule had JAX @ NYG at 1:00; the app had it at 4:25.** The error was in our
+  favor (Washington stayed unlocked), but trust the app's kickoff for every slot, and check it
+  when the board is built.
+- **TE and FLEX showed blank in one Sunday-evening screenshot** and were back in the next. Check
+  the lineup in the app before every lock, not only the players.
+
+### Inventory and anchor budget after week 11
+
+| Pos | Top tier left | Wk 14-17 need | Spare for wk 12-13 |
+| --- | --- | --- | --- |
+| QB | 9 of top 12 (Allen, Burrow, Purdy, Lawrence, Caleb Williams, Love, Goff, Mahomes, Stroud) | 8 | **+1** |
+| RB | 7 of top 15 (Gibbs, Bijan, Cook, Swift, Irving, JT, C. Brown) | ~10 | **-3** |
+| WR | **9 of top 15** (Lamb, ARSB, Golden, Nabers, C. Watson, Olave, Collins, London, Flowers) | ~10 | **-1** |
+| TE | 7 of top 8 (Bowers, McBride, Loveland, Likely, LaPorta, Kraft, Fannin) | 4 | **+3** |
+
+**WR is now short too.** The only spare left is TE (+3) and one QB. Weeks 12-13 anchors come
+from TE first. Re-pull the ROS boards before trusting this table: ranks have moved every week.
 
 ## Source notes
 
