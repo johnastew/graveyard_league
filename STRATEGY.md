@@ -4058,6 +4058,18 @@ already final when the 12:55 Lawrence decision comes.
 **General form: in a week whose late windows cannot reinforce, the kickoff window stops being
 a tiebreaker.** Compare early-week players on points, price and matchup like anyone else.
 
+### Tuesday evening update
+
+- **Boston: DNP Tuesday (toe)** (news 18:18 UTC Nov 24). The same toe cost him two practices in
+  week 10, and he then caught 1 of 2 targets. CLE plays SNF, so there is time. **Swap rule:** if
+  Boston has not practised by Friday's report, or carries a Q into the weekend, FLEX → **Meyers
+  before 1:00 Sunday**. Meyers locks at 1:00 and Boston's status settles only at SNF, so this is
+  decided on the report, not on inactives. If Boston is a surprise SNF inactive, FLEX → Fannin or
+  Jeanty (same game).
+- Rankings barely moved (same-day pull): Evans WR13 → WR15, Diggs WR21 → WR23, Boston WR29 →
+  WR28, Meyers WR32 → WR31, D. Smith WR18 and Loveland TE4 unchanged. No other practice reports
+  yet; Herbert still expected out.
+
 ### Checks before committing anyone
 
 1. Wednesday-Friday reports: **Loveland** (Thursday 1:00 lock), **Evans** (Achilles, snap
