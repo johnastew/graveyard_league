@@ -3865,6 +3865,144 @@ called three Mondays correctly.
 **WR is now short too.** The only spare left is TE (+3) and one QB. Weeks 12-13 anchors come
 from TE first. Re-pull the ROS boards before trusting this table: ranks have moved every week.
 
+## Week 12 board (2026) — Tuesday pull, provisional
+
+Cut 29.3% of 133 (39 reaped, 94 survive). Final lines: 101.16, 93.30, 100.80, 109.14, 89.1,
+114.54, 113.04. Two weeks at the season high and the cut % is up again, so **plan against
+~118, worst case ~125** (≈13.1-13.9 per slot). Nine real starters. All boards PPR, pulled
+Tuesday Nov 24 before any practice report except the Monday estimates. Burned list: 99. Every
+name below, levers and fallbacks included, was checked against it.
+
+**Windows (ET, from `./gy m 12`; confirm in the app — week 11's feed had one game wrong).**
+No byes. **Wed 8:00** GB@LAR · **Thu 1:00** CHI@DET · **Thu 4:30** PHI@DAL · **Thu 8:20**
+KC@BUF · **Fri 3:00** DEN@PIT · **Sun 1:00** TEN@JAC, NO@CIN, BAL@HOU, ATL@MIN, NYG@IND,
+NYJ@MIA · **4:05** NE@LAC · **4:25** SEA@SF, WAS@ARI · **SNF** LV@CLE · **MNF** CAR@TB.
+
+### The Thanksgiving shape: the reinforcement is at 1:00, not at night
+
+Ten teams play Wednesday-Friday. That changes the ladder in two ways:
+
+1. **Sunday 1:00 is now an informed decision point.** By 12:55 Sunday our own early slots and
+   a good share of the field's early scoring are final. It is the first week the 1:00 window
+   is decided with information rather than before it.
+2. **The late pool is the thinnest of the season.** Every reinforcement after 1:00 is a bank
+   piece or under the 5-point bar:
+
+| Window | Cheap default | Reinforcement (unburned) | Gain |
+| --- | --- | --- | --- |
+| 4:05 NE@LAC | NE DST | nothing (Herbert concussion, DJ Uiagalelei likely starts) | 0 |
+| 4:25 SEA@SF, WAS@ARI | Evans, Diggs | Purdy (17.8, QB3), McBride (15.9, TE2): endgame | ~+3 |
+| SNF LV@CLE | Judkins, Fannin | Bowers (14.7, TE1), Jeanty (13.8, RB16) | +0.3 to +2.4 |
+| MNF CAR@TB | (nothing held) | Irving (19.0, RB9), Mayfield (15.2) | +3.8 |
+
+**Expect a small Monday move (+8 to +12)**: CAR@TB offers the field only Irving and Mayfield.
+So the cushion has to be bought by 1:00 Sunday, which is where the board is deepest.
+
+### Inventory recount
+
+| Pos | Top tier left (ROS) | Wk 14-17 need | Spare | Read |
+| --- | --- | --- | --- | --- |
+| QB | 9: Allen, Burrow, Purdy, Mahomes, Lawrence, C. Williams, Goff, Love, Stroud | 8 | **+1** | Spend it this week (see Lawrence). |
+| RB | **6** of top 15: Gibbs, Bijan, Cook, Irving, C. Brown, Swift (JT fell to RB23) | ~10 | **-4** | The RB16-20 tier (Jeanty, Hall, Skattebo, Corum) is the endgame backfill. Prefer RB21+. |
+| WR | 9 of top 15: Lamb, ARSB, Golden, C. Watson, Nabers, Olave, Collins, Flowers, London | ~10 | **-1** | No top-15 WR. Spend WR16+. |
+| TE | 7 of top 9: Bowers, McBride, Likely, Loveland, Fannin, LaPorta, Kraft | 4 | **+3** | The anchor position. |
+
+### Working nine — exact player per slot, and when to set it
+
+| Slot | Player | Wk | ROS | Delta | PPR proj | Window | Set it |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| WR | DeVonta Smith (PHI) | WR18 | WR28 | **+10** | 14.54 | **Thu 4:30** @ DAL | Thu by 4:25 |
+| QB | **Trevor Lawrence (JAC)** — anchor, the QB spare | QB3 | QB6 | +3 | 22.27 | Sun 1:00 vs TEN | Sun 12:55 |
+| SFLX | J.J. McCarthy (NYG) | QB19 | QB18 | -1 | 17.25 | Sun 1:00 @ IND | Sun 12:55 |
+| RB | Cam Skattebo (NYG) | RB16 | RB18 | +2 | 16.61 | Sun 1:00 @ IND | Sun 12:55 |
+| DST | New England (vs Uiagalelei) | DST15 | DST14 | -1 | 7.03 | 4:05 @ LAC | Sun 4:00 |
+| WR | Stefon Diggs (WAS) | WR21 | WR23 | +2 | 13.66 | 4:25 @ ARI | Sun 4:20 |
+| FLEX | Mike Evans (SF) | WR13 | WR21 | **+8** | 12.62 | 4:25 vs SEA | Sun 4:20 |
+| RB | Quinshon Judkins (CLE) | RB21 | RB28 | **+7** | 13.49 | **SNF** vs LV | Sun 8:15 |
+| TE | **Harold Fannin Jr. (CLE)** — anchor, from TE's +3 | TE8 | TE6 | -2 | 12.28 | **SNF** vs LV | Sun 8:15 |
+
+**Projected ~129.8 (~1.10x a 118 line)**, the widest projected cushion since week 6. Committed
+before Sunday afternoon: D. Smith + the 1:00 trio, ~70.7. **Two anchors** (Lawrence, Fannin),
+which the budget allows: QB's +1 goes to 0, TE's +3 goes to +2, leaving one TE anchor for
+week 13 and one TE as insurance. Nothing from the top 15 at RB or WR.
+
+**Correlation.** Two mild same-team pairs: McCarthy + Skattebo (NYG, QB-RB) and Judkins +
+Fannin (CLE, RB-TE). The two QBs are in different games (week 10's lesson). The decorrelated
+swap for the NYG pair is SFLX → **Baker Mayfield** (MNF, 15.19, plantar fasciitis, CAR pass D
+#13): -2.1 projected, and it buys back a Monday slot that this week can only save, not
+reinforce.
+
+### Why these, and the dependencies to re-grade
+
+- **Lawrence is the week's QB spot**: JAC implied **31.0**, the highest on the slate, against
+  TEN's #2-softest pass D. 352-3 against the same Titans in week 10. The week 13 schedule has
+  no comparable elite-QB matchup (Allen @ NE #8, Goff @ ATL #15, Love @ NO #12), so the spare
+  is worth more now than next week. Decided at 12:55 Sunday with the Thursday result known,
+  so it can still be withheld (McCarthy to QB, Mayfield to SFLX).
+- **McCarthy**: NYG's starter, IND pass D #21, NYG implied 24.0. 18-38-173 last week is a
+  floor game; the slot is a QB floor at 1:00. No role dependency.
+- **Skattebo**: NYG's workhorse (18 carries, 2 TDs in week 10; 14-34 plus a lost fumble against
+  JAC's front last week). IND run D #22. Hamstring is behind him (full practices).
+- **D. Smith**: full on Monday's estimate (hamstring cleared). DAL pass D is #3 softest.
+  The risk is **Joe Milton** (11-22-141 last week) and PHI's 19.5 implied total. He is the only
+  pre-Sunday commit, chosen because no Sunday WR outside the top 15 comes within 3 points.
+- **Diggs**: ARI is the **#1 softest pass D**; WAS implied 24.0. 6 TDs in 9 games.
+- **Evans**: back from the Achilles at 6-7-109-1 on **43% of snaps**. Re-grade the snap share
+  and Wednesday's report; the 4:25 kickoff lets SF's inactives settle him.
+- **Judkins over Hall** (equal projections, 13.49 / 13.52): Judkins is RB28 ROS, Hall RB17,
+  and the RB16-20 tier is the endgame backfill. Spend the less settled role (Sampson takes
+  passing work) and bank the workhorse. Hall is the fallback.
+- **Fannin**: 90+ yards in three of his last four, rested by CLE's week 11 bye. SNF, so he can
+  still be withheld if Sunday reads far clear.
+- **NE DST**: Herbert is in concussion protocol and "unlikely to play" (Nov 23); Uiagalelei
+  has 7 career attempts and LAC is already the weakest offense by EPA. **WAS DST** (DST8 /
+  DST27, +19, ARI implied 16.5, Beck back injury) is the alternative. Re-run the lines
+  Saturday and take whichever opponent's implied total is lower.
+
+### Not taking, and why
+
+- **Saquon (Thu, +11)**: Q, neck, limited, and he left last week with an arm injury. A flag on
+  the earliest lock of the week.
+- **Milton (Thu, QB29, 16.04)**: would stack with D. Smith on a team implied 19.5.
+- **Darnold (4:25, 14.83)**: SF pass D #30, a veto.
+- **Mendoza (SNF, 14.75)**: rookie, sacked 11 times in two starts.
+- **Herbert**: concussion. **Richardson (14.11)**: same game as McCarthy.
+- **Likely (TE3 / TE4)**: the third NYG piece and a better TE than the anchor needs to be.
+- **Loveland (Thu) / LaPorta (Thu, Q ankle) / Kraft (Wed, 10.0)**: Fannin is the same tier at
+  SNF.
+- **Hockenson (TE7 / TE12, +5)**: ATL pass D is #32, a veto.
+- **Strange (TE15, 10.1)**: the cheap TE if the anchor is declined; three quiet weeks running.
+- **Jeanty (RB16), Hall (RB17)**: endgame backfill. **JT (RB23, 15.2)**: IND benched Jones for
+  Richardson and JT had 27 yards on 15 touches last week.
+- **Meyers (1:00, JAC vs TEN, 11.0)**: the WR fallback; "every other week" usage behind P. Washington.
+- **MIN DST (DST1 / DST1)**: the delta-0 elite unit. **DEN DST**: negative delta, and Friday.
+- **Bank on the shelf**: Allen, Burrow, Purdy, Mahomes, C. Williams, Goff, Love, Stroud, Gibbs,
+  Bijan, Cook, Irving, C. Brown, Swift, Lamb, ARSB, Golden, C. Watson, Nabers, Olave, Collins,
+  Flowers, London, Bowers, McBride, Likely, Loveland.
+
+### Decision points
+
+1. **Thursday ~3:00**: PHI inactives (D. Smith locks at 4:30). If he is out, WR → Meyers (1:00)
+   or Boston (SNF). If the owner is away Thursday, set him Wednesday night.
+2. **Sunday 11:30**: inactives for Lawrence, McCarthy, Skattebo.
+3. **Sunday 12:55 — the week's real decision.** Log the live line and our score (D. Smith
+   only). There is no ratio for a post-Friday line yet, so this is directional. Lawrence plays
+   by default. Withhold him only if the owner wants the QB spare for week 13; then McCarthy
+   moves to QB and SFLX → Mayfield (MNF).
+4. **~4:00 / ~4:20**: NE DST, Diggs and Evans play unless flagged. No upgrade here clears the
+   bar (Purdy and McBride are endgame).
+5. **~8:15 Sunday**: Judkins and Fannin. Savings only: if our score − the live line is **≥ ~25**,
+   TE Fannin → Michael Mayer (LV, TE24 ROS) and bank Fannin.
+6. **MNF**: nothing held. Log the pre-MNF line and rank.
+
+### Checks before committing anyone
+
+1. Wednesday-Friday reports: **Evans** (Achilles, snap share), **D. Smith** (hamstring),
+   **Herbert** (decides NE DST), **Beck** (WAS DST), Skattebo, Judkins, Fannin.
+2. Re-pull all boards Wednesday night (D. Smith locks Thursday) and Saturday; re-run
+   `./gy m 12 --refresh` Saturday.
+3. Every lever name against `./gy l` before it goes on a list.
+
 ## Source notes
 
 - **Start/sit columns are worth more than sleeper columns here.** Start/sit pieces
