@@ -3917,16 +3917,18 @@ So the cushion has to be bought by 1:00 Sunday, which is where the board is deep
 | RB | Cam Skattebo (NYG) | RB16 | RB18 | +2 | 16.61 | Sun 1:00 @ IND | Sun 12:55 |
 | DST | New England (vs Uiagalelei) | DST15 | DST14 | -1 | 7.03 | 4:05 @ LAC | Sun 4:00 |
 | WR | Stefon Diggs (WAS) | WR21 | WR23 | +2 | 13.66 | 4:25 @ ARI | Sun 4:20 |
-| FLEX | Mike Evans (SF) | WR13 | WR21 | **+8** | 12.62 | 4:25 vs SEA | Sun 4:20 |
+| FLEX | ~~Evans~~ **Denzel Boston (CLE)** (owner check: Evans's WR matchup) | WR29 | WR27 | -2 | 11.58 | **SNF** vs LV | Sun 8:15 |
 | RB | Quinshon Judkins (CLE) | RB21 | RB28 | **+7** | 13.49 | **SNF** vs LV | Sun 8:15 |
 | TE | ~~Fannin~~ **Colston Loveland (CHI)** — anchor, from TE's +3 (owner check below) | TE4 | TE5 | +1 | 12.27 | **Thu 1:00** @ DET | Thu by 12:55 |
 
-**Projected ~129.7 (~1.10x a 118 line)**, the widest projected cushion since week 6. Committed
-before Sunday afternoon: D. Smith, Loveland and the 1:00 trio, ~83. **Two anchors** (Lawrence,
+**Projected ~128.7 (~1.09x a 118 line)**, the widest projected cushion since week 6. Committed
+before Sunday afternoon: D. Smith, Loveland and the 1:00 trio, ~83. Two slots at SNF (Judkins,
+Boston). **Two anchors** (Lawrence,
 Loveland), which the budget allows: QB's +1 goes to 0, TE's +3 goes to +2, leaving one TE
 anchor for week 13 and one TE as insurance. Nothing from the top 15 at RB or WR.
 
-**Correlation.** One mild same-team pair: McCarthy + Skattebo (NYG, QB-RB). The two QBs are in
+**Correlation.** Two mild same-team pairs: McCarthy + Skattebo (NYG, QB-RB) and Judkins + Boston
+(CLE, RB-WR). The two QBs are in
 different games (week 10's lesson). The decorrelated
 swap for the NYG pair is SFLX → **Baker Mayfield** (MNF, 15.19, plantar fasciitis, CAR pass D
 #13): -2.1 projected, and it buys back a Monday slot that this week can only save, not
@@ -3946,9 +3948,35 @@ reinforce.
 - **D. Smith**: full on Monday's estimate (hamstring cleared). DAL pass D is #3 softest.
   The risk is **Joe Milton** (11-22-141 last week) and PHI's 19.5 implied total. He is the only
   pre-Sunday commit, chosen because no Sunday WR outside the top 15 comes within 3 points.
-- **Diggs**: ARI is the **#1 softest pass D**; WAS implied 24.0. 6 TDs in 9 games.
-- **Evans**: back from the Achilles at 6-7-109-1 on **43% of snaps**. Re-grade the snap share
-  and Wednesday's report; the 4:25 kickoff lets SF's inactives settle him.
+- **Diggs**: ARI is the **#1 softest pass D** by EPA; WAS implied 24.0. 6 TDs in 9 games. But
+  the WR-specific grade is only **2.2 stars (rank 21)**: ARI's EPA softness is not all against
+  receivers. He stays (the next cheap WR is 2.6 points lower), but he is not the lock he looked.
+- **Boston (FLEX), replacing Evans.** See the owner check below.
+
+### Owner check (Tuesday): Evans into Seattle
+
+The owner's worry was that Seattle is the best defense against WRs and the data had not caught
+up. **The data had caught up; the board was reading the wrong number.** FantasyPros' WR
+strength of schedule rates SF's WRs **1.0 star, 31st of 32** this week. The EPA table had SEA
+as the #17 pass D, which is team-level: it mixes coverage of WRs, TEs and backs. A bottom-3
+matchup for a player's job is the veto in "Matchups from current-season EPA" (rule 3), and
+Evans also played only 43% of snaps in his first game back from the Achilles.
+
+| Option | Proj | Wk / ROS | WR matchup | Targets/game, recent | Window |
+| --- | --- | --- | --- | --- | --- |
+| Mike Evans (SF) | 12.62 | WR13 / WR21 | **1.0★, #31** | 7 (one game back) | 4:25 |
+| **Denzel Boston (CLE)** | 11.58 | WR29 / WR27 | **5.0★, #4** | 7.0 (3 games) | **SNF** |
+| Jakobi Meyers (JAC) | 11.02 | WR32 / WR41 | 5.0★, #1 | 6.25 (4 games) | 1:00 |
+
+**Boston gets the FLEX.** He is within 1.1 projected points, cheaper on ROS, has the most
+targets of the three, has a top-4 WR matchup, and moves the slot to SNF. The toe that cost him
+two practices in week 10 is off the report. Meyers grades best on matchup and JAC's 31.0
+implied total, but he would stack with Lawrence and his usage is "every other week". He is the
+fallback if Boston draws a flag.
+
+**Lesson: for WR and TE matchups, read the position-specific strength of schedule, not the
+team pass-D EPA.** `./gy m` is team-level. Check `get_schedule_and_strength` by position for
+any pass-catcher whose matchup is part of the case.
 - **Judkins over Hall** (equal projections, 13.49 / 13.52): Judkins is RB28 ROS, Hall RB17,
   and the RB16-20 tier is the endgame backfill. Spend the less settled role (Sampson takes
   passing work) and bank the workhorse. Hall is the fallback.
@@ -3991,9 +4019,9 @@ reinforce.
    only). There is no ratio for a post-Friday line yet, so this is directional. Lawrence plays
    by default. Withhold him only if the owner wants the QB spare for week 13; then McCarthy
    moves to QB and SFLX → Mayfield (MNF).
-4. **~4:00 / ~4:20**: NE DST, Diggs and Evans play unless flagged. No upgrade here clears the
+4. **~4:00 / ~4:20**: NE DST and Diggs play unless flagged. No upgrade here clears the
    bar (Purdy and McBride are endgame).
-5. **~8:15 Sunday**: Judkins plays. Nothing at SNF reinforces him (Jeanty +0.3).
+5. **~8:15 Sunday**: Judkins and Boston play. Nothing at SNF reinforces them (Jeanty +0.3). If Boston is a late scratch, FLEX → Fannin or Jeanty (same game).
 6. **MNF**: nothing held. Log the pre-MNF line and rank.
 
 ### Owner check (Tuesday): were the Wednesday-Friday games actually weighed?
