@@ -3892,7 +3892,7 @@ Ten teams play Wednesday-Friday. That changes the ladder in two ways:
 | --- | --- | --- | --- |
 | 4:05 NE@LAC | NE DST | nothing (Herbert concussion, DJ Uiagalelei likely starts) | 0 |
 | 4:25 SEA@SF, WAS@ARI | Evans, Diggs | Purdy (17.8, QB3), McBride (15.9, TE2): endgame | ~+3 |
-| SNF LV@CLE | Judkins, Fannin | Bowers (14.7, TE1), Jeanty (13.8, RB16) | +0.3 to +2.4 |
+| SNF LV@CLE | Judkins | Jeanty (13.8, RB16); Bowers (14.7, TE1) only via FLEX | +0.3 |
 | MNF CAR@TB | (nothing held) | Irving (19.0, RB9), Mayfield (15.2) | +3.8 |
 
 **Expect a small Monday move (+8 to +12)**: CAR@TB offers the field only Irving and Mayfield.
@@ -3919,15 +3919,15 @@ So the cushion has to be bought by 1:00 Sunday, which is where the board is deep
 | WR | Stefon Diggs (WAS) | WR21 | WR23 | +2 | 13.66 | 4:25 @ ARI | Sun 4:20 |
 | FLEX | Mike Evans (SF) | WR13 | WR21 | **+8** | 12.62 | 4:25 vs SEA | Sun 4:20 |
 | RB | Quinshon Judkins (CLE) | RB21 | RB28 | **+7** | 13.49 | **SNF** vs LV | Sun 8:15 |
-| TE | **Harold Fannin Jr. (CLE)** — anchor, from TE's +3 | TE8 | TE6 | -2 | 12.28 | **SNF** vs LV | Sun 8:15 |
+| TE | ~~Fannin~~ **Colston Loveland (CHI)** — anchor, from TE's +3 (owner check below) | TE4 | TE5 | +1 | 12.27 | **Thu 1:00** @ DET | Thu by 12:55 |
 
-**Projected ~129.8 (~1.10x a 118 line)**, the widest projected cushion since week 6. Committed
-before Sunday afternoon: D. Smith + the 1:00 trio, ~70.7. **Two anchors** (Lawrence, Fannin),
-which the budget allows: QB's +1 goes to 0, TE's +3 goes to +2, leaving one TE anchor for
-week 13 and one TE as insurance. Nothing from the top 15 at RB or WR.
+**Projected ~129.7 (~1.10x a 118 line)**, the widest projected cushion since week 6. Committed
+before Sunday afternoon: D. Smith, Loveland and the 1:00 trio, ~83. **Two anchors** (Lawrence,
+Loveland), which the budget allows: QB's +1 goes to 0, TE's +3 goes to +2, leaving one TE
+anchor for week 13 and one TE as insurance. Nothing from the top 15 at RB or WR.
 
-**Correlation.** Two mild same-team pairs: McCarthy + Skattebo (NYG, QB-RB) and Judkins +
-Fannin (CLE, RB-TE). The two QBs are in different games (week 10's lesson). The decorrelated
+**Correlation.** One mild same-team pair: McCarthy + Skattebo (NYG, QB-RB). The two QBs are in
+different games (week 10's lesson). The decorrelated
 swap for the NYG pair is SFLX → **Baker Mayfield** (MNF, 15.19, plantar fasciitis, CAR pass D
 #13): -2.1 projected, and it buys back a Monday slot that this week can only save, not
 reinforce.
@@ -3952,8 +3952,9 @@ reinforce.
 - **Judkins over Hall** (equal projections, 13.49 / 13.52): Judkins is RB28 ROS, Hall RB17,
   and the RB16-20 tier is the endgame backfill. Spend the less settled role (Sampson takes
   passing work) and bank the workhorse. Hall is the fallback.
-- **Fannin**: 90+ yards in three of his last four, rested by CLE's week 11 bye. SNF, so he can
-  still be withheld if Sunday reads far clear.
+- **Loveland**: 50+ yards in four of his last five; 9 targets in his last two games (Fannin: 11).
+  CHI @ DET is the highest total on the slate (55.5, CHI implied 29.0) and DET is the #7-softest
+  pass D. Not on the injury report.
 - **NE DST**: Herbert is in concussion protocol and "unlikely to play" (Nov 23); Uiagalelei
   has 7 career attempts and LAC is already the weakest offense by EPA. **WAS DST** (DST8 /
   DST27, +19, ARI implied 16.5, Beck back injury) is the alternative. Re-run the lines
@@ -3968,8 +3969,8 @@ reinforce.
 - **Mendoza (SNF, 14.75)**: rookie, sacked 11 times in two starts.
 - **Herbert**: concussion. **Richardson (14.11)**: same game as McCarthy.
 - **Likely (TE3 / TE4)**: the third NYG piece and a better TE than the anchor needs to be.
-- **Loveland (Thu) / LaPorta (Thu, Q ankle) / Kraft (Wed, 10.0)**: Fannin is the same tier at
-  SNF.
+- **Fannin (SNF, TE6, 12.28)**: lost the tiebreak to Loveland (owner check below).
+  **LaPorta (Thu, Q ankle) / Kraft (Wed, 10.0)**: flagged, or two points lower.
 - **Hockenson (TE7 / TE12, +5)**: ATL pass D is #32, a veto.
 - **Strange (TE15, 10.1)**: the cheap TE if the anchor is declined; three quiet weeks running.
 - **Jeanty (RB16), Hall (RB17)**: endgame backfill. **JT (RB23, 15.2)**: IND benched Jones for
@@ -3982,8 +3983,9 @@ reinforce.
 
 ### Decision points
 
-1. **Thursday ~3:00**: PHI inactives (D. Smith locks at 4:30). If he is out, WR → Meyers (1:00)
-   or Boston (SNF). If the owner is away Thursday, set him Wednesday night.
+1. **Thursday ~11:30**: CHI inactives (Loveland locks at 1:00). If he is out, TE → Fannin (SNF).
+   **Thursday ~3:00**: PHI inactives (D. Smith locks at 4:30). If he is out, WR → Meyers (1:00)
+   or Boston (SNF). If the owner is away Thursday, set both Wednesday night.
 2. **Sunday 11:30**: inactives for Lawrence, McCarthy, Skattebo.
 3. **Sunday 12:55 — the week's real decision.** Log the live line and our score (D. Smith
    only). There is no ratio for a post-Friday line yet, so this is directional. Lawrence plays
@@ -3991,14 +3993,48 @@ reinforce.
    moves to QB and SFLX → Mayfield (MNF).
 4. **~4:00 / ~4:20**: NE DST, Diggs and Evans play unless flagged. No upgrade here clears the
    bar (Purdy and McBride are endgame).
-5. **~8:15 Sunday**: Judkins and Fannin. Savings only: if our score − the live line is **≥ ~25**,
-   TE Fannin → Michael Mayer (LV, TE24 ROS) and bank Fannin.
+5. **~8:15 Sunday**: Judkins plays. Nothing at SNF reinforces him (Jeanty +0.3).
 6. **MNF**: nothing held. Log the pre-MNF line and rank.
+
+### Owner check (Tuesday): were the Wednesday-Friday games actually weighed?
+
+The owner's challenge: the board looked Sunday-heavy. The first write-up showed only the
+winners. Here is every early-window player who could start for us, against the Sunday pick he
+would replace. A Thursday player lacks only the late look, and this week that look is worth
+little: no late reinforcement clears the bar, and the one savings lever at stake (withhold the
+TE at SNF if G ≥ 25) has not been triggered since week 5.
+
+| Slot | Best Wed-Fri option | Proj | Wk / ROS | Sunday pick | Proj | Wk / ROS | Verdict |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| QB spare | Allen (Thu) 20.8 · C. Williams (Thu) 19.0 · Goff (Thu) 18.5 · Mahomes (Thu) 18.5 · Love (Wed) 15.9 | — | elite | Lawrence | 22.27 | QB3 / QB6 | **Sunday**: +1.5 over the best, and the best matchup |
+| SFLX | Joe Milton (Thu) | 16.04 | QB26 / QB29 | McCarthy | 17.25 | QB19 / QB18 | **Sunday**: Milton has 9.75 a game in two starts with **10 sacks**, PHI implied 19.5, and he would stack with D. Smith |
+| RB | Saquon (Thu) | 13.31 | RB14 / RB25 | Judkins | 13.49 | RB21 / RB28 | **Sunday**: equal points, but Saquon is Q (neck, plus an arm injury last week) and pairs with D. Smith |
+| RB | Corum (Wed) | 11.67 | RB17 / RB20 | Judkins | 13.49 | RB21 / RB28 | **Sunday**: Corum is hot (28-158-2 in two games) but RB20 is endgame backfill, and he projects 1.8 lower |
+| WR | **D. Smith (Thu)** | 14.54 | WR18 / WR28 | Meyers | 11.02 | WR32 / WR41 | **Thursday**, already in |
+| WR/FLEX | Odunze (Thu, CHI 29.0) 10.85 · Waddle (Fri) 10.74 · Flournoy (Thu) 9.13 | — | WR30 / WR31 / WR37 | Evans | 12.62 | WR13 / WR21 | **Sunday**: Evans is +1.8 and a +8 delta; Odunze and Waddle are negative deltas |
+| **TE** | **Loveland (Thu)** | 12.27 | TE4 / TE5 | Fannin | 12.28 | TE8 / TE6 | **Thursday**, see below |
+| DST | Denver (Fri, PIT 17.2) | 7.50 | DST5 / DST3 | New England | 7.03 | DST15 / DST14 | **Sunday**: Denver is a -2 delta on a unit that ranks DST3 ROS. Never buy a negative delta at DST |
+
+Banked and not considered at any price: Gibbs, Cook, Swift, Lamb, ARSB, Golden, C. Watson, and
+the four elite QBs above.
+
+**The one flip: TE Fannin → Loveland.** The two are a dead heat on points (12.27 / 12.28) and
+the same price (TE5 / TE6 ROS), so the matchup tiebreak decides it. It goes to Loveland on
+every key: implied total (CHI **29.0** against CLE 23.0), opponent pass D (DET #7 against LV
+#22), and delta (+1 against -2). Target volume is a wash (4.5 against 5.5 a game over the last
+two). Fannin's only edge was the SNF window, and this week that window's lever is worth almost
+nothing. The swap also breaks the Judkins-Fannin CLE pair. Cost: one fewer late slot (Judkins
+alone at SNF), accepted because the late pool cannot reinforce anyway. Benefit: more points are
+already final when the 12:55 Lawrence decision comes.
+
+**General form: in a week whose late windows cannot reinforce, the kickoff window stops being
+a tiebreaker.** Compare early-week players on points, price and matchup like anyone else.
 
 ### Checks before committing anyone
 
-1. Wednesday-Friday reports: **Evans** (Achilles, snap share), **D. Smith** (hamstring),
-   **Herbert** (decides NE DST), **Beck** (WAS DST), Skattebo, Judkins, Fannin.
+1. Wednesday-Friday reports: **Loveland** (Thursday 1:00 lock), **Evans** (Achilles, snap
+   share), **D. Smith** (hamstring), **Herbert** (decides NE DST), **Beck** (WAS DST),
+   Skattebo, Judkins.
 2. Re-pull all boards Wednesday night (D. Smith locks Thursday) and Saturday; re-run
    `./gy m 12 --refresh` Saturday.
 3. Every lever name against `./gy l` before it goes on a list.
