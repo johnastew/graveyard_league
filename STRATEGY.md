@@ -3941,10 +3941,10 @@ reinforce.
   no comparable elite-QB matchup (Allen @ NE #8, Goff @ ATL #15, Love @ NO #12), so the spare
   is worth more now than next week. Decided at 12:55 Sunday with the Thursday result known,
   so it can still be withheld (McCarthy to QB, Mayfield to SFLX).
-- **McCarthy**: NYG's starter, IND pass D #21, NYG implied 24.0. 18-38-173 last week is a
+- **McCarthy**: NYG's starter, IND pass D #14 (corrected Wed: #21 was NYG's own D), NYG implied 24.0. 18-38-173 last week is a
   floor game; the slot is a QB floor at 1:00. No role dependency.
 - **Skattebo**: NYG's workhorse (18 carries, 2 TDs in week 10; 14-34 plus a lost fumble against
-  JAC's front last week). IND run D #22. Hamstring is behind him (full practices).
+  JAC's front last week). IND run D **#4 softest** (corrected Wed: #22 was NYG's own D). Hamstring is behind him (full practices).
 - **D. Smith**: full on Monday's estimate (hamstring cleared). DAL pass D is #3 softest.
   The risk is **Joe Milton** (11-22-141 last week) and PHI's 19.5 implied total. He is the only
   pre-Sunday commit, chosen because no Sunday WR outside the top 15 comes within 3 points.
@@ -4069,6 +4069,22 @@ a tiebreaker.** Compare early-week players on points, price and matchup like any
 - Rankings barely moved (same-day pull): Evans WR13 → WR15, Diggs WR21 → WR23, Boston WR29 →
   WR28, Meyers WR32 → WR31, D. Smith WR18 and Loveland TE4 unchanged. No other practice reports
   yet; Herbert still expected out.
+
+### Wednesday update
+
+- **No new practice reports** for any of the nine (Wednesday's posts come in the afternoon).
+  Loveland and D. Smith are not on the Thursday teams' injury feeds. Boston's Tuesday DNP stands;
+  the Friday rule (Meyers before 1:00 if he hasn't practised or carries a Q) is unchanged.
+- **Projections refreshed** (FP PPR): Lawrence 23.02 (+0.75), D. Smith 15.05 (+0.51), McCarthy
+  16.81, Skattebo 16.65, Judkins 13.67, Diggs 13.48, Loveland 11.86 (Fannin 11.67, still behind),
+  Boston 11.20, NE DST **7.82** (up from 7.03, now the top DST projection: Uiagalelei priced in).
+  **Board ~129.6**, unchanged.
+- **DST is now a coin flip.** NE 7.82 against WAS 7.75. The nflverse lines have ARI at 17.2 and
+  LAC still at 18.5, which looks like it has not priced Herbert out yet. Keep NE; re-check
+  Saturday and take WAS only if ARI's total is clearly the lower one.
+- **Matchup misread corrected.** The Tuesday board quoted NYG's own defense ranks for the IND
+  matchup. IND is the #14 pass D (not #21) and the **#4-softest run D** (not #22). Both NYG
+  picks are better spots than written, Skattebo especially.
 
 ### Checks before committing anyone
 
