@@ -4115,6 +4115,23 @@ lever:
 place of a ~20-24 one. Only worth it if this week is actually at risk. Stroud (+3.6, QB10) is
 the cheaper version, but +3.6 is under the 5-point bar.
 
+### Post-Thursday reading: 39.1 against 39.1, G = 0
+
+**D. Smith 39.6** (9-12-186-2, read with PHI @ DAL in Q4 3:23; 30-38 at the time). Loveland
+-0.5. **Our score 39.1, live line 39.1.** We are sitting exactly on the cut, which reads worse
+than it is:
+
+- **Rank after Thursday measures slots spent, not position.** We have used 2 slots; we hold 7,
+  projecting **~101** on the app's numbers (Lawrence 22.5, Skattebo 17.3, McCarthy 16.2, Diggs
+  12.7, Judkins 12.5, Fannin ~11.5, NE 8.4). Finish **~140**.
+- The cut team reached 39.1 in a high-scoring early slate (CHI @ DET 39-35, PHI @ DAL 30-38),
+  which is ~2.5 slots at ~15. Its other ~6.5 slots at ~12.5 put the final line near **~120**,
+  a touch above the ~118 plan because the Thanksgiving games ran hot. Margin on the means:
+  **~+20**. D. Smith's +25 over projection more than repaid Loveland's -12.
+- **So no Burrow.** The 12:55 rule (G < -10) is nowhere near met. Re-read at 12:55 anyway.
+- First Thanksgiving reading for the log: post-Thursday line 39.1. Log the post-Friday line
+  (DEN @ PIT) and the final, to size this shape next year.
+
 ### Checks before committing anyone
 
 1. Wednesday-Friday reports: **Loveland** (Thursday 1:00 lock), **Evans** (Achilles, snap
