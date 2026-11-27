@@ -4086,6 +4086,35 @@ a tiebreaker.** Compare early-week players on points, price and matchup like any
   matchup. IND is the #14 pass D (not #21) and the **#4-softest run D** (not #22). Both NYG
   picks are better spots than written, Skattebo especially.
 
+### Friday update: Loveland carted off, Boston out, Diggs flagged
+
+- **Loveland: -0.5.** One catch for 5 yards and a fumble, then carted to the locker room with a
+  knee injury in the first half (Schefter, Nov 26). Burned (100 on the season). The anchor cost
+  ~12 projected points on the earliest lock of the week. TE elite stock left: Bowers, McBride,
+  Likely, Fannin, LaPorta, Kraft (6 for 4 endgame starts, spare +2).
+- **D. Smith**: no week 12 stat row in the feed yet (it is dated Nov 26). Confirm his score in
+  the app.
+- **Boston: Q, DNP / DNP, 36%**, and the report now lists a hamstring/quad as well as the toe.
+  The Friday swap rule is met early. **FLEX → Fannin (SNF), held as a lever.** The FLEX can take
+  any position, so it stays open through MNF: at ~8:15 Sunday choose Fannin (11.7), Jeanty
+  (13.6, RB16), or Bowers (14.7, TE1, emergency only), or move it to an MNF player (Irving
+  19.0, RB9, emergency only).
+- **Diggs: Q, personal (not an injury), DNP Wednesday, no practice Thursday** (holiday). 4:25
+  kickoff, so his inactive call (~2:55) comes after the 1:00 lock. **Rule:** if Friday's or
+  Saturday's report still has him away, WR → **Meyers before 1:00** (Q ankle, limited x2, 98%,
+  playing through it all season). If he is a surprise inactive at 2:55, WR → Evans (4:25).
+- **Herbert: DNP / DNP, 9.5%.** NE DST holds.
+
+**Board now ~117.6** (with D. Smith at his 15.05 projection) against a ~118 plan line. The
+cushion is gone, so the doctrine's tiebreak flips to ceiling, and the 12:55 decision gets a real
+lever:
+
+**12:55 Sunday: SFLX McCarthy → Joe Burrow** (CIN vs NO, 1:00, 24.8 projected, CIN implied 30.2,
+**+8**) if our score − the live line is **under ~-10**. It costs an endgame QB (8 elite left for
+8 endgame starts after Lawrence, so 7), which in one of weeks 14-17 means a ~16-point QB in
+place of a ~20-24 one. Only worth it if this week is actually at risk. Stroud (+3.6, QB10) is
+the cheaper version, but +3.6 is under the 5-point bar.
+
 ### Checks before committing anyone
 
 1. Wednesday-Friday reports: **Loveland** (Thursday 1:00 lock), **Evans** (Achilles, snap
