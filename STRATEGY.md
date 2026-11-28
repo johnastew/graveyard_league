@@ -4132,6 +4132,34 @@ than it is:
 - First Thanksgiving reading for the log: post-Thursday line 39.1. Log the post-Friday line
   (DEN @ PIT) and the final, to size this shape next year.
 
+### Saturday: final reports in; WR Meyers, FLEX Diggs, Fannin back on the shelf
+
+Final reports and refreshed lines (Nov 28):
+
+- **Parker Washington OUT** (JAC). **Meyers is off the injury report** and becomes JAC's WR1
+  against TEN, the #1 WR matchup, JAC implied 31.2. Projection 10.65 → **13.31**. This is
+  positive role-by-absence on a settled absence (ruled out on the final report).
+- **Boston: Q, DNP all week, 22%, "not expected to play"** (Nov 27). Out of the plan.
+- **Diggs**: off the final report (the "personal" Q is gone), 12.68. No news confirming his
+  return to practice, so read WAS's inactives at ~2:55.
+- **Herbert OUT; LAC implied 15.8**, the lowest on the slate. **NE DST locked** (7.69 against
+  WAS 6.78).
+- Lawrence 21.89 (down 1.1 without P. Washington). Fannin 11.84, Jeanty 13.87.
+
+**New arrangement: WR Meyers (1:00), FLEX Diggs (4:25).**
+
+| Option | WR | FLEX | Proj | Cost |
+| --- | --- | --- | --- | --- |
+| Before | Diggs | Fannin | 24.52 | TE spare (TE6) |
+| **Now** | **Meyers** | **Diggs** | **25.99** | WR41 + WR23, nothing scarce |
+
++1.5 projected, and **Fannin goes back on the shelf** (TE spare stays at +2 for week 13). Diggs
+in the FLEX keeps his personal-absence risk covered: FLEX takes any position, so if he is a
+surprise inactive at ~2:55, FLEX → Jeanty (13.9) or Fannin (11.8) at SNF. Meyers stacks with
+Lawrence (QB-WR2); accepted because the cushion is ~+20 and it is the cheaper arrangement.
+
+**Board: 39.1 banked + ~102.2 to play = ~141.3.** No Burrow unless 12:55 reads G < -10.
+
 ### Checks before committing anyone
 
 1. Wednesday-Friday reports: **Loveland** (Thursday 1:00 lock), **Evans** (Achilles, snap
